@@ -1,2 +1,2 @@
 parent_id	lab_id	principal_investigator	pi_email	operator	operator_email	protocols_io_doi	dataset_type	analyte_class	is_targeted	acquisition_instrument_vendor	acquisition_instrument_model	source_storage_duration_value	source_storage_duration_unit	time_since_acquisition_instrument_calibration_value	time_since_acquisition_instrument_calibration_unit	contributors_path	data_path	is_image_preprocessing_required	slide_id	tile_configuration	scan_direction	tiled_image_columns	tiled_image_count	intended_tile_overlap_percentage	metadata_schema_id
-																									b21f206d-6fbe-4217-975a-da3a940fbdaa
+							Second Harmonic Generation (SHG)																		b21f206d-6fbe-4217-975a-da3a940fbdaa

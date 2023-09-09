@@ -95,10 +95,10 @@
       "time_since_acquisition_instrument_calibration_unit": "time_since_acquisition_instrument_calibration_unit",
       "stain_name": "stain_name",
       "stain_technique": "stain_technique",
-      "tile_configuration": "tile_configuration",
-      "scan_direction": "scan_direction",
       "preparation_instrument_vendor": "preparation_instrument_vendor",
-      "preparation_instrument_model": "preparation_instrument_model"
+      "preparation_instrument_model": "preparation_instrument_model",
+      "tile_configuration": "tile_configuration",
+      "scan_direction": "scan_direction"
     },
     "propertyDescriptions": {
       "parent_id": "The HuBMAP ID of the entity that was used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. Example: HBM765.TRHD.452",
@@ -130,10 +130,10 @@
       "time_since_acquisition_instrument_calibration_unit": "The time unit of measurement",
       "stain_name": "The name of the chemical stains (dyes) applied to histology samples to highlight important features of the tissue as well as to enhance the tissue contrast.",
       "stain_technique": "There are typically three types of stains: progressive, modified progressive, and regressive. Progressive staining occurs when the hematoxylin is added to the tissue without being followed by a differentiator to remove excess dye. With regressive and modified progressive staining, a differentiator is used.",
-      "tile_configuration": "This is how the tiles are configured for stitching.",
-      "scan_direction": "This is the direction of imaging, which is required for stitching.",
       "preparation_instrument_vendor": "The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.",
-      "preparation_instrument_model": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data."
+      "preparation_instrument_model": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
+      "tile_configuration": "This is how the tiles are configured for stitching.",
+      "scan_direction": "This is the direction of imaging, which is required for stitching."
     }
   },
   "properties": {
@@ -384,72 +384,72 @@
         },
         "principal_investigator": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/444ce73f-e24f-4d1d-b341-cea66e31e895"
+            "https://schema.metadatacenter.org/properties/1c85a2c6-ac09-4892-8654-515c0f993853"
           ]
         },
         "operator": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/8cf97ac2-66ae-4121-875e-5695f8091436"
+            "https://schema.metadatacenter.org/properties/d502e0eb-1a38-414f-9b42-918bb5d6573a"
           ]
         },
         "dataset_type": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/749043a3-ab2b-47aa-b0c9-d8c1d46e6de6"
+            "https://schema.metadatacenter.org/properties/68dccb1d-add0-410e-a253-2c412bd34c82"
           ]
         },
         "analyte_class": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/76fcee0a-82d1-495e-91b9-0e18b398087d"
+            "https://schema.metadatacenter.org/properties/ced777ca-dd4c-4b6c-abcb-7f10fc8abad5"
           ]
         },
         "acquisition_instrument_vendor": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/948e32ae-227f-4c88-99a1-1b60655bf071"
+            "https://schema.metadatacenter.org/properties/38d50320-1f0f-4f8d-8c4d-4e4a698cab02"
           ]
         },
         "acquisition_instrument_model": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/5d1c3c4c-1dc5-4ddc-9a4b-1d950fc68a2f"
+            "https://schema.metadatacenter.org/properties/49a06e9e-6ad8-4aca-b510-8e199400b77c"
           ]
         },
         "source_storage_duration_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/5d1dfbcd-a79b-4f95-a558-c4484886bfa7"
+            "https://schema.metadatacenter.org/properties/d463699b-db0f-4e24-adad-c529e7d1e98b"
           ]
         },
         "time_since_acquisition_instrument_calibration_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/46b97325-b0c5-4a80-8b65-b4a42d35c563"
+            "https://schema.metadatacenter.org/properties/6c621abe-4010-4314-9a7d-93a961b65d9d"
           ]
         },
         "stain_name": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/e502919f-54c8-4168-8258-5d599ae2ffa0"
+            "https://schema.metadatacenter.org/properties/72ef68ca-ceee-4a28-9acd-bc7e9ae97620"
           ]
         },
         "stain_technique": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/67a0e466-7aac-4e91-be55-2ef9fa8f5ff5"
-          ]
-        },
-        "tile_configuration": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/2d781db8-3fef-42e3-b6e9-cfc54f35a833"
-          ]
-        },
-        "scan_direction": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/4079f279-51f5-4476-86b9-5e4e20ea6796"
+            "https://schema.metadatacenter.org/properties/fbbd433b-2b37-498d-a5ef-20f604719bc7"
           ]
         },
         "preparation_instrument_vendor": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/0ae13749-6ba1-49f8-ae9a-74b5336d4ace"
+            "https://schema.metadatacenter.org/properties/bfba3f1c-3f26-4a3b-9b49-c6c65bcd9065"
           ]
         },
         "preparation_instrument_model": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/b10754bc-b667-4900-ae03-dbfc6c6243be"
+            "https://schema.metadatacenter.org/properties/7e60de7d-5861-4005-8d73-69ec3f37d1a0"
+          ]
+        },
+        "tile_configuration": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/cf32e6bb-4c7d-4846-b900-b4c26c06b392"
+          ]
+        },
+        "scan_direction": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/0a926cb0-c21f-4b59-84ef-545bb27ee27d"
           ]
         }
       },
@@ -493,10 +493,10 @@
         "time_since_acquisition_instrument_calibration_unit",
         "stain_name",
         "stain_technique",
-        "tile_configuration",
-        "scan_direction",
         "preparation_instrument_vendor",
-        "preparation_instrument_model"
+        "preparation_instrument_model",
+        "tile_configuration",
+        "scan_direction"
       ],
       "additionalProperties": false
     },
@@ -648,9 +648,9 @@
       ],
       "schema:name": "parent_id",
       "schema:description": "The HuBMAP ID of the entity that was used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. Example: HBM765.TRHD.452",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -739,9 +739,9 @@
       ],
       "schema:name": "lab_id",
       "schema:description": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -830,9 +830,9 @@
       ],
       "schema:name": "pi_email",
       "schema:description": "Email address for the principal investigator.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -921,9 +921,9 @@
       ],
       "schema:name": "operator_email",
       "schema:description": "Email address for the operator.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1007,9 +1007,9 @@
       },
       "schema:name": "protocols_io_doi",
       "schema:description": "DOI for protocols.io referring to the protocol for this assay. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1108,9 +1108,9 @@
       ],
       "schema:name": "is_targeted",
       "schema:description": "Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay. The CODEX analyte is protein.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1189,9 +1189,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "How long was the source material (parent) stored, prior to this sample being processed.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1270,9 +1270,9 @@
       ],
       "schema:name": "time_since_acquisition_instrument_calibration_value",
       "schema:description": "The amount of time since the acqusition instrument was last serviced by the vendor. This provides a metric for assessing drift in data capture.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1361,9 +1361,9 @@
       ],
       "schema:name": "contributors_path",
       "schema:description": "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1452,9 +1452,9 @@
       ],
       "schema:name": "data_path",
       "schema:description": "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"/TEST001-RK/\" for this field. If there are multiple directory levels, use the format \"/TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1552,9 +1552,9 @@
       ],
       "schema:name": "is_image_preprocessing_required",
       "schema:description": "Depending on if the acquisition instrument was a microscope, slide scanner, etc. will indicate whether or not any level of preprocessing was required to assemble the image (e.g., fusing image tiles) .",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1652,9 +1652,9 @@
       ],
       "schema:name": "is_batch_staining_done",
       "schema:description": "Are the slides stained using a linear batch method or individually?",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1752,9 +1752,9 @@
       ],
       "schema:name": "is_staining_automated",
       "schema:description": "Is the slide staining automated with an instrument?",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1843,9 +1843,9 @@
       ],
       "schema:name": "slide_id",
       "schema:description": "A unique ID denoting the slide used. This allows users the ability to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1924,9 +1924,9 @@
       ],
       "schema:name": "tiled_image_columns",
       "schema:description": "This is how many columns used in stitching. This is sometimes referred to as the grid size x.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2005,9 +2005,9 @@
       ],
       "schema:name": "tiled_image_count",
       "schema:description": "This is the total number of raw (tiled) images captured, that are to be stitched together.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2086,9 +2086,9 @@
       ],
       "schema:name": "intended_tile_overlap_percentage",
       "schema:description": "The amount of overlap between tiled images. This is the set point, where as during image acquisition there will be slight variations due to stage registration.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2139,7 +2139,7 @@
         "inputType": "textfield"
       },
       "_valueConstraints": {
-        "requiredValue": false,
+        "requiredValue": true,
         "defaultValue": "2263a3e3-819b-4639-a3db-3dbc0e46cda1"
       },
       "properties": {
@@ -2178,9 +2178,9 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2204,9 +2204,9 @@
         "inputType": "richtext",
         "_content": "&lt;p&gt;The histology dataset metadata specification provides standardized guidelines for organizing and describing histological data, facilitating efficient analysis and interpretation.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Metadata Schema ID&lt;/strong&gt;:&amp;nbsp;2263a3e3-819b-4639-a3db-3dbc0e46cda1&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Template Version&lt;/strong&gt;: 2.0.0&lt;/p&gt;\n"
       },
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "schema:description": "",
@@ -2266,8 +2266,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000029",
-            "name": "Principal Investigator",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000311",
+            "name": "Principal investigator",
             "maxDepth": 0
           }
         ],
@@ -2304,9 +2304,9 @@
       },
       "schema:name": "principal_investigator",
       "schema:description": "The full name of the principal investigator responsible for the data.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2365,7 +2365,7 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000030",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000331",
             "name": "Operator",
             "maxDepth": 0
           }
@@ -2403,9 +2403,9 @@
       },
       "schema:name": "operator",
       "schema:description": "The full name of the person responsible for executing the assay.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2464,8 +2464,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000016",
-            "name": "Dataset Type",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000361",
+            "name": "Dataset type",
             "maxDepth": 0
           }
         ],
@@ -2506,9 +2506,9 @@
       },
       "schema:name": "dataset_type",
       "schema:description": "The specific type of dataset being produced.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2567,8 +2567,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000001",
-            "name": "Analyte",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000371",
+            "name": "Analyte class",
             "maxDepth": 0
           }
         ],
@@ -2605,9 +2605,9 @@
       },
       "schema:name": "analyte_class",
       "schema:description": "Analytes are the target molecules being measured with the assay.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2666,8 +2666,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000025",
-            "name": "Acquisition Instrument Vendor",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000391",
+            "name": "Acquisition instrument vendor",
             "maxDepth": 0
           }
         ],
@@ -2704,9 +2704,9 @@
       },
       "schema:name": "acquisition_instrument_vendor",
       "schema:description": "An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2765,8 +2765,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000027",
-            "name": "Acquisition Instrument Model",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000401",
+            "name": "Acquisition instrument model",
             "maxDepth": 0
           }
         ],
@@ -2803,9 +2803,9 @@
       },
       "schema:name": "acquisition_instrument_model",
       "schema:description": "Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2864,8 +2864,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000023",
-            "name": "Unit of Time",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000031",
+            "name": "Source storage duration unit",
             "maxDepth": 0
           }
         ],
@@ -2902,9 +2902,9 @@
       },
       "schema:name": "source_storage_duration_unit",
       "schema:description": "The time duration unit of measurement",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2963,8 +2963,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000023",
-            "name": "Unit of Time",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000421",
+            "name": "Time since acquisition instrument calibration unit",
             "maxDepth": 0
           }
         ],
@@ -3001,15 +3001,15 @@
       },
       "schema:name": "time_since_acquisition_instrument_calibration_unit",
       "schema:description": "The time unit of measurement",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
-      "skos:prefLabel": "Time since acquisition calibration unit",
+      "skos:prefLabel": "Time since acquisition instrument calibration unit",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "stain_name": {
@@ -3062,8 +3062,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000011",
-            "name": "Stain",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000461",
+            "name": "Stain name",
             "maxDepth": 0
           }
         ],
@@ -3100,9 +3100,9 @@
       },
       "schema:name": "stain_name",
       "schema:description": "The name of the chemical stains (dyes) applied to histology samples to highlight important features of the tissue as well as to enhance the tissue contrast.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3161,8 +3161,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000044",
-            "name": "Stain Technique",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000471",
+            "name": "Stain technique",
             "maxDepth": 0
           }
         ],
@@ -3199,15 +3199,213 @@
       },
       "schema:name": "stain_technique",
       "schema:description": "There are typically three types of stains: progressive, modified progressive, and regressive. Progressive staining occurs when the hematoxylin is added to the tissue without being followed by a differentiator to remove excess dye. With regressive and modified progressive staining, a differentiator is used.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Stain technique",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "preparation_instrument_vendor": {
+      "@id": "https://repo.metadatacenter.org/template-fields/06409abf-2641-493c-9b2f-5c37d63381ce",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "preparation_instrument_vendor field schema",
+      "description": "preparation_instrument_vendor field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000501",
+            "name": "Preparation instrument vendor",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "preparation_instrument_vendor",
+      "schema:description": "The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Preparation instrument vendor",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "preparation_instrument_model": {
+      "@id": "https://repo.metadatacenter.org/template-fields/8882b904-5642-4c3a-ba5e-11f8d896f3e0",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "preparation_instrument_model field schema",
+      "description": "preparation_instrument_model field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000511",
+            "name": "Preparation instrument model",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "preparation_instrument_model",
+      "schema:description": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Preparation instrument model",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "tile_configuration": {
@@ -3260,8 +3458,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000032",
-            "name": "Tile Configuration",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000531",
+            "name": "Tile configuration",
             "maxDepth": 0
           }
         ],
@@ -3298,9 +3496,9 @@
       },
       "schema:name": "tile_configuration",
       "schema:description": "This is how the tiles are configured for stitching.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3359,8 +3557,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000031",
-            "name": "Scan Direction",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000541",
+            "name": "Scan direction",
             "maxDepth": 0
           }
         ],
@@ -3427,229 +3625,15 @@
       },
       "schema:name": "scan_direction",
       "schema:description": "This is the direction of imaging, which is required for stitching.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
+      "pav:createdOn": "2023-09-08T20:26:55-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Scan direction",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "preparation_instrument_vendor": {
-      "@id": "https://repo.metadatacenter.org/template-fields/06409abf-2641-493c-9b2f-5c37d63381ce",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "preparation_instrument_vendor field schema",
-      "description": "preparation_instrument_vendor field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": false,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48660",
-            "prefLabel": "Not applicable",
-            "type": "OntologyClass",
-            "label": "Not applicable",
-            "source": "HRAVS"
-          }
-        ],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000026",
-            "name": "Preparation Instrument Vendor",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "preparation_instrument_vendor",
-      "schema:description": "The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Preparation Instrument Vendor",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "preparation_instrument_model": {
-      "@id": "https://repo.metadatacenter.org/template-fields/8882b904-5642-4c3a-ba5e-11f8d896f3e0",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "preparation_instrument_model field schema",
-      "description": "preparation_instrument_model field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": false,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48660",
-            "prefLabel": "Not applicable",
-            "type": "OntologyClass",
-            "label": "Not applicable",
-            "source": "HRAVS"
-          }
-        ],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000028",
-            "name": "Preparation Instrument Model",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "preparation_instrument_model",
-      "schema:description": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
-      "pav:createdOn": "2023-08-04T13:18:27-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Preparation Instrument Model",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -3691,16 +3675,16 @@
     "time_since_acquisition_instrument_calibration_unit",
     "stain_name",
     "stain_technique",
-    "tile_configuration",
-    "scan_direction",
     "preparation_instrument_vendor",
-    "preparation_instrument_model"
+    "preparation_instrument_model",
+    "tile_configuration",
+    "scan_direction"
   ],
   "schema:name": "Histology",
   "schema:description": "The histology metadata specification provides standardized guidelines for organizing and describing histological data, facilitating efficient analysis and interpretation.",
   "pav:createdOn": "2023-06-09T16:43:11-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-08-04T13:18:27-07:00",
+  "pav:lastUpdatedOn": "2023-09-08T20:26:55-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

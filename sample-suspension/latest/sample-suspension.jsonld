@@ -63,15 +63,15 @@
       "notes": "notes",
       "metadata_schema_id": "metadata_schema_id",
       "header_info": "header_info",
+      "tissue_weight_value": "tissue_weight_value",
       "source_storage_duration_unit": "source_storage_duration_unit",
+      "tissue_weight_unit": "tissue_weight_unit",
       "preparation_medium": "preparation_medium",
       "preparation_condition": "preparation_condition",
       "processing_time_unit": "processing_time_unit",
       "storage_medium": "storage_medium",
       "storage_method": "storage_method",
-      "suspension_entity_type": "suspension_entity_type",
-      "tissue_weight_value": "tissue_weight_value",
-      "tissue_weight_unit": "tissue_weight_unit"
+      "suspension_entity_type": "suspension_entity_type"
     },
     "propertyDescriptions": {
       "sample_id": "The HuBMAP ID for the sample assigned by the ingest portal. Example: HBM743.CKJW.876",
@@ -84,15 +84,15 @@
       "notes": "Miscellaneous details about the sample, not captured in the existing metadata fields.",
       "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.",
       "header_info": "",
+      "tissue_weight_value": "The weight of a tissue block or the piece of tissue used in a suspension.",
       "source_storage_duration_unit": "The time duration unit of measurement",
+      "tissue_weight_unit": "The tissue weight unit of measurement",
       "preparation_medium": "The medium used during the sample preparation",
       "preparation_condition": "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation.",
       "processing_time_unit": "The time unit of measurement",
       "storage_medium": "What was the sample preserved in.",
       "storage_method": "The method by which the sample was stored, after preparation and before the assay was performed.",
-      "suspension_entity_type": "The type of single cell entity derived from isolation protocol.",
-      "tissue_weight_value": "The weight of a tissue block or the piece of tissue used in a suspension.",
-      "tissue_weight_unit": "The tissue weight unit of measurement"
+      "suspension_entity_type": "The type of single cell entity derived from isolation protocol."
     }
   },
   "properties": {
@@ -296,49 +296,49 @@
             "https://schema.metadatacenter.org/properties/98d9bfb5-4682-44bb-82b7-2ecb49c661ea"
           ]
         },
-        "source_storage_duration_unit": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/3f1b5878-a183-47cd-b649-f394a2ba9003"
-          ]
-        },
-        "preparation_medium": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/e4c8a569-e84d-4d6e-a784-95143f8afb38"
-          ]
-        },
-        "preparation_condition": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/e26c844c-7f25-4e02-b01d-3e3e52de742a"
-          ]
-        },
-        "processing_time_unit": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/65bc651f-039b-4698-a5bb-40fe982f21c2"
-          ]
-        },
-        "storage_medium": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/b3344da3-2879-49c1-ad27-2b58b1d40668"
-          ]
-        },
-        "storage_method": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/30959312-73ca-4b68-af52-cb53333e1467"
-          ]
-        },
-        "suspension_entity_type": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/0427fa34-6ad1-4c26-845c-9024d4e8a4b3"
-          ]
-        },
         "tissue_weight_value": {
           "enum": [
             "https://schema.metadatacenter.org/properties/a02d6136-adba-4d90-9feb-63cb305ebf38"
           ]
         },
+        "source_storage_duration_unit": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/dad51671-e7d4-4a9b-9c7e-6559c6207a28"
+          ]
+        },
         "tissue_weight_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/4f5c52f0-602f-46ec-b978-f57ad21a6beb"
+            "https://schema.metadatacenter.org/properties/1a7a59ad-dea5-4d2a-9351-0a808eae18d5"
+          ]
+        },
+        "preparation_medium": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/c02be95a-8b02-463e-bff5-41fe35721647"
+          ]
+        },
+        "preparation_condition": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/050e557e-041f-4afb-bb50-9601b4f3dd70"
+          ]
+        },
+        "processing_time_unit": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/91747a91-3b75-4455-9b86-026e46846fd3"
+          ]
+        },
+        "storage_medium": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/fbe40f14-7373-4ea6-896e-e86f65bc12a4"
+          ]
+        },
+        "storage_method": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/972331d4-5b36-41b6-be27-62c0fbffbab3"
+          ]
+        },
+        "suspension_entity_type": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/13d36368-9b05-4d01-97d6-de27fd6297dd"
           ]
         }
       },
@@ -363,15 +363,15 @@
         "suspension_enriched_target",
         "notes",
         "metadata_schema_id",
+        "tissue_weight_value",
         "source_storage_duration_unit",
+        "tissue_weight_unit",
         "preparation_medium",
         "preparation_condition",
         "processing_time_unit",
         "storage_medium",
         "storage_method",
-        "suspension_entity_type",
-        "tissue_weight_value",
-        "tissue_weight_unit"
+        "suspension_entity_type"
       ],
       "additionalProperties": false
     },
@@ -522,9 +522,9 @@
       ],
       "schema:name": "sample_id",
       "schema:description": "The HuBMAP ID for the sample assigned by the ingest portal. Example: HBM743.CKJW.876",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -603,9 +603,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "How long was the source material (parent) stored, prior to this sample being processed.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -684,9 +684,9 @@
       ],
       "schema:name": "processing_time_value",
       "schema:description": "How long the tissue was being handled before the initial preservation",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -775,9 +775,9 @@
       ],
       "schema:name": "quality_criteria",
       "schema:description": "For example, RIN: 8.7. For suspensions, measured by visual inspection prior to cell lysis or defined by known parameters such as wells with several cells or no cells. This can be captured at a high level. \"OK\" or \"not OK\", or with more specificity such as \"debris\", \"clump\", \"low clump\".",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -856,9 +856,9 @@
       ],
       "schema:name": "suspension_entity_count",
       "schema:description": "Total number of cell/nuclei yielded post dissociation and enrichment.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -956,9 +956,9 @@
       ],
       "schema:name": "is_suspension_enriched",
       "schema:description": "Was the cell/nuclei population enriched?",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1047,9 +1047,9 @@
       ],
       "schema:name": "suspension_enriched_target",
       "schema:description": "If the suspension was enriched, then this is the target of the enrichment.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1138,9 +1138,9 @@
       ],
       "schema:name": "notes",
       "schema:description": "Miscellaneous details about the sample, not captured in the existing metadata fields.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1191,7 +1191,7 @@
         "inputType": "textfield"
       },
       "_valueConstraints": {
-        "requiredValue": false,
+        "requiredValue": true,
         "defaultValue": "507d47ea-d71d-41ea-b0f3-86b569d4934c"
       },
       "properties": {
@@ -1230,9 +1230,9 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1256,9 +1256,9 @@
         "inputType": "richtext",
         "_content": "&lt;p&gt;The sample suspension dataset metadata specification outlines the standardized format for recording essential information about biological samples, such as origin, preparation, and storage conditions, ensuring accurate documentation and facilitating data sharing and analysis.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Metadata Schema ID:&lt;/strong&gt;&amp;nbsp;507d47ea-d71d-41ea-b0f3-86b569d4934c&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Schema Version:&lt;/strong&gt;&amp;nbsp;2.0.0&lt;/p&gt;\n"
       },
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "schema:description": "",
@@ -1266,765 +1266,6 @@
       "schema:name": "header_info",
       "skos:prefLabel": "Header Info",
       "@id": "https://repo.metadatacenter.org/template-fields/178e1b87-138e-4bfa-8015-d89e5b027a45",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "source_storage_duration_unit": {
-      "@id": "https://repo.metadatacenter.org/template-fields/d666d473-cf11-4025-bea0-2a4d77110044",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "source_storage_duration_unit field schema",
-      "description": "source_storage_duration_unit field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000023",
-            "name": "Unit of Time",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "source_storage_duration_unit",
-      "schema:description": "The time duration unit of measurement",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Source storage duration unit",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "preparation_medium": {
-      "@id": "https://repo.metadatacenter.org/template-fields/5eb04109-9e15-4889-bd11-ef93d7cb5f95",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "preparation_medium field schema",
-      "description": "preparation_medium field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          },
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132",
-            "prefLabel": "None",
-            "type": "OntologyClass",
-            "label": "None",
-            "source": "HRAVS"
-          }
-        ],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000033",
-            "name": "Preparation Medium",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "preparation_medium",
-      "schema:description": "The medium used during the sample preparation",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Preparation medium",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "preparation_condition": {
-      "@id": "https://repo.metadatacenter.org/template-fields/8711a6de-b6af-40e6-9e74-b2320bb18a71",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "preparation_condition field schema",
-      "description": "preparation_condition field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          }
-        ],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000003",
-            "name": "Material Storage Method",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false,
-        "actions": []
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "preparation_condition",
-      "schema:description": "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Preparation condition",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "processing_time_unit": {
-      "@id": "https://repo.metadatacenter.org/template-fields/e78b2f98-e783-4bce-b251-0dae403c6b7b",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "processing_time_unit field schema",
-      "description": "processing_time_unit field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": false,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000023",
-            "name": "Unit of Time",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false,
-        "actions": [
-          {
-            "to": 0,
-            "action": "move",
-            "termUri": "http://purl.obolibrary.org/obo/UO_0000031",
-            "type": "OntologyClass",
-            "sourceUri": "template",
-            "source": "HRAVS"
-          }
-        ]
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "processing_time_unit",
-      "schema:description": "The time unit of measurement",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Processing time unit",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "storage_medium": {
-      "@id": "https://repo.metadatacenter.org/template-fields/5533c854-9d23-4919-a895-4a3d4d6442a8",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "storage_medium field schema",
-      "description": "storage_medium field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          },
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132",
-            "prefLabel": "None",
-            "type": "OntologyClass",
-            "label": "None",
-            "source": "HRAVS"
-          }
-        ],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000034",
-            "name": "Storage Medium",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false,
-        "actions": []
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "storage_medium",
-      "schema:description": "What was the sample preserved in.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Storage medium",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "storage_method": {
-      "@id": "https://repo.metadatacenter.org/template-fields/3ad380a4-13ce-4c85-8c49-8c26e1409ba5",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "storage_method field schema",
-      "description": "storage_method field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132",
-            "prefLabel": "None",
-            "type": "OntologyClass",
-            "label": "None",
-            "source": "HRAVS"
-          },
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          }
-        ],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000003",
-            "name": "Material Storage Method",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false,
-        "actions": []
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "storage_method",
-      "schema:description": "The method by which the sample was stored, after preparation and before the assay was performed.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Storage method",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "suspension_entity_type": {
-      "@id": "https://repo.metadatacenter.org/template-fields/3c22f5ea-003e-4191-afad-93e2c66a608f",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "suspension_entity_type field schema",
-      "description": "suspension_entity_type field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000042",
-            "name": "Microanatomic Structure",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "suspension_entity_type",
-      "schema:description": "The type of single cell entity derived from isolation protocol.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Suspension entity type",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "tissue_weight_value": {
@@ -2097,15 +1338,114 @@
       ],
       "schema:name": "tissue_weight_value",
       "schema:description": "The weight of a tissue block or the piece of tissue used in a suspension.",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Tissue weight value",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "source_storage_duration_unit": {
+      "@id": "https://repo.metadatacenter.org/template-fields/d666d473-cf11-4025-bea0-2a4d77110044",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "source_storage_duration_unit field schema",
+      "description": "source_storage_duration_unit field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000031",
+            "name": "Source storage duration unit",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "source_storage_duration_unit",
+      "schema:description": "The time duration unit of measurement",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Source storage duration unit",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "tissue_weight_unit": {
@@ -2158,8 +1498,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000022",
-            "name": "Unit of Weight",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000221",
+            "name": "Tissue weight unit",
             "maxDepth": 0
           }
         ],
@@ -2196,15 +1536,622 @@
       },
       "schema:name": "tissue_weight_unit",
       "schema:description": "The tissue weight unit of measurement",
-      "pav:createdOn": "2023-08-03T13:08:40-07:00",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Tissue weight unit",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "preparation_medium": {
+      "@id": "https://repo.metadatacenter.org/template-fields/5eb04109-9e15-4889-bd11-ef93d7cb5f95",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "preparation_medium field schema",
+      "description": "preparation_medium field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000041",
+            "name": "Preparation medium",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "preparation_medium",
+      "schema:description": "The medium used during the sample preparation",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Preparation medium",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "preparation_condition": {
+      "@id": "https://repo.metadatacenter.org/template-fields/8711a6de-b6af-40e6-9e74-b2320bb18a71",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "preparation_condition field schema",
+      "description": "preparation_condition field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000051",
+            "name": "Preparation condition",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false,
+        "actions": []
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "preparation_condition",
+      "schema:description": "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation.",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Preparation condition",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "processing_time_unit": {
+      "@id": "https://repo.metadatacenter.org/template-fields/e78b2f98-e783-4bce-b251-0dae403c6b7b",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "processing_time_unit field schema",
+      "description": "processing_time_unit field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000071",
+            "name": "Processing time unit",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false,
+        "actions": [
+          {
+            "to": 0,
+            "action": "move",
+            "termUri": "http://purl.obolibrary.org/obo/UO_0000031",
+            "type": "OntologyClass",
+            "sourceUri": "template",
+            "source": "HRAVS"
+          }
+        ]
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "processing_time_unit",
+      "schema:description": "The time unit of measurement",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Processing time unit",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "storage_medium": {
+      "@id": "https://repo.metadatacenter.org/template-fields/5533c854-9d23-4919-a895-4a3d4d6442a8",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "storage_medium field schema",
+      "description": "storage_medium field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000081",
+            "name": "Storage medium",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false,
+        "actions": []
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "storage_medium",
+      "schema:description": "What was the sample preserved in.",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Storage medium",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "storage_method": {
+      "@id": "https://repo.metadatacenter.org/template-fields/3ad380a4-13ce-4c85-8c49-8c26e1409ba5",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "storage_method field schema",
+      "description": "storage_method field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000091",
+            "name": "Storage method",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false,
+        "actions": []
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "storage_method",
+      "schema:description": "The method by which the sample was stored, after preparation and before the assay was performed.",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Storage method",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "suspension_entity_type": {
+      "@id": "https://repo.metadatacenter.org/template-fields/3c22f5ea-003e-4191-afad-93e2c66a608f",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "suspension_entity_type field schema",
+      "description": "suspension_entity_type field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000251",
+            "name": "Suspension entity type",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "suspension_entity_type",
+      "schema:description": "The type of single cell entity derived from isolation protocol.",
+      "pav:createdOn": "2023-09-08T20:02:33-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Suspension entity type",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -2227,21 +2174,21 @@
     "suspension_enriched_target",
     "notes",
     "metadata_schema_id",
+    "tissue_weight_value",
     "source_storage_duration_unit",
+    "tissue_weight_unit",
     "preparation_medium",
     "preparation_condition",
     "processing_time_unit",
     "storage_medium",
     "storage_method",
-    "suspension_entity_type",
-    "tissue_weight_value",
-    "tissue_weight_unit"
+    "suspension_entity_type"
   ],
   "schema:name": "Sample Suspension",
   "schema:description": "The sample suspension metadata schema",
   "pav:createdOn": "2023-04-11T11:13:40-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-08-03T13:08:40-07:00",
+  "pav:lastUpdatedOn": "2023-09-08T20:02:33-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

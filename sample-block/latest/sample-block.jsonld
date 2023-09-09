@@ -37,7 +37,7 @@
       "source_storage_duration_value",
       "source_storage_duration_unit",
       "weight_value",
-      "weight_unit",
+      "tissue_weight_unit",
       "volume_value",
       "volume_unit",
       "pathology_distance_value",
@@ -66,7 +66,7 @@
       "metadata_schema_id": "metadata_schema_id",
       "header_info": "header_info",
       "source_storage_duration_unit": "source_storage_duration_unit",
-      "weight_unit": "tissue_weight_unit",
+      "tissue_weight_unit": "tissue_weight_unit",
       "volume_unit": "volume_unit",
       "pathology_distance_unit": "pathology_distance_unit",
       "preparation_medium": "preparation_medium",
@@ -88,7 +88,7 @@
       "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.",
       "header_info": "",
       "source_storage_duration_unit": "The time duration unit of measurement",
-      "weight_unit": "The tissue weight unit of measurement",
+      "tissue_weight_unit": "The tissue weight unit of measurement",
       "volume_unit": "The volume unit of measurement",
       "pathology_distance_unit": "The distance unit of measurement",
       "preparation_medium": "The medium used during the sample preparation",
@@ -306,47 +306,47 @@
         },
         "source_storage_duration_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/41e39bca-0508-4799-a109-a3a6126a5439"
+            "https://schema.metadatacenter.org/properties/4c40148e-9c81-49d4-8170-13a30ea22bd9"
           ]
         },
-        "weight_unit": {
+        "tissue_weight_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/c6529974-936b-4abb-97dd-0be56dfe0cdf"
+            "https://schema.metadatacenter.org/properties/12c4f546-fd52-4453-a07e-bbbdc1e12a9c"
           ]
         },
         "volume_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/414c7237-2ec2-4127-88f0-8ff96d69261f"
+            "https://schema.metadatacenter.org/properties/826ab0f8-c8b5-459d-98b1-bcca36018611"
           ]
         },
         "pathology_distance_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/eaccfdaa-f6ec-4d1d-8510-1b5a57cc7e04"
+            "https://schema.metadatacenter.org/properties/a7942a7b-c260-41e1-8bd4-77c9068d8cb4"
           ]
         },
         "preparation_medium": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/04fd5d88-805a-465b-88fa-ec63e82a81c7"
+            "https://schema.metadatacenter.org/properties/a6c672b0-80e8-457b-897c-d499a63ca8d1"
           ]
         },
         "preparation_condition": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/b958e13e-8ba3-4d72-8089-e5d3487c6dc7"
+            "https://schema.metadatacenter.org/properties/bbc2c58e-46dd-4b68-a6e7-e2a0334e2c12"
           ]
         },
         "processing_time_unit": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/adafb513-5cd9-4b38-a835-6a720c3b8b6b"
+            "https://schema.metadatacenter.org/properties/6cc50b5e-0fe4-43b5-ac85-a6ff8c95dba3"
           ]
         },
         "storage_medium": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/1681d0db-55d8-4784-9fca-c00e2339a0c1"
+            "https://schema.metadatacenter.org/properties/2c3df404-4117-4f64-b23c-95ddd0a9d128"
           ]
         },
         "storage_method": {
           "enum": [
-            "https://schema.metadatacenter.org/properties/5bed6bc8-39df-4300-9aac-2054859ebf09"
+            "https://schema.metadatacenter.org/properties/1d036494-81e8-481f-8f0f-c0fbc3973c5a"
           ]
         }
       },
@@ -373,7 +373,7 @@
         "notes",
         "metadata_schema_id",
         "source_storage_duration_unit",
-        "weight_unit",
+        "tissue_weight_unit",
         "volume_unit",
         "pathology_distance_unit",
         "preparation_medium",
@@ -531,9 +531,9 @@
       ],
       "schema:name": "sample_id",
       "schema:description": "The HuBMAP ID for the sample assigned by the ingest portal. Example: HBM743.CKJW.876",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -612,9 +612,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "How long was the source material (parent) stored, prior to this sample being processed.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -693,9 +693,9 @@
       ],
       "schema:name": "tissue_weight_value",
       "schema:description": "The weight of a tissue block or the piece of tissue used in a suspension.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -774,9 +774,9 @@
       ],
       "schema:name": "volume_value",
       "schema:description": "The volume of the sample block",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -855,9 +855,9 @@
       ],
       "schema:name": "pathology_distance_value",
       "schema:description": "If a surgical sample, how far from the pathology was the sample obtained.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -936,9 +936,9 @@
       ],
       "schema:name": "processing_time_value",
       "schema:description": "How long the tissue was being handled before the initial preservation",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1027,9 +1027,9 @@
       ],
       "schema:name": "quality_criteria",
       "schema:description": "For example, RIN: 8.7. For suspensions, measured by visual inspection prior to cell lysis or defined by known parameters such as wells with several cells or no cells. This can be captured at a high level. \"OK\" or \"not OK\", or with more specificity such as \"debris\", \"clump\", \"low clump\".",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1118,9 +1118,9 @@
       ],
       "schema:name": "histological_report",
       "schema:description": "Histopathological reporting of key variables that are important for the tissue (absence of necrosis, comment on composition, significant pathology description, high level inflammation/fibrosis assessment, etc.)",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1209,9 +1209,9 @@
       ],
       "schema:name": "notes",
       "schema:description": "Miscellaneous details about the sample, not captured in the existing metadata fields.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1262,7 +1262,7 @@
         "inputType": "textfield"
       },
       "_valueConstraints": {
-        "requiredValue": false,
+        "requiredValue": true,
         "defaultValue": "22bc762a-5020-419d-b170-24253ed9e8d9"
       },
       "properties": {
@@ -1301,9 +1301,9 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1327,9 +1327,9 @@
         "inputType": "richtext",
         "_content": "&lt;p&gt;The sample block dataset metadata specification outlines the standardized format for recording essential information about biological samples, such as origin, preparation, and storage conditions, ensuring accurate documentation and facilitating data sharing and analysis.&lt;/p&gt;\n\n&lt;p style=\"background-color: rgb(255, 255, 255);\"&gt;&lt;strong&gt;Metadata Schema ID:&lt;/strong&gt;&amp;nbsp;22bc762a-5020-419d-b170-24253ed9e8d9&lt;/p&gt;\n\n&lt;p style=\"background-color: rgb(255, 255, 255);\"&gt;&lt;strong&gt;Schema Version:&amp;nbsp;&lt;/strong&gt;2.0.0&lt;/p&gt;\n"
       },
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "schema:description": "",
@@ -1389,8 +1389,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000023",
-            "name": "Unit of Time",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000031",
+            "name": "Source storage duration unit",
             "maxDepth": 0
           }
         ],
@@ -1427,9 +1427,9 @@
       },
       "schema:name": "source_storage_duration_unit",
       "schema:description": "The time duration unit of measurement",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1438,7 +1438,7 @@
       "skos:prefLabel": "Source storage duration unit",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
-    "weight_unit": {
+    "tissue_weight_unit": {
       "@id": "https://repo.metadatacenter.org/template-fields/4fabd371-2220-4bbc-a556-e58dc34412bd",
       "@type": "https://schema.metadatacenter.org/core/TemplateField",
       "@context": {
@@ -1488,8 +1488,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000022",
-            "name": "Unit of Weight",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000221",
+            "name": "Tissue weight unit",
             "maxDepth": 0
           }
         ],
@@ -1526,9 +1526,9 @@
       },
       "schema:name": "tissue_weight_unit",
       "schema:description": "The tissue weight unit of measurement",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1587,8 +1587,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000020",
-            "name": "Unit of Volume",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000201",
+            "name": "Volume unit",
             "maxDepth": 0
           }
         ],
@@ -1625,9 +1625,9 @@
       },
       "schema:name": "volume_unit",
       "schema:description": "The volume unit of measurement",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1686,8 +1686,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000019",
-            "name": "Unit of Length",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000241",
+            "name": "Pathology distance unit",
             "maxDepth": 0
           }
         ],
@@ -1724,9 +1724,9 @@
       },
       "schema:name": "pathology_distance_unit",
       "schema:description": "The distance unit of measurement",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1780,28 +1780,13 @@
         "requiredValue": true,
         "ontologies": [],
         "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          },
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132",
-            "prefLabel": "None",
-            "type": "OntologyClass",
-            "label": "None",
-            "source": "HRAVS"
-          }
-        ],
+        "classes": [],
         "branches": [
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000033",
-            "name": "Preparation Medium",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000041",
+            "name": "Preparation medium",
             "maxDepth": 0
           }
         ],
@@ -1838,9 +1823,9 @@
       },
       "schema:name": "preparation_medium",
       "schema:description": "The medium used during the sample preparation",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1894,21 +1879,13 @@
         "requiredValue": true,
         "ontologies": [],
         "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          }
-        ],
+        "classes": [],
         "branches": [
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000003",
-            "name": "Material Storage Method",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000051",
+            "name": "Preparation condition",
             "maxDepth": 0
           }
         ],
@@ -1946,9 +1923,9 @@
       },
       "schema:name": "preparation_condition",
       "schema:description": "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2007,8 +1984,8 @@
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000023",
-            "name": "Unit of Time",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000071",
+            "name": "Processing time unit",
             "maxDepth": 0
           }
         ],
@@ -2055,9 +2032,9 @@
       },
       "schema:name": "processing_time_unit",
       "schema:description": "The time unit of measurement",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2111,28 +2088,13 @@
         "requiredValue": true,
         "ontologies": [],
         "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          },
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132",
-            "prefLabel": "None",
-            "type": "OntologyClass",
-            "label": "None",
-            "source": "HRAVS"
-          }
-        ],
+        "classes": [],
         "branches": [
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000034",
-            "name": "Storage Medium",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000081",
+            "name": "Storage medium",
             "maxDepth": 0
           }
         ],
@@ -2170,9 +2132,9 @@
       },
       "schema:name": "storage_medium",
       "schema:description": "What was the sample preserved in.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2226,28 +2188,13 @@
         "requiredValue": true,
         "ontologies": [],
         "valueSets": [],
-        "classes": [
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132",
-            "prefLabel": "None",
-            "type": "OntologyClass",
-            "label": "None",
-            "source": "HRAVS"
-          },
-          {
-            "uri": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998",
-            "prefLabel": "Unknown",
-            "type": "OntologyClass",
-            "label": "Unknown",
-            "source": "HRAVS"
-          }
-        ],
+        "classes": [],
         "branches": [
           {
             "source": "undefined (HRAVS)",
             "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_0000003",
-            "name": "Material Storage Method",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000091",
+            "name": "Storage method",
             "maxDepth": 0
           }
         ],
@@ -2285,9 +2232,9 @@
       },
       "schema:name": "storage_method",
       "schema:description": "The method by which the sample was stored, after preparation and before the assay was performed.",
-      "pav:createdOn": "2023-08-03T12:51:17-07:00",
+      "pav:createdOn": "2023-09-08T19:33:39-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+      "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2318,7 +2265,7 @@
     "notes",
     "metadata_schema_id",
     "source_storage_duration_unit",
-    "weight_unit",
+    "tissue_weight_unit",
     "volume_unit",
     "pathology_distance_unit",
     "preparation_medium",
@@ -2331,7 +2278,7 @@
   "schema:description": "The sample block metadata specification outlines the standardized format for recording essential information about biological samples, such as origin, preparation, and storage conditions, ensuring accurate documentation and facilitating data sharing and analysis.",
   "pav:createdOn": "2023-04-11T11:00:55-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-08-03T12:51:17-07:00",
+  "pav:lastUpdatedOn": "2023-09-08T19:33:39-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

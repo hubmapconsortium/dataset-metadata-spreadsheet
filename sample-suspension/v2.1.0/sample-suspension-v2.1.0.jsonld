@@ -31,7 +31,6 @@
   "_ui": {
     "pages": [],
     "order": [
-      "header_info",
       "source_id",
       "sample_id",
       "lab_id",
@@ -64,10 +63,7 @@
       "suspension_enriched_target": "suspension_enriched_target",
       "notes": "notes",
       "metadata_schema_id": "metadata_schema_id",
-      "header_info": "header_info",
-      "tissue_weight_value": "tissue_weight_value",
       "source_storage_duration_unit": "source_storage_duration_unit",
-      "tissue_weight_unit": "tissue_weight_unit",
       "preparation_medium": "preparation_medium",
       "preparation_condition": "preparation_condition",
       "processing_time_unit": "processing_time_unit",
@@ -76,7 +72,9 @@
       "suspension_entity_type": "suspension_entity_type",
       "source_id": "source_id",
       "lab_id": "lab_id",
-      "preparation_protocol_doi": "preparation_protocol_doi"
+      "preparation_protocol_doi": "preparation_protocol_doi",
+      "tissue_weight_value": "tissue_weight_value",
+      "tissue_weight_unit": "tissue_weight_unit"
     },
     "propertyDescriptions": {
       "sample_id": "The HuBMAP ID for the sample assigned by the ingest portal. Example: HBM743.CKJW.876",
@@ -89,9 +87,7 @@
       "notes": "Miscellaneous details about the sample, not captured in the existing metadata fields.",
       "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.",
       "header_info": "",
-      "tissue_weight_value": "The weight of a tissue block or the piece of tissue used in a suspension.",
       "source_storage_duration_unit": "The time duration unit of measurement",
-      "tissue_weight_unit": "The tissue weight unit of measurement",
       "preparation_medium": "The medium used during the sample preparation",
       "preparation_condition": "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation.",
       "processing_time_unit": "The time unit of measurement",
@@ -100,7 +96,9 @@
       "suspension_entity_type": "The type of single cell entity derived from isolation protocol.",
       "source_id": "Unique identifier for the source (parent) from which the sample was taken. An example value would be HBM122.EFGH.789.",
       "lab_id": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
-      "preparation_protocol_doi": "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file."
+      "preparation_protocol_doi": "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file.",
+      "tissue_weight_value": "The weight of a tissue block or the piece of tissue used in a suspension. Knowing the weight of the parent block and tissue used in a suspension, allows us to compute what percentage of the block was used for the suspension.",
+      "tissue_weight_unit": "The tissue weight unit of measurement"
     }
   },
   "properties": {
@@ -304,19 +302,9 @@
             "https://schema.metadatacenter.org/properties/98d9bfb5-4682-44bb-82b7-2ecb49c661ea"
           ]
         },
-        "tissue_weight_value": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/a02d6136-adba-4d90-9feb-63cb305ebf38"
-          ]
-        },
         "source_storage_duration_unit": {
           "enum": [
             "https://schema.metadatacenter.org/properties/dad51671-e7d4-4a9b-9c7e-6559c6207a28"
-          ]
-        },
-        "tissue_weight_unit": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/1a7a59ad-dea5-4d2a-9351-0a808eae18d5"
           ]
         },
         "preparation_medium": {
@@ -363,6 +351,16 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/4f21ed51-812b-42d9-bcca-a7db4febb3cc"
           ]
+        },
+        "tissue_weight_value": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/4cf3151c-6478-4e4f-9cdb-cbe600089393"
+          ]
+        },
+        "tissue_weight_unit": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/d6e52ab9-7b2b-42cf-b8e0-7f3915c6c7bc"
+          ]
         }
       },
       "required": [
@@ -386,9 +384,7 @@
         "suspension_enriched_target",
         "notes",
         "metadata_schema_id",
-        "tissue_weight_value",
         "source_storage_duration_unit",
-        "tissue_weight_unit",
         "preparation_medium",
         "preparation_condition",
         "processing_time_unit",
@@ -397,7 +393,9 @@
         "suspension_entity_type",
         "source_id",
         "lab_id",
-        "preparation_protocol_doi"
+        "preparation_protocol_doi",
+        "tissue_weight_value",
+        "tissue_weight_unit"
       ],
       "additionalProperties": false
     },
@@ -548,9 +546,9 @@
       ],
       "schema:name": "sample_id",
       "schema:description": "The HuBMAP ID for the sample assigned by the ingest portal. Example: HBM743.CKJW.876",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -629,9 +627,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "How long was the source material (parent) stored, prior to this sample being processed.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -710,9 +708,9 @@
       ],
       "schema:name": "processing_time_value",
       "schema:description": "How long the tissue was being handled before the initial preservation",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -801,9 +799,9 @@
       ],
       "schema:name": "quality_criteria",
       "schema:description": "For example, RIN: 8.7. For suspensions, measured by visual inspection prior to cell lysis or defined by known parameters such as wells with several cells or no cells. This can be captured at a high level. \"OK\" or \"not OK\", or with more specificity such as \"debris\", \"clump\", \"low clump\".",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -882,9 +880,9 @@
       ],
       "schema:name": "suspension_entity_count",
       "schema:description": "Total number of cell/nuclei yielded post dissociation and enrichment.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -982,9 +980,9 @@
       ],
       "schema:name": "is_suspension_enriched",
       "schema:description": "Was the cell/nuclei population enriched?",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1073,9 +1071,9 @@
       ],
       "schema:name": "suspension_enriched_target",
       "schema:description": "If the suspension was enriched, then this is the target of the enrichment.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1164,9 +1162,9 @@
       ],
       "schema:name": "notes",
       "schema:description": "Miscellaneous details about the sample, not captured in the existing metadata fields.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1256,123 +1254,15 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Metadata Schema ID",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "header_info": {
-      "@type": "https://schema.metadatacenter.org/core/StaticTemplateField",
-      "@context": {
-        "schema": "http://schema.org/",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#"
-      },
-      "type": "object",
-      "title": "header_info field schema",
-      "description": "header_info field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "richtext",
-        "_content": "&lt;p&gt;The sample suspension dataset metadata specification outlines the standardized format for recording essential information about biological samples, such as origin, preparation, and storage conditions, ensuring accurate documentation and facilitating data sharing and analysis.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Metadata Schema ID:&lt;/strong&gt;&amp;nbsp;ea4fb93c-508e-4ec4-8a4b-89492ba68088&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Schema Version:&lt;/strong&gt;&amp;nbsp;2.1.0&lt;/p&gt;\n"
-      },
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "schema:description": "",
-      "additionalProperties": false,
-      "schema:name": "header_info",
-      "skos:prefLabel": "Header Info",
-      "@id": "https://repo.metadatacenter.org/template-fields/178e1b87-138e-4bfa-8015-d89e5b027a45",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "tissue_weight_value": {
-      "@id": "https://repo.metadatacenter.org/template-fields/4624227f-928f-4adc-8119-05d5069f2ca9",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "tissue_weight_value field schema",
-      "description": "tissue_weight_value field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "numeric"
-      },
-      "_valueConstraints": {
-        "requiredValue": false,
-        "numberType": "xsd:decimal",
-        "minValue": 0
-      },
-      "properties": {
-        "@value": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@type": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ],
-      "schema:name": "tissue_weight_value",
-      "schema:description": "The weight of a tissue block or the piece of tissue used in a suspension.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Tissue weight value",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "source_storage_duration_unit": {
@@ -1463,114 +1353,15 @@
       },
       "schema:name": "source_storage_duration_unit",
       "schema:description": "The time duration unit of measurement",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Source storage duration unit",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "tissue_weight_unit": {
-      "@id": "https://repo.metadatacenter.org/template-fields/4fabd371-2220-4bbc-a556-e58dc34412bd",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "tissue_weight_unit field schema",
-      "description": "tissue_weight_unit field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": false,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000221",
-            "name": "Tissue weight unit",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "tissue_weight_unit",
-      "schema:description": "The tissue weight unit of measurement",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Tissue weight unit",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "preparation_medium": {
@@ -1661,9 +1452,9 @@
       },
       "schema:name": "preparation_medium",
       "schema:description": "The medium used during the sample preparation",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1761,9 +1552,9 @@
       },
       "schema:name": "preparation_condition",
       "schema:description": "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1870,9 +1661,9 @@
       },
       "schema:name": "processing_time_unit",
       "schema:description": "The time unit of measurement",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1970,9 +1761,9 @@
       },
       "schema:name": "storage_medium",
       "schema:description": "What was the sample preserved in.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2070,9 +1861,9 @@
       },
       "schema:name": "storage_method",
       "schema:description": "The method by which the sample was stored, after preparation and before the assay was performed.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2169,9 +1960,9 @@
       },
       "schema:name": "suspension_entity_type",
       "schema:description": "The type of single cell entity derived from isolation protocol.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2260,9 +2051,9 @@
       ],
       "schema:name": "source_id",
       "schema:description": "Unique identifier for the source (parent) from which the sample was taken. An example value would be HBM122.EFGH.789.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2351,9 +2142,9 @@
       ],
       "schema:name": "lab_id",
       "schema:description": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2442,15 +2233,195 @@
       ],
       "schema:name": "preparation_protocol_doi",
       "schema:description": "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file.",
-      "pav:createdOn": "2023-09-22T12:55:03-07:00",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Preparation protocol DOI",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "tissue_weight_value": {
+      "@id": "https://repo.metadatacenter.org/template-fields/4624227f-928f-4adc-8119-05d5069f2ca9",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "tissue_weight_value field schema",
+      "description": "tissue_weight_value field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "numeric"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "numberType": "xsd:decimal",
+        "minValue": 0
+      },
+      "properties": {
+        "@value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@type": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ],
+      "schema:name": "tissue_weight_value",
+      "schema:description": "The weight of a tissue block or the piece of tissue used in a suspension. Knowing the weight of the parent block and tissue used in a suspension, allows us to compute what percentage of the block was used for the suspension.",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Tissue weight value",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "tissue_weight_unit": {
+      "@id": "https://repo.metadatacenter.org/template-fields/4fabd371-2220-4bbc-a556-e58dc34412bd",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "tissue_weight_unit field schema",
+      "description": "tissue_weight_unit field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000221",
+            "name": "Tissue weight unit",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "tissue_weight_unit",
+      "schema:description": "The tissue weight unit of measurement",
+      "pav:createdOn": "2023-10-03T09:50:46-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Tissue weight unit",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -2473,9 +2444,7 @@
     "suspension_enriched_target",
     "notes",
     "metadata_schema_id",
-    "tissue_weight_value",
     "source_storage_duration_unit",
-    "tissue_weight_unit",
     "preparation_medium",
     "preparation_condition",
     "processing_time_unit",
@@ -2484,13 +2453,15 @@
     "suspension_entity_type",
     "source_id",
     "lab_id",
-    "preparation_protocol_doi"
+    "preparation_protocol_doi",
+    "tissue_weight_value",
+    "tissue_weight_unit"
   ],
   "schema:name": "Sample Suspension",
   "schema:description": "The sample suspension metadata schema",
   "pav:createdOn": "2023-09-20T15:39:35-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-09-22T12:55:03-07:00",
+  "pav:lastUpdatedOn": "2023-10-03T09:50:46-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

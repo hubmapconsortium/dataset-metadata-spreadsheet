@@ -84,11 +84,11 @@
       "preparation_instrument_model": "preparation_instrument_model",
       "preparation_matrix": "preparation_matrix",
       "metadata_schema_id": "metadata_schema_id",
-      "ms_ionization_technique": "ms_ionization_technique",
-      "ms_scan_mode": "ms_scan_mode",
       "mass_to_charge_range_low_value": "mass_to_charge_range_low_value",
       "mass_to_charge_range_high_value": "mass_to_charge_range_high_value",
-      "analysis_protocol_doi": "analysis_protocol_doi"
+      "analysis_protocol_doi": "analysis_protocol_doi",
+      "ms_ionization_technique": "ms_ionization_technique",
+      "ms_scan_mode": "ms_scan_mode"
     },
     "propertyDescriptions": {
       "lab_id": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
@@ -114,11 +114,11 @@
       "preparation_instrument_model": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
       "preparation_matrix": "The matrix is a compound of crystallized molecules that acts like a buffer between the sample and the ionizing probe. It also helps ionize the sample, carrying it along the flight tube so it can be detected.",
       "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "ms_ionization_technique": "The ionization approach (i.e., sample probing method) for performing imaging mass spectrometry.",
-      "ms_scan_mode": "MS (mass spectrometry) scan mode refers to the number of steps in the separation of fragments.",
       "mass_to_charge_range_low_value": "The low value of the scanned mass-to-charge range, for MS1. (unitless)",
       "mass_to_charge_range_high_value": "The high value of the scanned mass-to-charge range, for MS1. (unitless)",
-      "analysis_protocol_doi": "A DOI to a protocols.io protocol describing the software and database(s) used to process the raw data. Example: https://dx.doi.org/10.17504/protocols.io.bsu5ney6"
+      "analysis_protocol_doi": "A DOI to a protocols.io protocol describing the software and database(s) used to process the raw data. Example: https://dx.doi.org/10.17504/protocols.io.bsu5ney6",
+      "ms_ionization_technique": "The ionization approach (i.e., sample probing method) for performing imaging mass spectrometry.",
+      "ms_scan_mode": "MS (mass spectrometry) scan mode refers to the number of steps in the separation of fragments."
     }
   },
   "properties": {
@@ -392,16 +392,6 @@
             "https://schema.metadatacenter.org/properties/500d2073-f1d9-4eda-a80b-71f144df948a"
           ]
         },
-        "ms_ionization_technique": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/967dd775-3e91-49c6-9ff8-cb8f767d5939"
-          ]
-        },
-        "ms_scan_mode": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/13d5689c-e549-4d63-8d2e-2f0fa9159d72"
-          ]
-        },
         "mass_to_charge_range_low_value": {
           "enum": [
             "https://schema.metadatacenter.org/properties/22cb5e66-ff25-456c-9555-88885a59ebfd"
@@ -415,6 +405,16 @@
         "analysis_protocol_doi": {
           "enum": [
             "https://schema.metadatacenter.org/properties/5ff88e1f-3c12-4ea2-82a0-30e354f30952"
+          ]
+        },
+        "ms_ionization_technique": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/cfd0569d-9dc5-4bd2-9ff8-eb67f73583e3"
+          ]
+        },
+        "ms_scan_mode": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/7cd4dab6-9ff2-4d19-91e2-1ace34414568"
           ]
         }
       },
@@ -453,11 +453,11 @@
         "preparation_instrument_model",
         "preparation_matrix",
         "metadata_schema_id",
-        "ms_ionization_technique",
-        "ms_scan_mode",
         "mass_to_charge_range_low_value",
         "mass_to_charge_range_high_value",
-        "analysis_protocol_doi"
+        "analysis_protocol_doi",
+        "ms_ionization_technique",
+        "ms_scan_mode"
       ],
       "additionalProperties": false
     },
@@ -608,9 +608,9 @@
       ],
       "schema:name": "lab_id",
       "schema:description": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -707,9 +707,9 @@
       },
       "schema:name": "dataset_type",
       "schema:description": "The specific type of dataset being produced.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -806,9 +806,9 @@
       },
       "schema:name": "analyte_class",
       "schema:description": "Analytes are the target molecules being measured with the assay.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -905,9 +905,9 @@
       },
       "schema:name": "acquisition_instrument_vendor",
       "schema:description": "An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1004,9 +1004,9 @@
       },
       "schema:name": "acquisition_instrument_model",
       "schema:description": "Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1085,9 +1085,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "How long was the source material (parent) stored, prior to this sample being processed.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1184,9 +1184,9 @@
       },
       "schema:name": "source_storage_duration_unit",
       "schema:description": "The time duration unit of measurement",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1265,9 +1265,9 @@
       ],
       "schema:name": "time_since_acquisition_instrument_calibration_value",
       "schema:description": "The amount of time since the acqusition instrument was last serviced by the vendor. This provides a metric for assessing drift in data capture.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1364,9 +1364,9 @@
       },
       "schema:name": "time_since_acquisition_instrument_calibration_unit",
       "schema:description": "The time unit of measurement",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1456,9 +1456,9 @@
       ],
       "schema:name": "parent_sample_id",
       "schema:description": "HuBMAP ID of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM765.TRHD.452",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1542,9 +1542,9 @@
       },
       "schema:name": "preparation_protocol_doi",
       "schema:description": "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1643,9 +1643,9 @@
       ],
       "schema:name": "is_targeted",
       "schema:description": "Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay (\"Yes\" or \"No\"). The CODEX analyte is protein.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1735,9 +1735,9 @@
       ],
       "schema:name": "contributors_path",
       "schema:description": "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"./extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1827,9 +1827,9 @@
       ],
       "schema:name": "data_path",
       "schema:description": "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1926,9 +1926,9 @@
       },
       "schema:name": "mass_analysis_polarity",
       "schema:description": "The polarity of the mass analysis (positive or negative ion modes).",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2006,9 +2006,9 @@
       ],
       "schema:name": "mass_resolving_power",
       "schema:description": "The mass resolving power m/∆m, where ∆m is defined as the full width at half-maximum (FWHM) for a given peak with a specified mass-to-charge (m/z). (unitless)",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2086,9 +2086,9 @@
       ],
       "schema:name": "mass_to_charge_resolving_power",
       "schema:description": "The peak (m/z) used to calculate the resolving power.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2185,9 +2185,9 @@
       },
       "schema:name": "ion_mobility",
       "schema:description": "Specifies which technology was used for ion mobility spectrometry. Technologies for measuring ion mobility: Traveling Wave Ion Mobility Spectrometry (TWIMS), Trapped Ion Mobility Spectrometry (TIMS), High Field Asymmetric waveform ion Mobility Spectrometry (FAIMS), Drift Tube Ion Mobility Spectrometry (DTIMS), Structures for Lossless Ion Manipulations (SLIM), and cyclic Ion Mobility Spectrometry (cIMS).",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2284,9 +2284,9 @@
       },
       "schema:name": "matrix_deposition_method",
       "schema:description": "Common methods of depositing matrix for assisting in desorption and ionization in imaging mass spectrometry include robotic spotting, electrospray deposition, and sublimation.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2383,9 +2383,9 @@
       },
       "schema:name": "preparation_instrument_vendor",
       "schema:description": "The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2482,9 +2482,9 @@
       },
       "schema:name": "preparation_instrument_model",
       "schema:description": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2581,9 +2581,9 @@
       },
       "schema:name": "preparation_matrix",
       "schema:description": "The matrix is a compound of crystallized molecules that acts like a buffer between the sample and the ionizing probe. It also helps ionize the sample, carrying it along the flight tube so it can be detected.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2673,213 +2673,15 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Metadata schema ID",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "ms_ionization_technique": {
-      "@id": "https://repo.metadatacenter.org/template-fields/ecb902f3-a3ac-4edb-be2f-4eb53d48809e",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "ms_ionization_technique field schema",
-      "description": "ms_ionization_technique field schema generated by the CEDAR Template Editor 2.6.44",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1001361",
-            "name": "Mass spectrometry ionization technique",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "ms_ionization_technique",
-      "schema:description": "The ionization approach (i.e., sample probing method) for performing imaging mass spectrometry.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "MS ionization technique",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "ms_scan_mode": {
-      "@id": "https://repo.metadatacenter.org/template-fields/1939113c-24a8-4ff6-93be-dfb69225ab36",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "ms_scan_mode field schema",
-      "description": "ms_scan_mode field schema generated by the CEDAR Template Editor 2.6.44",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "ontologies": [],
-        "valueSets": [],
-        "classes": [],
-        "branches": [
-          {
-            "source": "undefined (HRAVS)",
-            "acronym": "HRAVS",
-            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1001431",
-            "name": "Mass spectrometry scan mode",
-            "maxDepth": 0
-          }
-        ],
-        "multipleChoice": false
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "schema:name": "ms_scan_mode",
-      "schema:description": "MS (mass spectrometry) scan mode refers to the number of steps in the separation of fragments.",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "MS scan mode",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "mass_to_charge_range_low_value": {
@@ -2951,9 +2753,9 @@
       ],
       "schema:name": "mass_to_charge_range_low_value",
       "schema:description": "The low value of the scanned mass-to-charge range, for MS1. (unitless)",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3031,9 +2833,9 @@
       ],
       "schema:name": "mass_to_charge_range_high_value",
       "schema:description": "The high value of the scanned mass-to-charge range, for MS1. (unitless)",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3116,9 +2918,9 @@
       },
       "schema:name": "analysis_protocol_doi",
       "schema:description": "A DOI to a protocols.io protocol describing the software and database(s) used to process the raw data. Example: https://dx.doi.org/10.17504/protocols.io.bsu5ney6",
-      "pav:createdOn": "2023-10-18T11:56:47-07:00",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3127,6 +2929,204 @@
       "skos:prefLabel": "Analysis protocol DOI",
       "pav:derivedFrom": "https://repo.metadatacenter.org/template-fields/6c14b186-47e0-4e2c-a5f6-d8ac3cca10f2",
       "@id": "https://repo.metadatacenter.org/template-fields/84f1f82a-36de-4f74-8908-3f1fa2275b3b",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "ms_ionization_technique": {
+      "@id": "https://repo.metadatacenter.org/template-fields/ecb902f3-a3ac-4edb-be2f-4eb53d48809e",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "ms_ionization_technique field schema",
+      "description": "ms_ionization_technique field schema generated by the CEDAR Template Editor 2.6.44",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1001361",
+            "name": "MS ionization technique",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "ms_ionization_technique",
+      "schema:description": "The ionization approach (i.e., sample probing method) for performing imaging mass spectrometry.",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "MS ionization technique",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "ms_scan_mode": {
+      "@id": "https://repo.metadatacenter.org/template-fields/1939113c-24a8-4ff6-93be-dfb69225ab36",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "ms_scan_mode field schema",
+      "description": "ms_scan_mode field schema generated by the CEDAR Template Editor 2.6.44",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1001431",
+            "name": "MS scan mode",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "ms_scan_mode",
+      "schema:description": "MS (mass spectrometry) scan mode refers to the number of steps in the separation of fragments.",
+      "pav:createdOn": "2023-10-19T14:22:57-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "MS scan mode",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -3163,17 +3163,17 @@
     "preparation_instrument_model",
     "preparation_matrix",
     "metadata_schema_id",
-    "ms_ionization_technique",
-    "ms_scan_mode",
     "mass_to_charge_range_low_value",
     "mass_to_charge_range_high_value",
-    "analysis_protocol_doi"
+    "analysis_protocol_doi",
+    "ms_ionization_technique",
+    "ms_scan_mode"
   ],
   "schema:name": "MALDI",
   "schema:description": "",
   "pav:createdOn": "2023-10-13T13:28:12-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-10-18T11:56:47-07:00",
+  "pav:lastUpdatedOn": "2023-10-19T14:22:57-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

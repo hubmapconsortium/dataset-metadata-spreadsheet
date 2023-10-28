@@ -50,7 +50,6 @@
       "metadata_schema_id"
     ],
     "propertyLabels": {
-      "parent_sample_id": "parent_sample_id",
       "lab_id": "lab_id",
       "preparation_protocol_doi": "preparation_protocol_doi",
       "dataset_type": "dataset_type",
@@ -66,10 +65,10 @@
       "capture_area_id": "capture_area_id",
       "permeabilization_time_value": "permeabilization_time_value",
       "permeabilization_time_unit": "permeabilization_time_unit",
-      "metadata_schema_id": "metadata_schema_id"
+      "metadata_schema_id": "metadata_schema_id",
+      "parent_sample_id": "parent_sample_id"
     },
     "propertyDescriptions": {
-      "parent_sample_id": "HuBMAP ID of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM765.TRHD.452",
       "lab_id": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
       "preparation_protocol_doi": "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
       "dataset_type": "The specific type of dataset being produced.",
@@ -85,7 +84,8 @@
       "capture_area_id": "Which capture area on the slide was used. For Visium this would be [A1, B1, C1, D1]. For HiFi this would be the lane on the flowcell.",
       "permeabilization_time_value": "Permeabilization time used for this tissue section.",
       "permeabilization_time_unit": "The unit for the permeabilization time.",
-      "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+      "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
+      "parent_sample_id": "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
     }
   },
   "properties": {
@@ -244,11 +244,6 @@
             }
           }
         },
-        "parent_sample_id": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/e2cf1d20-5154-4114-9446-be0dc1f35e1c"
-          ]
-        },
         "lab_id": {
           "enum": [
             "https://schema.metadatacenter.org/properties/f3b02a88-f76b-4c8f-9142-a232c9918f26"
@@ -328,6 +323,11 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/efa9cf30-4aed-4666-956b-53a917068ea7"
           ]
+        },
+        "parent_sample_id": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/51c215af-886b-4270-a2ab-167e8e59818a"
+          ]
         }
       },
       "required": [
@@ -342,7 +342,6 @@
         "pav:createdBy",
         "pav:lastUpdatedOn",
         "oslc:modifiedBy",
-        "parent_sample_id",
         "lab_id",
         "preparation_protocol_doi",
         "dataset_type",
@@ -358,7 +357,8 @@
         "capture_area_id",
         "permeabilization_time_value",
         "permeabilization_time_unit",
-        "metadata_schema_id"
+        "metadata_schema_id",
+        "parent_sample_id"
       ],
       "additionalProperties": false
     },
@@ -428,98 +428,6 @@
         "null"
       ],
       "format": "uri"
-    },
-    "parent_sample_id": {
-      "@id": "https://repo.metadatacenter.org/template-fields/3cd0be1e-4770-4fa1-8976-12eb3934916d",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "Untitled field schema",
-      "description": "Untitled field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "regex": "^HBM\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*HBM\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "@value": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      },
-      "required": [
-        "@value"
-      ],
-      "schema:name": "parent_sample_id",
-      "schema:description": "HuBMAP ID of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM765.TRHD.452",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Parent sample ID",
-      "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "lab_id": {
       "@id": "https://repo.metadatacenter.org/template-fields/bbc141a6-0e81-4cba-8651-8b61a623bd6c",
@@ -601,9 +509,9 @@
       ],
       "schema:name": "lab_id",
       "schema:description": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -687,9 +595,9 @@
       },
       "schema:name": "preparation_protocol_doi",
       "schema:description": "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -786,9 +694,9 @@
       },
       "schema:name": "dataset_type",
       "schema:description": "The specific type of dataset being produced.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -878,9 +786,9 @@
       ],
       "schema:name": "contributors_path",
       "schema:description": "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"./extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -970,9 +878,9 @@
       ],
       "schema:name": "data_path",
       "schema:description": "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1050,9 +958,9 @@
       ],
       "schema:name": "mapped_area_value",
       "schema:description": "For Visium, this is the area of spots that was covered by tissue within the captured area, not the total possible captured area which is fixed. For GeoMx this would be the area of the AOI being captured. For HiFi this is the summed area of the ROIs in a single flowcell lane. For CosMx, Xenium and Resolve, this is the area of the FOV (aka ROI) region being captured.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1149,9 +1057,9 @@
       },
       "schema:name": "mapped_area_unit",
       "schema:description": "The unit of measurement for the mapping area. For Visium and GeoMx this is typically um^2.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1229,9 +1137,9 @@
       ],
       "schema:name": "spot_size_value",
       "schema:description": "For assays where spots are used to define discrete capture areas, this is the area of a spot.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1328,9 +1236,9 @@
       },
       "schema:name": "spot_size_unit",
       "schema:description": "The unit for spot size value.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1408,9 +1316,9 @@
       ],
       "schema:name": "number_of_spots",
       "schema:description": "Number of capture spots within the mapped area. For Visium this would be the number of spots covered by tissue, while it's the number of spots within ROIs for HiFi.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1488,9 +1396,9 @@
       ],
       "schema:name": "spot_spacing_value",
       "schema:description": "Approximate center-to-center distance between capture spots.  Synonyms: Inter-Spot distance, Spot resolution, Pit size",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1587,9 +1495,9 @@
       },
       "schema:name": "spot_spacing_unit",
       "schema:description": "Units corresponding to inter-spot distance",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1717,9 +1625,9 @@
       ],
       "schema:name": "capture_area_id",
       "schema:description": "Which capture area on the slide was used. For Visium this would be [A1, B1, C1, D1]. For HiFi this would be the lane on the flowcell.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1797,9 +1705,9 @@
       ],
       "schema:name": "permeabilization_time_value",
       "schema:description": "Permeabilization time used for this tissue section.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1896,9 +1804,9 @@
       },
       "schema:name": "permeabilization_time_unit",
       "schema:description": "The unit for the permeabilization time.",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1988,15 +1896,107 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "pav:createdOn": "2023-10-20T13:43:32-07:00",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Metadata schema ID",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "parent_sample_id": {
+      "@id": "https://repo.metadatacenter.org/template-fields/3cd0be1e-4770-4fa1-8976-12eb3934916d",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "Untitled field schema",
+      "description": "Untitled field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "regex": "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "@value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "@value"
+      ],
+      "schema:name": "parent_sample_id",
+      "schema:description": "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102",
+      "pav:createdOn": "2023-10-27T18:03:22-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Parent sample ID",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -2010,7 +2010,6 @@
     "pav:createdBy",
     "pav:lastUpdatedOn",
     "oslc:modifiedBy",
-    "parent_sample_id",
     "lab_id",
     "preparation_protocol_doi",
     "dataset_type",
@@ -2026,13 +2025,14 @@
     "capture_area_id",
     "permeabilization_time_value",
     "permeabilization_time_unit",
-    "metadata_schema_id"
+    "metadata_schema_id",
+    "parent_sample_id"
   ],
   "schema:name": "Visium",
   "schema:description": "",
   "pav:createdOn": "2023-10-09T19:09:06-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-10-20T13:43:32-07:00",
+  "pav:lastUpdatedOn": "2023-10-27T18:03:22-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

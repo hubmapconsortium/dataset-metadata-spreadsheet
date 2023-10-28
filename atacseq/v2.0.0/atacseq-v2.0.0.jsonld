@@ -124,9 +124,9 @@
       "preparation_instrument_model": "preparation_instrument_model",
       "metadata_schema_id": "metadata_schema_id",
       "preparation_instrument_kit": "preparation_instrument_kit",
-      "parent_sample_id": "parent_sample_id",
       "preparation_protocol_doi": "preparation_protocol_doi",
-      "is_targeted": "is_targeted"
+      "is_targeted": "is_targeted",
+      "parent_sample_id": "parent_sample_id"
     },
     "propertyDescriptions": {
       "lab_id": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
@@ -173,9 +173,9 @@
       "preparation_instrument_model": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
       "metadata_schema_id": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
       "preparation_instrument_kit": "The reagent kit used with the preparation instrument.",
-      "parent_sample_id": "HuBMAP ID of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM765.TRHD.452",
       "preparation_protocol_doi": "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "is_targeted": "Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay (\"Yes\" or \"No\"). The CODEX analyte is protein."
+      "is_targeted": "Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay (\"Yes\" or \"No\"). The CODEX analyte is protein.",
+      "parent_sample_id": "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
     }
   },
   "properties": {
@@ -554,11 +554,6 @@
             "https://schema.metadatacenter.org/properties/c588a2ab-ac7b-4836-8588-01cbb9f4bd9f"
           ]
         },
-        "parent_sample_id": {
-          "enum": [
-            "https://schema.metadatacenter.org/properties/c8b96d41-7d35-4e92-90f4-85c364a3baf3"
-          ]
-        },
         "preparation_protocol_doi": {
           "enum": [
             "https://schema.metadatacenter.org/properties/65265027-9ead-4091-8724-d95fae701bdb"
@@ -567,6 +562,11 @@
         "is_targeted": {
           "enum": [
             "https://schema.metadatacenter.org/properties/7f2c6169-8fbb-4d3e-a2b4-93a90b34638c"
+          ]
+        },
+        "parent_sample_id": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/eb023621-6861-47e1-aeb0-2802139e9734"
           ]
         }
       },
@@ -626,9 +626,9 @@
         "preparation_instrument_model",
         "metadata_schema_id",
         "preparation_instrument_kit",
-        "parent_sample_id",
         "preparation_protocol_doi",
-        "is_targeted"
+        "is_targeted",
+        "parent_sample_id"
       ],
       "additionalProperties": false
     },
@@ -779,9 +779,9 @@
       ],
       "schema:name": "lab_id",
       "schema:description": "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -878,9 +878,9 @@
       },
       "schema:name": "dataset_type",
       "schema:description": "The specific type of dataset being produced.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -977,9 +977,9 @@
       },
       "schema:name": "analyte_class",
       "schema:description": "Analytes are the target molecules being measured with the assay.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1076,9 +1076,9 @@
       },
       "schema:name": "acquisition_instrument_vendor",
       "schema:description": "An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1175,9 +1175,9 @@
       },
       "schema:name": "acquisition_instrument_model",
       "schema:description": "Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1256,9 +1256,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "How long was the source material (parent) stored, prior to this sample being processed.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1355,9 +1355,9 @@
       },
       "schema:name": "source_storage_duration_unit",
       "schema:description": "The time duration unit of measurement",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1436,9 +1436,9 @@
       ],
       "schema:name": "time_since_acquisition_instrument_calibration_value",
       "schema:description": "The amount of time since the acqusition instrument was last serviced by the vendor. This provides a metric for assessing drift in data capture.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1535,9 +1535,9 @@
       },
       "schema:name": "time_since_acquisition_instrument_calibration_unit",
       "schema:description": "The time unit of measurement",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1627,9 +1627,9 @@
       ],
       "schema:name": "contributors_path",
       "schema:description": "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"./extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1719,9 +1719,9 @@
       ],
       "schema:name": "data_path",
       "schema:description": "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1825,9 +1825,9 @@
       ],
       "schema:name": "barcode_offset",
       "schema:description": "Positions in the read at which the cell or capture spot barcodes start. Cell and capture spot barcodes are, for example, 3 x 8 bp sequences that are spaced by constant sequences (the offsets). First barcode at position 0, then 38, then 76. This should be included when constructing sequencing libraries with a non-commercial kit.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1924,9 +1924,9 @@
       },
       "schema:name": "barcode_read",
       "schema:description": "Which read file contains the cell or capture spot barcode. This should be included when constructing sequencing libraries with a non-commercial kit. This field is required if the source material is barcoded. This field is used to determine which analysis pipeline to run.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2036,9 +2036,9 @@
       ],
       "schema:name": "barcode_size",
       "schema:description": "Length of the cell or capture spot barcode in base pairs. Cell and capture spot barcodes are, for example, 3 x 8 bp sequences that are spaced by constant sequences, the offsets. This should be included when constructing sequencing libraries with a non-commercial kit. This field is required if the source material is barcoded.  This field is used to determine which analysis pipeline to run.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2136,9 +2136,9 @@
       ],
       "schema:name": "umi_offset",
       "schema:description": "Position in the read at which the UMI barcode starts. This should be included when constructing sequencing libraries with a non-commercial kit.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2235,9 +2235,9 @@
       },
       "schema:name": "umi_read",
       "schema:description": "Which read file contains the UMI barcode. This should be included when constructing sequencing libraries with a non-commercial kit.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2344,9 +2344,9 @@
       ],
       "schema:name": "umi_size",
       "schema:description": "Length of the umi barcode in base pairs. This should be included when constructing sequencing libraries with a non-commercial kit. This field is required if UMI are present. This field is used to determine which analysis pipeline to run.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2443,9 +2443,9 @@
       },
       "schema:name": "assay_input_entity",
       "schema:description": "This is the entity from which the analyte is being captured. For example, for bulk sequencing this would be \"tissue\", while it would be \"single cell\" for single cell sequencing. This field is used to determine which analysis pipeline to run.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2523,9 +2523,9 @@
       ],
       "schema:name": "number_of_input_cells_or_nuclei",
       "schema:description": "How many cells or nuclei were input to the assay? This is typically not available for preparations working with bulk tissue.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2614,9 +2614,9 @@
       ],
       "schema:name": "library_adapter_sequence",
       "schema:description": "5’ and/or 3’ read adapter sequences used as part of the library preparation protocol to render the library compatible with the sequencing protocol and instrumentation. This should be provided as comma-separated list of key:value pairs (adapter name:sequence).",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2694,9 +2694,9 @@
       ],
       "schema:name": "library_average_fragment_size",
       "schema:description": "Average size of sequencing library fragments estimated via gel electrophoresis or bioanalyzer/tapestation. Numeric value in base pairs (bp).",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2774,9 +2774,9 @@
       ],
       "schema:name": "library_input_amount_value",
       "schema:description": "The amount of cDNA, after amplification, that was used for library construction.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2873,9 +2873,9 @@
       },
       "schema:name": "library_input_amount_unit",
       "schema:description": "unit of library input amount value",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2953,9 +2953,9 @@
       ],
       "schema:name": "library_output_amount_value",
       "schema:description": "Total amount (eg. nanograms) of library after the clean-up step of final pcr amplification step. Answer the question: What is the Qubit measured concentration (ng/ul) times the elution volume (ul) after the final clean-up step?",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3052,9 +3052,9 @@
       },
       "schema:name": "library_output_amount_unit",
       "schema:description": "Units of library final yield.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3132,9 +3132,9 @@
       ],
       "schema:name": "library_concentration_value",
       "schema:description": "The concentration value of the pooled library samples submitted for sequencing.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3231,9 +3231,9 @@
       },
       "schema:name": "library_concentration_unit",
       "schema:description": "Unit of library concentration value.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3330,9 +3330,9 @@
       },
       "schema:name": "library_layout",
       "schema:description": "Whether the library was generated for single-end or paired end sequencing",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3410,9 +3410,9 @@
       ],
       "schema:name": "number_of_pcr_cycles_for_indexing",
       "schema:description": "Number of PCR cycles performed in order to add adapters and amplify the library. This does not include the cDNA amplification which is captured in the \"number of iterations of cDNA amplification\" field.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3509,9 +3509,9 @@
       },
       "schema:name": "library_preparation_kit",
       "schema:description": "Reagent kit used for library preparation",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3608,9 +3608,9 @@
       },
       "schema:name": "sample_indexing_kit",
       "schema:description": "Indexes are needed for multiplexing sequencing libraries for simultaneous sequencing (pooling) and proper attachment to the Illumina flowcell. Each indexing kit would have a number of compatible sequences (\"sample indexing sets\") that are used to label some number of samples (the number of sets depend on the kit).",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3699,9 +3699,9 @@
       ],
       "schema:name": "sample_indexing_set",
       "schema:description": "The specific sequencing barcode index set used, selected from the sample indexing kit. Example: For 10X this might be \"SI-GA-A1\", for Nextera \"N505 - CTCCTTAC\"",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3799,9 +3799,9 @@
       ],
       "schema:name": "is_technical_replicate",
       "schema:description": "Is the sequencing reaction run in replicate, \"Yes\" or \"No\". If \"Yes\", FASTQ files in dataset need to be merged.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3879,9 +3879,9 @@
       ],
       "schema:name": "expected_entity_capture_count",
       "schema:description": "Number of cells, nuclei or capture spots expected to be captured by the assay. For Visium this is the total number of spots covered by tissue, within the capture area.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -3978,9 +3978,9 @@
       },
       "schema:name": "sequencing_reagent_kit",
       "schema:description": "Reagent kit used for sequencing",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4069,9 +4069,9 @@
       ],
       "schema:name": "sequencing_read_format",
       "schema:description": "Number of sequencing cycles in each round of sequencing (i.e., Read1, i7 index, i5 index, and Read2). This is reported as a comma-delimited list. Example: For 10X snATAC-seq (R1,Index,R2,R3) this might be: 50,8,16,50. For SNARE-seq2 this might be: 75,94,8,75",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4168,9 +4168,9 @@
       },
       "schema:name": "transposition_reagent_kit",
       "schema:description": "If Tn5 came from a kit, provide the kit details. This should be set to \"Not applicable\" if a custom or in-house kit was used.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4267,9 +4267,9 @@
       },
       "schema:name": "transposition_method",
       "schema:description": "Modality of capturing accessible chromatin molecules. For example, this would be the type of kit that was used.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4358,9 +4358,9 @@
       ],
       "schema:name": "sequencing_batch_id",
       "schema:description": "The ID for the sequencing run. This could, for example, be the chip ID and should allow users the ability to determine which samples were processed together in a sequencing run. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4449,9 +4449,9 @@
       ],
       "schema:name": "capture_batch_id",
       "schema:description": "A lab-generated ID to identify which cells were captured at the same time. This would, for example, be an ID to denote which datasets were derived from a single 10X Genomics Chromium Controller run. In the case of the 10X Controller this could be the chip ID and would allow users the ability to determine which samples were processed together in a Chromium controller. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4548,9 +4548,9 @@
       },
       "schema:name": "preparation_instrument_vendor",
       "schema:description": "The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4647,9 +4647,9 @@
       },
       "schema:name": "preparation_instrument_model",
       "schema:description": "Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4739,9 +4739,9 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -4838,107 +4838,15 @@
       },
       "schema:name": "preparation_instrument_kit",
       "schema:description": "The reagent kit used with the preparation instrument.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Preparation instrument kit",
-      "$schema": "http://json-schema.org/draft-04/schema#"
-    },
-    "parent_sample_id": {
-      "@id": "https://repo.metadatacenter.org/template-fields/3cd0be1e-4770-4fa1-8976-12eb3934916d",
-      "@type": "https://schema.metadatacenter.org/core/TemplateField",
-      "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "pav": "http://purl.org/pav/",
-        "bibo": "http://purl.org/ontology/bibo/",
-        "oslc": "http://open-services.net/ns/core#",
-        "schema": "http://schema.org/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema:name": {
-          "@type": "xsd:string"
-        },
-        "schema:description": {
-          "@type": "xsd:string"
-        },
-        "skos:prefLabel": {
-          "@type": "xsd:string"
-        },
-        "skos:altLabel": {
-          "@type": "xsd:string"
-        },
-        "pav:createdOn": {
-          "@type": "xsd:dateTime"
-        },
-        "pav:createdBy": {
-          "@type": "@id"
-        },
-        "pav:lastUpdatedOn": {
-          "@type": "xsd:dateTime"
-        },
-        "oslc:modifiedBy": {
-          "@type": "@id"
-        }
-      },
-      "type": "object",
-      "title": "Untitled field schema",
-      "description": "Untitled field schema generated by the CEDAR Template Editor 2.6.19",
-      "_ui": {
-        "inputType": "textfield"
-      },
-      "_valueConstraints": {
-        "requiredValue": true,
-        "regex": "^HBM\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*HBM\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
-      },
-      "properties": {
-        "@type": {
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri"
-            },
-            {
-              "type": "array",
-              "minItems": 1,
-              "items": {
-                "type": "string",
-                "format": "uri"
-              },
-              "uniqueItems": true
-            }
-          ]
-        },
-        "@value": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "rdfs:label": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      },
-      "required": [
-        "@value"
-      ],
-      "schema:name": "parent_sample_id",
-      "schema:description": "HuBMAP ID of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas this would be the HuBMAP ID of a section for one of the imaging assays. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM765.TRHD.452",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
-      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
-      "pav:version": "0.0.1",
-      "bibo:status": "bibo:draft",
-      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "schema:schemaVersion": "1.6.0",
-      "additionalProperties": false,
-      "skos:prefLabel": "Parent sample ID",
       "$schema": "http://json-schema.org/draft-04/schema#"
     },
     "preparation_protocol_doi": {
@@ -5016,9 +4924,9 @@
       },
       "schema:name": "preparation_protocol_doi",
       "schema:description": "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -5117,15 +5025,107 @@
       ],
       "schema:name": "is_targeted",
       "schema:description": "Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay (\"Yes\" or \"No\"). The CODEX analyte is protein.",
-      "pav:createdOn": "2023-10-16T10:59:21-07:00",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Is targeted?",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "parent_sample_id": {
+      "@id": "https://repo.metadatacenter.org/template-fields/3cd0be1e-4770-4fa1-8976-12eb3934916d",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "Untitled field schema",
+      "description": "Untitled field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "regex": "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "@value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "@value"
+      ],
+      "schema:name": "parent_sample_id",
+      "schema:description": "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102",
+      "pav:createdOn": "2023-10-27T17:42:54-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Parent sample ID",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -5183,15 +5183,15 @@
     "preparation_instrument_model",
     "metadata_schema_id",
     "preparation_instrument_kit",
-    "parent_sample_id",
     "preparation_protocol_doi",
-    "is_targeted"
+    "is_targeted",
+    "parent_sample_id"
   ],
   "schema:name": "ATACseq",
   "schema:description": "",
   "pav:createdOn": "2023-10-03T10:26:38-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2023-10-16T10:59:21-07:00",
+  "pav:lastUpdatedOn": "2023-10-27T17:42:54-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

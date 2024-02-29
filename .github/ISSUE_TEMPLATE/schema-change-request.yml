@@ -1,0 +1,73 @@
+name: Schema change request
+description: A change request on the HuBMAP dataset metadata schema which can involve proposing modifications, additions, or deletions to the structure or content of the schema.
+assignees:
+  - johardi
+labels:
+  - Minor change
+body:
+  - type: dropdown
+    id: target-schema
+    attributes:
+      label: Pick the target metadata schema name.
+      multiple: true
+      options:
+        - Cell DIVE
+        - CODEX
+        - Light Sheet
+        - MIBI
+        - snATACseq
+        - snRNAseq
+        - Visium
+        - RNAseq (Visium)
+        - Visium (no probes)
+        - Visium (with probes)
+        - LC-MS
+        - HiFi-Slide
+        - Imaging Mass Spectrometry
+        - Histology
+        - PhenoCycler
+        - CyCIF
+        - MALDI
+        - SIMS
+        - NanoDESI
+        - DESI
+        - Auto-fluorescence
+        - Confocal
+        - Thick section Multiphoton MxIF
+        - Second Harmonic Generation (SHG)
+        - Enhanced Stimulated Raman Spectroscopy (SRS)
+        - ATACseq (bulk)
+        - RNAseq (bulk)
+        - RNAseq (GeoMx)
+        - 10X Multiome
+        - GeoMx
+        - GeoMx (NGS)
+        - GeoMx (nCounter)
+        - Molecular Cartography
+        - CosMx
+        - Xenium
+        - MERFISH
+        - DBiT
+        - nanoPOTS
+        - scATACseq
+        - scRNAseq
+        - ATACseq
+        - RNAseq
+        - RNAseq (with probes)
+        - nanoSPLITS
+        - SNARE-seq2
+        - 2D Imaging Mass Cytometry
+  - type: input
+    id: other-schema
+    attributes:
+      label: Please enter the schema name below if it is not listed.
+  - type: textarea
+    id: request-description
+    attributes:
+      label: Describe the change request (use a numbered list if many).
+      placeholder: e.g., Add "Aperio AT2" in the acquisition instrument model.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: For significant changes, label as 'Major change'.

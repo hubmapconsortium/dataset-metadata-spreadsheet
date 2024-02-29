@@ -1,5 +1,5 @@
 name: Schema change request
-description: A change request on the HuBMAP dataset metadata schema which can involve proposing modifications, additions, or deletions to the structure or content of the schema.
+description: Create a change request on the existing HuBMAP dataset metadata schema which can involve proposing modifications, additions, or deletions to the structure or content of the schema.
 assignees:
   - johardi
 labels:

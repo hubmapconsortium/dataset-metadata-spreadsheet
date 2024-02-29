@@ -1,0 +1,27 @@
+name: New schema request
+description: Create a request to have a new HuBMAP dataset metadata schema.
+assignees:
+  - johardi
+labels:
+  - New schema
+body:
+  - type: input
+    id: schema-name
+    attributes:
+      label: What is the schema name?
+    validations:
+      required: true
+  - type: input
+    id: metadata-schema-url
+    attributes:
+      label: Share the Google Sheets URL to the metadata schema with a read access.
+    validations:
+      required: true
+  - type: input
+    id: directory-structure-url
+    attributes:
+      label: Share the Google Sheets URL to the directory structure with a read access.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Feel free to add any additional notes or comments below.

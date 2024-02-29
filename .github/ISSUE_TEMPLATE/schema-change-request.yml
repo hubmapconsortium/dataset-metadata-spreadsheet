@@ -8,7 +8,7 @@ body:
   - type: dropdown
     id: target-schema
     attributes:
-      label: Pick the target metadata schema name.
+      label: Select the target metadata schema name, or choose 'Other' if not listed.
       multiple: true
       options:
         - Cell DIVE
@@ -57,10 +57,13 @@ body:
         - nanoSPLITS
         - SNARE-seq2
         - 2D Imaging Mass Cytometry
+        - Other
+    validations:
+      required: true
   - type: input
     id: other-schema
     attributes:
-      label: Please enter the schema name below if it is not listed.
+      label: If 'Other' is selected, please enter the schema name below.
   - type: textarea
     id: request-description
     attributes:
@@ -70,4 +73,4 @@ body:
       required: true
   - type: markdown
     attributes:
-      value: For significant changes, label as 'Major change'.
+      value: For significant changes, change the label to 'Major change'.

@@ -8,7 +8,7 @@ body:
   - type: dropdown
     id: target-schema
     attributes:
-      label: Select the target metadata schema name, or choose 'Other' if not listed.
+      label: Select the target metadata schema name (can be multiple), or choose 'Other' if not listed.
       multiple: true
       options:
         - Cell DIVE

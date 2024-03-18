@@ -11,52 +11,43 @@ body:
       label: Select the target metadata schema name (can be multiple), or choose 'Other' if not listed.
       multiple: true
       options:
+        - 10X Multiome
+        - 2D Imaging Mass Cytometry
+        - ATACseq
+        - Auto-fluorescence
         - Cell DIVE
         - CODEX
-        - Light Sheet
-        - MIBI
-        - snATACseq
-        - snRNAseq
-        - Visium
-        - RNAseq (Visium)
-        - Visium (no probes)
-        - Visium (with probes)
-        - LC-MS
-        - HiFi-Slide
-        - Imaging Mass Spectrometry
-        - Histology
-        - PhenoCycler
-        - CyCIF
-        - MALDI
-        - SIMS
-        - NanoDESI
-        - DESI
-        - Auto-fluorescence
         - Confocal
-        - Thick section Multiphoton MxIF
-        - Second Harmonic Generation (SHG)
-        - Enhanced Stimulated Raman Spectroscopy (SRS)
-        - ATACseq (bulk)
-        - RNAseq (bulk)
-        - RNAseq (GeoMx)
-        - 10X Multiome
-        - GeoMx
-        - GeoMx (NGS)
-        - GeoMx (nCounter)
-        - Molecular Cartography
         - CosMx
-        - Xenium
-        - MERFISH
+        - CyCIF
         - DBiT
-        - nanoPOTS
-        - scATACseq
-        - scRNAseq
-        - ATACseq
+        - DESI
+        - Enhanced Stimulated Raman Spectroscopy (SRS)
+        - GeoMx (nCounter)
+        - GeoMx (NGS)
+        - HiFi-Slide
+        - Histology
+        - LC-MS
+        - Light Sheet
+        - MALDI
+        - MERFISH
+        - MIBI
+        - Molecular Cartography
+        - MUSIC
+        - nanoSPLITS
+        - PhenoCycler
         - RNAseq
         - RNAseq (with probes)
-        - nanoSPLITS
+        - Sample Block
+        - Sample Section
+        - Sample Suspension
+        - Second Harmonic Generation (SHG)
+        - SIMS
         - SNARE-seq2
-        - 2D Imaging Mass Cytometry
+        - Thick section Multiphoton MxIF
+        - Visium (no probes)
+        - Visium (with probes)
+        - Xenium
         - Other
     validations:
       required: true

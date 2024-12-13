@@ -59,4 +59,4 @@ curl --request POST \
   --form input_file=@/path/to/epic-spreadsheet.xlsx
 ```
 
-**Caveat**: The validator only validates some header attributes such as "Type", "Permissible values" and "Requirement level".
+**Caveat**: The validator only validates some header attributes such as "Type", "Description", "Permissible values" and "Requirement level".

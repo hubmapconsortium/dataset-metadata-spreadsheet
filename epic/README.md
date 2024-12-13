@@ -2,6 +2,8 @@
 
 This README document explains the attributes in the header of EPIC data tables. Data curators should use these attributes to give data providers the guidelines for completing each column.
 
+## Attributes
+
 * **Type** _(required)_
 
   The type defines the kind of data that a variable can hold. Common types include integer, string, float, boolean, date, and more. The type determines what kind of operations and validations can be applied to the variable.
@@ -45,5 +47,16 @@ This README document explains the attributes in the header of EPIC data tables. 
   The requirement level indicates whether a variable is mandatory or optional. It specifies whether the variable must have a value (required) or if it can be left blank (optional).
 
   Permissible values: `REQUIRED` | `OPTIONAL`
-  
 
+## Validation
+
+An online validator is available to validate the EPIC spreadsheet, both the header attributes and the data table.
+
+```
+curl --request POST \
+  --url https://api.stage.metadatavalidator.metadatacenter.org/service/validate-structured-xlsx \
+  --header 'Content-Type: multipart/form-data' \
+  --form input_file=@/path/to/epic-spreadsheet.xlsx
+```
+
+**Caveat**: The validator only validates some header attributes such as "Type", "Permissible values" and "Requirement level".

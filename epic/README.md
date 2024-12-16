@@ -14,7 +14,7 @@ This README document explains the attributes in the header of EPIC data tables. 
 
   The unit of measurement for the data values.
 
-  Permissible values: `pixel` | `square micrometer`
+  Permissible values: `pixel` | `intensity` | `count` | `square micrometer`
 
 * **Feature class** _(required)_
 
@@ -47,16 +47,3 @@ This README document explains the attributes in the header of EPIC data tables. 
   The requirement level indicates whether a variable is mandatory or optional. It specifies whether the variable must have a value (required) or if it can be left blank (optional).
 
   Permissible values: `REQUIRED` | `OPTIONAL`
-
-## Validation
-
-An online validator is available to validate the EPIC spreadsheet, both the header attributes and the data table.
-
-```
-curl --request POST \
-  --url https://api.stage.metadatavalidator.metadatacenter.org/service/validate-structured-xlsx \
-  --header 'Content-Type: multipart/form-data' \
-  --form input_file=@/path/to/epic-spreadsheet.xlsx
-```
-
-**Caveat**: The validator only validates some header attributes such as "Type", "Description", "Permissible values" and "Requirement level".

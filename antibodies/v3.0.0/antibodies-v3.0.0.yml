@@ -1,0 +1,82 @@
+type: template
+name: Antibodies
+children:
+  - key: channel_id
+    type: text-field
+    name: channel_id
+    description: Structure of the identifier depends on the acquisition system. Whenever possible this should exactly match the channel ID in the OME TIFF file. For example the channel ID in an OME TIFF might be something like "Channel:0:13" which would then be the value entered here.
+    prefLabel: Channel ID
+    configuration:
+      required: true
+  - key: hgnc_symbol
+    type: text-field
+    name: hgnc_symbol
+    description: "Gene symbol approved by HGNC (https://www.genenames.org/)  for target gene. Example: ID2B"
+    prefLabel: HGNC symbol
+    regex: ""
+    configuration:
+      required: true
+  - key: antibody_rrid
+    type: text-field
+    name: antibody_rrid
+    description: "The RRID is a unique antibody identifier that comes from the Antibody Registry (https://antibodyregistry.org). If needed, more info available here: https://www.antibodyregistry.org/faq. Example: AB_10002075"
+    prefLabel: Antibody RRID
+    regex: ^AB_\d+$
+    configuration:
+      required: true
+  - key: uniprot_accession_number
+    type: text-field
+    name: uniprot_accession_number
+    description: "A unique identifier for the target protein in the UniProt database (https://www.uniprot.org). Example: Q9NNX6"
+    prefLabel: Uniprot accession number
+    configuration:
+      required: true
+  - key: lot_number
+    type: text-field
+    name: lot_number
+    description: "The lot number is specific to the vendor. Example: Abcam lot number is GR3238979-1"
+    prefLabel: Lot number
+    configuration:
+      required: true
+  - key: dilution_factor
+    type: numeric-field
+    name: dilution_factor
+    description: "Dillution factor is a whole number. Ratio of stock antibody in the experimental solution, with numerator of 1 assumed. e.g. for a 1:200 (1/200) dilution, the dilution factor would be 200."
+    prefLabel: Dilution factor
+    datatype: xsd:int
+  - key: antibody_concentration_value
+    type: numeric-field
+    name: antibody_concentration_value
+    description: The concentration value of the antibody preparation. Leave blank if not applicable.
+    prefLabel: Antibody concentration value
+    datatype: xsd:decimal
+  - key: antibody_concentration_unit
+    type: controlled-term-field
+    name: antibody_concentration_unit
+    description: The concentration units of the antibody preparation. Leave blank if not applicable.
+    prefLabel: Antibody concentration unit
+    datatype: iri
+    values:
+      - type: class
+        label: ug/ml
+        acronym: HRAVS
+        termType: class
+        termLabel: ug/ml
+        iri: http://purl.obolibrary.org/obo/UO_0000274
+  - key: conjugated_cat_number
+    type: text-field
+    name: conjugated_cat_number
+    description: An antibody may be conjugated to a fluorescent tag or a metal tag for detection. Conjugated antibodies may be purchased from commercial providers. Leave blank if not applicable.
+    prefLabel: Conjugated cat number
+  - key: conjugated_tag
+    type: text-field
+    name: conjugated_tag
+    prefLabel: Conjugated tag
+  - key: metadata_schema_id
+    type: text-field
+    name: metadata_schema_id
+    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    prefLabel: Metadata schema ID
+    default: 312f7be0-9aec-4cae-b942-a8864c0aa1ce
+    configuration:
+      required: true

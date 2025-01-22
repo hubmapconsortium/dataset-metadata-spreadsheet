@@ -1,0 +1,724 @@
+type: template
+name: Sample Block
+description: "The sample block metadata specification outlines the standardized format for recording essential information about biological samples, such as origin, preparation, and storage conditions, ensuring accurate documentation and facilitating data sharing and analysis."
+children:
+  - key: source_id
+    type: text-field
+    name: source_id
+    description: "Unique HuBMAP or SenNet identifier for the source (parent) from which the sample was taken. Example: HBM122.EFGH.789 or SNT234.RTYU.119"
+    prefLabel: Source ID
+    regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}$"
+    configuration:
+      required: true
+  - key: sample_id
+    type: text-field
+    name: sample_id
+    description: "Unique HuBMAP or SenNet identifier for the sample assigned by the ingest portal. Example: HBM743.CKJW.876 or SNT923.UYTE.122"
+    prefLabel: Sample ID
+    regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}$"
+    configuration:
+      required: true
+  - key: lab_id
+    type: text-field
+    name: lab_id
+    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    prefLabel: Lab ID
+  - key: preparation_protocol_doi
+    type: link-field
+    name: preparation_protocol_doi
+    description: "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
+    prefLabel: Preparation protocol DOI
+    configuration:
+      required: true
+  - key: source_storage_duration_value
+    type: numeric-field
+    name: source_storage_duration_value
+    description: "How long was the source material (parent) stored, prior to this sample being processed."
+    prefLabel: Source storage duration value
+    datatype: xsd:decimal
+    minValue: 0
+    configuration:
+      required: true
+  - key: source_storage_duration_unit
+    type: controlled-term-field
+    name: source_storage_duration_unit
+    description: The time duration unit of measurement
+    prefLabel: Source storage duration unit
+    datatype: iri
+    values:
+      - type: class
+        label: hour
+        acronym: HRAVS
+        termType: class
+        termLabel: hour
+        iri: http://purl.obolibrary.org/obo/UO_0000032
+      - type: class
+        label: month
+        acronym: HRAVS
+        termType: class
+        termLabel: month
+        iri: http://purl.obolibrary.org/obo/UO_0000035
+      - type: class
+        label: year
+        acronym: HRAVS
+        termType: class
+        termLabel: year
+        iri: http://purl.obolibrary.org/obo/UO_0000036
+      - type: class
+        label: day
+        acronym: HRAVS
+        termType: class
+        termLabel: day
+        iri: http://purl.obolibrary.org/obo/UO_0000033
+      - type: class
+        label: minute
+        acronym: HRAVS
+        termType: class
+        termLabel: minute
+        iri: http://purl.obolibrary.org/obo/UO_0000031
+    configuration:
+      required: true
+  - key: tissue_weight_value
+    type: numeric-field
+    name: tissue_weight_value
+    description: "The weight of a tissue block or the piece of tissue used in a suspension. Knowing the weight of the parent block and tissue used in a suspension, allows us to compute what percentage of the block was used for the suspension."
+    prefLabel: Tissue weight value
+    datatype: xsd:decimal
+    minValue: 0
+  - key: tissue_weight_unit
+    type: controlled-term-field
+    name: tissue_weight_unit
+    description: The tissue weight unit of measurement
+    prefLabel: Tissue weight unit
+    datatype: iri
+    values:
+      - type: class
+        label: ug
+        acronym: HRAVS
+        termType: class
+        termLabel: ug
+        iri: http://purl.obolibrary.org/obo/UO_0000023
+      - type: class
+        label: g
+        acronym: HRAVS
+        termType: class
+        termLabel: g
+        iri: http://purl.obolibrary.org/obo/UO_0000021
+      - type: class
+        label: mg
+        acronym: HRAVS
+        termType: class
+        termLabel: mg
+        iri: http://purl.obolibrary.org/obo/UO_0000022
+      - type: class
+        label: kg
+        acronym: HRAVS
+        termType: class
+        termLabel: kg
+        iri: http://purl.obolibrary.org/obo/UO_0000009
+  - key: volume_value
+    type: numeric-field
+    name: volume_value
+    description: The volume of the sample block
+    prefLabel: Volume value
+    datatype: xsd:decimal
+    minValue: 0
+  - key: volume_unit
+    type: controlled-term-field
+    name: volume_unit
+    description: The volume unit of measurement
+    prefLabel: Volume unit
+    datatype: iri
+    values:
+      - type: class
+        label: cm^3
+        acronym: HRAVS
+        termType: class
+        termLabel: cm^3
+        iri: http://purl.obolibrary.org/obo/UO_0000097
+      - type: class
+        label: mm^3
+        acronym: HRAVS
+        termType: class
+        termLabel: mm^3
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000136
+      - type: class
+        label: um^3
+        acronym: HRAVS
+        termType: class
+        termLabel: um^3
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000112
+      - type: class
+        label: ml
+        acronym: HRAVS
+        termType: class
+        termLabel: ml
+        iri: http://purl.obolibrary.org/obo/UO_0000098
+  - key: pathology_distance_value
+    type: numeric-field
+    name: pathology_distance_value
+    description: "If a surgical sample, how far from the pathology was the sample obtained."
+    prefLabel: Pathology distance value
+    datatype: xsd:decimal
+    minValue: 0
+  - key: pathology_distance_unit
+    type: controlled-term-field
+    name: pathology_distance_unit
+    description: The distance unit of measurement
+    prefLabel: Pathology distance unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: cm
+        acronym: HRAVS
+        termType: class
+        termLabel: cm
+        iri: http://purl.obolibrary.org/obo/UO_0000015
+  - key: preparation_medium
+    type: controlled-term-field
+    name: preparation_medium
+    description: The medium used during the sample preparation
+    prefLabel: Preparation medium
+    datatype: iri
+    values:
+      - type: class
+        label: NBF (Neutral Buffered Formalin)
+        acronym: HRAVS
+        termType: class
+        termLabel: NBF (Neutral Buffered Formalin)
+        iri: http://purl.obolibrary.org/obo/OBIB_0000213
+      - type: class
+        label: Allprotect tissue reagent (ALL)
+        acronym: HRAVS
+        termType: class
+        termLabel: Allprotect tissue reagent (ALL)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000118
+      - type: class
+        label: CLARITY hydrogel
+        acronym: HRAVS
+        termType: class
+        termLabel: CLARITY hydrogel
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000134
+      - type: class
+        label: Trumps fixative
+        acronym: HRAVS
+        termType: class
+        termLabel: Trumps fixative
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000331
+      - type: class
+        label: Inflated (OCT)
+        acronym: HRAVS
+        termType: class
+        termLabel: Inflated (OCT)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000123
+      - type: class
+        label: DMEM
+        acronym: HRAVS
+        termType: class
+        termLabel: DMEM
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185409
+      - type: class
+        label: PFA (Paraformaldehyde)
+        acronym: HRAVS
+        termType: class
+        termLabel: PFA (Paraformaldehyde)
+        iri: http://purl.obolibrary.org/obo/CHEBI_61538
+      - type: class
+        label: "Fixed frozen OCT (Formalin, sucrose protected)"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Fixed frozen OCT (Formalin, sucrose protected)"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000116
+      - type: class
+        label: Unknown
+        acronym: HRAVS
+        termType: class
+        termLabel: Unknown
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: Fresh frozen OCT
+        acronym: HRAVS
+        termType: class
+        termLabel: Fresh frozen OCT
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000126
+      - type: class
+        label: Alpha-MEM
+        acronym: HRAVS
+        termType: class
+        termLabel: Alpha-MEM
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000371
+      - type: class
+        label: 2% PFA/2.5% Glutaraldehyde
+        acronym: HRAVS
+        termType: class
+        termLabel: 2% PFA/2.5% Glutaraldehyde
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000332
+      - type: class
+        label: Bouin's
+        acronym: HRAVS
+        termType: class
+        termLabel: Bouin's
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000140
+      - type: class
+        label: Methanol
+        acronym: HRAVS
+        termType: class
+        termLabel: Methanol
+        iri: http://purl.obolibrary.org/obo/CHEBI_17790
+      - type: class
+        label: PAXgene tissue kit (PXT)
+        acronym: HRAVS
+        termType: class
+        termLabel: PAXgene tissue kit (PXT)
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185113
+      - type: class
+        label: PBS
+        acronym: HRAVS
+        termType: class
+        termLabel: PBS
+        iri: http://purl.obolibrary.org/obo/OBI_0100046
+      - type: class
+        label: Ethanol
+        acronym: HRAVS
+        termType: class
+        termLabel: Ethanol
+        iri: http://purl.obolibrary.org/obo/CHEBI_16236
+      - type: class
+        label: Modified Davidson's Fixative
+        acronym: HRAVS
+        termType: class
+        termLabel: Modified Davidson's Fixative
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000370
+      - type: class
+        label: HPMC-PVP
+        acronym: HRAVS
+        termType: class
+        termLabel: HPMC-PVP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000386
+      - type: class
+        label: Inflated (Agarose)
+        acronym: HRAVS
+        termType: class
+        termLabel: Inflated (Agarose)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000106
+      - type: class
+        label: PLP (Periodate-Lysine-Paraformaldehyde)
+        acronym: HRAVS
+        termType: class
+        termLabel: PLP (Periodate-Lysine-Paraformaldehyde)
+        iri: http://purl.bioontology.org/ontology/MESH/C046311
+      - type: class
+        label: MACS tissue storage solution
+        acronym: HRAVS
+        termType: class
+        termLabel: MACS tissue storage solution
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000105
+      - type: class
+        label: Fresh frozen CMC
+        acronym: HRAVS
+        termType: class
+        termLabel: Fresh frozen CMC
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000130
+      - type: class
+        label: Fresh frozen gelatin
+        acronym: HRAVS
+        termType: class
+        termLabel: Fresh frozen gelatin
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000198
+      - type: class
+        label: Growth media
+        acronym: HRAVS
+        termType: class
+        termLabel: Growth media
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000372
+      - type: class
+        label: RNAlater
+        acronym: HRAVS
+        termType: class
+        termLabel: RNAlater
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63348
+      - type: class
+        label: Biops buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: Biops buffer
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000330
+      - type: class
+        label: Fixed frozen OCT (Cytofix/Cytoperm)
+        acronym: HRAVS
+        termType: class
+        termLabel: Fixed frozen OCT (Cytofix/Cytoperm)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000149
+      - type: class
+        label: None
+        acronym: HRAVS
+        termType: class
+        termLabel: None
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
+      - type: class
+        label: "Fixed frozen OCT (PFA, sucrose protected)"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Fixed frozen OCT (PFA, sucrose protected)"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000147
+      - type: class
+        label: Lysis buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: Lysis buffer
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C178573
+    configuration:
+      required: true
+  - key: preparation_condition
+    type: controlled-term-field
+    name: preparation_condition
+    description: "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation."
+    prefLabel: Preparation condition
+    datatype: iri
+    values:
+      - type: class
+        label: Frozen in liquid nitrogen vapor
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen in liquid nitrogen vapor
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185339
+      - type: class
+        label: Stored in ambient temperature
+        acronym: HRAVS
+        termType: class
+        termLabel: Stored in ambient temperature
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70719
+      - type: class
+        label: Frozen on ice
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen on ice
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000144
+      - type: class
+        label: Frozen in liquid nitrogen
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen in liquid nitrogen
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185338
+      - type: class
+        label: Unknown
+        acronym: HRAVS
+        termType: class
+        termLabel: Unknown
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: Frozen at -20 degrees celsius
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen at -20 degrees celsius
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000107
+      - type: class
+        label: Frozen on dry ice
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen on dry ice
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C187069
+      - type: class
+        label: Stored in refrigerator
+        acronym: HRAVS
+        termType: class
+        termLabel: Stored in refrigerator
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000104
+    configuration:
+      required: true
+  - key: processing_time_value
+    type: numeric-field
+    name: processing_time_value
+    description: How long the tissue was being handled before the initial preservation
+    prefLabel: Processing time value
+    datatype: xsd:decimal
+    minValue: 0
+  - key: processing_time_unit
+    type: controlled-term-field
+    name: processing_time_unit
+    description: The time unit of measurement
+    prefLabel: Processing time unit
+    datatype: iri
+    values:
+      - type: class
+        label: hour
+        acronym: HRAVS
+        termType: class
+        termLabel: hour
+        iri: http://purl.obolibrary.org/obo/UO_0000032
+      - type: class
+        label: day
+        acronym: HRAVS
+        termType: class
+        termLabel: day
+        iri: http://purl.obolibrary.org/obo/UO_0000033
+      - type: class
+        label: minute
+        acronym: HRAVS
+        termType: class
+        termLabel: minute
+        iri: http://purl.obolibrary.org/obo/UO_0000031
+    actions:
+      - action: move
+        to: 0
+        termIri: http://purl.obolibrary.org/obo/UO_0000031
+        sourceIri: template
+        sourceAcronym: HRAVS
+        type: class
+  - key: storage_medium
+    type: controlled-term-field
+    name: storage_medium
+    description: What was the sample preserved in.
+    prefLabel: Storage medium
+    datatype: iri
+    values:
+      - type: class
+        label: PBS
+        acronym: HRAVS
+        termType: class
+        termLabel: PBS
+        iri: http://purl.obolibrary.org/obo/OBI_0100046
+      - type: class
+        label: OCT
+        acronym: HRAVS
+        termType: class
+        termLabel: OCT
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63523
+      - type: class
+        label: NBF (Neutral Buffered Formalin)
+        acronym: HRAVS
+        termType: class
+        termLabel: NBF (Neutral Buffered Formalin)
+        iri: http://purl.obolibrary.org/obo/OBIB_0000213
+      - type: class
+        label: Ethanol
+        acronym: HRAVS
+        termType: class
+        termLabel: Ethanol
+        iri: http://purl.obolibrary.org/obo/CHEBI_16236
+      - type: class
+        label: Allprotect tissue reagent (ALL)
+        acronym: HRAVS
+        termType: class
+        termLabel: Allprotect tissue reagent (ALL)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000118
+      - type: class
+        label: Formic acid in water
+        acronym: HRAVS
+        termType: class
+        termLabel: Formic acid in water
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83719
+      - type: class
+        label: HPMC-PVP
+        acronym: HRAVS
+        termType: class
+        termLabel: HPMC-PVP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000386
+      - type: class
+        label: DMSO (no serum)
+        acronym: HRAVS
+        termType: class
+        termLabel: DMSO (no serum)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000115
+      - type: class
+        label: MACS tissue storage solution
+        acronym: HRAVS
+        termType: class
+        termLabel: MACS tissue storage solution
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000105
+      - type: class
+        label: PFA (Paraformaldehyde)
+        acronym: HRAVS
+        termType: class
+        termLabel: PFA (Paraformaldehyde)
+        iri: http://purl.obolibrary.org/obo/CHEBI_61538
+      - type: class
+        label: Tris-EDTA
+        acronym: HRAVS
+        termType: class
+        termLabel: Tris-EDTA
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000135
+      - type: class
+        label: Concentrated quench buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: Concentrated quench buffer
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000391
+      - type: class
+        label: Unknown
+        acronym: HRAVS
+        termType: class
+        termLabel: Unknown
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: Gelatin
+        acronym: HRAVS
+        termType: class
+        termLabel: Gelatin
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65802
+      - type: class
+        label: Cryo-EM
+        acronym: HRAVS
+        termType: class
+        termLabel: Cryo-EM
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000333
+      - type: class
+        label: DMSO (serum)
+        acronym: HRAVS
+        termType: class
+        termLabel: DMSO (serum)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000125
+      - type: class
+        label: RNAlater
+        acronym: HRAVS
+        termType: class
+        termLabel: RNAlater
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63348
+      - type: class
+        label: FFPE (Paraffin embedded)
+        acronym: HRAVS
+        termType: class
+        termLabel: FFPE (Paraffin embedded)
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C143028
+      - type: class
+        label: CMC
+        acronym: HRAVS
+        termType: class
+        termLabel: CMC
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83594
+      - type: class
+        label: None
+        acronym: HRAVS
+        termType: class
+        termLabel: None
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
+      - type: class
+        label: 2% PFA/2.5% Glutaraldehyde
+        acronym: HRAVS
+        termType: class
+        termLabel: 2% PFA/2.5% Glutaraldehyde
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000332
+      - type: class
+        label: Methanol
+        acronym: HRAVS
+        termType: class
+        termLabel: Methanol
+        iri: http://purl.obolibrary.org/obo/CHEBI_17790
+      - type: class
+        label: PAXgene tissue kit (PXT)
+        acronym: HRAVS
+        termType: class
+        termLabel: PAXgene tissue kit (PXT)
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185113
+    configuration:
+      required: true
+  - key: storage_method
+    type: controlled-term-field
+    name: storage_method
+    description: "The method by which the sample was stored, after preparation and before the assay was performed."
+    prefLabel: Storage method
+    datatype: iri
+    values:
+      - type: class
+        label: Frozen in liquid nitrogen vapor
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen in liquid nitrogen vapor
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185339
+      - type: class
+        label: Stored in ambient temperature
+        acronym: HRAVS
+        termType: class
+        termLabel: Stored in ambient temperature
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C70719
+      - type: class
+        label: Frozen on ice
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen on ice
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000144
+      - type: class
+        label: Frozen in liquid nitrogen
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen in liquid nitrogen
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185338
+      - type: class
+        label: Unknown
+        acronym: HRAVS
+        termType: class
+        termLabel: Unknown
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: Stored in desiccator
+        acronym: HRAVS
+        termType: class
+        termLabel: Stored in desiccator
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000387
+      - type: class
+        label: Incubated at 37 degrees celsius
+        acronym: HRAVS
+        termType: class
+        termLabel: Incubated at 37 degrees celsius
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000148
+      - type: class
+        label: Frozen at -80 degrees celsius
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen at -80 degrees celsius
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000132
+      - type: class
+        label: Frozen at -20 degrees celsius
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen at -20 degrees celsius
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000107
+      - type: class
+        label: Frozen on dry ice
+        acronym: HRAVS
+        termType: class
+        termLabel: Frozen on dry ice
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C187069
+      - type: class
+        label: Stored in refrigerator
+        acronym: HRAVS
+        termType: class
+        termLabel: Stored in refrigerator
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000104
+      - type: class
+        label: None
+        acronym: HRAVS
+        termType: class
+        termLabel: None
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
+    configuration:
+      required: true
+  - key: quality_criteria
+    type: text-field
+    name: quality_criteria
+    description: "For example, RIN: 8.7. For suspensions, measured by visual inspection prior to cell lysis or defined by known parameters such as wells with several cells or no cells. This can be captured at a high level. \"OK\" or \"not OK\", or with more specificity such as \"debris\", \"clump\", \"low clump\"."
+    prefLabel: Quality criteria
+  - key: histological_report
+    type: text-field
+    name: histological_report
+    description: "Histopathological reporting of key variables that are important for the tissue (absence of necrosis, comment on composition, significant pathology description, high level inflammation/fibrosis assessment, etc.)"
+    prefLabel: Histological report
+  - key: notes
+    type: text-field
+    name: notes
+    description: "Miscellaneous details about the sample, not captured in the existing metadata fields."
+    prefLabel: Notes
+  - key: metadata_schema_id
+    type: text-field
+    name: metadata_schema_id
+    description: The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.
+    prefLabel: Metadata schema ID
+    default: 3e98cee6-d3fb-467b-8d4e-9ba7ee49eeff
+    configuration:
+      required: true

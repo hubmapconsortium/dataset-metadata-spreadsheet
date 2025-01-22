@@ -1,0 +1,85 @@
+type: template
+name: Object x Analyte
+children:
+  - key: parent_dataset_id
+    type: text-field
+    name: parent_dataset_id
+    description: "Unique HuBMAP or SenNet identifier of the dataset(s) used to generate this derived dataset. For example, for a segmentation mask, the parent would be the imaging assay that contains the OME TIFF file used. If a derived dataset comes from multiple parent datasets then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
+    prefLabel: Parent dataset ID
+    configuration:
+      required: true
+  - key: lab_id
+    type: text-field
+    name: lab_id
+    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    prefLabel: Lab ID
+  - key: derived_dataset_protocol_doi
+    type: link-field
+    name: derived_dataset_protocol_doi
+    description: "DOI for the protocols.io page that describes the analysis performed when generating this dataset. For example, for an analysis of a sequencing dataset, the protocol should explain the pipeline run, reference libraries used, and URLs for critical programs."
+    prefLabel: Derived dataset protocol DOI
+    configuration:
+      required: true
+  - key: derived_dataset_type
+    type: controlled-term-field
+    name: derived_dataset_type
+    description: The specific type of analysis being executed.
+    prefLabel: Derived dataset type
+    datatype: iri
+    default:
+      value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000403
+      label: Object x Analyte
+    values:
+      - type: class
+        label: Object x Analyte
+        acronym: HRAVS
+        termType: class
+        termLabel: Object x Analyte
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000403
+      - type: class
+        label: Segmentation Mask
+        acronym: HRAVS
+        termType: class
+        termLabel: Segmentation Mask
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000314
+    configuration:
+      required: true
+  - key: program_url
+    type: text-field
+    name: program_url
+    description: "This is a link to the code or program run to generate this dataset (e.g., GitHub). This URL needs to contain the version of the program or code used to generate this derived dataset. For example on GitHub this should be to the tag or release for the actual version of the code within the respository that was used, rather than a more general link to the repository (e.g., https://github.com/hubmapconsortium/salmon-rnaseq/releases/tag/v2.1.15). If multiple programs are used to make this derived dataset then each URL should be included in double quotes, using a \";\" (semicolon) as a delimiter between the quoted URLs. For example an entry might be included as follows: \"https://www.github.com/blah/blah\"; \"https://www.github.com/foo/bar\"."
+    prefLabel: Program URL
+  - key: contributors_path
+    type: text-field
+    name: contributors_path
+    description: "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"./extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest."
+    prefLabel: Contributors path
+    regex: ^(?:\.\/.*|\w.*)\.tsv$
+    configuration:
+      required: true
+  - key: data_path
+    type: text-field
+    name: data_path
+    description: "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest."
+    prefLabel: Data path
+    regex: ^(?:\.|\.\/.+|\w.*)$
+    configuration:
+      required: true
+  - key: is_cell_type_annotation_included
+    type: radio-field
+    name: is_cell_type_annotation_included
+    description: This field specifies if the dataset includes cell type annotations ("Yes" or "No").
+    prefLabel: Is cell type annotation included?
+    values:
+      - label: "Yes"
+      - label: "No"
+    configuration:
+      required: true
+  - key: metadata_schema_id
+    type: text-field
+    name: metadata_schema_id
+    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    prefLabel: Metadata schema ID
+    default: 2f324a7b-dbf7-4df0-9f1d-e93603d9ecf4
+    configuration:
+      required: true

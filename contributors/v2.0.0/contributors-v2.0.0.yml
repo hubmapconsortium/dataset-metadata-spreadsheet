@@ -1,0 +1,87 @@
+type: template
+name: Contributor
+children:
+  - key: first_name
+    type: text-field
+    name: first_name
+    description: First name
+    prefLabel: First name
+    configuration:
+      required: true
+  - key: last_name
+    type: text-field
+    name: last_name
+    description: Last name
+    prefLabel: Last name
+    configuration:
+      required: true
+  - key: middle_name_or_initial
+    type: text-field
+    name: middle_name_or_initial
+    description: Middle name or initial. Leave blank if not applicable
+    prefLabel: Middle name or initial
+  - key: display_name
+    type: text-field
+    name: display_name
+    description: Name for display
+    prefLabel: Display name
+    configuration:
+      required: true
+  - key: affiliation
+    type: text-field
+    name: affiliation
+    description: Institutional affiliation
+    prefLabel: Affiliation
+    configuration:
+      required: true
+  - key: orcid
+    type: text-field
+    name: orcid
+    description: "ORCID ID of contributor. Example: 0000-0002-8928-741X"
+    prefLabel: ORCID ID
+    regex: "^(\\d{4}-){3}\\d{3}(\\d|X)$"
+    configuration:
+      required: true
+  - key: email
+    type: email-field
+    name: email
+    description: Email address for the individual
+    prefLabel: Email
+  - key: is_contact
+    type: radio-field
+    name: is_contact
+    description: Is this individual a contact for DOI purposes?
+    prefLabel: Is contact?
+    values:
+      - label: "Yes"
+      - label: "No"
+    configuration:
+      required: true
+  - key: is_principal_investigator
+    type: radio-field
+    name: is_principal_investigator
+    description: Is this individual a principal investigator responsible for the data?
+    prefLabel: Is principal investigator?
+    values:
+      - label: "Yes"
+      - label: "No"
+    configuration:
+      required: true
+  - key: is_operator
+    type: radio-field
+    name: is_operator
+    description: "Is this person responsible for executing the assay(s) in whole or part? If more than one person is responsible for running the assay(s), then each operator should be listed separately in the contributors file."
+    prefLabel: Is operator?
+    values:
+      - label: "Yes"
+      - label: "No"
+    configuration:
+      required: true
+  - key: metadata_schema_id
+    type: text-field
+    name: metadata_schema_id
+    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    prefLabel: Metadata schema ID
+    default: 94dae6f8-0756-4ab0-a47b-138e446a9501
+    configuration:
+      required: true

@@ -646,7 +646,7 @@ children:
   - key: section_index_number
     type: numeric-field
     name: section_index_number
-    description: The index number for the section if the sample is a single section.
+    description: The index number for the tissue section. The numbering of the tissue sections within a block should start with 1.
     prefLabel: Section index number
     datatype: xsd:int
     minValue: 0

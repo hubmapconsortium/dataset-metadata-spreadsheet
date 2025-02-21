@@ -259,6 +259,12 @@ children:
         termType: class
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
+      - type: class
+        label: MS Lipidomics
+        acronym: HRAVS
+        termType: class
+        termLabel: MS Lipidomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
     configuration:
       required: true
   - key: analyte_class
@@ -1632,6 +1638,12 @@ children:
         termLabel: Illumina; NovaSeq X Series 10B Reagent Kit (300 Cycle); PN 20085594
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000283
       - type: class
+        label: Element Biosciences; AVITI 2x75 Sequencing Kit Cloudbreak FS High Output (184 Cycles); PN 860-00015
+        acronym: HRAVS
+        termType: class
+        termLabel: Element Biosciences; AVITI 2x75 Sequencing Kit Cloudbreak FS High Output (184 Cycles); PN 860-00015
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000406
+      - type: class
         label: Illumina; NovaSeq X Series 1.5B Reagent Kit (100 Cycle); PN 20104703
         acronym: HRAVS
         termType: class
@@ -1814,6 +1826,12 @@ children:
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
       - type: class
+        label: Element Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Element Biosciences
+        iri: https://identifiers.org/RRID:SCR_026453
+      - type: class
         label: Hamamatsu
         acronym: HRAVS
         termType: class
@@ -1892,6 +1910,12 @@ children:
         termType: class
         termLabel: Visium CytAssist
         iri: https://identifiers.org/RRID:SCR_024570
+      - type: class
+        label: AVITI
+        acronym: HRAVS
+        termType: class
+        termLabel: AVITI
+        iri: https://identifiers.org/RRID:SCR_026452
       - type: class
         label: SunCollect Sprayer
         acronym: HRAVS

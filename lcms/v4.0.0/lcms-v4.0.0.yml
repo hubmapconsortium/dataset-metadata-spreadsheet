@@ -259,6 +259,12 @@ children:
         termType: class
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
+      - type: class
+        label: MS Lipidomics
+        acronym: HRAVS
+        termType: class
+        termLabel: MS Lipidomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
     configuration:
       required: true
   - key: analyte_class
@@ -586,6 +592,12 @@ children:
         termLabel: NanoZoomer 2.0-HT
         iri: https://identifiers.org/RRID:SCR_021658
       - type: class
+        label: timsTOF Ultra 2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Ultra 2
+        iri: https://identifiers.org/RRID:SCR_026541
+      - type: class
         label: Lightsheet 7
         acronym: HRAVS
         termType: class
@@ -604,11 +616,23 @@ children:
         termLabel: DNBSEQ-T7
         iri: https://identifiers.org/RRID:SCR_024847
       - type: class
+        label: timsTOF Pro
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Pro
+        iri: https://identifiers.org/RRID:SCR_026544
+      - type: class
         label: Unknown
         acronym: HRAVS
         termType: class
         termLabel: Unknown
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: timsTOF Pro 2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Pro 2
+        iri: https://identifiers.org/RRID:SCR_026545
       - type: class
         label: Q Exactive UHMR
         acronym: HRAVS
@@ -621,6 +645,12 @@ children:
         termType: class
         termLabel: Q Exactive
         iri: https://identifiers.org/RRID:SCR_020565
+      - type: class
+        label: timsTOF SCP
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF SCP
+        iri: https://identifiers.org/RRID:SCR_026542
       - type: class
         label: Zyla 4.2 sCMOS
         acronym: HRAVS
@@ -639,6 +669,12 @@ children:
         termType: class
         termLabel: QTRAP 5500
         iri: https://identifiers.org/RRID:SCR_020517
+      - type: class
+        label: timsTOF Ultra
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Ultra
+        iri: https://identifiers.org/RRID:SCR_026540
       - type: class
         label: BZ-X800
         acronym: HRAVS
@@ -711,6 +747,12 @@ children:
         termType: class
         termLabel: IN Cell Analyzer 2200
         iri: https://identifiers.org/RRID:SCR_023616
+      - type: class
+        label: timsTOF HT
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF HT
+        iri: https://identifiers.org/RRID:SCR_026543
       - type: class
         label: PhenoImager Fusion
         acronym: HRAVS

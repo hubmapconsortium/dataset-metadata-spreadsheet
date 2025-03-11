@@ -1090,12 +1090,6 @@ children:
         termLabel: Standard BioTools; Cell-ID Intercalator-103Rh 500 um; PN 201103A
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000417
       - type: class
-        label: Standard BioTools; Cell-ID Cisplatin-198Pt 100 uL; PN 201198
-        acronym: HRAVS
-        termType: class
-        termLabel: Standard BioTools; Cell-ID Cisplatin-198Pt 100 uL; PN 201198
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000416
-      - type: class
         label: Standard BioTools; Cell-ID Cisplatin 100 uL; PN 201064
         acronym: HRAVS
         termType: class
@@ -1114,6 +1108,12 @@ children:
         termLabel: Custom
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
+        label: Sigma Aldrich; Cisplatin 25mg; PN P4394
+        acronym: HRAVS
+        termType: class
+        termLabel: Sigma Aldrich; Cisplatin 25mg; PN P4394
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000419
+      - type: class
         label: Standard BioTools; Cell-ID Cisplatin-196Pt 100 uL; PN 201196
         acronym: HRAVS
         termType: class
@@ -1131,6 +1131,12 @@ children:
         termType: class
         termLabel: None
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
+      - type: class
+        label: Standard BioTools; Cell-ID Cisplatin-198Pt 100 uL; PN 201198
+        acronym: HRAVS
+        termType: class
+        termLabel: Standard BioTools; Cell-ID Cisplatin-198Pt 100 uL; PN 201198
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000416
       - type: class
         label: Standard BioTools; Cell-ID Cisplatin-195Pt 100 uL; PN 201195
         acronym: HRAVS

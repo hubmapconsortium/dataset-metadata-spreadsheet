@@ -36,8 +36,6 @@ children:
     name: lot_number
     description: "The lot number is specific to the vendor. Example: Abcam lot number is GR3238979-1"
     prefLabel: Lot number
-    configuration:
-      required: true
   - key: dilution_factor
     type: numeric-field
     name: dilution_factor

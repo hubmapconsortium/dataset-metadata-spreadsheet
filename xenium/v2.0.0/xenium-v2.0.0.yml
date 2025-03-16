@@ -259,6 +259,18 @@ children:
         termType: class
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
+      - type: class
+        label: MS Lipidomics
+        acronym: HRAVS
+        termType: class
+        termLabel: MS Lipidomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: CyTOF
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
     configuration:
       required: true
   - key: analyte_class
@@ -586,6 +598,12 @@ children:
         termLabel: NanoZoomer 2.0-HT
         iri: https://identifiers.org/RRID:SCR_021658
       - type: class
+        label: timsTOF Ultra 2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Ultra 2
+        iri: https://identifiers.org/RRID:SCR_026541
+      - type: class
         label: Lightsheet 7
         acronym: HRAVS
         termType: class
@@ -604,11 +622,23 @@ children:
         termLabel: DNBSEQ-T7
         iri: https://identifiers.org/RRID:SCR_024847
       - type: class
+        label: timsTOF Pro
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Pro
+        iri: https://identifiers.org/RRID:SCR_026544
+      - type: class
         label: Unknown
         acronym: HRAVS
         termType: class
         termLabel: Unknown
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: timsTOF Pro 2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Pro 2
+        iri: https://identifiers.org/RRID:SCR_026545
       - type: class
         label: Q Exactive UHMR
         acronym: HRAVS
@@ -622,11 +652,23 @@ children:
         termLabel: Q Exactive
         iri: https://identifiers.org/RRID:SCR_020565
       - type: class
+        label: timsTOF SCP
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF SCP
+        iri: https://identifiers.org/RRID:SCR_026542
+      - type: class
         label: Zyla 4.2 sCMOS
         acronym: HRAVS
         termType: class
         termLabel: Zyla 4.2 sCMOS
         iri: https://identifiers.org/RRID:SCR_023610
+      - type: class
+        label: Helios
+        acronym: HRAVS
+        termType: class
+        termLabel: Helios
+        iri: https://identifiers.org/RRID:SCR_019916
       - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
@@ -640,11 +682,23 @@ children:
         termLabel: QTRAP 5500
         iri: https://identifiers.org/RRID:SCR_020517
       - type: class
+        label: timsTOF Ultra
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Ultra
+        iri: https://identifiers.org/RRID:SCR_026540
+      - type: class
         label: BZ-X800
         acronym: HRAVS
         termType: class
         termLabel: BZ-X800
         iri: https://identifiers.org/RRID:SCR_023617
+      - type: class
+        label: CyTOF 2
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF 2
+        iri: https://identifiers.org/RRID:SCR_026551
       - type: class
         label: NextSeq 500
         acronym: HRAVS
@@ -669,6 +723,12 @@ children:
         termType: class
         termLabel: NovaSeq X Plus
         iri: https://identifiers.org/RRID:SCR_024568
+      - type: class
+        label: CyTOF XT
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF XT
+        iri: https://identifiers.org/RRID:SCR_026344
       - type: class
         label: NanoZoomer-SQ
         acronym: HRAVS
@@ -711,6 +771,12 @@ children:
         termType: class
         termLabel: IN Cell Analyzer 2200
         iri: https://identifiers.org/RRID:SCR_023616
+      - type: class
+        label: timsTOF HT
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF HT
+        iri: https://identifiers.org/RRID:SCR_026543
       - type: class
         label: PhenoImager Fusion
         acronym: HRAVS
@@ -1087,6 +1153,12 @@ children:
         termType: class
         termLabel: "10x Genomics; Chromium Next GEM Single Cell Fixed RNA Mouse Transcriptome Probe Kit, 64 rxns; PN 1000492"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000393
+      - type: class
+        label: 10x Genomics; Xenium Prime 5K Human Pan Tissue & Pathways Panel; PN 1000724
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Prime 5K Human Pan Tissue & Pathways Panel; PN 1000724
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000426
       - type: class
         label: 10x Genomics; Visium Human Transcriptome Probe Kit-Large; PN 1000364
         acronym: HRAVS

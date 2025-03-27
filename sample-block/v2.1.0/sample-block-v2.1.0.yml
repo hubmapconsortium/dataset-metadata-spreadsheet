@@ -212,6 +212,12 @@ children:
         termLabel: Trumps fixative
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000331
       - type: class
+        label: 1X fixation & permeabilization buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: 1X fixation & permeabilization buffer
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000425
+      - type: class
         label: Inflated (OCT)
         acronym: HRAVS
         termType: class
@@ -484,6 +490,12 @@ children:
         termType: class
         termLabel: PBS
         iri: http://purl.obolibrary.org/obo/OBI_0100046
+      - type: class
+        label: 1X quench buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: 1X quench buffer
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000427
       - type: class
         label: OCT
         acronym: HRAVS

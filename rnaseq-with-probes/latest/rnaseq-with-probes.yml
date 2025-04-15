@@ -104,11 +104,11 @@ children:
         termLabel: CosMx
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
       - type: class
-        label: DBiT
+        label: DBiT-seq
         acronym: HRAVS
         termType: class
-        termLabel: DBiT
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000222
+        termLabel: DBiT-seq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000428
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -205,6 +205,12 @@ children:
         termType: class
         termLabel: RNAseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000310
+      - type: class
+        label: Singular Genomics G4X
+        acronym: HRAVS
+        termType: class
+        termLabel: Singular Genomics G4X
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000429
       - type: class
         label: MERFISH
         acronym: HRAVS
@@ -487,6 +493,12 @@ children:
         termLabel: Resolve Biosciences
         iri: https://identifiers.org/RRID:SCR_023911
       - type: class
+        label: Singular Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Singular Genomics
+        iri: https://identifiers.org/RRID:SCR_026683
+      - type: class
         label: Vizgen
         acronym: HRAVS
         termType: class
@@ -712,6 +724,12 @@ children:
         termLabel: CyTOF 2
         iri: https://identifiers.org/RRID:SCR_026551
       - type: class
+        label: G4X Spatial Sequencer
+        acronym: HRAVS
+        termType: class
+        termLabel: G4X Spatial Sequencer
+        iri: https://identifiers.org/RRID:SCR_026684
+      - type: class
         label: NextSeq 500
         acronym: HRAVS
         termType: class
@@ -885,6 +903,12 @@ children:
         termType: class
         termLabel: NovaSeq 6000
         iri: https://identifiers.org/RRID:SCR_016387
+      - type: class
+        label: In-House
+        acronym: HRAVS
+        termType: class
+        termLabel: In-House
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C126386
       - type: class
         label: HiSeq 4000
         acronym: HRAVS
@@ -1404,6 +1428,12 @@ children:
         termType: class
         termLabel: "10x Genomics; Library Construction Kit C, 16 rxns; PN 1000694"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000399
+      - type: class
+        label: "10x Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Mouse Transcriptome, 6.5mm, 4 rxns; PN 1000521"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Mouse Transcriptome, 6.5mm, 4 rxns; PN 1000521"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000432
       - type: class
         label: "10X Genomics; Chromium Next GEM Single Cell 3' HT Kit v3.1, 48 rxns; PN 1000348"
         acronym: HRAVS
@@ -2164,6 +2194,12 @@ children:
         termLabel: 10x Genomics; Visium Human Transcriptome Probe Kit-Small; PN 1000363
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000326
       - type: class
+        label: 10x Genomics; Visium Mouse Transcriptome Probe Kit v2.0 - Small; PN 1000667
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Visium Mouse Transcriptome Probe Kit v2.0 - Small; PN 1000667
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000431
+      - type: class
         label: Custom
         acronym: HRAVS
         termType: class
@@ -2211,6 +2247,12 @@ children:
         termType: class
         termLabel: 10x Genomics; Visium Mouse Transcriptome Probe Kit - Small; PN 1000365
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000362
+      - type: class
+        label: "NanoString Technologies; CosMx Human Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-H-USCP-1KP-R"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Human Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-H-USCP-1KP-R"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000430
       - type: class
         label: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 16 rxns; PN 1000420"
         acronym: HRAVS

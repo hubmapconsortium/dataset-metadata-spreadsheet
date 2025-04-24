@@ -18,7 +18,7 @@ children:
   - key: preparation_protocol_doi
     type: link-field
     name: preparation_protocol_doi
-    description: "DOI for the protocols.io page that describes the assay or sample procurment and preparation. For example for an imaging assay, the protocol might include staining of a section through the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
+    description: "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might begin with staining of a section and finalize with the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1."
     prefLabel: Preparation protocol DOI
     configuration:
       required: true
@@ -105,11 +105,11 @@ children:
         termLabel: CosMx
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
       - type: class
-        label: DBiT
+        label: DBiT-seq
         acronym: HRAVS
         termType: class
-        termLabel: DBiT
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000222
+        termLabel: DBiT-seq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000428
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -207,6 +207,12 @@ children:
         termLabel: RNAseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000310
       - type: class
+        label: Singular Genomics G4X
+        acronym: HRAVS
+        termType: class
+        termLabel: Singular Genomics G4X
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000429
+      - type: class
         label: MERFISH
         acronym: HRAVS
         termType: class
@@ -260,6 +266,18 @@ children:
         termType: class
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
+      - type: class
+        label: MS Lipidomics
+        acronym: HRAVS
+        termType: class
+        termLabel: MS Lipidomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: CyTOF
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
     configuration:
       required: true
   - key: analyte_class
@@ -386,23 +404,11 @@ children:
     datatype: iri
     values:
       - type: class
-        label: In-House
-        acronym: HRAVS
-        termType: class
-        termLabel: In-House
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C126386
-      - type: class
         label: BGI Genomics
         acronym: HRAVS
         termType: class
         termLabel: BGI Genomics
         iri: https://identifiers.org/RRID:SCR_024848
-      - type: class
-        label: Resolve Biosciences
-        acronym: HRAVS
-        termType: class
-        termLabel: Resolve Biosciences
-        iri: https://identifiers.org/RRID:SCR_023911
       - type: class
         label: Cytiva
         acronym: HRAVS
@@ -422,35 +428,11 @@ children:
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
       - type: class
-        label: Vizgen
-        acronym: HRAVS
-        termType: class
-        termLabel: Vizgen
-        iri: https://identifiers.org/RRID:SCR_026274
-      - type: class
-        label: Standard BioTools (Fluidigm)
-        acronym: HRAVS
-        termType: class
-        termLabel: Standard BioTools (Fluidigm)
-        iri: https://identifiers.org/RRID:SCR_023606
-      - type: class
         label: GE Healthcare
         acronym: HRAVS
         termType: class
         termLabel: GE Healthcare
         iri: https://identifiers.org/RRID:SCR_025461
-      - type: class
-        label: Sciex
-        acronym: HRAVS
-        termType: class
-        termLabel: Sciex
-        iri: https://identifiers.org/RRID:SCR_023651
-      - type: class
-        label: Bruker
-        acronym: HRAVS
-        termType: class
-        termLabel: Bruker
-        iri: https://identifiers.org/RRID:SCR_017365
       - type: class
         label: Leica Microsystems
         acronym: HRAVS
@@ -463,6 +445,84 @@ children:
         termType: class
         termLabel: Akoya Biosciences
         iri: https://identifiers.org/RRID:SCR_023774
+      - type: class
+        label: NanoString
+        acronym: HRAVS
+        termType: class
+        termLabel: NanoString
+        iri: https://identifiers.org/RRID:SCR_023912
+      - type: class
+        label: Element Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Element Biosciences
+        iri: https://identifiers.org/RRID:SCR_026453
+      - type: class
+        label: Andor
+        acronym: HRAVS
+        termType: class
+        termLabel: Andor
+        iri: https://identifiers.org/RRID:SCR_023609
+      - type: class
+        label: Huron Digital Pathology
+        acronym: HRAVS
+        termType: class
+        termLabel: Huron Digital Pathology
+        iri: https://identifiers.org/RRID:SCR_024996
+      - type: class
+        label: Illumina
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina
+        iri: https://identifiers.org/RRID:SCR_010233
+      - type: class
+        label: Ionpath
+        acronym: HRAVS
+        termType: class
+        termLabel: Ionpath
+        iri: https://identifiers.org/RRID:SCR_023605
+      - type: class
+        label: In-House
+        acronym: HRAVS
+        termType: class
+        termLabel: In-House
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C126386
+      - type: class
+        label: Resolve Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Resolve Biosciences
+        iri: https://identifiers.org/RRID:SCR_023911
+      - type: class
+        label: Singular Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Singular Genomics
+        iri: https://identifiers.org/RRID:SCR_026683
+      - type: class
+        label: Vizgen
+        acronym: HRAVS
+        termType: class
+        termLabel: Vizgen
+        iri: https://identifiers.org/RRID:SCR_026274
+      - type: class
+        label: Standard BioTools (Fluidigm)
+        acronym: HRAVS
+        termType: class
+        termLabel: Standard BioTools (Fluidigm)
+        iri: https://identifiers.org/RRID:SCR_023606
+      - type: class
+        label: Sciex
+        acronym: HRAVS
+        termType: class
+        termLabel: Sciex
+        iri: https://identifiers.org/RRID:SCR_023651
+      - type: class
+        label: Bruker
+        acronym: HRAVS
+        termType: class
+        termLabel: Bruker
+        iri: https://identifiers.org/RRID:SCR_017365
       - type: class
         label: Evident Scientific (Olympus)
         acronym: HRAVS
@@ -488,47 +548,17 @@ children:
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
       - type: class
-        label: NanoString
-        acronym: HRAVS
-        termType: class
-        termLabel: NanoString
-        iri: https://identifiers.org/RRID:SCR_023912
-      - type: class
         label: Hamamatsu
         acronym: HRAVS
         termType: class
         termLabel: Hamamatsu
         iri: https://identifiers.org/RRID:SCR_017105
       - type: class
-        label: Andor
-        acronym: HRAVS
-        termType: class
-        termLabel: Andor
-        iri: https://identifiers.org/RRID:SCR_023609
-      - type: class
-        label: Huron Digital Pathology
-        acronym: HRAVS
-        termType: class
-        termLabel: Huron Digital Pathology
-        iri: https://identifiers.org/RRID:SCR_024996
-      - type: class
-        label: Illumina
-        acronym: HRAVS
-        termType: class
-        termLabel: Illumina
-        iri: https://identifiers.org/RRID:SCR_010233
-      - type: class
         label: Motic
         acronym: HRAVS
         termType: class
         termLabel: Motic
         iri: https://identifiers.org/RRID:SCR_024856
-      - type: class
-        label: Ionpath
-        acronym: HRAVS
-        termType: class
-        termLabel: Ionpath
-        iri: https://identifiers.org/RRID:SCR_023605
     configuration:
       required: true
   - key: acquisition_instrument_model
@@ -587,6 +617,12 @@ children:
         termLabel: NanoZoomer 2.0-HT
         iri: https://identifiers.org/RRID:SCR_021658
       - type: class
+        label: timsTOF Ultra 2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Ultra 2
+        iri: https://identifiers.org/RRID:SCR_026541
+      - type: class
         label: Lightsheet 7
         acronym: HRAVS
         termType: class
@@ -605,11 +641,29 @@ children:
         termLabel: DNBSEQ-T7
         iri: https://identifiers.org/RRID:SCR_024847
       - type: class
+        label: timsTOF Pro
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Pro
+        iri: https://identifiers.org/RRID:SCR_026544
+      - type: class
         label: Unknown
         acronym: HRAVS
         termType: class
         termLabel: Unknown
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: AVITI
+        acronym: HRAVS
+        termType: class
+        termLabel: AVITI
+        iri: https://identifiers.org/RRID:SCR_026452
+      - type: class
+        label: timsTOF Pro 2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Pro 2
+        iri: https://identifiers.org/RRID:SCR_026545
       - type: class
         label: Q Exactive UHMR
         acronym: HRAVS
@@ -623,11 +677,23 @@ children:
         termLabel: Q Exactive
         iri: https://identifiers.org/RRID:SCR_020565
       - type: class
+        label: timsTOF SCP
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF SCP
+        iri: https://identifiers.org/RRID:SCR_026542
+      - type: class
         label: Zyla 4.2 sCMOS
         acronym: HRAVS
         termType: class
         termLabel: Zyla 4.2 sCMOS
         iri: https://identifiers.org/RRID:SCR_023610
+      - type: class
+        label: Helios
+        acronym: HRAVS
+        termType: class
+        termLabel: Helios
+        iri: https://identifiers.org/RRID:SCR_019916
       - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
@@ -641,11 +707,29 @@ children:
         termLabel: QTRAP 5500
         iri: https://identifiers.org/RRID:SCR_020517
       - type: class
+        label: timsTOF Ultra
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF Ultra
+        iri: https://identifiers.org/RRID:SCR_026540
+      - type: class
         label: BZ-X800
         acronym: HRAVS
         termType: class
         termLabel: BZ-X800
         iri: https://identifiers.org/RRID:SCR_023617
+      - type: class
+        label: CyTOF 2
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF 2
+        iri: https://identifiers.org/RRID:SCR_026551
+      - type: class
+        label: G4X Spatial Sequencer
+        acronym: HRAVS
+        termType: class
+        termLabel: G4X Spatial Sequencer
+        iri: https://identifiers.org/RRID:SCR_026684
       - type: class
         label: NextSeq 500
         acronym: HRAVS
@@ -670,6 +754,12 @@ children:
         termType: class
         termLabel: NovaSeq X Plus
         iri: https://identifiers.org/RRID:SCR_024568
+      - type: class
+        label: CyTOF XT
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF XT
+        iri: https://identifiers.org/RRID:SCR_026344
       - type: class
         label: NanoZoomer-SQ
         acronym: HRAVS
@@ -712,6 +802,12 @@ children:
         termType: class
         termLabel: IN Cell Analyzer 2200
         iri: https://identifiers.org/RRID:SCR_023616
+      - type: class
+        label: timsTOF HT
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF HT
+        iri: https://identifiers.org/RRID:SCR_026543
       - type: class
         label: PhenoImager Fusion
         acronym: HRAVS
@@ -808,6 +904,12 @@ children:
         termType: class
         termLabel: NovaSeq 6000
         iri: https://identifiers.org/RRID:SCR_016387
+      - type: class
+        label: In-House
+        acronym: HRAVS
+        termType: class
+        termLabel: In-House
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C126386
       - type: class
         label: HiSeq 4000
         acronym: HRAVS
@@ -915,7 +1017,7 @@ children:
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
-    description: The amount of time since the acqusition instrument was last serviced by the vendor. This provides a metric for assessing drift in data capture.
+    description: The amount of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture.
     prefLabel: Time since acquisition instrument calibration value
     datatype: xsd:decimal
     minValue: 0
@@ -971,7 +1073,7 @@ children:
   - key: total_run_time_value
     type: numeric-field
     name: total_run_time_value
-    description: How long the tissue was on the acquisition instrument.
+    description: How long did the instrument take to fully complete all imaging rounds on the loaded slide.
     prefLabel: Total run time value
     datatype: xsd:decimal
     minValue: 0
@@ -1019,7 +1121,7 @@ children:
   - key: number_of_biomarker_imaging_rounds
     type: numeric-field
     name: number_of_biomarker_imaging_rounds
-    description: "Number of imaging rounds to capture the tagged biomarkers. For CODEX a biomarker imaging round consists of 1. oligo application, 2. fluor application, 3. washes. For Cell DIVE a biomarker imaging round consists of 1. staining of a biomarker via secondary detection or direct conjugate and 2. dye inactivation."
+    description: "Number of imaging rounds to capture the tagged biomarkers. For CODEX a biomarker imaging round consists of 1. oligo and fluor application, 2. imaging, 3. removal of oligo and fluor along washes. For Cell DIVE a biomarker imaging round consists of 1. staining of a biomarker via secondary detection or direct conjugate and 2. dye inactivation."
     prefLabel: Number of biomarker imaging rounds
     datatype: xsd:int
     minValue: 0

@@ -779,6 +779,18 @@ children:
         termLabel: Digital Spatial Profiler
         iri: https://identifiers.org/RRID:SCR_021660
       - type: class
+        label: timsTOF FleX
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF FleX
+        iri: https://identifiers.org/RRID:SCR_026925
+      - type: class
+        label: timsTOF FleX MALDI-2
+        acronym: HRAVS
+        termType: class
+        termLabel: timsTOF FleX MALDI-2
+        iri: https://identifiers.org/RRID:SCR_023615
+      - type: class
         label: NanoZoomer S210
         acronym: HRAVS
         termType: class
@@ -849,7 +861,7 @@ children:
         acronym: HRAVS
         termType: class
         termLabel: MALDI timsTOF Flex Prototype
-        iri: https://identifiers.org/RRID:SCR_023615
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000433
       - type: class
         label: TissueScope LE Slide Scanner
         acronym: HRAVS

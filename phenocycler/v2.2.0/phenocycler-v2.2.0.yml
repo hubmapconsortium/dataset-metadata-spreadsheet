@@ -1161,6 +1161,7 @@ children:
     values:
       - label: NAKATPASE
       - label: CD298
+      - label: "Pan-Cytokeratin,Collagen IV,FUT4,SMA"
       - label: Not applicable
     configuration:
       required: true

@@ -1154,27 +1154,15 @@ children:
     description: "A unique ID denoting the slide used. This allows users the ability to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers."
     prefLabel: Slide ID
   - key: cell_boundary_marker_or_stain
-    type: radio-field
+    type: text-field
     name: cell_boundary_marker_or_stain
     description: "If a marker or stain was used to identify all cell boundaries in the tissue, then the name of the marker or stain should be included here. The name of the antibody-targeted molecule marker or non-antibody targeted molecule stain included here must be identical to what is found in the imaging data. For example, with the PhenoCycler, this name must match the value found in the XPD output file. If multiple marker or stains are used to identify all cell boundaries, then a comma separated list should be used here."
     prefLabel: Cell boundary marker or stain
-    values:
-      - label: NAKATPASE
-      - label: CD298
-      - label: "Pan-Cytokeratin,Collagen IV,FUT4,SMA"
-      - label: Not applicable
-    configuration:
-      required: true
   - key: nuclear_marker_or_stain
-    type: radio-field
+    type: text-field
     name: nuclear_marker_or_stain
     description: "For markers, an antibody-targetted molecule present in or around the cell nucleus, the protein or gene symbol that identifies the antibody target that is used as the nuclear marker. This symbol must match the antibody target that is either generated from the panel used or entered with custom panels. Preferably, if using a custom antibody marker, this symbol should be the HGNC symbol (https://www.genenames.org/).   For non-protein targets this is the stain name (e.g., DAPI) and, when appropriate, associated staining kit and vendor. For the PhenoCycler, this symbol must match the value found in the XPD output file."
     prefLabel: Nuclear marker or stain
-    values:
-      - label: DAPI
-      - label: Not applicable
-    configuration:
-      required: true
   - key: non_global_files
     type: text-field
     name: non_global_files

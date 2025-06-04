@@ -84,7 +84,7 @@ children:
         acronym: HRAVS
         termType: class
         termLabel: Stereo-seq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000385
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000434
       - type: class
         label: Visium (with probes)
         acronym: HRAVS
@@ -175,6 +175,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -426,6 +432,12 @@ children:
         termType: class
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
+      - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
       - type: class
         label: GE Healthcare
         acronym: HRAVS
@@ -1110,7 +1122,7 @@ children:
   - key: number_of_channels
     type: numeric-field
     name: number_of_channels
-    description: The number of distinct color channels in the image.
+    description: The number of distinct fluorescent channels in the image.
     prefLabel: Number of channels
     datatype: xsd:int
     minValue: 0

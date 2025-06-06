@@ -1,5 +1,5 @@
 type: template
-name: CosMx
+name: CosMx Transcriptomics
 children:
   - key: parent_sample_id
     type: text-field
@@ -29,7 +29,7 @@ children:
     datatype: iri
     default:
       value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
-      label: CosMx
+      label: CosMx Transcriptomics
     values:
       - type: class
         label: HiFi-Slide
@@ -84,7 +84,7 @@ children:
         acronym: HRAVS
         termType: class
         termLabel: Stereo-seq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000385
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000434
       - type: class
         label: Visium (with probes)
         acronym: HRAVS
@@ -175,6 +175,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -426,6 +432,12 @@ children:
         termType: class
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
+      - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
       - type: class
         label: GE Healthcare
         acronym: HRAVS
@@ -1260,6 +1272,12 @@ children:
         termLabel: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 64 rxns; PN 1000456"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000376
       - type: class
+        label: "NanoString Technologies; CosMx Human Immuno-Oncology Panel (Protein, 64 Plex); PN CMX-H-IOP-64P-P"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Human Immuno-Oncology Panel (Protein, 64 Plex); PN CMX-H-IOP-64P-P"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000436
+      - type: class
         label: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome, 4 rxns x 1 BC; PN 1000474"
         acronym: HRAVS
         termType: class
@@ -1277,6 +1295,12 @@ children:
         termType: class
         termLabel: "NanoString Technologies; CosMx Human Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-H-USCP-1KP-R"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000430
+      - type: class
+        label: "NanoString Technologies; CosMx Mouse Neuroscience Panel (Protein, 64 Plex); PN CMX-M-Neuro-64P-P"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Mouse Neuroscience Panel (Protein, 64 Plex); PN CMX-M-Neuro-64P-P"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000437
       - type: class
         label: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 16 rxns; PN 1000420"
         acronym: HRAVS

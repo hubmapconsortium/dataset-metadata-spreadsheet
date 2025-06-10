@@ -176,6 +176,12 @@ children:
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
       - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
+      - type: class
         label: Histology
         acronym: HRAVS
         termType: class
@@ -426,6 +432,12 @@ children:
         termType: class
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
+      - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
       - type: class
         label: GE Healthcare
         acronym: HRAVS
@@ -1342,6 +1354,12 @@ children:
         termType: class
         termLabel: ng/ul
         iri: http://purl.obolibrary.org/obo/UO_0010050
+      - type: class
+        label: pg/ul
+        acronym: HRAVS
+        termType: class
+        termLabel: pg/ul
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000438
       - type: class
         label: nM
         acronym: HRAVS

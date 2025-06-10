@@ -85,7 +85,7 @@ children:
         acronym: HRAVS
         termType: class
         termLabel: Stereo-seq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000434
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000385
       - type: class
         label: Visium (with probes)
         acronym: HRAVS
@@ -440,6 +440,12 @@ children:
         termLabel: Complete Genomics
         iri: https://identifiers.org/RRID:SCR_027007
       - type: class
+        label: 3DHISTECH
+        acronym: HRAVS
+        termType: class
+        termLabel: 3DHISTECH
+        iri: https://identifiers.org/RRID:SCR_027042
+      - type: class
         label: GE Healthcare
         acronym: HRAVS
         termType: class
@@ -598,6 +604,12 @@ children:
         termType: class
         termLabel: BZ-X710
         iri: https://identifiers.org/RRID:SCR_017202
+      - type: class
+        label: Pannoramic MIDI II Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Pannoramic MIDI II Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_024834
       - type: class
         label: Not applicable
         acronym: HRAVS

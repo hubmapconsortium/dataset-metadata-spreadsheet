@@ -84,7 +84,7 @@ children:
         acronym: HRAVS
         termType: class
         termLabel: Stereo-seq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000434
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000385
       - type: class
         label: Visium (with probes)
         acronym: HRAVS
@@ -175,6 +175,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS

@@ -1,5 +1,5 @@
 type: template
-name: ATACseq v3
+name: ATACseq
 children:
   - key: parent_sample_id
     type: text-field
@@ -175,6 +175,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -427,6 +433,18 @@ children:
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
       - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
+      - type: class
+        label: 3DHISTECH
+        acronym: HRAVS
+        termType: class
+        termLabel: 3DHISTECH
+        iri: https://identifiers.org/RRID:SCR_027042
+      - type: class
         label: GE Healthcare
         acronym: HRAVS
         termType: class
@@ -585,6 +603,12 @@ children:
         termType: class
         termLabel: BZ-X710
         iri: https://identifiers.org/RRID:SCR_017202
+      - type: class
+        label: Pannoramic MIDI II Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Pannoramic MIDI II Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_024834
       - type: class
         label: Not applicable
         acronym: HRAVS
@@ -1313,6 +1337,12 @@ children:
         termLabel: ng/ul
         iri: http://purl.obolibrary.org/obo/UO_0010050
       - type: class
+        label: pg/ul
+        acronym: HRAVS
+        termType: class
+        termLabel: pg/ul
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000438
+      - type: class
         label: nM
         acronym: HRAVS
         termType: class
@@ -1470,6 +1500,12 @@ children:
         termType: class
         termLabel: "10x Genomics; Chromium GEM-X Single Cell 5' Kit v3, 16 rxns; PN 1000699"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000394
+      - type: class
+        label: "10x Genomics; Library Construction Kit, 16 rxns; PN 1000190"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Library Construction Kit, 16 rxns; PN 1000190"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000439
       - type: class
         label: "Parse Biosciences; Evercode WT Mini v2 Kit, 12 rxns; PN ECW02010"
         acronym: HRAVS

@@ -1,2 +1,2 @@
-parent_sample_id	lab_id	preparation_protocol_doi	dataset_type	contributors_path	data_path	mapped_area_value	mapped_area_unit	spot_size_value	spot_size_unit	number_of_spots	spot_spacing_value	spot_spacing_unit	capture_area_id	permeabilization_time_value	permeabilization_time_unit	preparation_instrument_vendor	preparation_instrument_model	metadata_schema_id
-			Visium (with probes)															4646ec9d-f3c9-4619-bc45-7e14748bb976
+parent_sample_id	lab_id	preparation_protocol_doi	dataset_type	contributors_path	data_path	mapped_area_value	mapped_area_unit	spot_size_value	spot_size_unit	number_of_spots	spot_spacing_value	spot_spacing_unit	capture_area_id	permeabilization_time_value	permeabilization_time_unit	preparation_instrument_vendor	preparation_instrument_model	non_global_files	metadata_schema_id
+			Visium (with probes)																4646ec9d-f3c9-4619-bc45-7e14748bb976

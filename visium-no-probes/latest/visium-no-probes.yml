@@ -98,12 +98,6 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
-        label: CosMx
-        acronym: HRAVS
-        termType: class
-        termLabel: CosMx
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
-      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
@@ -115,6 +109,12 @@ children:
         termType: class
         termLabel: SIMS
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000202
+      - type: class
+        label: CosMx Transcriptomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Transcriptomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
       - type: class
         label: Cell DIVE
         acronym: HRAVS
@@ -175,6 +175,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -597,6 +603,12 @@ children:
         termType: class
         termLabel: TM-Sprayer
         iri: https://identifiers.org/RRID:SCR_023732
+  - key: non_global_files
+    type: text-field
+    name: non_global_files
+    description: "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree. This field is used for internal HuBMAP processing. Examples for GeoMx and PhenoCycler are provided in the File Locations documentation: https://docs.google.com/document/d/1n2McSs9geA9Eli4QWQaB3c9R3wo5d5U1Xd57DWQfN5Q/edit#heading=h.1u82i4axggee"
+    prefLabel: Non global files
+    regex: "^(?:\\.\\/[^;]+|\\w[^;]+)(?:;\\s*(?:\\.\\/[^;]+|\\w[^;]+))*$"
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id

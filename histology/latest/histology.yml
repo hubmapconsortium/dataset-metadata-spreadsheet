@@ -177,6 +177,12 @@ children:
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
       - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
+      - type: class
         label: Histology
         acronym: HRAVS
         termType: class
@@ -428,6 +434,18 @@ children:
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
       - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
+      - type: class
+        label: 3DHISTECH
+        acronym: HRAVS
+        termType: class
+        termLabel: 3DHISTECH
+        iri: https://identifiers.org/RRID:SCR_027042
+      - type: class
         label: GE Healthcare
         acronym: HRAVS
         termType: class
@@ -548,6 +566,12 @@ children:
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
       - type: class
+        label: Microscopes International
+        acronym: HRAVS
+        termType: class
+        termLabel: Microscopes International
+        iri: https://identifiers.org/RRID:SCR_027094
+      - type: class
         label: Hamamatsu
         acronym: HRAVS
         termType: class
@@ -586,6 +610,12 @@ children:
         termType: class
         termLabel: BZ-X710
         iri: https://identifiers.org/RRID:SCR_017202
+      - type: class
+        label: Pannoramic MIDI II Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Pannoramic MIDI II Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_024834
       - type: class
         label: Not applicable
         acronym: HRAVS
@@ -695,6 +725,12 @@ children:
         termLabel: Helios
         iri: https://identifiers.org/RRID:SCR_019916
       - type: class
+        label: uScopeHXII-20
+        acronym: HRAVS
+        termType: class
+        termLabel: uScopeHXII-20
+        iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
         termType: class
@@ -772,6 +808,12 @@ children:
         termType: class
         termLabel: NextSeq 550
         iri: https://identifiers.org/RRID:SCR_016381
+      - type: class
+        label: Axio Zoom.V16
+        acronym: HRAVS
+        termType: class
+        termLabel: Axio Zoom.V16
+        iri: https://identifiers.org/RRID:SCR_027090
       - type: class
         label: Digital Spatial Profiler
         acronym: HRAVS
@@ -928,6 +970,12 @@ children:
         termType: class
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
+      - type: class
+        label: solariX
+        acronym: HRAVS
+        termType: class
+        termLabel: solariX
+        iri: https://identifiers.org/RRID:SCR_027095
       - type: class
         label: Aperio AT2
         acronym: HRAVS

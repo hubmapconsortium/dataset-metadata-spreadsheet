@@ -74,6 +74,12 @@ children:
         termLabel: Confocal
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000206
       - type: class
+        label: FACS
+        acronym: HRAVS
+        termType: class
+        termLabel: FACS
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000440
+      - type: class
         label: Xenium
         acronym: HRAVS
         termType: class
@@ -175,6 +181,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -427,6 +439,18 @@ children:
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
       - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
+      - type: class
+        label: 3DHISTECH
+        acronym: HRAVS
+        termType: class
+        termLabel: 3DHISTECH
+        iri: https://identifiers.org/RRID:SCR_027042
+      - type: class
         label: GE Healthcare
         acronym: HRAVS
         termType: class
@@ -541,11 +565,23 @@ children:
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
       - type: class
+        label: Cytek Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Biosciences
+        iri: https://identifiers.org/RRID:SCR_027071
+      - type: class
         label: 10x Genomics
         acronym: HRAVS
         termType: class
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
+      - type: class
+        label: Microscopes International
+        acronym: HRAVS
+        termType: class
+        termLabel: Microscopes International
+        iri: https://identifiers.org/RRID:SCR_027094
       - type: class
         label: Hamamatsu
         acronym: HRAVS
@@ -585,6 +621,12 @@ children:
         termType: class
         termLabel: BZ-X710
         iri: https://identifiers.org/RRID:SCR_017202
+      - type: class
+        label: Pannoramic MIDI II Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Pannoramic MIDI II Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_024834
       - type: class
         label: Not applicable
         acronym: HRAVS
@@ -694,6 +736,12 @@ children:
         termLabel: Helios
         iri: https://identifiers.org/RRID:SCR_019916
       - type: class
+        label: uScopeHXII-20
+        acronym: HRAVS
+        termType: class
+        termLabel: uScopeHXII-20
+        iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
         termType: class
@@ -772,6 +820,12 @@ children:
         termLabel: NextSeq 550
         iri: https://identifiers.org/RRID:SCR_016381
       - type: class
+        label: Axio Zoom.V16
+        acronym: HRAVS
+        termType: class
+        termLabel: Axio Zoom.V16
+        iri: https://identifiers.org/RRID:SCR_027090
+      - type: class
         label: Digital Spatial Profiler
         acronym: HRAVS
         termType: class
@@ -807,6 +861,12 @@ children:
         termType: class
         termLabel: Axio Observer 7
         iri: https://identifiers.org/RRID:SCR_023694
+      - type: class
+        label: Cytek Northern Lights
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Northern Lights
+        iri: https://identifiers.org/RRID:SCR_027072
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
@@ -927,6 +987,12 @@ children:
         termType: class
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
+      - type: class
+        label: solariX
+        acronym: HRAVS
+        termType: class
+        termLabel: solariX
+        iri: https://identifiers.org/RRID:SCR_027095
       - type: class
         label: Aperio AT2
         acronym: HRAVS
@@ -1079,6 +1145,8 @@ children:
     description: The number of mass channels that measure the expression of markers in single cells.
     prefLabel: Number of mass channels
     datatype: xsd:int
+    configuration:
+      required: true
   - key: is_erythrocyte_lysis_performed
     type: radio-field
     name: is_erythrocyte_lysis_performed
@@ -1087,6 +1155,8 @@ children:
     values:
       - label: "Yes"
       - label: "No"
+    configuration:
+      required: true
   - key: antibody_reagent_kit
     type: controlled-term-field
     name: antibody_reagent_kit
@@ -1124,6 +1194,8 @@ children:
         termType: class
         termLabel: Standard BioTools; Maxpar Phosphoprotein Staining Kit; PN 201604
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000408
+    configuration:
+      required: true
   - key: viability_reagent_kit
     type: controlled-term-field
     name: viability_reagent_kit
@@ -1191,6 +1263,8 @@ children:
         termType: class
         termLabel: Standard BioTools; Cell-ID Cisplatin-195Pt 100 uL; PN 201195
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000414
+    configuration:
+      required: true
   - key: is_cell_activation_performed
     type: radio-field
     name: is_cell_activation_performed
@@ -1199,6 +1273,8 @@ children:
     values:
       - label: "Yes"
       - label: "No"
+    configuration:
+      required: true
   - key: activation_stimulus
     type: text-field
     name: activation_stimulus
@@ -1212,6 +1288,8 @@ children:
     values:
       - label: "Yes"
       - label: "No"
+    configuration:
+      required: true
   - key: is_heparin_used
     type: radio-field
     name: is_heparin_used
@@ -1220,6 +1298,8 @@ children:
     values:
       - label: "Yes"
       - label: "No"
+    configuration:
+      required: true
   - key: loaded_cell_concentration_value
     type: numeric-field
     name: loaded_cell_concentration_value
@@ -1276,6 +1356,8 @@ children:
         termType: class
         termLabel: None
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
+    configuration:
+      required: true
   - key: calibration_kit_lot_number
     type: text-field
     name: calibration_kit_lot_number

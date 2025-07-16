@@ -38,6 +38,12 @@ children:
         termLabel: HiFi-Slide
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000195
       - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000441
+      - type: class
         label: SNARE-seq2
         acronym: HRAVS
         termType: class
@@ -73,6 +79,12 @@ children:
         termType: class
         termLabel: Confocal
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000206
+      - type: class
+        label: FACS
+        acronym: HRAVS
+        termType: class
+        termLabel: FACS
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000440
       - type: class
         label: Xenium
         acronym: HRAVS
@@ -175,6 +187,12 @@ children:
         termType: class
         termLabel: ATACseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -427,6 +445,18 @@ children:
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
       - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
+      - type: class
+        label: 3DHISTECH
+        acronym: HRAVS
+        termType: class
+        termLabel: 3DHISTECH
+        iri: https://identifiers.org/RRID:SCR_027042
+      - type: class
         label: GE Healthcare
         acronym: HRAVS
         termType: class
@@ -541,11 +571,23 @@ children:
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
       - type: class
+        label: Cytek Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Biosciences
+        iri: https://identifiers.org/RRID:SCR_027071
+      - type: class
         label: 10x Genomics
         acronym: HRAVS
         termType: class
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
+      - type: class
+        label: Microscopes International
+        acronym: HRAVS
+        termType: class
+        termLabel: Microscopes International
+        iri: https://identifiers.org/RRID:SCR_027094
       - type: class
         label: Hamamatsu
         acronym: HRAVS
@@ -585,6 +627,12 @@ children:
         termType: class
         termLabel: BZ-X710
         iri: https://identifiers.org/RRID:SCR_017202
+      - type: class
+        label: Pannoramic MIDI II Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Pannoramic MIDI II Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_024834
       - type: class
         label: Not applicable
         acronym: HRAVS
@@ -694,6 +742,12 @@ children:
         termLabel: Helios
         iri: https://identifiers.org/RRID:SCR_019916
       - type: class
+        label: uScopeHXII-20
+        acronym: HRAVS
+        termType: class
+        termLabel: uScopeHXII-20
+        iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
         termType: class
@@ -772,6 +826,12 @@ children:
         termLabel: NextSeq 550
         iri: https://identifiers.org/RRID:SCR_016381
       - type: class
+        label: Axio Zoom.V16
+        acronym: HRAVS
+        termType: class
+        termLabel: Axio Zoom.V16
+        iri: https://identifiers.org/RRID:SCR_027090
+      - type: class
         label: Digital Spatial Profiler
         acronym: HRAVS
         termType: class
@@ -807,6 +867,12 @@ children:
         termType: class
         termLabel: Axio Observer 7
         iri: https://identifiers.org/RRID:SCR_023694
+      - type: class
+        label: Cytek Northern Lights
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Northern Lights
+        iri: https://identifiers.org/RRID:SCR_027072
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
@@ -928,6 +994,12 @@ children:
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
       - type: class
+        label: solariX
+        acronym: HRAVS
+        termType: class
+        termLabel: solariX
+        iri: https://identifiers.org/RRID:SCR_027095
+      - type: class
         label: Aperio AT2
         acronym: HRAVS
         termType: class
@@ -939,6 +1011,12 @@ children:
         termType: class
         termLabel: MIBIscope
         iri: https://identifiers.org/RRID:SCR_023613
+      - type: class
+        label: Biomark HD
+        acronym: HRAVS
+        termType: class
+        termLabel: Biomark HD
+        iri: https://identifiers.org/RRID:SCR_022658
       - type: class
         label: NanoZoomer S60
         acronym: HRAVS
@@ -963,6 +1041,12 @@ children:
         termType: class
         termLabel: Axio Scan.Z1
         iri: https://identifiers.org/RRID:SCR_020927
+      - type: class
+        label: Juno System
+        acronym: HRAVS
+        termType: class
+        termLabel: Juno System
+        iri: https://identifiers.org/RRID:SCR_027198
       - type: class
         label: Q Exactive HF
         acronym: HRAVS
@@ -1214,6 +1298,12 @@ children:
         termLabel: 10x Genomics; Visium Human Transcriptome Probe Kit-Large; PN 1000364
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000383
       - type: class
+        label: 10x Genomics; Xenium Mouse Multi-Tissue Atlassing Panel; PN 1000627
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Mouse Multi-Tissue Atlassing Panel; PN 1000627
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000442
+      - type: class
         label: 10x Genomics; Visium Human Transcriptome Probe Kit-Small; PN 1000363
         acronym: HRAVS
         termType: class
@@ -1262,6 +1352,12 @@ children:
         termLabel: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 64 rxns; PN 1000456"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000376
       - type: class
+        label: "NanoString Technologies; CosMx Human Immuno-Oncology Panel (Protein, 64 Plex); PN CMX-H-IOP-64P-P"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Human Immuno-Oncology Panel (Protein, 64 Plex); PN CMX-H-IOP-64P-P"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000436
+      - type: class
         label: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome, 4 rxns x 1 BC; PN 1000474"
         acronym: HRAVS
         termType: class
@@ -1279,6 +1375,12 @@ children:
         termType: class
         termLabel: "NanoString Technologies; CosMx Human Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-H-USCP-1KP-R"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000430
+      - type: class
+        label: "NanoString Technologies; CosMx Mouse Neuroscience Panel (Protein, 64 Plex); PN CMX-M-Neuro-64P-P"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Mouse Neuroscience Panel (Protein, 64 Plex); PN CMX-M-Neuro-64P-P"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000437
       - type: class
         label: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 16 rxns; PN 1000420"
         acronym: HRAVS

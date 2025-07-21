@@ -1346,11 +1346,29 @@ children:
         termLabel: 10x Genomics; Xenium Human Multi-Tissue and Cancer Panel v1; PN 1000626
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000395
       - type: class
+        label: 10x Genomics; Xenium Custom Gene Expression Panel (up to 50 genes); PN 1000464
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Custom Gene Expression Panel (up to 50 genes); PN 1000464
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000445
+      - type: class
+        label: 10x Genomics; Xenium Custom Gene Expression Panel (51-100 genes); PN 1000561
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Custom Gene Expression Panel (51-100 genes); PN 1000561
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000444
+      - type: class
         label: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 64 rxns; PN 1000456"
         acronym: HRAVS
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Human Transcriptome Probe Kit, 64 rxns; PN 1000456"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000376
+      - type: class
+        label: 10x Genomics; Xenium Human Colon Gene Expression Panel; PN 1000642
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Human Colon Gene Expression Panel; PN 1000642
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000446
       - type: class
         label: "NanoString Technologies; CosMx Human Immuno-Oncology Panel (Protein, 64 Plex); PN CMX-H-IOP-64P-P"
         acronym: HRAVS
@@ -1369,6 +1387,12 @@ children:
         termType: class
         termLabel: 10x Genomics; Visium Mouse Transcriptome Probe Kit - Small; PN 1000365
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000362
+      - type: class
+        label: 10x Genomics; Xenium Human Lung Gene Expression Panel; PN 1000601
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Human Lung Gene Expression Panel; PN 1000601
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000443
       - type: class
         label: "NanoString Technologies; CosMx Human Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-H-USCP-1KP-R"
         acronym: HRAVS

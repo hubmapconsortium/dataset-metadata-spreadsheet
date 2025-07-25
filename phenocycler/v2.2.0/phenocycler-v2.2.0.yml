@@ -39,6 +39,12 @@ children:
         termLabel: HiFi-Slide
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000195
       - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000441
+      - type: class
         label: SNARE-seq2
         acronym: HRAVS
         termType: class
@@ -75,6 +81,12 @@ children:
         termLabel: Confocal
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000206
       - type: class
+        label: FACS
+        acronym: HRAVS
+        termType: class
+        termLabel: FACS
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000440
+      - type: class
         label: Xenium
         acronym: HRAVS
         termType: class
@@ -110,6 +122,12 @@ children:
         termType: class
         termLabel: DBiT-seq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000428
+      - type: class
+        label: Seq-Scope
+        acronym: HRAVS
+        termType: class
+        termLabel: Seq-Scope
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000390
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -237,6 +255,12 @@ children:
         termLabel: nanoSPLITS
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000312
       - type: class
+        label: Pixel-seq
+        acronym: HRAVS
+        termType: class
+        termLabel: Pixel-seq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000449
+      - type: class
         label: 10X Multiome
         acronym: HRAVS
         termType: class
@@ -254,6 +278,12 @@ children:
         termType: class
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
+      - type: class
+        label: 4i
+        acronym: HRAVS
+        termType: class
+        termLabel: 4i
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000447
       - type: class
         label: PhenoCycler
         acronym: HRAVS
@@ -284,6 +314,12 @@ children:
         termType: class
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+      - type: class
+        label: MPLEx
+        acronym: HRAVS
+        termType: class
+        termLabel: MPLEx
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000448
     configuration:
       required: true
   - key: analyte_class
@@ -560,11 +596,23 @@ children:
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
       - type: class
+        label: Cytek Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Biosciences
+        iri: https://identifiers.org/RRID:SCR_027071
+      - type: class
         label: 10x Genomics
         acronym: HRAVS
         termType: class
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
+      - type: class
+        label: Microscopes International
+        acronym: HRAVS
+        termType: class
+        termLabel: Microscopes International
+        iri: https://identifiers.org/RRID:SCR_027094
       - type: class
         label: Hamamatsu
         acronym: HRAVS
@@ -719,6 +767,12 @@ children:
         termLabel: Helios
         iri: https://identifiers.org/RRID:SCR_019916
       - type: class
+        label: uScopeHXII-20
+        acronym: HRAVS
+        termType: class
+        termLabel: uScopeHXII-20
+        iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
         termType: class
@@ -797,6 +851,12 @@ children:
         termLabel: NextSeq 550
         iri: https://identifiers.org/RRID:SCR_016381
       - type: class
+        label: Axio Zoom.V16
+        acronym: HRAVS
+        termType: class
+        termLabel: Axio Zoom.V16
+        iri: https://identifiers.org/RRID:SCR_027090
+      - type: class
         label: Digital Spatial Profiler
         acronym: HRAVS
         termType: class
@@ -832,6 +892,12 @@ children:
         termType: class
         termLabel: Axio Observer 7
         iri: https://identifiers.org/RRID:SCR_023694
+      - type: class
+        label: Cytek Northern Lights
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Northern Lights
+        iri: https://identifiers.org/RRID:SCR_027072
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
@@ -953,6 +1019,12 @@ children:
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
       - type: class
+        label: solariX
+        acronym: HRAVS
+        termType: class
+        termLabel: solariX
+        iri: https://identifiers.org/RRID:SCR_027095
+      - type: class
         label: Aperio AT2
         acronym: HRAVS
         termType: class
@@ -964,6 +1036,12 @@ children:
         termType: class
         termLabel: MIBIscope
         iri: https://identifiers.org/RRID:SCR_023613
+      - type: class
+        label: Biomark HD
+        acronym: HRAVS
+        termType: class
+        termLabel: Biomark HD
+        iri: https://identifiers.org/RRID:SCR_022658
       - type: class
         label: NanoZoomer S60
         acronym: HRAVS
@@ -988,6 +1066,12 @@ children:
         termType: class
         termLabel: Axio Scan.Z1
         iri: https://identifiers.org/RRID:SCR_020927
+      - type: class
+        label: Juno System
+        acronym: HRAVS
+        termType: class
+        termLabel: Juno System
+        iri: https://identifiers.org/RRID:SCR_027198
       - type: class
         label: Q Exactive HF
         acronym: HRAVS
@@ -1182,11 +1266,15 @@ children:
     name: cell_boundary_marker_or_stain
     description: "If a marker or stain was used to identify all cell boundaries in the tissue, then the name of the marker or stain should be included here. The name of the antibody-targeted molecule marker or non-antibody targeted molecule stain included here must be identical to what is found in the imaging data. For example, with the PhenoCycler, this name must match the value found in the XPD output file. If multiple marker or stains are used to identify all cell boundaries, then a comma separated list should be used here."
     prefLabel: Cell boundary marker or stain
+    configuration:
+      required: true
   - key: nuclear_marker_or_stain
     type: text-field
     name: nuclear_marker_or_stain
     description: "For markers, an antibody-targetted molecule present in or around the cell nucleus, the protein or gene symbol that identifies the antibody target that is used as the nuclear marker. This symbol must match the antibody target that is either generated from the panel used or entered with custom panels. Preferably, if using a custom antibody marker, this symbol should be the HGNC symbol (https://www.genenames.org/).   For non-protein targets this is the stain name (e.g., DAPI) and, when appropriate, associated staining kit and vendor. For the PhenoCycler, this symbol must match the value found in the XPD output file."
     prefLabel: Nuclear marker or stain
+    configuration:
+      required: true
   - key: non_global_files
     type: text-field
     name: non_global_files

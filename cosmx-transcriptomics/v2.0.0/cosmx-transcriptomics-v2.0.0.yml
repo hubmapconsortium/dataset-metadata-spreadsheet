@@ -38,23 +38,11 @@ children:
         termLabel: HiFi-Slide
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000195
       - type: class
-        label: Olink
-        acronym: HRAVS
-        termType: class
-        termLabel: Olink
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000441
-      - type: class
         label: SNARE-seq2
         acronym: HRAVS
         termType: class
         termLabel: SNARE-seq2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000264
-      - type: class
-        label: MIBI
-        acronym: HRAVS
-        termType: class
-        termLabel: MIBI
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000172
       - type: class
         label: Visium (no probes)
         acronym: HRAVS
@@ -68,29 +56,11 @@ children:
         termLabel: DESI
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000204
       - type: class
-        label: Auto-fluorescence
-        acronym: HRAVS
-        termType: class
-        termLabel: Auto-fluorescence
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000205
-      - type: class
         label: Confocal
         acronym: HRAVS
         termType: class
         termLabel: Confocal
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000206
-      - type: class
-        label: FACS
-        acronym: HRAVS
-        termType: class
-        termLabel: FACS
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000440
-      - type: class
-        label: Xenium
-        acronym: HRAVS
-        termType: class
-        termLabel: Xenium
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
       - type: class
         label: Stereo-seq
         acronym: HRAVS
@@ -110,12 +80,6 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
-        label: CosMx
-        acronym: HRAVS
-        termType: class
-        termLabel: CosMx
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
-      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
@@ -127,6 +91,126 @@ children:
         termType: class
         termLabel: Seq-Scope
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000390
+      - type: class
+        label: CosMx Transcriptomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Transcriptomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
+      - type: class
+        label: CyCIF
+        acronym: HRAVS
+        termType: class
+        termLabel: CyCIF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000200
+      - type: class
+        label: Light Sheet
+        acronym: HRAVS
+        termType: class
+        termLabel: Light Sheet
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
+      - type: class
+        label: seqFISH
+        acronym: HRAVS
+        termType: class
+        termLabel: seqFISH
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000397
+      - type: class
+        label: ATACseq
+        acronym: HRAVS
+        termType: class
+        termLabel: ATACseq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
+      - type: class
+        label: Singular Genomics G4X
+        acronym: HRAVS
+        termType: class
+        termLabel: Singular Genomics G4X
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000429
+      - type: class
+        label: Visium HD
+        acronym: HRAVS
+        termType: class
+        termLabel: Visium HD
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000451
+      - type: class
+        label: MERFISH
+        acronym: HRAVS
+        termType: class
+        termLabel: MERFISH
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000221
+      - type: class
+        label: 10X Multiome
+        acronym: HRAVS
+        termType: class
+        termLabel: 10X Multiome
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000215
+      - type: class
+        label: 4i
+        acronym: HRAVS
+        termType: class
+        termLabel: 4i
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000447
+      - type: class
+        label: PhenoCycler
+        acronym: HRAVS
+        termType: class
+        termLabel: PhenoCycler
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000199
+      - type: class
+        label: Second Harmonic Generation (SHG)
+        acronym: HRAVS
+        termType: class
+        termLabel: Second Harmonic Generation (SHG)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000208
+      - type: class
+        label: Thick section Multiphoton MxIF
+        acronym: HRAVS
+        termType: class
+        termLabel: Thick section Multiphoton MxIF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
+      - type: class
+        label: CyTOF
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+      - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000441
+      - type: class
+        label: MIBI
+        acronym: HRAVS
+        termType: class
+        termLabel: MIBI
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000172
+      - type: class
+        label: Auto-fluorescence
+        acronym: HRAVS
+        termType: class
+        termLabel: Auto-fluorescence
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000205
+      - type: class
+        label: FACS
+        acronym: HRAVS
+        termType: class
+        termLabel: FACS
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000440
+      - type: class
+        label: Xenium
+        acronym: HRAVS
+        termType: class
+        termLabel: Xenium
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -158,17 +242,11 @@ children:
         termLabel: MUSIC
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000328
       - type: class
-        label: CyCIF
+        label: Pixel-seqV2
         acronym: HRAVS
         termType: class
-        termLabel: CyCIF
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000200
-      - type: class
-        label: Light Sheet
-        acronym: HRAVS
-        termType: class
-        termLabel: Light Sheet
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
+        termLabel: Pixel-seqV2
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000450
       - type: class
         label: MALDI
         acronym: HRAVS
@@ -176,29 +254,11 @@ children:
         termLabel: MALDI
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000201
       - type: class
-        label: seqFISH
-        acronym: HRAVS
-        termType: class
-        termLabel: seqFISH
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000397
-      - type: class
         label: 2D Imaging Mass Cytometry
         acronym: HRAVS
         termType: class
         termLabel: 2D Imaging Mass Cytometry
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000296
-      - type: class
-        label: ATACseq
-        acronym: HRAVS
-        termType: class
-        termLabel: ATACseq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
-      - type: class
-        label: CosMx Proteomics
-        acronym: HRAVS
-        termType: class
-        termLabel: CosMx Proteomics
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
       - type: class
         label: Histology
         acronym: HRAVS
@@ -230,18 +290,6 @@ children:
         termLabel: RNAseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000310
       - type: class
-        label: Singular Genomics G4X
-        acronym: HRAVS
-        termType: class
-        termLabel: Singular Genomics G4X
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000429
-      - type: class
-        label: MERFISH
-        acronym: HRAVS
-        termType: class
-        termLabel: MERFISH
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000221
-      - type: class
         label: LC-MS
         acronym: HRAVS
         termType: class
@@ -253,18 +301,6 @@ children:
         termType: class
         termLabel: nanoSPLITS
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000312
-      - type: class
-        label: Pixel-seq
-        acronym: HRAVS
-        termType: class
-        termLabel: Pixel-seq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000449
-      - type: class
-        label: 10X Multiome
-        acronym: HRAVS
-        termType: class
-        termLabel: 10X Multiome
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000215
       - type: class
         label: GeoMx (nCounter)
         acronym: HRAVS
@@ -278,41 +314,11 @@ children:
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
       - type: class
-        label: 4i
-        acronym: HRAVS
-        termType: class
-        termLabel: 4i
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000447
-      - type: class
-        label: PhenoCycler
-        acronym: HRAVS
-        termType: class
-        termLabel: PhenoCycler
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000199
-      - type: class
-        label: Second Harmonic Generation (SHG)
-        acronym: HRAVS
-        termType: class
-        termLabel: Second Harmonic Generation (SHG)
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000208
-      - type: class
-        label: Thick section Multiphoton MxIF
-        acronym: HRAVS
-        termType: class
-        termLabel: Thick section Multiphoton MxIF
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
-      - type: class
         label: MS Lipidomics
         acronym: HRAVS
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
-      - type: class
-        label: CyTOF
-        acronym: HRAVS
-        termType: class
-        termLabel: CyTOF
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
       - type: class
         label: MPLEx
         acronym: HRAVS
@@ -1325,6 +1331,12 @@ children:
         termType: class
         termLabel: 10x Genomics; Xenium Mouse Multi-Tissue Atlassing Panel; PN 1000627
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000442
+      - type: class
+        label: "NanoString Technologies; CosMx Mouse Neuroscience Panel (RNA, 1000 Plex); PN CMX-M-NEUP-R"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Mouse Neuroscience Panel (RNA, 1000 Plex); PN CMX-M-NEUP-R"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000452
       - type: class
         label: 10x Genomics; Visium Human Transcriptome Probe Kit-Small; PN 1000363
         acronym: HRAVS

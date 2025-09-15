@@ -1392,17 +1392,17 @@ children:
         termLabel: 10x Genomics; Visium Mouse Transcriptome Probe Kit - Small; PN 1000365
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000362
       - type: class
-        label: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides: PN 121500047"
-        acronym: HRAVS
-        termType: class
-        termLabel: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides: PN 121500047"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000453
-      - type: class
         label: 10x Genomics; Xenium Human Lung Gene Expression Panel; PN 1000601
         acronym: HRAVS
         termType: class
         termLabel: 10x Genomics; Xenium Human Lung Gene Expression Panel; PN 1000601
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000443
+      - type: class
+        label: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides; PN 121500047"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides; PN 121500047"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000453
       - type: class
         label: "NanoString Technologies; CosMx Mouse Neuroscience Panel (Protein, 64 Plex); PN CMX-M-Neuro-64P-P"
         acronym: HRAVS

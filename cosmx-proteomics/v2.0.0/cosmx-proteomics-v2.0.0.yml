@@ -4,7 +4,7 @@ children:
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
-    description: "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
+    description: "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442"
     prefLabel: Parent sample ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
     configuration:
@@ -12,19 +12,17 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
     name: preparation_protocol_doi
-    description: "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might begin with staining of a section and finalize with the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1."
+    description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
-    configuration:
-      required: true
   - key: dataset_type
     type: controlled-term-field
     name: dataset_type
-    description: The specific type of dataset being produced.
+    description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
     default:
@@ -330,7 +328,7 @@ children:
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
-    description: Analytes are the target molecules being measured with the assay.
+    description: "The analyte class which is the target molecule that the assay is measuring. Example: DNA"
     prefLabel: Analyte class
     datatype: iri
     values:
@@ -435,7 +433,7 @@ children:
   - key: is_targeted
     type: radio-field
     name: is_targeted
-    description: Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay ("Yes" or "No"). The CODEX analyte is protein.
+    description: "Indicates whether a specific molecule or set of molecules is targeted for detection or measurement by the assay. Example: Yes"
     prefLabel: Is targeted?
     values:
       - label: "Yes"
@@ -446,7 +444,7 @@ children:
   - key: acquisition_instrument_vendor
     type: controlled-term-field
     name: acquisition_instrument_vendor
-    description: An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.
+    description: "The company that manufactures or supplies the acquisition instrument. An acquisition instrument is a device equipped with signal detection hardware and signal processing software. It captures signals produced by assays, such as variations in light intensity or color, or signals corresponding to molecular mass. If the instrument was custom-built or developed internally, enter \"In-House\". Example: Illumina"
     prefLabel: Acquisition instrument vendor
     datatype: iri
     values:
@@ -635,7 +633,7 @@ children:
   - key: acquisition_instrument_model
     type: controlled-term-field
     name: acquisition_instrument_model
-    description: Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.
+    description: "The specific model of the acquisition instrument, as manufacturers often offer various versions with differing features or sensitivities. These differences may be relevant to the processing or interpretation of the data. If the instrument was custom-built or developed internally, enter \"In-House\". If the model is unknown, enter \"Unknown\". Example: HiSeq 4000"
     prefLabel: Acquisition instrument model
     datatype: iri
     values:
@@ -1036,6 +1034,12 @@ children:
         termLabel: solariX
         iri: https://identifiers.org/RRID:SCR_027095
       - type: class
+        label: Panoramic 150 Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Panoramic 150 Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_027467
+      - type: class
         label: Aperio AT2
         acronym: HRAVS
         termType: class
@@ -1100,7 +1104,7 @@ children:
   - key: source_storage_duration_value
     type: numeric-field
     name: source_storage_duration_value
-    description: "How long was the source material stored, prior to this sample being processed? For assays applied to tissue sections, this would be how long the tissue section (e.g., slide) was stored, prior to the assay beginning (e.g., imaging). For assays applied to suspensions such as sequencing, this would be how long the suspension was stored before library construction began."
+    description: "The length of time the sample was stored prior to processing it. For assays performed on tissue sections, this refers to how long the tissue section (e.g., slide) was stored before the assay began (e.g., imaging). For assays performed on suspensions, such as sequencing, it refers to how long the suspension was stored before library construction started. Example: 12"
     prefLabel: Source storage duration value
     datatype: xsd:decimal
     minValue: 0
@@ -1109,7 +1113,7 @@ children:
   - key: source_storage_duration_unit
     type: controlled-term-field
     name: source_storage_duration_unit
-    description: The time duration unit of measurement
+    description: "The unit of measurement used to specify the source storage duration value. Example: hour"
     prefLabel: Source storage duration unit
     datatype: iri
     values:
@@ -1148,14 +1152,14 @@ children:
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
-    description: The amount of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture.
+    description: "The length of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture. Example: 10"
     prefLabel: Time since acquisition instrument calibration value
     datatype: xsd:decimal
     minValue: 0
   - key: time_since_acquisition_instrument_calibration_unit
     type: controlled-term-field
     name: time_since_acquisition_instrument_calibration_unit
-    description: The time unit of measurement
+    description: "The unit of measurement used to specify the time since acquisition instrument calibration value. Example: month"
     prefLabel: Time since acquisition instrument calibration unit
     datatype: iri
     values:
@@ -1180,7 +1184,7 @@ children:
   - key: contributors_path
     type: text-field
     name: contributors_path
-    description: "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"./extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest."
+    description: "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv"
     prefLabel: Contributors path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
     configuration:
@@ -1188,7 +1192,7 @@ children:
   - key: data_path
     type: text-field
     name: data_path
-    description: "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest."
+    description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
     prefLabel: Data path
     regex: ^(?:\.|\.\/.+|\w.*)$
     configuration:
@@ -1196,13 +1200,13 @@ children:
   - key: mapped_area_value
     type: numeric-field
     name: mapped_area_value
-    description: "For Visium, this is the area of spots that was covered by tissue within the captured area, not the total possible captured area which is fixed. For GeoMx this would be the area of the AOI being captured. For HiFi this is the summed area of the ROIs in a single flowcell lane. For CosMx and Resolve, this is the area of the FOV (aka ROI) region being captured. For Xenium this is the total area of the FOV regions (aka ROI) being captured. For Stereo-Seq this is the number of beads."
+    description: "The mapped area value, which refers to the specific area covered or captured in various assays. For Visium, it is the area of spots covered by tissue within the captured area, excluding the total possible captured area. For GeoMx, it refers to the area of the AOI being captured. In HiFi, it is the summed area of the ROIs in a single flowcell lane. For CosMx and Resolve, it indicates the area of the FOV (also known as ROI) region being captured. For Xenium, it is the total area of the FOV regions (also known as ROI) being captured. For Stereo-Seq, this value represents the number of beads. Example: 42.25"
     prefLabel: Mapped area value
     datatype: xsd:decimal
   - key: mapped_area_unit
     type: controlled-term-field
     name: mapped_area_unit
-    description: The unit of measurement for the mapping area. For Visium and GeoMx this is typically um^2.
+    description: "The unit of measurement for the mapped area value. If mapping area is not specified, this field may be left blank. Example: um^2"
     prefLabel: Mapped area unit
     datatype: iri
     values:
@@ -1221,26 +1225,26 @@ children:
   - key: slide_id
     type: text-field
     name: slide_id
-    description: "A unique ID denoting the slide used. This allows users the ability to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers."
+    description: "The unique identifier assigned to each slide, enabling users to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name to prevent overlapping values across different centers. Example: VAN0071-PA-1-1_AF"
     prefLabel: Slide ID
     configuration:
       required: true
   - key: target_retrieval_incubation_temperature
     type: numeric-field
     name: target_retrieval_incubation_temperature
-    description: "Will normally be 100 degrees Celsius for RNA assays, and 80 degrees Celsius for protein assays."
+    description: "The incubation temperature required for target retrieval, which is typically 100 degrees Celsius for RNA assays and 80 degrees Celsius for protein assays. Example: 100"
     prefLabel: Target retrieval incubation temperature
     datatype: xsd:int
   - key: target_retrieval_incubation_time_value
     type: numeric-field
     name: target_retrieval_incubation_time_value
-    description: The duration for which a sample is exposed to a target retrieval solution.
+    description: "The duration for which a sample is exposed to a target retrieval solution. Example: 15"
     prefLabel: Target retrieval incubation time value
     datatype: xsd:decimal
   - key: target_retrieval_incubation_time_unit
     type: controlled-term-field
     name: target_retrieval_incubation_time_unit
-    description: The units for target retrieval incubation time value.
+    description: "The unit of measurement for the target retrieval incubation time value. If no incubation time is specified, this field may be left blank. Example: minute"
     prefLabel: Target retrieval incubation time unit
     datatype: iri
     values:
@@ -1253,13 +1257,13 @@ children:
   - key: probe_hybridization_time_value
     type: numeric-field
     name: probe_hybridization_time_value
-    description: How long was the oligo-conjugated RNA or oligo-conjugated antibody probes hybridized with the sample?
+    description: "The duration for which the oligo-conjugated RNA or oligo-conjugated antibody probes were hybridized with the sample. Example: 30"
     prefLabel: Probe hybridization time value
     datatype: xsd:decimal
   - key: probe_hybridization_time_unit
     type: controlled-term-field
     name: probe_hybridization_time_unit
-    description: The units for probe hybridization time value.
+    description: "The unit of measurement for the probe hybridization time value. If the hybridization time is not specified, this field may be left blank. Example: minute"
     prefLabel: Probe hybridization time unit
     datatype: iri
     values:
@@ -1278,7 +1282,7 @@ children:
   - key: oligo_probe_panel
     type: controlled-term-field
     name: oligo_probe_panel
-    description: "This is the probe panel used to target genes and/or proteins. In cases where there is a core panel and add-on modules, the core panel should be selected here. If additional panels are used, then they must be included in the \"additional_panels_used.csv\" file that's uploaded with the dataset."
+    description: "The oligo probe panel used to target genes and/or proteins. If there is a core panel along with add-on modules, the core panel should be selected in this field. Any additional panels utilized should be documented in the \"additional_panels_used.csv\" file, which must be uploaded alongside the dataset. Example: 10x Genomics; Visium Human Transcriptome Probe Kit-Small; PN 1000363"
     prefLabel: Oligo probe panel
     datatype: iri
     values:
@@ -1337,6 +1341,12 @@ children:
         termLabel: "NanoString Technologies; CosMx Human 6K Discovery Panel (RNA, 6175 Plex); PN 121500041"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000455
       - type: class
+        label: "NanoString Technologies; CosMx Mouse Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-M-USCP-1KP-R"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Mouse Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-M-USCP-1KP-R"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000457
+      - type: class
         label: 10x Genomics; Xenium Custom Gene Expression Panel (51-100 genes); PN 1000561
         acronym: HRAVS
         termType: class
@@ -1367,17 +1377,17 @@ children:
         termLabel: 10x Genomics; Visium Mouse Transcriptome Probe Kit - Small; PN 1000365
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000362
       - type: class
+        label: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides: PN 121500047"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides: PN 121500047"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000453
+      - type: class
         label: 10x Genomics; Xenium Human Lung Gene Expression Panel; PN 1000601
         acronym: HRAVS
         termType: class
         termLabel: 10x Genomics; Xenium Human Lung Gene Expression Panel; PN 1000601
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000443
-      - type: class
-        label: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides; PN 121500047"
-        acronym: HRAVS
-        termType: class
-        termLabel: "NanoString Technologies; CosMx Hs WTX RNA Panel Kit, 2 slides; PN 121500047"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000453
       - type: class
         label: "NanoString Technologies; CosMx Mouse Neuroscience Panel (Protein, 64 Plex); PN CMX-M-Neuro-64P-P"
         acronym: HRAVS
@@ -1447,7 +1457,7 @@ children:
   - key: is_custom_probes_used
     type: radio-field
     name: is_custom_probes_used
-    description: "State (\"Yes\" or \"No\") whether custom RNA or antibody probes were used. If custom probes were used, they must be listed in the \"custom_probe_set.csv\" file."
+    description: "Indicates whether custom RNA or antibody probes were utilized in the assay. If custom probes were employed, they should be documented in the \"custom_probe_set.csv\" file. Example: No"
     prefLabel: Is custom probes used?
     values:
       - label: "Yes"
@@ -1457,38 +1467,33 @@ children:
   - key: number_of_panel_targets
     type: numeric-field
     name: number_of_panel_targets
-    description: "How many genes, RNA isoforms or RNA regions are targeted by probes."
+    description: "The number of panel targets, which refers to the total count of genes, RNA isoforms, or RNA regions that are targeted by probes. Example: 1000"
     prefLabel: Number of panel targets
     datatype: xsd:int
-    configuration:
-      required: true
   - key: roi_label
     type: text-field
     name: roi_label
-    description: "A label for the region of interest. For Resolve and CosMx, this is the field of view (FOV) label. For Xenium this is the ID of the region containing the analysis. For GeoMx this can be found in the \"Initial Dataset\" spreadsheet (download from within Data Analysis Suite)."
+    description: "The label for the region of interest (ROI). For Resolve and CosMx, this corresponds to the field of view (FOV) label. In the case of Xenium, it refers to the ID of the region containing the analysis. For GeoMx, this information can be located in the \"Initial Dataset\" spreadsheet, which can be downloaded from within the Data Analysis Suite. Example: Decidua"
     prefLabel: ROI label
   - key: anatomical_structure_label
     type: text-field
     name: anatomical_structure_label
-    description: The overarching anatomical structure.
+    description: "The label for the overarching anatomical structure. If the anatomical structure is not applicable or not specified, this field may be left blank. Example: Kidney"
     prefLabel: Anatomical structure label
   - key: anatomical_structure_id
     type: text-field
     name: anatomical_structure_id
-    description: The ontology ID for the parent structure. Typically this would be an UBERON ID.
+    description: "The ontology ID associated with the anatomical structure, typically represented by an UBERON ID. Example: UBERON:0002113"
     prefLabel: Anatomical structure ID
     regex: "^(?:UBERON:\\d{7}|FMA:\\d+)$"
   - key: non_global_files
     type: text-field
     name: non_global_files
-    description: "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree. This field is used for internal HuBMAP processing. Examples for GeoMx and PhenoCycler are provided in the File Locations documentation: https://docs.google.com/document/d/1n2McSs9geA9Eli4QWQaB3c9R3wo5d5U1Xd57DWQfN5Q/edit#heading=h.1u82i4axggee"
+    description: "Specifies a semicolon-separated list of non-global files that are to be included in the dataset. The file paths assume that the files are located in the \"TOP/non-global/\" directory. For instance, if the file is located at TOP/non-global/lab_processed/images/1-tissue-boundary.geojson, the value for this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". Once ingested, these files will be copied to their appropriate locations within the respective dataset directory tree. This field is intended for internal HuBMAP processing. Examples for GeoMx and PhenoCycler are provided in the File Locations documentation: https://docs.google.com/document/d/1n2McSs9geA9Eli4QWQaB3c9R3wo5d5U1Xd57DWQfN5Q/edit#heading=h.1u82i4axggee Example: ./lab_processed/images/1-tissue-boundary.geojson"
     prefLabel: Non global files
     regex: "^(?:\\.\\/[^;]+|\\w[^;]+)(?:;\\s*(?:\\.\\/[^;]+|\\w[^;]+))*$"
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id
-    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
-    default: 971357a5-6491-4149-aa6e-d6f14bc9a048
-    configuration:
-      required: true

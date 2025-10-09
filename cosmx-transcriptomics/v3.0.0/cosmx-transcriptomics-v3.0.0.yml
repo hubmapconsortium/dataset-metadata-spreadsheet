@@ -7,6 +7,8 @@ children:
     description: "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442"
     prefLabel: Parent sample ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
+    configuration:
+      required: true
   - key: lab_id
     type: text-field
     name: lab_id
@@ -17,12 +19,17 @@ children:
     name: preparation_protocol_doi
     description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
+    configuration:
+      required: true
   - key: dataset_type
     type: controlled-term-field
     name: dataset_type
     description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
+    default:
+      value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
+      label: CosMx Proteomics
     values:
       - type: class
         label: HiFi-Slide
@@ -318,6 +325,8 @@ children:
         termType: class
         termLabel: MPLEx
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000448
+    configuration:
+      required: true
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
@@ -421,6 +430,8 @@ children:
         termType: class
         termLabel: Endogenous fluorophore
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000131
+    configuration:
+      required: true
   - key: is_targeted
     type: radio-field
     name: is_targeted
@@ -430,6 +441,8 @@ children:
       - label: "Yes"
         selected: true
       - label: "No"
+    configuration:
+      required: true
   - key: acquisition_instrument_vendor
     type: controlled-term-field
     name: acquisition_instrument_vendor
@@ -617,6 +630,8 @@ children:
         termType: class
         termLabel: Motic
         iri: https://identifiers.org/RRID:SCR_024856
+    configuration:
+      required: true
   - key: acquisition_instrument_model
     type: controlled-term-field
     name: acquisition_instrument_model
@@ -1086,6 +1101,8 @@ children:
         termType: class
         termLabel: Xenium Analyzer
         iri: https://identifiers.org/RRID:SCR_023910
+    configuration:
+      required: true
   - key: source_storage_duration_value
     type: numeric-field
     name: source_storage_duration_value
@@ -1093,6 +1110,8 @@ children:
     prefLabel: Source storage duration value
     datatype: xsd:decimal
     minValue: 0
+    configuration:
+      required: true
   - key: source_storage_duration_unit
     type: controlled-term-field
     name: source_storage_duration_unit
@@ -1130,6 +1149,8 @@ children:
         termType: class
         termLabel: minute
         iri: http://purl.obolibrary.org/obo/UO_0000031
+    configuration:
+      required: true
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
@@ -1168,12 +1189,16 @@ children:
     description: "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv"
     prefLabel: Contributors path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
+    configuration:
+      required: true
   - key: data_path
     type: text-field
     name: data_path
     description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
     prefLabel: Data path
     regex: ^(?:\.|\.\/.+|\w.*)$
+    configuration:
+      required: true
   - key: mapped_area_value
     type: numeric-field
     name: mapped_area_value
@@ -1204,6 +1229,8 @@ children:
     name: slide_id
     description: "The unique identifier assigned to each slide, enabling users to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name to prevent overlapping values across different centers. Example: VAN0071-PA-1-1_AF"
     prefLabel: Slide ID
+    configuration:
+      required: true
   - key: target_retrieval_incubation_temperature
     type: numeric-field
     name: target_retrieval_incubation_temperature
@@ -1462,12 +1489,16 @@ children:
     values:
       - label: "Yes"
       - label: "No"
+    configuration:
+      required: true
   - key: number_of_panel_targets
     type: numeric-field
     name: number_of_panel_targets
     description: "The number of panel targets, which refers to the total count of genes, RNA isoforms, or RNA regions that are targeted by probes. Example: 1000"
     prefLabel: Number of panel targets
     datatype: xsd:int
+    configuration:
+      required: true
   - key: roi_label
     type: text-field
     name: roi_label
@@ -1496,3 +1527,5 @@ children:
     description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
     default: 30f0de6d-4c5c-46f7-87ce-fae3752dfa9e
+    configuration:
+      required: true

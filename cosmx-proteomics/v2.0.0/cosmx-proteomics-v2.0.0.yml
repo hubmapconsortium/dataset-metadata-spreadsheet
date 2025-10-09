@@ -19,12 +19,17 @@ children:
     name: preparation_protocol_doi
     description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
+    configuration:
+      required: true
   - key: dataset_type
     type: controlled-term-field
     name: dataset_type
     description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
+    default:
+      value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
+      label: CosMx Proteomics
     values:
       - type: class
         label: HiFi-Slide
@@ -320,6 +325,8 @@ children:
         termType: class
         termLabel: MPLEx
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000448
+    configuration:
+      required: true
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
@@ -1142,6 +1149,8 @@ children:
         termType: class
         termLabel: minute
         iri: http://purl.obolibrary.org/obo/UO_0000031
+    configuration:
+      required: true
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
@@ -1447,6 +1456,8 @@ children:
         termType: class
         termLabel: "NanoString Technologies; CosMx Hs Univ Cell (RNA, 1000 Plex); PN 121500002"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000454
+    configuration:
+      required: true
   - key: is_custom_probes_used
     type: radio-field
     name: is_custom_probes_used
@@ -1463,6 +1474,8 @@ children:
     description: "The number of panel targets, which refers to the total count of genes, RNA isoforms, or RNA regions that are targeted by probes. Example: 1000"
     prefLabel: Number of panel targets
     datatype: xsd:int
+    configuration:
+      required: true
   - key: roi_label
     type: text-field
     name: roi_label
@@ -1491,3 +1504,5 @@ children:
     description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
     default: 971357a5-6491-4149-aa6e-d6f14bc9a048
+    configuration:
+      required: true

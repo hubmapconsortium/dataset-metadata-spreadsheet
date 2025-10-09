@@ -23,9 +23,6 @@ children:
     description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
-    default:
-      value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
-      label: CosMx Transcriptomics
     values:
       - type: class
         label: HiFi-Slide
@@ -321,8 +318,6 @@ children:
         termType: class
         termLabel: MPLEx
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000448
-    configuration:
-      required: true
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
@@ -1500,3 +1495,4 @@ children:
     name: metadata_schema_id
     description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
+    default: 30f0de6d-4c5c-46f7-87ce-fae3752dfa9e

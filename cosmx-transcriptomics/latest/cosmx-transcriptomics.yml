@@ -1,5 +1,6 @@
 type: template
 name: CosMx Transcriptomics
+description: VALIDATION.noDescriptionField
 children:
   - key: parent_sample_id
     type: text-field
@@ -28,8 +29,8 @@ children:
     prefLabel: Dataset type
     datatype: iri
     default:
-      value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
-      label: CosMx Proteomics
+      value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
+      label: CosMx Transcriptomics
     values:
       - type: class
         label: HiFi-Slide
@@ -43,6 +44,12 @@ children:
         termType: class
         termLabel: SNARE-seq2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000264
+      - type: class
+        label: COMET
+        acronym: HRAVS
+        termType: class
+        termLabel: COMET
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000458
       - type: class
         label: Visium (no probes)
         acronym: HRAVS
@@ -1481,6 +1488,8 @@ children:
         termType: class
         termLabel: "NanoString Technologies; CosMx Hs Univ Cell (RNA, 1000 Plex); PN 121500002"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000454
+    configuration:
+      required: true
   - key: is_custom_probes_used
     type: radio-field
     name: is_custom_probes_used

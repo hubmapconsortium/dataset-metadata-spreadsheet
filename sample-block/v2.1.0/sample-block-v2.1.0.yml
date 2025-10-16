@@ -5,7 +5,7 @@ children:
   - key: source_id
     type: text-field
     name: source_id
-    description: "Unique HuBMAP or SenNet identifier for the source (parent) from which the sample was taken. Example: HBM122.EFGH.789 or SNT234.RTYU.119"
+    description: "The unique identifier from HuBMAP or SenNet for the source (parent data) from which the sample was derived. Example: HBM122.EFGH.789"
     prefLabel: Source ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}$"
     configuration:
@@ -13,7 +13,7 @@ children:
   - key: sample_id
     type: text-field
     name: sample_id
-    description: "Unique HuBMAP or SenNet identifier for the sample assigned by the ingest portal. Example: HBM743.CKJW.876 or SNT923.UYTE.122"
+    description: "The unique HuBMAP or SenNet identifier assigned to the sample by the ingest portal. Example: HBM743.CKJW.876"
     prefLabel: Sample ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}$"
     configuration:
@@ -21,19 +21,19 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
     name: preparation_protocol_doi
-    description: "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might begin with staining of a section and finalize with the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1."
+    description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
     configuration:
       required: true
   - key: source_storage_duration_value
     type: numeric-field
     name: source_storage_duration_value
-    description: "How long was the source material (parent) stored, prior to this sample being processed."
+    description: "The length of time the sample was stored prior to processing it. For assays performed on tissue sections, this refers to how long the tissue section (e.g., slide) was stored before the assay began (e.g., imaging). For assays performed on suspensions, such as sequencing, it refers to how long the suspension was stored before library construction started. Example: 12"
     prefLabel: Source storage duration value
     datatype: xsd:decimal
     minValue: 0
@@ -42,7 +42,7 @@ children:
   - key: source_storage_duration_unit
     type: controlled-term-field
     name: source_storage_duration_unit
-    description: The time duration unit of measurement
+    description: "The unit of measurement used to specify the source storage duration value. Example: hour"
     prefLabel: Source storage duration unit
     datatype: iri
     values:
@@ -81,14 +81,14 @@ children:
   - key: tissue_weight_value
     type: numeric-field
     name: tissue_weight_value
-    description: "The weight of a tissue block or the piece of tissue used in a suspension. Knowing the weight of the parent block and tissue used in a suspension, allows us to compute what percentage of the block was used for the suspension."
+    description: "The weight of a tissue block or the piece of tissue used in a suspension. This information is crucial for calculating the percentage of the parent block that was utilized in the suspension preparation. If the weight is not applicable or unknown, this field may be left blank. Example: 100"
     prefLabel: Tissue weight value
     datatype: xsd:decimal
     minValue: 0
   - key: tissue_weight_unit
     type: controlled-term-field
     name: tissue_weight_unit
-    description: The tissue weight unit of measurement
+    description: "The unit of measurement for the tissue weight value. If no tissue weight is specified, this field may be left blank. Example: g"
     prefLabel: Tissue weight unit
     datatype: iri
     values:
@@ -119,14 +119,14 @@ children:
   - key: volume_value
     type: numeric-field
     name: volume_value
-    description: The volume of the sample block
+    description: "The volume of the object in question. Example: 102"
     prefLabel: Volume value
     datatype: xsd:decimal
     minValue: 0
   - key: volume_unit
     type: controlled-term-field
     name: volume_unit
-    description: The volume unit of measurement
+    description: "The unit of measurement for the volume value. If no volume measurement is specified, this field may be left blank. Example: mm^3"
     prefLabel: Volume unit
     datatype: iri
     values:
@@ -157,14 +157,14 @@ children:
   - key: pathology_distance_value
     type: numeric-field
     name: pathology_distance_value
-    description: "If a surgical sample, how far from the pathology was the sample obtained."
+    description: "The distance from which the surgical sample was obtained relative to the pathology site. If this information is not applicable, this field may be left blank. Example: 100"
     prefLabel: Pathology distance value
     datatype: xsd:decimal
     minValue: 0
   - key: pathology_distance_unit
     type: controlled-term-field
     name: pathology_distance_unit
-    description: The distance unit of measurement
+    description: "The unit of measurement for the pathology distance value. If no distance measurement is applicable, this field may be left blank. Example: mm"
     prefLabel: Pathology distance unit
     datatype: iri
     values:
@@ -183,7 +183,7 @@ children:
   - key: preparation_medium
     type: controlled-term-field
     name: preparation_medium
-    description: The medium used during the sample preparation
+    description: "The medium used during the sample preparation process. If no specific medium was utilized, enter \"None\". If medium was not recorded, enter \"Unknown\". Example: Fresh frozen CMC"
     prefLabel: Preparation medium
     datatype: iri
     values:
@@ -384,7 +384,7 @@ children:
   - key: preparation_condition
     type: controlled-term-field
     name: preparation_condition
-    description: "The condition by which the preparation occurred, such as was the sample placed in dry ice during the preparation."
+    description: "The condition under which the sample preparation took place, such as whether the sample was placed on dry ice during the process. If preparation condition was not recorded, enter \"Unknown\". Example: Frozen on dry ice"
     prefLabel: Preparation condition
     datatype: iri
     values:
@@ -441,14 +441,14 @@ children:
   - key: processing_time_value
     type: numeric-field
     name: processing_time_value
-    description: How long the tissue was being handled before the initial preservation
+    description: "The duration for which the tissue was handled prior to its initial preservation. Example: 120"
     prefLabel: Processing time value
     datatype: xsd:decimal
     minValue: 0
   - key: processing_time_unit
     type: controlled-term-field
     name: processing_time_unit
-    description: The time unit of measurement
+    description: "The unit of measurement for the processing time value. If processing time is not specified, this field may be left blank. Example: minute"
     prefLabel: Processing time unit
     datatype: iri
     values:
@@ -480,22 +480,16 @@ children:
   - key: storage_medium
     type: controlled-term-field
     name: storage_medium
-    description: What was the sample preserved in.
+    description: "The medium used to preserve the sample. If no specific medium was utilized, enter \"None\". If medium was not recorded, enter \"Unknown\". Example: FFPE (Paraffin embedded)"
     prefLabel: Storage medium
     datatype: iri
     values:
       - type: class
-        label: PBS
+        label: Water
         acronym: HRAVS
         termType: class
-        termLabel: PBS
-        iri: http://purl.obolibrary.org/obo/OBI_0100046
-      - type: class
-        label: 1X quench buffer
-        acronym: HRAVS
-        termType: class
-        termLabel: 1X quench buffer
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000427
+        termLabel: Water
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65147
       - type: class
         label: OCT
         acronym: HRAVS
@@ -509,29 +503,11 @@ children:
         termLabel: NBF (Neutral Buffered Formalin)
         iri: http://purl.obolibrary.org/obo/OBIB_0000213
       - type: class
-        label: Ethanol
-        acronym: HRAVS
-        termType: class
-        termLabel: Ethanol
-        iri: http://purl.obolibrary.org/obo/CHEBI_16236
-      - type: class
         label: Allprotect tissue reagent (ALL)
         acronym: HRAVS
         termType: class
         termLabel: Allprotect tissue reagent (ALL)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000118
-      - type: class
-        label: Formic acid in water
-        acronym: HRAVS
-        termType: class
-        termLabel: Formic acid in water
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83719
-      - type: class
-        label: HPMC-PVP
-        acronym: HRAVS
-        termType: class
-        termLabel: HPMC-PVP
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000386
       - type: class
         label: DMSO (no serum)
         acronym: HRAVS
@@ -539,29 +515,11 @@ children:
         termLabel: DMSO (no serum)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000115
       - type: class
-        label: MACS tissue storage solution
-        acronym: HRAVS
-        termType: class
-        termLabel: MACS tissue storage solution
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000105
-      - type: class
         label: PFA (Paraformaldehyde)
         acronym: HRAVS
         termType: class
         termLabel: PFA (Paraformaldehyde)
         iri: http://purl.obolibrary.org/obo/CHEBI_61538
-      - type: class
-        label: Tris-EDTA
-        acronym: HRAVS
-        termType: class
-        termLabel: Tris-EDTA
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000135
-      - type: class
-        label: Concentrated quench buffer
-        acronym: HRAVS
-        termType: class
-        termLabel: Concentrated quench buffer
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000391
       - type: class
         label: Unknown
         acronym: HRAVS
@@ -575,41 +533,17 @@ children:
         termLabel: Gelatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65802
       - type: class
-        label: Cryo-EM
-        acronym: HRAVS
-        termType: class
-        termLabel: Cryo-EM
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000333
-      - type: class
         label: DMSO (serum)
         acronym: HRAVS
         termType: class
         termLabel: DMSO (serum)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000125
       - type: class
-        label: RNAlater
-        acronym: HRAVS
-        termType: class
-        termLabel: RNAlater
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63348
-      - type: class
-        label: FFPE (Paraffin embedded)
-        acronym: HRAVS
-        termType: class
-        termLabel: FFPE (Paraffin embedded)
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C143028
-      - type: class
         label: CMC
         acronym: HRAVS
         termType: class
         termLabel: CMC
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83594
-      - type: class
-        label: None
-        acronym: HRAVS
-        termType: class
-        termLabel: None
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
       - type: class
         label: 2% PFA/2.5% Glutaraldehyde
         acronym: HRAVS
@@ -628,12 +562,84 @@ children:
         termType: class
         termLabel: PAXgene tissue kit (PXT)
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185113
+      - type: class
+        label: PBS
+        acronym: HRAVS
+        termType: class
+        termLabel: PBS
+        iri: http://purl.obolibrary.org/obo/OBI_0100046
+      - type: class
+        label: 1X quench buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: 1X quench buffer
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000427
+      - type: class
+        label: Ethanol
+        acronym: HRAVS
+        termType: class
+        termLabel: Ethanol
+        iri: http://purl.obolibrary.org/obo/CHEBI_16236
+      - type: class
+        label: Formic acid in water
+        acronym: HRAVS
+        termType: class
+        termLabel: Formic acid in water
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83719
+      - type: class
+        label: HPMC-PVP
+        acronym: HRAVS
+        termType: class
+        termLabel: HPMC-PVP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000386
+      - type: class
+        label: MACS tissue storage solution
+        acronym: HRAVS
+        termType: class
+        termLabel: MACS tissue storage solution
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000105
+      - type: class
+        label: Tris-EDTA
+        acronym: HRAVS
+        termType: class
+        termLabel: Tris-EDTA
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000135
+      - type: class
+        label: Concentrated quench buffer
+        acronym: HRAVS
+        termType: class
+        termLabel: Concentrated quench buffer
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000391
+      - type: class
+        label: Cryo-EM
+        acronym: HRAVS
+        termType: class
+        termLabel: Cryo-EM
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000333
+      - type: class
+        label: RNAlater
+        acronym: HRAVS
+        termType: class
+        termLabel: RNAlater
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63348
+      - type: class
+        label: FFPE (Paraffin embedded)
+        acronym: HRAVS
+        termType: class
+        termLabel: FFPE (Paraffin embedded)
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C143028
+      - type: class
+        label: None
+        acronym: HRAVS
+        termType: class
+        termLabel: None
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41132
     configuration:
       required: true
   - key: storage_method
     type: controlled-term-field
     name: storage_method
-    description: "The method by which the sample was stored, after preparation and before the assay was performed."
+    description: "The method used to store the sample after preparation and prior to performing the assay. If no specific storage method was utilized, enter \"None\". If storage method was not recorded, enter \"Unknown\". Example: Frozen in dry ice"
     prefLabel: Storage method
     datatype: iri
     values:
@@ -714,22 +720,22 @@ children:
   - key: quality_criteria
     type: text-field
     name: quality_criteria
-    description: "For example, RIN: 8.7. For suspensions, measured by visual inspection prior to cell lysis or defined by known parameters such as wells with several cells or no cells. This can be captured at a high level. \"OK\" or \"not OK\", or with more specificity such as \"debris\", \"clump\", \"low clump\"."
+    description: "The quality criteria used to assess the sample, which may include metrics such as RIN (e.g., RIN: 8.7) or visual inspection parameters for suspensions prior to cell lysis. These criteria can be captured at a high level with general terms like \"OK\" or \"not OK\" or with more specific descriptors such as \"debris\" \"clump\" or \"low clump\". Example: RIN: 8.7, low clump, no visible debris"
     prefLabel: Quality criteria
   - key: histological_report
     type: text-field
     name: histological_report
-    description: "Histopathological reporting of key variables that are important for the tissue (absence of necrosis, comment on composition, significant pathology description, high level inflammation/fibrosis assessment, etc.)"
+    description: "The key variables in the histopathological report that are crucial for assessing the tissue, including the absence of necrosis, comments on tissue composition, descriptions of significant pathology, and high-level assessments of inflammation or fibrosis. Example: No necrosis observed; tissue composed predominantly of hepatocytes with mild portal inflammation and minimal fibrosis"
     prefLabel: Histological report
   - key: notes
     type: text-field
     name: notes
-    description: "Miscellaneous details about the sample, not captured in the existing metadata fields."
+    description: "Miscellaneous details about the sample that are not captured in the existing metadata fields. Example: Sample was stored at 4°C for 48 hours prior to processing due to equipment maintenance delay"
     prefLabel: Notes
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id
-    description: The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing.
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
     default: 3e98cee6-d3fb-467b-8d4e-9ba7ee49eeff
     configuration:

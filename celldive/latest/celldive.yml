@@ -5,7 +5,7 @@ children:
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
-    description: "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
+    description: "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442"
     prefLabel: Parent sample ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
     configuration:
@@ -13,17 +13,19 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
     name: preparation_protocol_doi
-    description: "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might begin with staining of a section and finalize with the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1."
+    description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
+    configuration:
+      required: true
   - key: dataset_type
     type: controlled-term-field
     name: dataset_type
-    description: The specific type of dataset being produced.
+    description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
     default:
@@ -42,6 +44,12 @@ children:
         termType: class
         termLabel: SNARE-seq2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000264
+      - type: class
+        label: COMET
+        acronym: HRAVS
+        termType: class
+        termLabel: COMET
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000458
       - type: class
         label: Visium (no probes)
         acronym: HRAVS
@@ -79,12 +87,6 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
-        label: CosMx
-        acronym: HRAVS
-        termType: class
-        termLabel: CosMx
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
-      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
@@ -96,6 +98,12 @@ children:
         termType: class
         termLabel: Seq-Scope
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000390
+      - type: class
+        label: CosMx Transcriptomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Transcriptomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
       - type: class
         label: CyCIF
         acronym: HRAVS
@@ -329,7 +337,7 @@ children:
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
-    description: Analytes are the target molecules being measured with the assay.
+    description: "The analyte class which is the target molecule that the assay is measuring. Example: DNA"
     prefLabel: Analyte class
     datatype: iri
     values:
@@ -434,16 +442,18 @@ children:
   - key: is_targeted
     type: radio-field
     name: is_targeted
-    description: Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay ("Yes" or "No"). The CODEX analyte is protein.
+    description: "Indicates whether a specific molecule or set of molecules is targeted for detection or measurement by the assay. Example: Yes"
     prefLabel: Is targeted?
     values:
       - label: "Yes"
         selected: true
       - label: "No"
+    configuration:
+      required: true
   - key: acquisition_instrument_vendor
     type: controlled-term-field
     name: acquisition_instrument_vendor
-    description: An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.
+    description: "The company that manufactures or supplies the acquisition instrument. An acquisition instrument is a device equipped with signal detection hardware and signal processing software. It captures signals produced by assays, such as variations in light intensity or color, or signals corresponding to molecular mass. If the instrument was custom-built or developed internally, enter \"In-House\". Example: Illumina"
     prefLabel: Acquisition instrument vendor
     datatype: iri
     values:
@@ -632,7 +642,7 @@ children:
   - key: acquisition_instrument_model
     type: controlled-term-field
     name: acquisition_instrument_model
-    description: Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.
+    description: "The specific model of the acquisition instrument, as manufacturers often offer various versions with differing features or sensitivities. These differences may be relevant to the processing or interpretation of the data. If the instrument was custom-built or developed internally, enter \"In-House\". If the model is unknown, enter \"Unknown\". Example: HiSeq 4000"
     prefLabel: Acquisition instrument model
     datatype: iri
     values:
@@ -1033,6 +1043,12 @@ children:
         termLabel: solariX
         iri: https://identifiers.org/RRID:SCR_027095
       - type: class
+        label: Panoramic 150 Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Panoramic 150 Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_027467
+      - type: class
         label: Aperio AT2
         acronym: HRAVS
         termType: class
@@ -1097,7 +1113,7 @@ children:
   - key: source_storage_duration_value
     type: numeric-field
     name: source_storage_duration_value
-    description: "How long was the source material (parent) stored, prior to this sample being processed."
+    description: "The length of time the sample was stored prior to processing it. For assays performed on tissue sections, this refers to how long the tissue section (e.g., slide) was stored before the assay began (e.g., imaging). For assays performed on suspensions, such as sequencing, it refers to how long the suspension was stored before library construction started. Example: 12"
     prefLabel: Source storage duration value
     datatype: xsd:decimal
     minValue: 0
@@ -1106,7 +1122,7 @@ children:
   - key: source_storage_duration_unit
     type: controlled-term-field
     name: source_storage_duration_unit
-    description: The time duration unit of measurement
+    description: "The unit of measurement used to specify the source storage duration value. Example: hour"
     prefLabel: Source storage duration unit
     datatype: iri
     values:
@@ -1145,14 +1161,14 @@ children:
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
-    description: The amount of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture.
+    description: "The length of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture. Example: 10"
     prefLabel: Time since acquisition instrument calibration value
     datatype: xsd:decimal
     minValue: 0
   - key: time_since_acquisition_instrument_calibration_unit
     type: controlled-term-field
     name: time_since_acquisition_instrument_calibration_unit
-    description: The time unit of measurement
+    description: "The unit of measurement used to specify the time since acquisition instrument calibration value. Example: month"
     prefLabel: Time since acquisition instrument calibration unit
     datatype: iri
     values:
@@ -1177,7 +1193,7 @@ children:
   - key: contributors_path
     type: text-field
     name: contributors_path
-    description: "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest."
+    description: "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv"
     prefLabel: Contributors path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
     configuration:
@@ -1185,7 +1201,7 @@ children:
   - key: data_path
     type: text-field
     name: data_path
-    description: "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"/TEST001-RK/\" for this field. If there are multiple directory levels, use the format \"/TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest."
+    description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
     prefLabel: Data path
     regex: ^(?:\.|\.\/.+|\w.*)$
     configuration:
@@ -1193,7 +1209,7 @@ children:
   - key: antibodies_path
     type: text-field
     name: antibodies_path
-    description: This is the location of the antibodies.tsv file relative to the root of the top level of the upload directory structure. This path should begin with "." and would likely be something like "./extras/antibodies.tsv".
+    description: "The path to the antibodies.tsv file relative to the root directory of the upload structure. This path should start with \".\" and is typically formatted as \"./extras/antibodies.tsv\". Example: ./extras/antibodies.tsv"
     prefLabel: Antibodies path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
     configuration:
@@ -1201,7 +1217,7 @@ children:
   - key: number_of_antibodies
     type: numeric-field
     name: number_of_antibodies
-    description: Number of antibodies
+    description: "The number of antibodies used in the assay. If no antibodies were utilized, enter 0. Example: 5"
     prefLabel: Number of antibodies
     datatype: xsd:int
     minValue: 0
@@ -1210,7 +1226,7 @@ children:
   - key: number_of_channels
     type: numeric-field
     name: number_of_channels
-    description: Number of fluorescent channels imaged during each cycle.
+    description: "The number of fluorescent channels that are imaged during each cycle. Example: 3"
     prefLabel: Number of channels
     datatype: xsd:int
     minValue: 0
@@ -1219,7 +1235,7 @@ children:
   - key: number_of_biomarker_imaging_rounds
     type: numeric-field
     name: number_of_biomarker_imaging_rounds
-    description: "Number of imaging rounds to capture the tagged biomarkers. For CODEX a biomarker imaging round consists of 1. oligo and fluor application, 2. imaging, 3. removal of oligo and fluor along washes. For Cell DIVE a biomarker imaging round consists of 1. staining of a biomarker via secondary detection or direct conjugate and 2. dye inactivation."
+    description: "The number of imaging rounds required to capture the tagged biomarkers. For CODEX, a biomarker imaging round includes steps such as (1) oligo application, (2) fluor application, and (3) washes. For Cell DIVE, it involves (1) the staining of a biomarker via secondary detection or direct conjugate, followed by (2) dye inactivation. Example: 3"
     prefLabel: Number of biomarker imaging rounds
     datatype: xsd:int
     minValue: 0
@@ -1228,7 +1244,7 @@ children:
   - key: number_of_total_imaging_rounds
     type: numeric-field
     name: number_of_total_imaging_rounds
-    description: "The total number of acquisitions performed on microscope to collect autofluorescence/background or stained signal (e.g., histology)."
+    description: "The total number of imaging rounds performed using a microscope to collect either autofluorescence/background or stained signals, such as those used in histological analysis. Example: 5"
     prefLabel: Number of total imaging rounds
     datatype: xsd:int
     minValue: 0
@@ -1237,28 +1253,28 @@ children:
   - key: slide_id
     type: text-field
     name: slide_id
-    description: "A unique ID denoting the slide used. This allows users the ability to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers."
+    description: "The unique identifier assigned to each slide, enabling users to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name to prevent overlapping values across different centers. Example: VAN0071-PA-1-1_AF"
     prefLabel: Slide ID
     configuration:
       required: true
   - key: cell_boundary_marker_or_stain
     type: text-field
     name: cell_boundary_marker_or_stain
-    description: "If a marker or stain was used to identify all cell boundaries in the tissue, then the name of the marker or stain should be included here. The name of the antibody-targeted molecule marker or non-antibody targeted molecule stain included here must be identical to what is found in the imaging data. For example, with the PhenoCycler, this name must match the value found in the XPD output file. If multiple marker or stains are used to identify all cell boundaries, then a comma separated list should be used here."
+    description: "The name of the marker or stain used to identify all cell boundaries in the tissue. This name must exactly match the antibody-targeted molecule marker or non-antibody targeted molecule stain as found in the imaging data. For example, in the case of using the PhenoCycler, ensure the name corresponds to the value in the XPD output file. If multiple markers or stains are employed, list them in a comma-separated format. Example: Pan-Cytokeratin, E-Cadherin"
     prefLabel: Cell boundary marker or stain
     configuration:
       required: true
   - key: nuclear_marker_or_stain
     type: text-field
     name: nuclear_marker_or_stain
-    description: "For markers, an antibody-targetted molecule present in or around the cell nucleus, the protein or gene symbol that identifies the antibody target that is used as the nuclear marker. This symbol must match the antibody target that is either generated from the panel used or entered with custom panels. Preferably, if using a custom antibody marker, this symbol should be the HGNC symbol (https://www.genenames.org/).   For non-protein targets this is the stain name (e.g., DAPI) and, when appropriate, associated staining kit and vendor. For the PhenoCycler, this symbol must match the value found in the XPD output file."
+    description: "The nuclear marker or stain used, which can be an antibody-targeted molecule present in or around the cell nucleus. For protein targets, use the protein or gene symbol that identifies the antibody target, ensuring it matches the antibody target from the panel used or custom panels. Preferably, if using a custom antibody marker, this symbol should be the HGNC symbol (https://www.genenames.org/). For non-protein targets, provide the stain name (e.g., DAPI) and, when applicable, include the associated staining kit and vendor. For the PhenoCycler, ensure the symbol matches the value found in the XPD output file. Example: DAPI"
     prefLabel: Nuclear marker or stain
     configuration:
       required: true
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id
-    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
     default: 6f9eee7b-7ef1-4f32-a34e-706bbbbb09bf
     configuration:

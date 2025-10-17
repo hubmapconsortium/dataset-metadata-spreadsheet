@@ -44,6 +44,12 @@ children:
         termLabel: SNARE-seq2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000264
       - type: class
+        label: COMET
+        acronym: HRAVS
+        termType: class
+        termLabel: COMET
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000458
+      - type: class
         label: Visium (no probes)
         acronym: HRAVS
         termType: class

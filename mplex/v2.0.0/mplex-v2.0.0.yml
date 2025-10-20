@@ -4,7 +4,7 @@ children:
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
-    description: "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
+    description: "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442"
     prefLabel: Parent sample ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
     configuration:
@@ -12,19 +12,19 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
     name: preparation_protocol_doi
-    description: "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might begin with staining of a section and finalize with the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1."
+    description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
     configuration:
       required: true
   - key: dataset_type
     type: controlled-term-field
     name: dataset_type
-    description: The specific type of dataset being produced.
+    description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
     default:
@@ -43,6 +43,12 @@ children:
         termType: class
         termLabel: SNARE-seq2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000264
+      - type: class
+        label: COMET
+        acronym: HRAVS
+        termType: class
+        termLabel: COMET
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000458
       - type: class
         label: Visium (no probes)
         acronym: HRAVS
@@ -330,7 +336,7 @@ children:
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
-    description: Analytes are the target molecules being measured with the assay.
+    description: "The analyte class which is the target molecule that the assay is measuring. Example: DNA"
     prefLabel: Analyte class
     datatype: iri
     values:
@@ -435,7 +441,7 @@ children:
   - key: is_targeted
     type: radio-field
     name: is_targeted
-    description: Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay ("Yes" or "No"). The CODEX analyte is protein.
+    description: "Indicates whether a specific molecule or set of molecules is targeted for detection or measurement by the assay. Example: Yes"
     prefLabel: Is targeted?
     values:
       - label: "Yes"
@@ -446,7 +452,7 @@ children:
   - key: acquisition_instrument_vendor
     type: controlled-term-field
     name: acquisition_instrument_vendor
-    description: An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.
+    description: "The company that manufactures or supplies the acquisition instrument. An acquisition instrument is a device equipped with signal detection hardware and signal processing software. It captures signals produced by assays, such as variations in light intensity or color, or signals corresponding to molecular mass. If the instrument was custom-built or developed internally, enter \"In-House\". Example: Illumina"
     prefLabel: Acquisition instrument vendor
     datatype: iri
     values:
@@ -635,7 +641,7 @@ children:
   - key: acquisition_instrument_model
     type: controlled-term-field
     name: acquisition_instrument_model
-    description: Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.
+    description: "The specific model of the acquisition instrument, as manufacturers often offer various versions with differing features or sensitivities. These differences may be relevant to the processing or interpretation of the data. If the instrument was custom-built or developed internally, enter \"In-House\". If the model is unknown, enter \"Unknown\". Example: HiSeq 4000"
     prefLabel: Acquisition instrument model
     datatype: iri
     values:
@@ -994,6 +1000,12 @@ children:
         termLabel: Orbitrap Eclipse Tribrid
         iri: https://identifiers.org/RRID:SCR_023618
       - type: class
+        label: Cell DIVE
+        acronym: HRAVS
+        termType: class
+        termLabel: Cell DIVE
+        iri: https://identifiers.org/RRID:SCR_027323
+      - type: class
         label: MERSCOPE
         acronym: HRAVS
         termType: class
@@ -1029,6 +1041,12 @@ children:
         termType: class
         termLabel: solariX
         iri: https://identifiers.org/RRID:SCR_027095
+      - type: class
+        label: Panoramic 150 Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Panoramic 150 Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_027467
       - type: class
         label: Aperio AT2
         acronym: HRAVS
@@ -1094,7 +1112,7 @@ children:
   - key: source_storage_duration_value
     type: numeric-field
     name: source_storage_duration_value
-    description: "How long was the source material (parent) stored, prior to this sample being processed."
+    description: "The length of time the sample was stored prior to processing it. For assays performed on tissue sections, this refers to how long the tissue section (e.g., slide) was stored before the assay began (e.g., imaging). For assays performed on suspensions, such as sequencing, it refers to how long the suspension was stored before library construction started. Example: 12"
     prefLabel: Source storage duration value
     datatype: xsd:decimal
     minValue: 0
@@ -1103,7 +1121,7 @@ children:
   - key: source_storage_duration_unit
     type: controlled-term-field
     name: source_storage_duration_unit
-    description: The time duration unit of measurement
+    description: "The unit of measurement used to specify the source storage duration value. Example: hour"
     prefLabel: Source storage duration unit
     datatype: iri
     values:
@@ -1142,14 +1160,14 @@ children:
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
-    description: The amount of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture.
+    description: "The length of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture. Example: 10"
     prefLabel: Time since acquisition instrument calibration value
     datatype: xsd:decimal
     minValue: 0
   - key: time_since_acquisition_instrument_calibration_unit
     type: controlled-term-field
     name: time_since_acquisition_instrument_calibration_unit
-    description: The time unit of measurement
+    description: "The unit of measurement used to specify the time since acquisition instrument calibration value. Example: month"
     prefLabel: Time since acquisition instrument calibration unit
     datatype: iri
     values:
@@ -1174,7 +1192,7 @@ children:
   - key: contributors_path
     type: text-field
     name: contributors_path
-    description: "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"./extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest."
+    description: "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv"
     prefLabel: Contributors path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
     configuration:
@@ -1182,7 +1200,7 @@ children:
   - key: data_path
     type: text-field
     name: data_path
-    description: "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest."
+    description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
     prefLabel: Data path
     regex: ^(?:\.|\.\/.+|\w.*)$
     configuration:
@@ -1190,7 +1208,7 @@ children:
   - key: ms_ionization_technique
     type: controlled-term-field
     name: ms_ionization_technique
-    description: "The ionization approach (i.e., sample probing method) for performing imaging mass spectrometry."
+    description: "The ionization technique used in imaging mass spectrometry, which refers to the method employed to probe the sample. Example: MALDI"
     prefLabel: MS ionization technique
     datatype: iri
     values:
@@ -1254,12 +1272,18 @@ children:
         termType: class
         termLabel: MALDI-2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000279
+      - type: class
+        label: nESI
+        acronym: HRAVS
+        termType: class
+        termLabel: nESI
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000456
     configuration:
       required: true
   - key: ms_scan_mode
     type: controlled-term-field
     name: ms_scan_mode
-    description: MS (mass spectrometry) scan mode refers to the number of steps in the separation of fragments.
+    description: "The mode of mass spectrometry (MS) scanning, which refers to the number of steps involved in the separation of fragments during the analysis. Example: MS1"
     prefLabel: MS scan mode
     datatype: iri
     values:
@@ -1286,7 +1310,7 @@ children:
   - key: mass_analysis_polarity
     type: controlled-term-field
     name: mass_analysis_polarity
-    description: The polarity of the mass analysis (positive or negative ion modes).
+    description: "The polarity mode used in mass analysis, indicating whether positive or negative ion modes are employed. Example: Positive ion mode"
     prefLabel: Mass analysis polarity
     datatype: iri
     values:
@@ -1313,7 +1337,7 @@ children:
   - key: mass_to_charge_range_low_value
     type: numeric-field
     name: mass_to_charge_range_low_value
-    description: "The low value of the scanned mass-to-charge range, for MS1. (unitless)"
+    description: "The low value of the scanned mass-to-charge range for MS1. This value is unitless. Example: 100"
     prefLabel: Mass-to-charge range low value
     datatype: xsd:decimal
   - key: mass_to_charge_range_high_value
@@ -1325,19 +1349,19 @@ children:
   - key: mass_resolving_power
     type: numeric-field
     name: mass_resolving_power
-    description: "The mass resolving power m/∆m, where ∆m is defined as the full width at half-maximum (FWHM) for a given peak with a specified mass-to-charge (m/z). (unitless)"
+    description: "The mass resolving power, denoted as m/∆m, where ∆m is defined as the full width at half-maximum (FWHM) for a given peak with a specified mass-to-charge ratio (m/z). This measurement is unitless. Example: 60000"
     prefLabel: Mass resolving power
     datatype: xsd:decimal
   - key: mass_to_charge_resolving_power
     type: numeric-field
     name: mass_to_charge_resolving_power
-    description: The peak (m/z) used to calculate the resolving power.
+    description: "The peak mass-to-charge ratio (m/z) used to calculate the resolving power. Example: 400.2"
     prefLabel: Mass-to-charge resolving power
     datatype: xsd:decimal
   - key: ion_mobility
     type: controlled-term-field
     name: ion_mobility
-    description: "Specifies which technology was used for ion mobility spectrometry. Technologies for measuring ion mobility: Traveling Wave Ion Mobility Spectrometry (TWIMS), Trapped Ion Mobility Spectrometry (TIMS), High Field Asymmetric waveform ion Mobility Spectrometry (FAIMS), Drift Tube Ion Mobility Spectrometry (DTIMS), Structures for Lossless Ion Manipulations (SLIM), and cyclic Ion Mobility Spectrometry (cIMS)."
+    description: "The specific technology employed for ion mobility spectrometry. Available technologies include Traveling Wave Ion Mobility Spectrometry (TWIMS), Trapped Ion Mobility Spectrometry (TIMS), High Field Asymmetric Waveform Ion Mobility Spectrometry (FAIMS), Drift Tube Ion Mobility Spectrometry (DTIMS), Structures for Lossless Ion Manipulations (SLIM), and cyclic Ion Mobility Spectrometry (cIMS). Example: TIMS"
     prefLabel: Ion mobility
     datatype: iri
     values:
@@ -1380,7 +1404,7 @@ children:
   - key: data_collection_mode
     type: controlled-term-field
     name: data_collection_mode
-    description: "Mode of data collection in tandem MS assays. Either DDA (Data-dependent acquisition), DIA (Data-independent acquisition), SRM (multiple reaction monitoring), or PRM (parallel reaction monitoring)."
+    description: "The mode of data collection used in tandem MS assays, which can include options such as Data-dependent acquisition (DDA), Data-independent acquisition (DIA), multiple reaction monitoring (SRM), or parallel reaction monitoring (PRM). Example: PRM"
     prefLabel: Data collection mode
     datatype: iri
     values:
@@ -1411,12 +1435,12 @@ children:
   - key: label_name
     type: text-field
     name: label_name
-    description: "If the samples were labeled (e.g. TMT), provide the name/ID of the label on this sample. Leave blank if not applicable."
+    description: "The name or identifier of the chemical label used on this sample if labeling was applied. This is typically required for multiplexed experiments using techniques like Tandem Mass Tag (TMT). If sample was not labeled, this field may be left blank. Example: TMT126"
     prefLabel: Label name
   - key: lc_instrument_vendor
     type: controlled-term-field
     name: lc_instrument_vendor
-    description: The manufacturer of the instrument used for liquid chromatography.
+    description: "The company that manufactures the instrument used for liquid chromatography. If the instrument was custom-built or developed internally, enter \"In-House\". Example: Bruker"
     prefLabel: LC instrument vendor
     datatype: iri
     values:
@@ -1465,12 +1489,12 @@ children:
   - key: lc_instrument_model
     type: text-field
     name: lc_instrument_model
-    description: The model number/name of the instrument used for liquid chromatography.
+    description: "The model number or name of the instrument used for liquid chromatography. Example: Bruker Elute LC-MS"
     prefLabel: LC instrument model
   - key: lc_column_vendor
     type: controlled-term-field
     name: lc_column_vendor
-    description: "The manufacturer of the liquid chromatography column unless self-packed, pulled tip capillary is used."
+    description: "The manufacturer of the liquid chromatography column used, unless a self-packed or pulled tip capillary is employed. If the column was custom-made or developed internally, enter \"In-House\". Example: Bruker"
     prefLabel: LC column vendor
     datatype: iri
     values:
@@ -1513,12 +1537,12 @@ children:
   - key: lc_column_model
     type: text-field
     name: lc_column_model
-    description: "The model number/name of the liquid chromatography column. If it is a custom self-packed, pulled tip capillary is used enter “Pulled tip capilary”."
+    description: "The model number or name of the liquid chromatography column used. If a custom self-packed, pulled tip capillary is utilized, enter \"Pulled tip capillary\". Example: Thermo Scientific Vanquish UHPLC"
     prefLabel: LC column model
   - key: lc_resin
     type: text-field
     name: lc_resin
-    description: "Details of the resin used for liquid chromatography, including vendor, particle size, pore size."
+    description: "The details of the resin used in liquid chromatography, including information about the vendor, particle size, and pore size. Example: Thermo Fisher Scientific, Acclaim PepMap 100 C18, 3 µm, 100 Å"
     prefLabel: LC resin
   - key: lc_column_length_value
     type: numeric-field
@@ -1554,7 +1578,7 @@ children:
   - key: lc_temperature_value
     type: numeric-field
     name: lc_temperature_value
-    description: Liquid chromatography temperature.
+    description: "The temperature at which the liquid chromatography (LC) process is conducted. Example: 40"
     prefLabel: LC temperature value
     datatype: xsd:decimal
   - key: lc_temperature_unit
@@ -1578,6 +1602,7 @@ children:
   - key: lc_inner_diameter_unit
     type: controlled-term-field
     name: lc_inner_diameter_unit
+    description: "The unit of measurment for the LC inner diameter value. If the diameter is not specified, this field may be left blank. Example: um"
     prefLabel: LC inner diameter unit
     datatype: iri
     values:
@@ -1627,7 +1652,7 @@ children:
   - key: lc_gradient_value
     type: numeric-field
     name: lc_gradient_value
-    description: Liquid chromatography gradient.
+    description: "The liquid chromatography (LC) gradient used in the assay. Example: 120"
     prefLabel: LC gradient value
     datatype: xsd:decimal
   - key: lc_gradient_unit
@@ -1697,12 +1722,12 @@ children:
   - key: spatial_sampling_target
     type: text-field
     name: spatial_sampling_target
-    description: Specifies the cell-type or functional tissue unit (FTU) that is targeted in the spatial profiling experiment. Leave blank if data are generated in imaging mode without a specific target structure.
+    description: "The cell type or functional tissue unit (FTU) that is the focus of the spatial profiling experiment. If the data are generated in imaging mode without targeting a specific structure, this field may be left blank. Example: Proximal tubule epithelial cell"
     prefLabel: Spatial sampling target
   - key: spatial_sampling_type
     type: controlled-term-field
     name: spatial_sampling_type
-    description: Specifies whether or not the analysis was performed in a spatially targeted manner. Spatial profiling experiments target specific tissue foci but do not necessarily generate images. Spatial imaging expriments collect data from a regular array (pixels) that can be visualized as heat maps of ion intensity at each location (molecular images). Leave blank if data are derived from bulk analysis.
+    description: "The type of spatial targeting used in the analysis. Spatial profiling focuses on selected tissue regions without necessarily producing images, while spatial imaging captures data across a regular grid of pixels, enabling visualization as ion intensity heat maps—also referred to as molecular images. Leave this field blank if the data originate from bulk (non-spatial) analysis. Example: Imaging"
     prefLabel: Spatial sampling type
     datatype: iri
     values:
@@ -1728,7 +1753,7 @@ children:
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id
-    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
     default: 2015a1c3-fcf8-458c-8572-0f65e89f2405
     configuration:

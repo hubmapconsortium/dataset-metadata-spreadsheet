@@ -460,7 +460,7 @@ children:
   - key: preparation_instrument_vendor
     type: controlled-term-field
     name: preparation_instrument_vendor
-    description: The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.
+    description: "The company that manufactures the instrument used to prepare the sample (e.g., for staining or other processing steps) prior to the assay. If the instrument was custom-built or developed internally, enter \"In-House\". If no sample preparation occurred, enter \"Not applicable\". Example: 10X Genomics"
     prefLabel: Preparation instrument vendor
     datatype: iri
     values:
@@ -521,7 +521,7 @@ children:
   - key: preparation_instrument_model
     type: controlled-term-field
     name: preparation_instrument_model
-    description: Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.
+    description: "The specific model of the instrument used for sample preparation, such as staining. Manufacturers may offer multiple models with varying features or sensitivities, which can influence how the sample is processed and how the resulting data is interpreted. If no sample preparation occurred, enter \"Not applicable\". Example: Chromium X"
     prefLabel: Preparation instrument model
     datatype: iri
     values:

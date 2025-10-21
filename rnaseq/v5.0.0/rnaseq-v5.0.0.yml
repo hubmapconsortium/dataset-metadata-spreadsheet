@@ -1208,7 +1208,7 @@ children:
   - key: barcode_offset
     type: radio-field
     name: barcode_offset
-    description: "Positions in the read at which the cell or capture spot barcodes start. Cell and capture spot barcodes are, for example, 3 x 8 bp sequences that are spaced by constant sequences (the offsets). First barcode at position 0, then 38, then 76. This should be included when constructing sequencing libraries with a non-commercial kit."
+    description: "The position within a sequencing read where a barcode sequence begins. In sequencing libraries, barcodes—short DNA sequences used to tag individual cells or molecules—are often arranged in a pattern where each barcode is separated by a constant sequence of known length. These constant sequences create predictable spacing between barcodes, known as offsets. For example, if barcodes are 8 base pairs (bp) long and separated by 30 bp constant regions, the barcodes might start at positions 0, 38, and 76 within the read. If the source material is not barcoded, this field should be marked as \"Not applicable\". Example: 0,38,76"
     prefLabel: Barcode offset
     values:
       - label: 0
@@ -1218,13 +1218,14 @@ children:
       - label: "0,38,76"
       - label: "10,48,78"
       - label: "10,48,86"
+      - label: "0,20-23,41-44"
       - label: Not applicable
     configuration:
       required: true
   - key: barcode_read
     type: controlled-term-field
     name: barcode_read
-    description: Which read file contains the cell or capture spot barcode. This should be included when constructing sequencing libraries with a non-commercial kit. This field is required if the source material is barcoded. This field is used to determine which analysis pipeline to run.
+    description: "The sequencing read file contains the cell or capture spot barcode sequences. This information is essential when constructing sequencing libraries with a non-commercial kit, as it ensures that barcodes are correctly extracted during data processing. If the source material is not barcoded, this field should be marked as \"Not applicable\". Example: Read 1 (R1)"
     prefLabel: Barcode read
     datatype: iri
     values:
@@ -1251,7 +1252,7 @@ children:
   - key: barcode_size
     type: radio-field
     name: barcode_size
-    description: "Length of the cell or capture spot barcode in base pairs. Cell and capture spot barcodes are, for example, 3 x 8 bp sequences that are spaced by constant sequences, the offsets. This should be included when constructing sequencing libraries with a non-commercial kit. This field is required if the source material is barcoded.  This field is used to determine which analysis pipeline to run."
+    description: "The length of each cell or capture spot barcode in base pairs (bp). If the source material is not barcoded, enter \"Not applicable\". Example: 16"
     prefLabel: Barcode size
     values:
       - label: 14
@@ -1277,7 +1278,7 @@ children:
   - key: umi_read
     type: controlled-term-field
     name: umi_read
-    description: Which read file contains the UMI barcode. This should be included when constructing sequencing libraries with a non-commercial kit.
+    description: "Specifies which sequencing read file contains the Unique Molecular Identifier (UMI) barcode. If no UMI is used, enter \"Not applicable\". Example: Read 1 (R1)"
     prefLabel: UMI read
     datatype: iri
     values:
@@ -1304,7 +1305,7 @@ children:
   - key: umi_size
     type: radio-field
     name: umi_size
-    description: Length of the umi barcode in base pairs. This should be included when constructing sequencing libraries with a non-commercial kit. This field is required if UMI are present. This field is used to determine which analysis pipeline to run.
+    description: "The length of the Unique Molecular Identifier (UMI) in base pairs (bp). If no UMI is used, enter \"Not applicable\". Example: 8"
     prefLabel: UMI size
     values:
       - label: 8
@@ -1317,7 +1318,7 @@ children:
   - key: assay_input_entity
     type: controlled-term-field
     name: assay_input_entity
-    description: "This is the entity from which the analyte is being captured. For example, for bulk sequencing this would be \"tissue\", while it would be \"single cell\" for single cell sequencing. This field is used to determine which analysis pipeline to run."
+    description: "The entity from which the analyte is captured. For example, in bulk sequencing, the source entity would be \"tissue\" while in single-cell sequencing, it would be \"single cell\". Example: single cell"
     prefLabel: Assay input entity
     datatype: iri
     values:
@@ -1356,19 +1357,19 @@ children:
   - key: number_of_input_cells_or_nuclei
     type: numeric-field
     name: number_of_input_cells_or_nuclei
-    description: How many cells or nuclei were input to the assay? This is typically not available for preparations working with bulk tissue.
+    description: "The number of cells or nuclei that were input into the assay. This information is typically not available for assays performed on bulk tissue preparations, and therefore this field may be left blank. Example: 1000"
     prefLabel: Number of input cells or nuclei
     datatype: xsd:int
   - key: amount_of_input_analyte_value
     type: numeric-field
     name: amount_of_input_analyte_value
-    description: "The amount of RNA or DNA input to the assay, typically measured by a Qubit, BioAnalyzer, or TapeStation. In most single cell/nuclei assays, this value isn't available."
+    description: "The amount of RNA or DNA input into the assay, typically measured using instruments such as a Qubit, BioAnalyzer, or TapeStation. In most single-cell or single-nucleus assays, this value is usually not available, and therfore this field may be left blank. Example: 500"
     prefLabel: Amount of input analyte value
     datatype: xsd:decimal
   - key: amount_of_input_analyte_unit
     type: controlled-term-field
     name: amount_of_input_analyte_unit
-    description: Units of amount of entity input to assay value
+    description: "The unit of measurement used to specify the amount of input analyte value. If no input amount, this field may be left blank. Example: ng"
     prefLabel: Amount of input analyte unit
     datatype: iri
     values:
@@ -1387,14 +1388,14 @@ children:
   - key: library_adapter_sequence
     type: text-field
     name: library_adapter_sequence
-    description: 5’ and/or 3’ read adapter sequences used as part of the library preparation protocol to render the library compatible with the sequencing protocol and instrumentation. This should be provided as comma-separated list of key:value pairs (adapter name:sequence).
+    description: "The 5' and/or 3' adapter sequences used during library preparation to make the library compatible with the sequencing protocol and instrumentation. Adapter sequences should be provided as a comma-separated list of key-value pairs in the format: \"adapter name: sequence\". Example: Nextera Read 1: CTGTCTCTTATACACATCT"
     prefLabel: Library adapter sequence
     configuration:
       required: true
   - key: library_average_fragment_size
     type: numeric-field
     name: library_average_fragment_size
-    description: Average size of sequencing library fragments estimated via gel electrophoresis or bioanalyzer/tapestation. Numeric value in base pairs (bp).
+    description: "The average size of sequencing library fragments, measured in base pairs (bp), as estimated by gel electrophoresis, BioAnalyzer, or TapeStation. Example: 200"
     prefLabel: Library average fragment size
     datatype: xsd:int
     configuration:
@@ -1402,7 +1403,7 @@ children:
   - key: library_input_amount_value
     type: numeric-field
     name: library_input_amount_value
-    description: "The amount of cDNA, after amplification, that was used for library construction."
+    description: "The amount of cDNA, after amplification, that was used for library construction. Example: 60"
     prefLabel: Library input amount value
     datatype: xsd:decimal
     configuration:
@@ -1410,7 +1411,7 @@ children:
   - key: library_input_amount_unit
     type: controlled-term-field
     name: library_input_amount_unit
-    description: unit of library input amount value
+    description: "The unit of measurement used to specify the library input amount value. Example: ng"
     prefLabel: Library input amount unit
     datatype: iri
     values:
@@ -1431,13 +1432,13 @@ children:
   - key: library_output_amount_value
     type: numeric-field
     name: library_output_amount_value
-    description: "Total amount (eg. nanograms) of library after the clean-up step of final pcr amplification step. Answer the question: What is the Qubit measured concentration (ng/ul) times the elution volume (ul) after the final clean-up step?"
+    description: "The total amount of library following the clean-up step after the final PCR amplification. To calculate, multiply the Qubit-measured concentration (ng/µl) by the elution volume (µl) obtained after the final clean-up. Example: 125"
     prefLabel: Library output amount value
     datatype: xsd:decimal
   - key: library_output_amount_unit
     type: controlled-term-field
     name: library_output_amount_unit
-    description: Units of library final yield.
+    description: "The unit of measurement used to specify the library output amount value. Example: ng"
     prefLabel: Library output amount unit
     datatype: iri
     values:
@@ -1456,7 +1457,7 @@ children:
   - key: library_concentration_value
     type: numeric-field
     name: library_concentration_value
-    description: The concentration value of the pooled library samples submitted for sequencing.
+    description: "The concentration of the pooled library submitted for sequencing. Example: 2.5"
     prefLabel: Library concentration value
     datatype: xsd:decimal
     configuration:
@@ -1491,7 +1492,7 @@ children:
   - key: library_layout
     type: controlled-term-field
     name: library_layout
-    description: Whether the library was generated for single-end or paired end sequencing
+    description: "Indicates whether the sequencing library was prepared for single-end or paired-end sequencing. This information determines how reads are generated and aligned during data processing. Example: single-end"
     prefLabel: Library layout
     datatype: iri
     values:
@@ -1512,7 +1513,7 @@ children:
   - key: number_of_iterations_of_cdna_amplification
     type: numeric-field
     name: number_of_iterations_of_cdna_amplification
-    description: "This is the amplification of the cDNA prior to library construction. This is typically a PCR amplification, while for linear amplification methods like aRNA this would be the number of rounds of aRNA."
+    description: "The number of amplification cycles applied to cDNA prior to library construction. This is typically the number of PCR cycles used. For protocols using linear amplification methods (e.g., aRNA), this refers to the number of amplification rounds performed. Example: 3"
     prefLabel: Number of iterations of cDNA amplification
     datatype: xsd:int
     configuration:
@@ -1520,7 +1521,7 @@ children:
   - key: number_of_pcr_cycles_for_indexing
     type: numeric-field
     name: number_of_pcr_cycles_for_indexing
-    description: Number of PCR cycles performed in order to add adapters and amplify the library. This does not include the cDNA amplification which is captured in the "number of iterations of cDNA amplification" field.
+    description: "The number of PCR cycles used specifically to add sequencing adapters and amplify the library during the indexing step. This count does not include earlier cDNA amplification cycles, which are recorded separately under the \"Number of iterations of cDNA amplification\" field. Example: 8"
     prefLabel: Number of PCR cycles for indexing
     datatype: xsd:int
     configuration:
@@ -1528,7 +1529,7 @@ children:
   - key: library_preparation_kit
     type: controlled-term-field
     name: library_preparation_kit
-    description: Reagent kit used for library preparation
+    description: "The reagent kit used to construct the sequencing library, including both the kit name and, if available, version and product number. If the library was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 16 rxns; PN 1000263"
     prefLabel: Library preparation kit
     datatype: iri
     values:
@@ -1735,7 +1736,7 @@ children:
   - key: sample_indexing_kit
     type: controlled-term-field
     name: sample_indexing_kit
-    description: Indexes are needed for multiplexing sequencing libraries for simultaneous sequencing (pooling) and proper attachment to the Illumina flowcell. Each indexing kit would have a number of compatible sequences ("sample indexing sets") that are used to label some number of samples (the number of sets depend on the kit).
+    description: "The reagent kit used to add index sequences to samples. Indexes enable multiplexing, allowing multiple libraries to be pooled and sequenced together on the same Illumina flow cell. Each indexing kit includes a set of compatible index sequences (often called \"indexing sets\") used to uniquely label a specific number of samples, depending on the kit’s design. If the library was prepared using a custom protocol, enter “Custom”. If no indexing was performed, enter \"Not applicable\". Example: 10X Genomics; Dual Index Kit TS, Set A; PN 1000251"
     prefLabel: Sample indexing kit
     datatype: iri
     values:
@@ -1852,14 +1853,14 @@ children:
   - key: sample_indexing_set
     type: text-field
     name: sample_indexing_set
-    description: "The specific sequencing barcode index set used, selected from the sample indexing kit. Example: For 10X this might be \"SI-GA-A1\", for Nextera \"N505 - CTCCTTAC\""
+    description: "The specific sequencing barcode index set used, chosen from the sample indexing kit. For example, in the case of 10x, this might be \"SI-GA-A1\", whereas for Nextera, it could be \"N505 - CTCCTTAC\". Example: SI-GA-A1"
     prefLabel: Sample indexing set
     configuration:
       required: true
   - key: is_technical_replicate
     type: radio-field
     name: is_technical_replicate
-    description: "Is the sequencing reaction run in replicate, \"Yes\" or \"No\". If \"Yes\", FASTQ files in dataset need to be merged."
+    description: "Indicates whether the sequencing reaction was run in replicate. If \"Yes,\" the corresponding FASTQ files in the dataset should be merged for analysis. Example: Yes"
     prefLabel: Is technical replicate?
     values:
       - label: "Yes"
@@ -1869,16 +1870,22 @@ children:
   - key: expected_entity_capture_count
     type: numeric-field
     name: expected_entity_capture_count
-    description: "Number of cells, nuclei or capture spots expected to be captured by the assay. For Visium this is the total number of spots covered by tissue, within the capture area."
+    description: "The number of cells, nuclei, or capture spots expected to be captured by the assay. Example: 14336"
     prefLabel: Expected entity capture count
     datatype: xsd:int
   - key: sequencing_reagent_kit
     type: controlled-term-field
     name: sequencing_reagent_kit
-    description: Reagent kit used for sequencing
+    description: "The reagent kit used to perform the sequencing run, including the platform, kit name, version, and product number when available. If the reagent kit was prepared using a custom protocol, enter “Custom”. Example: Illumina; NextSeq 500/550 Hi Output Kit 150 Cycles; v2.5; PN 20024907"
     prefLabel: Sequencing reagent kit
     datatype: iri
     values:
+      - type: class
+        label: Illumina; NovaSeq X Series 25B Reagent Kit (100 Cycle); PN 20125967
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina; NovaSeq X Series 25B Reagent Kit (100 Cycle); PN 20125967
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000463
       - type: class
         label: Illumina; NovaSeq X Series 1.5B Reagent Kit (300 Cycle); PN 20104705
         acronym: HRAVS
@@ -1903,6 +1910,12 @@ children:
         termType: class
         termLabel: Illumina; NextSeq 1000/2000 P2 Reagent v3 Kit (200 Cycles); PN 20046812
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000352
+      - type: class
+        label: Illumina; NovaSeq X Series 25B Reagent Kit (200 Cycle); PN 20125968
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina; NovaSeq X Series 25B Reagent Kit (200 Cycle); PN 20125968
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000464
       - type: class
         label: Illumina; NovaSeq X Series 1.5B Reagent Kit (200 Cycle); PN 20104704
         acronym: HRAVS
@@ -2046,24 +2059,24 @@ children:
   - key: sequencing_read_format
     type: text-field
     name: sequencing_read_format
-    description: "Number of sequencing cycles in each round of sequencing (i.e., Read1, i7 index, i5 index, and Read2). This is reported as a comma-delimited list. Example: For 10X snATAC-seq (R1,Index,R2,R3) this might be: 50,8,16,50. For SNARE-seq2 this might be: 75,94,8,75"
+    description: "The number of sequencing cycles for each read and index in the sequencing run, typically reported as a comma-separated list in the order: Read 1, i7 index, i5 index, and Read 2. Example: 50,8,16,50"
     prefLabel: Sequencing read format
     configuration:
       required: true
   - key: sequencing_batch_id
     type: text-field
     name: sequencing_batch_id
-    description: "The ID for the sequencing run. This could, for example, be the chip ID and should allow users the ability to determine which samples were processed together in a sequencing run. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers."
+    description: "A lab-assigned identifier for the sequencing run, such as a chip ID, that enables users to determine which samples were processed together. To avoid ID conflicts across institutions, it is recommended to prefix the ID with the name of the sequencing center. Example: Broad_Chip1234"
     prefLabel: Sequencing batch ID
   - key: capture_batch_id
     type: text-field
     name: capture_batch_id
-    description: "A lab-generated ID to identify which cells were captured at the same time. This would, for example, be an ID to denote which datasets were derived from a single 10X Genomics Chromium Controller run. In the case of the 10X Controller this could be the chip ID and would allow users the ability to determine which samples were processed together in a Chromium controller. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers."
+    description: "A lab-assigned identifier used to indicate which cells or nuclei were captured together in the same run. For example, in a 10X Genomics Chromium Controller workflow, this could be the chip ID used to trace datasets derived from a single capture event. This ID helps users identify samples processed together on the same device. To avoid conflicts across institutions, it is recommended to prefix the ID with the name of the sequencing center. Example: Broad_Batch1234"
     prefLabel: Capture batch ID
   - key: preparation_instrument_vendor
     type: controlled-term-field
     name: preparation_instrument_vendor
-    description: The manufacturer of the instrument used to prepare (staining/processing) the sample for the assay. If an automatic slide staining method was indicated this field should list the manufacturer of the instrument.
+    description: "The company that manufactures the instrument used to prepare the sample (e.g., for staining or other processing steps) prior to the assay. If the instrument was custom-built or developed internally, enter \"In-House\". If no sample preparation occurred, enter \"Not applicable\". Example: 10X Genomics"
     prefLabel: Preparation instrument vendor
     datatype: iri
     values:
@@ -2124,7 +2137,7 @@ children:
   - key: preparation_instrument_model
     type: controlled-term-field
     name: preparation_instrument_model
-    description: Manufacturers of a staining system instrument may offer various versions (models) of that instrument with different features. Differences in features or sensitivities may be relevant to processing or interpretation of the data.
+    description: "The specific model of the instrument used for sample preparation, such as staining. Manufacturers may offer multiple models with varying features or sensitivities, which can influence how the sample is processed and how the resulting data is interpreted. If no sample preparation occurred, enter \"Not applicable\". Example: Chromium X"
     prefLabel: Preparation instrument model
     datatype: iri
     values:
@@ -2239,7 +2252,7 @@ children:
   - key: preparation_instrument_kit
     type: controlled-term-field
     name: preparation_instrument_kit
-    description: The reagent kit used with the preparation instrument.
+    description: "The reagent kit used in conjunction with the preparation instrument for sample processing (e.g., staining or labeling). If the reagent kit was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 48 rxns; PN 1000120"
     prefLabel: Preparation instrument kit
     datatype: iri
     values:

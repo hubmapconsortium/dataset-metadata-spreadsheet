@@ -86,6 +86,12 @@ children:
     datatype: iri
     values:
       - type: class
+        label: HTK Solution
+        acronym: HRAVS
+        termType: class
+        termLabel: HTK Solution
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000152
+      - type: class
         label: NBF (Neutral Buffered Formalin)
         acronym: HRAVS
         termType: class
@@ -218,6 +224,12 @@ children:
         termLabel: PLP (Periodate-Lysine-Paraformaldehyde)
         iri: http://purl.bioontology.org/ontology/MESH/C046311
       - type: class
+        label: UW Solution
+        acronym: HRAVS
+        termType: class
+        termLabel: UW Solution
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000151
+      - type: class
         label: MACS tissue storage solution
         acronym: HRAVS
         termType: class
@@ -334,6 +346,12 @@ children:
         termType: class
         termLabel: Stored in refrigerator
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000104
+      - type: class
+        label: Stored on wet ice
+        acronym: HRAVS
+        termType: class
+        termLabel: Stored on wet ice
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000465
     configuration:
       required: true
   - key: processing_time_value

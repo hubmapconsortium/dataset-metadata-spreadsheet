@@ -5,7 +5,7 @@ children:
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
-    description: "Unique HuBMAP or SenNet identifier of the sample (i.e., block, section or suspension) used to perform this assay. For example, for a RNAseq assay, the parent would be the suspension, whereas, for one of the imaging assays, the parent would be the tissue section. If an assay comes from multiple parent samples then this should be a comma separated list. Example: HBM386.ZGKG.235, HBM672.MKPK.442 or SNT232.UBHJ.322, SNT329.ALSK.102"
+    description: "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442"
     prefLabel: Parent sample ID
     regex: "^(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3}(?:,\\s*(?:HBM|SNT)\\d{3}\\.[A-Z]{4}\\.\\d{3})*$"
     configuration:
@@ -13,19 +13,19 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "An internal field labs can use it to add whatever ID(s) they want or need for dataset validation and tracking. This could be a single ID (e.g., \"Visium_9OLC_A4_S1\") or a delimited list of IDs (e.g., “9OL; 9OLC.A2; Visium_9OLC_A4_S1”). This field will not be accessible to anyone outside of the consortium and no effort will be made to check if IDs provided by one data provider are also used by another."
+    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
     name: preparation_protocol_doi
-    description: "DOI for the protocols.io page that describes the assay or sample procurement and preparation. For example for an imaging assay, the protocol might begin with staining of a section and finalize with the creation of an OME-TIFF file. In this case the protocol would include any image processing steps required to create the OME-TIFF file. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1."
+    description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
     prefLabel: Preparation protocol DOI
     configuration:
       required: true
   - key: dataset_type
     type: controlled-term-field
     name: dataset_type
-    description: The specific type of dataset being produced.
+    description: "The specific type of dataset being produced. Example: RNAseq"
     prefLabel: Dataset type
     datatype: iri
     default:
@@ -45,11 +45,11 @@ children:
         termLabel: SNARE-seq2
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000264
       - type: class
-        label: MIBI
+        label: COMET
         acronym: HRAVS
         termType: class
-        termLabel: MIBI
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000172
+        termLabel: COMET
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000458
       - type: class
         label: Visium (no probes)
         acronym: HRAVS
@@ -63,23 +63,11 @@ children:
         termLabel: DESI
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000204
       - type: class
-        label: Auto-fluorescence
-        acronym: HRAVS
-        termType: class
-        termLabel: Auto-fluorescence
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000205
-      - type: class
         label: Confocal
         acronym: HRAVS
         termType: class
         termLabel: Confocal
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000206
-      - type: class
-        label: Xenium
-        acronym: HRAVS
-        termType: class
-        termLabel: Xenium
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
       - type: class
         label: Stereo-seq
         acronym: HRAVS
@@ -99,17 +87,137 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
-        label: CosMx
-        acronym: HRAVS
-        termType: class
-        termLabel: CosMx
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
-      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
         termLabel: DBiT-seq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000428
+      - type: class
+        label: Seq-Scope
+        acronym: HRAVS
+        termType: class
+        termLabel: Seq-Scope
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000390
+      - type: class
+        label: CosMx Transcriptomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Transcriptomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000218
+      - type: class
+        label: CyCIF
+        acronym: HRAVS
+        termType: class
+        termLabel: CyCIF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000200
+      - type: class
+        label: Light Sheet
+        acronym: HRAVS
+        termType: class
+        termLabel: Light Sheet
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
+      - type: class
+        label: seqFISH
+        acronym: HRAVS
+        termType: class
+        termLabel: seqFISH
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000397
+      - type: class
+        label: ATACseq
+        acronym: HRAVS
+        termType: class
+        termLabel: ATACseq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
+      - type: class
+        label: CosMx Proteomics
+        acronym: HRAVS
+        termType: class
+        termLabel: CosMx Proteomics
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000435
+      - type: class
+        label: Singular Genomics G4X
+        acronym: HRAVS
+        termType: class
+        termLabel: Singular Genomics G4X
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000429
+      - type: class
+        label: Visium HD
+        acronym: HRAVS
+        termType: class
+        termLabel: Visium HD
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000451
+      - type: class
+        label: MERFISH
+        acronym: HRAVS
+        termType: class
+        termLabel: MERFISH
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000221
+      - type: class
+        label: 10X Multiome
+        acronym: HRAVS
+        termType: class
+        termLabel: 10X Multiome
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000215
+      - type: class
+        label: 4i
+        acronym: HRAVS
+        termType: class
+        termLabel: 4i
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000447
+      - type: class
+        label: PhenoCycler
+        acronym: HRAVS
+        termType: class
+        termLabel: PhenoCycler
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000199
+      - type: class
+        label: Second Harmonic Generation (SHG)
+        acronym: HRAVS
+        termType: class
+        termLabel: Second Harmonic Generation (SHG)
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000208
+      - type: class
+        label: Thick section Multiphoton MxIF
+        acronym: HRAVS
+        termType: class
+        termLabel: Thick section Multiphoton MxIF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
+      - type: class
+        label: CyTOF
+        acronym: HRAVS
+        termType: class
+        termLabel: CyTOF
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+      - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000441
+      - type: class
+        label: MIBI
+        acronym: HRAVS
+        termType: class
+        termLabel: MIBI
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000172
+      - type: class
+        label: Auto-fluorescence
+        acronym: HRAVS
+        termType: class
+        termLabel: Auto-fluorescence
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000205
+      - type: class
+        label: FACS
+        acronym: HRAVS
+        termType: class
+        termLabel: FACS
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000440
+      - type: class
+        label: Xenium
+        acronym: HRAVS
+        termType: class
+        termLabel: Xenium
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -141,17 +249,11 @@ children:
         termLabel: MUSIC
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000328
       - type: class
-        label: CyCIF
+        label: Pixel-seqV2
         acronym: HRAVS
         termType: class
-        termLabel: CyCIF
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000200
-      - type: class
-        label: Light Sheet
-        acronym: HRAVS
-        termType: class
-        termLabel: Light Sheet
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
+        termLabel: Pixel-seqV2
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000450
       - type: class
         label: MALDI
         acronym: HRAVS
@@ -159,23 +261,11 @@ children:
         termLabel: MALDI
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000201
       - type: class
-        label: seqFISH
-        acronym: HRAVS
-        termType: class
-        termLabel: seqFISH
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000397
-      - type: class
         label: 2D Imaging Mass Cytometry
         acronym: HRAVS
         termType: class
         termLabel: 2D Imaging Mass Cytometry
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000296
-      - type: class
-        label: ATACseq
-        acronym: HRAVS
-        termType: class
-        termLabel: ATACseq
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000309
       - type: class
         label: Histology
         acronym: HRAVS
@@ -207,18 +297,6 @@ children:
         termLabel: RNAseq
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000310
       - type: class
-        label: Singular Genomics G4X
-        acronym: HRAVS
-        termType: class
-        termLabel: Singular Genomics G4X
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000429
-      - type: class
-        label: MERFISH
-        acronym: HRAVS
-        termType: class
-        termLabel: MERFISH
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000221
-      - type: class
         label: LC-MS
         acronym: HRAVS
         termType: class
@@ -230,12 +308,6 @@ children:
         termType: class
         termLabel: nanoSPLITS
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000312
-      - type: class
-        label: 10X Multiome
-        acronym: HRAVS
-        termType: class
-        termLabel: 10X Multiome
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000215
       - type: class
         label: GeoMx (nCounter)
         acronym: HRAVS
@@ -249,41 +321,23 @@ children:
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
       - type: class
-        label: PhenoCycler
-        acronym: HRAVS
-        termType: class
-        termLabel: PhenoCycler
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000199
-      - type: class
-        label: Second Harmonic Generation (SHG)
-        acronym: HRAVS
-        termType: class
-        termLabel: Second Harmonic Generation (SHG)
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000208
-      - type: class
-        label: Thick section Multiphoton MxIF
-        acronym: HRAVS
-        termType: class
-        termLabel: Thick section Multiphoton MxIF
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
-      - type: class
         label: MS Lipidomics
         acronym: HRAVS
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
       - type: class
-        label: CyTOF
+        label: MPLEx
         acronym: HRAVS
         termType: class
-        termLabel: CyTOF
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+        termLabel: MPLEx
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000448
     configuration:
       required: true
   - key: analyte_class
     type: controlled-term-field
     name: analyte_class
-    description: Analytes are the target molecules being measured with the assay.
+    description: "The analyte class which is the target molecule that the assay is measuring. Example: DNA"
     prefLabel: Analyte class
     datatype: iri
     values:
@@ -388,7 +442,7 @@ children:
   - key: is_targeted
     type: radio-field
     name: is_targeted
-    description: Specifies whether or not a specific molecule(s) is/are targeted for detection/measurement by the assay ("Yes" or "No"). The CODEX analyte is protein.
+    description: "Indicates whether a specific molecule or set of molecules is targeted for detection or measurement by the assay. Example: Yes"
     prefLabel: Is targeted?
     values:
       - label: "Yes"
@@ -399,7 +453,7 @@ children:
   - key: acquisition_instrument_vendor
     type: controlled-term-field
     name: acquisition_instrument_vendor
-    description: An acquisition instrument is the device that contains the signal detection hardware and signal processing software. Assays generate signals such as light of various intensities or color or signals representing the molecular mass.
+    description: "The company that manufactures or supplies the acquisition instrument. An acquisition instrument is a device equipped with signal detection hardware and signal processing software. It captures signals produced by assays, such as variations in light intensity or color, or signals corresponding to molecular mass. If the instrument was custom-built or developed internally, enter \"In-House\". Example: Illumina"
     prefLabel: Acquisition instrument vendor
     datatype: iri
     values:
@@ -427,6 +481,18 @@ children:
         termType: class
         termLabel: Zeiss Microscopy
         iri: https://identifiers.org/RRID:SCR_023607
+      - type: class
+        label: Complete Genomics
+        acronym: HRAVS
+        termType: class
+        termLabel: Complete Genomics
+        iri: https://identifiers.org/RRID:SCR_027007
+      - type: class
+        label: 3DHISTECH
+        acronym: HRAVS
+        termType: class
+        termLabel: 3DHISTECH
+        iri: https://identifiers.org/RRID:SCR_027042
       - type: class
         label: GE Healthcare
         acronym: HRAVS
@@ -542,11 +608,23 @@ children:
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
       - type: class
+        label: Cytek Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Biosciences
+        iri: https://identifiers.org/RRID:SCR_027071
+      - type: class
         label: 10x Genomics
         acronym: HRAVS
         termType: class
         termLabel: 10x Genomics
         iri: https://identifiers.org/RRID:SCR_023672
+      - type: class
+        label: Microscopes International
+        acronym: HRAVS
+        termType: class
+        termLabel: Microscopes International
+        iri: https://identifiers.org/RRID:SCR_027094
       - type: class
         label: Hamamatsu
         acronym: HRAVS
@@ -564,7 +642,7 @@ children:
   - key: acquisition_instrument_model
     type: controlled-term-field
     name: acquisition_instrument_model
-    description: Manufacturers of an acquisition instrument may offer various versions (models) of that instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data.
+    description: "The specific model of the acquisition instrument, as manufacturers often offer various versions with differing features or sensitivities. These differences may be relevant to the processing or interpretation of the data. If the instrument was custom-built or developed internally, enter \"In-House\". If the model is unknown, enter \"Unknown\". Example: HiSeq 4000"
     prefLabel: Acquisition instrument model
     datatype: iri
     values:
@@ -586,6 +664,12 @@ children:
         termType: class
         termLabel: BZ-X710
         iri: https://identifiers.org/RRID:SCR_017202
+      - type: class
+        label: Pannoramic MIDI II Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Pannoramic MIDI II Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_024834
       - type: class
         label: Not applicable
         acronym: HRAVS
@@ -695,6 +779,12 @@ children:
         termLabel: Helios
         iri: https://identifiers.org/RRID:SCR_019916
       - type: class
+        label: uScopeHXII-20
+        acronym: HRAVS
+        termType: class
+        termLabel: uScopeHXII-20
+        iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
         termType: class
@@ -773,6 +863,12 @@ children:
         termLabel: NextSeq 550
         iri: https://identifiers.org/RRID:SCR_016381
       - type: class
+        label: Axio Zoom.V16
+        acronym: HRAVS
+        termType: class
+        termLabel: Axio Zoom.V16
+        iri: https://identifiers.org/RRID:SCR_027090
+      - type: class
         label: Digital Spatial Profiler
         acronym: HRAVS
         termType: class
@@ -808,6 +904,12 @@ children:
         termType: class
         termLabel: Axio Observer 7
         iri: https://identifiers.org/RRID:SCR_023694
+      - type: class
+        label: Cytek Northern Lights
+        acronym: HRAVS
+        termType: class
+        termLabel: Cytek Northern Lights
+        iri: https://identifiers.org/RRID:SCR_027072
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
@@ -899,6 +1001,12 @@ children:
         termLabel: Orbitrap Eclipse Tribrid
         iri: https://identifiers.org/RRID:SCR_023618
       - type: class
+        label: Cell DIVE
+        acronym: HRAVS
+        termType: class
+        termLabel: Cell DIVE
+        iri: https://identifiers.org/RRID:SCR_027323
+      - type: class
         label: MERSCOPE
         acronym: HRAVS
         termType: class
@@ -929,6 +1037,18 @@ children:
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
       - type: class
+        label: solariX
+        acronym: HRAVS
+        termType: class
+        termLabel: solariX
+        iri: https://identifiers.org/RRID:SCR_027095
+      - type: class
+        label: Panoramic 150 Digital Scanner
+        acronym: HRAVS
+        termType: class
+        termLabel: Panoramic 150 Digital Scanner
+        iri: https://identifiers.org/RRID:SCR_027467
+      - type: class
         label: Aperio AT2
         acronym: HRAVS
         termType: class
@@ -940,6 +1060,12 @@ children:
         termType: class
         termLabel: MIBIscope
         iri: https://identifiers.org/RRID:SCR_023613
+      - type: class
+        label: Biomark HD
+        acronym: HRAVS
+        termType: class
+        termLabel: Biomark HD
+        iri: https://identifiers.org/RRID:SCR_022658
       - type: class
         label: NanoZoomer S60
         acronym: HRAVS
@@ -965,6 +1091,12 @@ children:
         termLabel: Axio Scan.Z1
         iri: https://identifiers.org/RRID:SCR_020927
       - type: class
+        label: Juno System
+        acronym: HRAVS
+        termType: class
+        termLabel: Juno System
+        iri: https://identifiers.org/RRID:SCR_027198
+      - type: class
         label: Q Exactive HF
         acronym: HRAVS
         termType: class
@@ -981,7 +1113,7 @@ children:
   - key: source_storage_duration_value
     type: numeric-field
     name: source_storage_duration_value
-    description: "How long was the source material (parent) stored, prior to this sample being processed."
+    description: "The length of time the sample was stored prior to processing it. For assays performed on tissue sections, this refers to how long the tissue section (e.g., slide) was stored before the assay began (e.g., imaging). For assays performed on suspensions, such as sequencing, it refers to how long the suspension was stored before library construction started. Example: 12"
     prefLabel: Source storage duration value
     datatype: xsd:decimal
     minValue: 0
@@ -990,7 +1122,7 @@ children:
   - key: source_storage_duration_unit
     type: controlled-term-field
     name: source_storage_duration_unit
-    description: The time duration unit of measurement
+    description: "The unit of measurement used to specify the source storage duration value. Example: hour"
     prefLabel: Source storage duration unit
     datatype: iri
     values:
@@ -1029,14 +1161,14 @@ children:
   - key: time_since_acquisition_instrument_calibration_value
     type: numeric-field
     name: time_since_acquisition_instrument_calibration_value
-    description: The amount of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture.
+    description: "The length of time since the acquisition instrument was last serviced or calibrated. This provides a metric for assessing drift in data capture. Example: 10"
     prefLabel: Time since acquisition instrument calibration value
     datatype: xsd:decimal
     minValue: 0
   - key: time_since_acquisition_instrument_calibration_unit
     type: controlled-term-field
     name: time_since_acquisition_instrument_calibration_unit
-    description: The time unit of measurement
+    description: "The unit of measurement used to specify the time since acquisition instrument calibration value. Example: month"
     prefLabel: Time since acquisition instrument calibration unit
     datatype: iri
     values:
@@ -1061,7 +1193,7 @@ children:
   - key: contributors_path
     type: text-field
     name: contributors_path
-    description: "The path to the file with the ORCID IDs for all contributors of this dataset (e.g., \"extras/contributors.tsv\" or \"./contributors.tsv\"). This is an internal metadata field that is just used for ingest."
+    description: "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv"
     prefLabel: Contributors path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
     configuration:
@@ -1069,7 +1201,7 @@ children:
   - key: data_path
     type: text-field
     name: data_path
-    description: "The top level directory containing the raw and/or processed data. For a single dataset upload this might be \".\" where as for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For instance, if the data is within a directory called \"TEST001-RK\" use syntax \"/TEST001-RK/\" for this field. If there are multiple directory levels, use the format \"/TEST001-RK/Run1/Pass2\" in which \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field that is just used for ingest."
+    description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
     prefLabel: Data path
     regex: ^(?:\.|\.\/.+|\w.*)$
     configuration:
@@ -1077,7 +1209,7 @@ children:
   - key: antibodies_path
     type: text-field
     name: antibodies_path
-    description: This is the location of the antibodies.tsv file relative to the root of the top level of the upload directory structure. This path should begin with "." and would likely be something like "./extras/antibodies.tsv".
+    description: "The path to the antibodies.tsv file relative to the root directory of the upload structure. This path should start with \".\" and is typically formatted as \"./extras/antibodies.tsv\". Example: ./extras/antibodies.tsv"
     prefLabel: Antibodies path
     regex: ^(?:\.\/.*|\w.*)\.tsv$
     configuration:
@@ -1085,7 +1217,7 @@ children:
   - key: is_image_preprocessing_required
     type: radio-field
     name: is_image_preprocessing_required
-    description: "Depending on if the acquisition instrument was a microscope, slide scanner, etc. will indicate whether or not any level of preprocessing was required to assemble the image (e.g., fusing image tiles) ."
+    description: "Indicates whether image preprocessing is necessary based on the type of acquisition instrument used, such as a microscope or slide scanner. This may involve steps like fusing image tiles to assemble the complete image. Example: Yes"
     prefLabel: Is image preprocessing required?
     values:
       - label: "Yes"
@@ -1093,12 +1225,12 @@ children:
   - key: slide_id
     type: text-field
     name: slide_id
-    description: "A unique ID denoting the slide used. This allows users the ability to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name, to prevent values overlapping across centers."
+    description: "The unique identifier assigned to each slide, enabling users to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name to prevent overlapping values across different centers. Example: VAN0071-PA-1-1_AF"
     prefLabel: Slide ID
   - key: tile_configuration
     type: controlled-term-field
     name: tile_configuration
-    description: This is how the tiles are configured for stitching.
+    description: "The configuration of tiles used for stitching in the assay process. If no tile configuration is applicable, enter \"Not applicable\". Example: Row-by-row"
     prefLabel: Tile configuration
     datatype: iri
     values:
@@ -1135,7 +1267,7 @@ children:
   - key: scan_direction
     type: controlled-term-field
     name: scan_direction
-    description: "This is the direction of imaging, which is required for stitching."
+    description: "The direction of imaging, which is necessary for the stitching process. Example: Left-and-down"
     prefLabel: Scan direction
     datatype: iri
     values:
@@ -1193,28 +1325,28 @@ children:
   - key: tiled_image_columns
     type: numeric-field
     name: tiled_image_columns
-    description: This is how many columns used in stitching. This is sometimes referred to as the grid size x.
+    description: "The number of columns used in the stitching process of a tiled image, often referred to as the grid size in the x-dimension. Example: 5"
     prefLabel: Tiled image columns
     datatype: xsd:int
     minValue: 1
   - key: tiled_image_count
     type: numeric-field
     name: tiled_image_count
-    description: "This is the total number of raw (tiled) images captured, that are to be stitched together."
+    description: "The total number of raw tiled images captured, which are intended to be stitched together. Example: 75"
     prefLabel: Tiled image count
     datatype: xsd:int
     minValue: 1
   - key: intended_tile_overlap_percentage
     type: numeric-field
     name: intended_tile_overlap_percentage
-    description: "The amount of overlap between tiled images. This is the set point, where as during image acquisition there will be slight variations due to stage registration."
+    description: "The intended percentage of overlap between tiled images. This value serves as the set point, although slight variations may occur during image acquisition due to stage registration. Example: 5"
     prefLabel: Intended tile overlap percentage
     datatype: xsd:decimal
     minValue: 0
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id
-    description: "The string that serves as the definitive identifier for the metadata schema version and is readily interpretable by computers for data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9"
     prefLabel: Metadata schema ID
     default: 3829a2c4-e29b-4dca-91f2-af3d427ed57b
     configuration:

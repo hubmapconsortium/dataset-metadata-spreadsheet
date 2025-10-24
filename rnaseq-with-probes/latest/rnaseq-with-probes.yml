@@ -1656,6 +1656,12 @@ children:
         termLabel: "Parse Biosciences; Evercode WT Mini v2 Kit, 12 rxns; PN ECW02010"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000342
       - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 48 rxns; PN 1000356"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 48 rxns; PN 1000356"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000467
+      - type: class
         label: Illumina; TruSeq Stranded mRNA Library Prep (96 samples); PN 20020595
         acronym: HRAVS
         termType: class
@@ -1721,6 +1727,12 @@ children:
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 4 rxns; PN 1000269"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000338
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 8 rxns; PN 1000374"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 8 rxns; PN 1000374"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000466
       - type: class
         label: "10X Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Human Transcriptome, 6.5mm, 4 reactions; PN 1000520"
         acronym: HRAVS

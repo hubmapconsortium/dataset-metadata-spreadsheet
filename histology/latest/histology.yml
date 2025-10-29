@@ -1374,6 +1374,12 @@ children:
         termLabel: Hamamatsu
         iri: https://identifiers.org/RRID:SCR_017105
       - type: class
+        label: Ionpath
+        acronym: HRAVS
+        termType: class
+        termLabel: Ionpath
+        iri: https://identifiers.org/RRID:SCR_023605
+      - type: class
         label: SunChrom
         acronym: HRAVS
         termType: class
@@ -1416,6 +1422,12 @@ children:
         termType: class
         termLabel: Chromium Controller
         iri: https://identifiers.org/RRID:SCR_019326
+      - type: class
+        label: Custom
+        acronym: HRAVS
+        termType: class
+        termLabel: Custom
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
         label: NanoZoomer S360
         acronym: HRAVS
@@ -1539,7 +1551,7 @@ children:
   - key: scan_direction
     type: controlled-term-field
     name: scan_direction
-    description: "This is the direction of imaging, which is required for stitching."
+    description: "The direction of imaging, which is necessary for the stitching process. Example: Left-and-down"
     prefLabel: Scan direction
     datatype: iri
     values:

@@ -172,6 +172,12 @@ children:
         termLabel: DMEM
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C185409
       - type: class
+        label: Perfadex Plus
+        acronym: HRAVS
+        termType: class
+        termLabel: Perfadex Plus
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000249
+      - type: class
         label: PFA (Paraformaldehyde)
         acronym: HRAVS
         termType: class

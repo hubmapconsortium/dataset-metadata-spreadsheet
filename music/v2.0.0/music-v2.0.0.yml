@@ -86,6 +86,12 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
+        label: Virtual Histology
+        acronym: HRAVS
+        termType: class
+        termLabel: Virtual Histology
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000473
+      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
@@ -347,17 +353,17 @@ children:
         termLabel: DNA + RNA
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000327
       - type: class
-        label: Nucleic acid + protein
-        acronym: HRAVS
-        termType: class
-        termLabel: Nucleic acid + protein
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000273
-      - type: class
         label: Chromatin
         acronym: HRAVS
         termType: class
         termLabel: Chromatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13201
+      - type: class
+        label: RNA + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: RNA + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000474
       - type: class
         label: RNA
         acronym: HRAVS
@@ -1552,6 +1558,12 @@ children:
         termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 16 rxns; PN 1000268"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000337
       - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000175"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000175"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000471
+      - type: class
         label: "10x Genomics; Library Construction Kit C, 16 rxns; PN 1000694"
         acronym: HRAVS
         termType: class
@@ -1624,6 +1636,12 @@ children:
         termLabel: "10x Genomics; Chromium GEM-X Single Cell 5' Kit v3, 16 rxns; PN 1000699"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000394
       - type: class
+        label: "10x Genomics; Chromium Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000110"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000110"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000469
+      - type: class
         label: "10x Genomics; Library Construction Kit, 16 rxns; PN 1000190"
         acronym: HRAVS
         termType: class
@@ -1635,6 +1653,12 @@ children:
         termType: class
         termLabel: "Parse Biosciences; Evercode WT Mini v2 Kit, 12 rxns; PN ECW02010"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000342
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 48 rxns; PN 1000356"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 48 rxns; PN 1000356"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000467
       - type: class
         label: Illumina; TruSeq Stranded mRNA Library Prep (96 samples); PN 20020595
         acronym: HRAVS
@@ -1701,6 +1725,12 @@ children:
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 4 rxns; PN 1000269"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000338
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 8 rxns; PN 1000374"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 8 rxns; PN 1000374"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000466
       - type: class
         label: "10X Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Human Transcriptome, 6.5mm, 4 reactions; PN 1000520"
         acronym: HRAVS
@@ -1782,6 +1812,12 @@ children:
         termType: class
         termLabel: Custom
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
+      - type: class
+        label: "10x Genomics; Chromium i7 Multiplex Kit N, Set A, 96 rxn; PN 1000084"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium i7 Multiplex Kit N, Set A, 96 rxn; PN 1000084"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000468
       - type: class
         label: Parse Biosciences; Fragmentation Reagents; PN WX100
         acronym: HRAVS
@@ -2103,6 +2139,18 @@ children:
         termLabel: Hamamatsu
         iri: https://identifiers.org/RRID:SCR_017105
       - type: class
+        label: Ionpath
+        acronym: HRAVS
+        termType: class
+        termLabel: Ionpath
+        iri: https://identifiers.org/RRID:SCR_023605
+      - type: class
+        label: Akoya Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Akoya Biosciences
+        iri: https://identifiers.org/RRID:SCR_023774
+      - type: class
         label: SunChrom
         acronym: HRAVS
         termType: class
@@ -2145,6 +2193,12 @@ children:
         termType: class
         termLabel: Chromium Controller
         iri: https://identifiers.org/RRID:SCR_019326
+      - type: class
+        label: Custom
+        acronym: HRAVS
+        termType: class
+        termLabel: Custom
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
         label: NanoZoomer S360
         acronym: HRAVS
@@ -2231,23 +2285,11 @@ children:
     datatype: iri
     values:
       - type: class
-        label: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 16 rxns; PN 1000127"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 16 rxns; PN 1000127"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000379
-      - type: class
         label: "10X Genomics; Chromium Next GEM Chip K Automated Single Cell Kit, 48 rxns; PN 1000289"
         acronym: HRAVS
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Chip K Automated Single Cell Kit, 48 rxns; PN 1000289"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000373
-      - type: class
-        label: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000250
       - type: class
         label: "10x Genomics; Chromium Single Cell B Chip Kit, 16 rxns; PN 1000074"
         acronym: HRAVS
@@ -2261,17 +2303,17 @@ children:
         termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 4 rxn; PN 1000285"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000251
       - type: class
-        label: "10x Genomics; Chromium GEM-X Single Cell 3' Kit v4, 16 rxns; PN 1000691"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10x Genomics; Chromium GEM-X Single Cell 3' Kit v4, 16 rxns; PN 1000691"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000400
-      - type: class
         label: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 48 rxns; PN 1000286"
         acronym: HRAVS
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 48 rxns; PN 1000286"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000367
+      - type: class
+        label: "10x Genomics; Chromium Chip E Single Cell ATAC Kit, 48 rxns; PN 1000155"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Chip E Single Cell ATAC Kit, 48 rxns; PN 1000155"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000470
       - type: class
         label: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 48 rxns; PN 1000120"
         acronym: HRAVS
@@ -2279,29 +2321,47 @@ children:
         termLabel: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 48 rxns; PN 1000120"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000378
       - type: class
-        label: "10X Genomics; Visium FFPE Reagent Kit v2-Small, PN 1000436"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10X Genomics; Visium FFPE Reagent Kit v2-Small, PN 1000436"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000324
-      - type: class
         label: Custom
         acronym: HRAVS
         termType: class
         termLabel: Custom
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
-        label: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000325
-      - type: class
         label: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 16 rxns; PN 1000287"
         acronym: HRAVS
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 16 rxns; PN 1000287"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000368
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 16 rxns; PN 1000127"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 16 rxns; PN 1000127"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000379
+      - type: class
+        label: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000250
+      - type: class
+        label: "10x Genomics; Chromium GEM-X Single Cell 3' Kit v4, 16 rxns; PN 1000691"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium GEM-X Single Cell 3' Kit v4, 16 rxns; PN 1000691"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000400
+      - type: class
+        label: "10X Genomics; Visium FFPE Reagent Kit v2-Small, PN 1000436"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium FFPE Reagent Kit v2-Small, PN 1000436"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000324
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000325
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id

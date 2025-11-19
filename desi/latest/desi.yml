@@ -86,6 +86,12 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
+        label: Virtual Histology
+        acronym: HRAVS
+        termType: class
+        termLabel: Virtual Histology
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000473
+      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
@@ -347,17 +353,17 @@ children:
         termLabel: DNA + RNA
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000327
       - type: class
-        label: Nucleic acid + protein
-        acronym: HRAVS
-        termType: class
-        termLabel: Nucleic acid + protein
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000273
-      - type: class
         label: Chromatin
         acronym: HRAVS
         termType: class
         termLabel: Chromatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13201
+      - type: class
+        label: RNA + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: RNA + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000474
       - type: class
         label: RNA
         acronym: HRAVS
@@ -1502,6 +1508,18 @@ children:
         termLabel: Hamamatsu
         iri: https://identifiers.org/RRID:SCR_017105
       - type: class
+        label: Ionpath
+        acronym: HRAVS
+        termType: class
+        termLabel: Ionpath
+        iri: https://identifiers.org/RRID:SCR_023605
+      - type: class
+        label: Akoya Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Akoya Biosciences
+        iri: https://identifiers.org/RRID:SCR_023774
+      - type: class
         label: SunChrom
         acronym: HRAVS
         termType: class
@@ -1544,6 +1562,12 @@ children:
         termType: class
         termLabel: Chromium Controller
         iri: https://identifiers.org/RRID:SCR_019326
+      - type: class
+        label: Custom
+        acronym: HRAVS
+        termType: class
+        termLabel: Custom
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
         label: NanoZoomer S360
         acronym: HRAVS

@@ -353,6 +353,12 @@ children:
         termLabel: DNA + RNA
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000327
       - type: class
+        label: Nucleic acid + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: Nucleic acid + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000273
+      - type: class
         label: Chromatin
         acronym: HRAVS
         termType: class

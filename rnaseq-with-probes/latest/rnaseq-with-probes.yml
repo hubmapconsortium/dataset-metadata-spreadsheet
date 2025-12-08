@@ -320,6 +320,12 @@ children:
         termLabel: GeoMx (nCounter)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000301
       - type: class
+        label: Raman Imaging
+        acronym: HRAVS
+        termType: class
+        termLabel: Raman Imaging
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000475
+      - type: class
         label: RNAseq (with probes)
         acronym: HRAVS
         termType: class
@@ -331,6 +337,12 @@ children:
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: STARmap
+        acronym: HRAVS
+        termType: class
+        termLabel: STARmap
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000476
       - type: class
         label: MPLEx
         acronym: HRAVS
@@ -2504,6 +2516,12 @@ children:
         termType: class
         termLabel: "NanoString Technologies; CosMx Human Immuno-Oncology Panel (Protein, 64 Plex); PN CMX-H-IOP-64P-P"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000436
+      - type: class
+        label: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 16 rxns x 16 BC; PN 1000547"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 16 rxns x 16 BC; PN 1000547"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000477
       - type: class
         label: 10x Genomics; Visium Mouse Transcriptome Probe Kit - Small; PN 1000365
         acronym: HRAVS

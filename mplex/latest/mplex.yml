@@ -320,6 +320,12 @@ children:
         termLabel: GeoMx (nCounter)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000301
       - type: class
+        label: Raman Imaging
+        acronym: HRAVS
+        termType: class
+        termLabel: Raman Imaging
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000475
+      - type: class
         label: RNAseq (with probes)
         acronym: HRAVS
         termType: class
@@ -331,6 +337,12 @@ children:
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: STARmap
+        acronym: HRAVS
+        termType: class
+        termLabel: STARmap
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000476
       - type: class
         label: MPLEx
         acronym: HRAVS
@@ -619,6 +631,12 @@ children:
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
       - type: class
+        label: Revvity
+        acronym: HRAVS
+        termType: class
+        termLabel: Revvity
+        iri: https://identifiers.org/RRID:SCR_027779
+      - type: class
         label: Cytek Biosciences
         acronym: HRAVS
         termType: class
@@ -754,6 +772,12 @@ children:
         termLabel: AVITI
         iri: https://identifiers.org/RRID:SCR_026452
       - type: class
+        label: Opera Phenix Plus HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix Plus HCS
+        iri: https://identifiers.org/RRID:SCR_027780
+      - type: class
         label: timsTOF Pro 2
         acronym: HRAVS
         termType: class
@@ -795,6 +819,12 @@ children:
         termType: class
         termLabel: uScopeHXII-20
         iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
+        label: Orbitrap Fusion Tribrid
+        acronym: HRAVS
+        termType: class
+        termLabel: Orbitrap Fusion Tribrid
+        iri: https://identifiers.org/RRID:SCR_020559
       - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
@@ -921,6 +951,12 @@ children:
         termType: class
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
+      - type: class
+        label: Zeiss LightSheet Z.1
+        acronym: HRAVS
+        termType: class
+        termLabel: Zeiss LightSheet Z.1
+        iri: https://identifiers.org/RRID:SCR_020919
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
@@ -1071,6 +1107,12 @@ children:
         termType: class
         termLabel: MIBIscope
         iri: https://identifiers.org/RRID:SCR_023613
+      - type: class
+        label: SYNAPT G2-Si
+        acronym: HRAVS
+        termType: class
+        termLabel: SYNAPT G2-Si
+        iri: https://identifiers.org/RRID:SCR_027782
       - type: class
         label: Biomark HD
         acronym: HRAVS
@@ -1468,6 +1510,12 @@ children:
         termType: class
         termLabel: Evosep
         iri: https://identifiers.org/RRID:SCR_024590
+      - type: class
+        label: Shimadzu
+        acronym: HRAVS
+        termType: class
+        termLabel: Shimadzu
+        iri: https://identifiers.org/RRID:SCR_026147
       - type: class
         label: Thermo Fisher Scientific
         acronym: HRAVS

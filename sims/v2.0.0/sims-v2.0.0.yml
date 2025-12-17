@@ -571,6 +571,12 @@ children:
         termLabel: Ionpath
         iri: https://identifiers.org/RRID:SCR_023605
       - type: class
+        label: Waters
+        acronym: HRAVS
+        termType: class
+        termLabel: Waters
+        iri: https://identifiers.org/RRID:SCR_024589
+      - type: class
         label: In-House
         acronym: HRAVS
         termType: class

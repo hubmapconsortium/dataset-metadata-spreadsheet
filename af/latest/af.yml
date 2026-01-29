@@ -123,6 +123,12 @@ children:
         termLabel: Light Sheet
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
       - type: class
+        label: iCLAP
+        acronym: HRAVS
+        termType: class
+        termLabel: iCLAP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
+      - type: class
         label: seqFISH
         acronym: HRAVS
         termType: class
@@ -321,6 +327,12 @@ children:
         termLabel: GeoMx (nCounter)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000301
       - type: class
+        label: Raman Imaging
+        acronym: HRAVS
+        termType: class
+        termLabel: Raman Imaging
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000475
+      - type: class
         label: RNAseq (with probes)
         acronym: HRAVS
         termType: class
@@ -332,6 +344,12 @@ children:
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: STARmap
+        acronym: HRAVS
+        termType: class
+        termLabel: STARmap
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000476
       - type: class
         label: MPLEx
         acronym: HRAVS
@@ -365,6 +383,12 @@ children:
         termType: class
         termLabel: Chromatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13201
+      - type: class
+        label: Lipid + metabolite + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: Lipid + metabolite + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000478
       - type: class
         label: RNA + protein
         acronym: HRAVS
@@ -560,6 +584,12 @@ children:
         termLabel: Ionpath
         iri: https://identifiers.org/RRID:SCR_023605
       - type: class
+        label: Waters
+        acronym: HRAVS
+        termType: class
+        termLabel: Waters
+        iri: https://identifiers.org/RRID:SCR_024589
+      - type: class
         label: In-House
         acronym: HRAVS
         termType: class
@@ -619,6 +649,12 @@ children:
         termType: class
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
+      - type: class
+        label: Revvity
+        acronym: HRAVS
+        termType: class
+        termLabel: Revvity
+        iri: https://identifiers.org/RRID:SCR_027779
       - type: class
         label: Cytek Biosciences
         acronym: HRAVS
@@ -755,6 +791,18 @@ children:
         termLabel: AVITI
         iri: https://identifiers.org/RRID:SCR_026452
       - type: class
+        label: DMi8
+        acronym: HRAVS
+        termType: class
+        termLabel: DMi8
+        iri: https://identifiers.org/RRID:SCR_026672
+      - type: class
+        label: Opera Phenix Plus HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix Plus HCS
+        iri: https://identifiers.org/RRID:SCR_027780
+      - type: class
         label: timsTOF Pro 2
         acronym: HRAVS
         termType: class
@@ -796,6 +844,12 @@ children:
         termType: class
         termLabel: uScopeHXII-20
         iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
+        label: Orbitrap Fusion Tribrid
+        acronym: HRAVS
+        termType: class
+        termLabel: Orbitrap Fusion Tribrid
+        iri: https://identifiers.org/RRID:SCR_020559
       - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
@@ -922,6 +976,18 @@ children:
         termType: class
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
+      - type: class
+        label: Opera Phenix HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix HCS
+        iri: https://identifiers.org/RRID:SCR_027817
+      - type: class
+        label: Zeiss LightSheet Z.1
+        acronym: HRAVS
+        termType: class
+        termLabel: Zeiss LightSheet Z.1
+        iri: https://identifiers.org/RRID:SCR_020919
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
@@ -1072,6 +1138,12 @@ children:
         termType: class
         termLabel: MIBIscope
         iri: https://identifiers.org/RRID:SCR_023613
+      - type: class
+        label: SYNAPT G2-Si
+        acronym: HRAVS
+        termType: class
+        termLabel: SYNAPT G2-Si
+        iri: https://identifiers.org/RRID:SCR_027782
       - type: class
         label: Biomark HD
         acronym: HRAVS
@@ -1355,6 +1427,12 @@ children:
     prefLabel: Intended tile overlap percentage
     datatype: xsd:decimal
     minValue: 0
+  - key: non_global_files
+    type: text-field
+    name: non_global_files
+    description: "Specifies a semicolon-separated list of non-global files that are to be included in the dataset. The file paths assume that the files are located in the \"TOP/non-global/\" directory. For instance, if the file is located at TOP/non-global/lab_processed/images/1-tissue-boundary.geojson, the value for this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". Once ingested, these files will be copied to their appropriate locations within the respective dataset directory tree. This field is intended for internal HuBMAP processing. Examples for GeoMx and PhenoCycler are provided in the File Locations documentation: https://docs.google.com/document/d/1n2McSs9geA9Eli4QWQaB3c9R3wo5d5U1Xd57DWQfN5Q/edit#heading=h.1u82i4axggee Example: ./lab_processed/images/1-tissue-boundary.geojson"
+    prefLabel: Non global files
+    regex: "^(?:\\.\\/[^;]+|\\w[^;]+)(?:;\\s*(?:\\.\\/[^;]+|\\w[^;]+))*$"
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id

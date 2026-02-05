@@ -122,6 +122,12 @@ children:
         termLabel: Light Sheet
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
       - type: class
+        label: iCLAP
+        acronym: HRAVS
+        termType: class
+        termLabel: iCLAP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
+      - type: class
         label: seqFISH
         acronym: HRAVS
         termType: class
@@ -377,6 +383,12 @@ children:
         termLabel: Chromatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13201
       - type: class
+        label: Lipid + metabolite + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: Lipid + metabolite + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000478
+      - type: class
         label: RNA + protein
         acronym: HRAVS
         termType: class
@@ -570,6 +582,12 @@ children:
         termType: class
         termLabel: Ionpath
         iri: https://identifiers.org/RRID:SCR_023605
+      - type: class
+        label: Waters
+        acronym: HRAVS
+        termType: class
+        termLabel: Waters
+        iri: https://identifiers.org/RRID:SCR_024589
       - type: class
         label: In-House
         acronym: HRAVS
@@ -772,6 +790,12 @@ children:
         termLabel: AVITI
         iri: https://identifiers.org/RRID:SCR_026452
       - type: class
+        label: DMi8
+        acronym: HRAVS
+        termType: class
+        termLabel: DMi8
+        iri: https://identifiers.org/RRID:SCR_026672
+      - type: class
         label: Opera Phenix Plus HCS
         acronym: HRAVS
         termType: class
@@ -951,6 +975,12 @@ children:
         termType: class
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
+      - type: class
+        label: Opera Phenix HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix HCS
+        iri: https://identifiers.org/RRID:SCR_027817
       - type: class
         label: Zeiss LightSheet Z.1
         acronym: HRAVS

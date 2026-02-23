@@ -1072,6 +1072,12 @@ children:
         termLabel: Axio Observer 5
         iri: https://identifiers.org/RRID:SCR_023692
       - type: class
+        label: NanoZoomer 2.0-RS
+        acronym: HRAVS
+        termType: class
+        termLabel: NanoZoomer 2.0-RS
+        iri: https://identifiers.org/RRID:SCR_028001
+      - type: class
         label: Axio Observer 3
         acronym: HRAVS
         termType: class
@@ -1414,6 +1420,7 @@ children:
       - label: 9
       - label: 10
       - label: 12
+      - label: 14
       - label: Not applicable
     configuration:
       required: true

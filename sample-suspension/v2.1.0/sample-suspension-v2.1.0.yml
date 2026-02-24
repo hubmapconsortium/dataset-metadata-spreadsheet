@@ -505,6 +505,12 @@ children:
         termLabel: CMC
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83594
       - type: class
+        label: Nuclease-free water
+        acronym: HRAVS
+        termType: class
+        termLabel: Nuclease-free water
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000482
+      - type: class
         label: 2% PFA/2.5% Glutaraldehyde
         acronym: HRAVS
         termType: class

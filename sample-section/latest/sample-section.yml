@@ -230,12 +230,6 @@ children:
         termLabel: PLP (Periodate-Lysine-Paraformaldehyde)
         iri: http://purl.bioontology.org/ontology/MESH/C046311
       - type: class
-        label: UW Solution
-        acronym: HRAVS
-        termType: class
-        termLabel: UW Solution
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000151
-      - type: class
         label: MACS tissue storage solution
         acronym: HRAVS
         termType: class
@@ -253,6 +247,12 @@ children:
         termType: class
         termLabel: Fresh frozen gelatin
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000198
+      - type: class
+        label: UWS Solution
+        acronym: HRAVS
+        termType: class
+        termLabel: UWS Solution
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000151
       - type: class
         label: Growth media
         acronym: HRAVS
@@ -334,6 +334,12 @@ children:
         termType: class
         termLabel: Unknown
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
+      - type: class
+        label: Incubated at 37 degrees celsius
+        acronym: HRAVS
+        termType: class
+        termLabel: Incubated at 37 degrees celsius
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000148
       - type: class
         label: Frozen at -20 degrees celsius
         acronym: HRAVS
@@ -466,6 +472,12 @@ children:
         termType: class
         termLabel: CMC
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83594
+      - type: class
+        label: Nuclease-free water
+        acronym: HRAVS
+        termType: class
+        termLabel: Nuclease-free water
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000482
       - type: class
         label: 2% PFA/2.5% Glutaraldehyde
         acronym: HRAVS

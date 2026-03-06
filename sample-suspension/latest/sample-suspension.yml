@@ -373,6 +373,12 @@ children:
         termLabel: Unknown
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17998
       - type: class
+        label: Incubated at 37 degrees celsius
+        acronym: HRAVS
+        termType: class
+        termLabel: Incubated at 37 degrees celsius
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000148
+      - type: class
         label: Frozen at -20 degrees celsius
         acronym: HRAVS
         termType: class
@@ -707,6 +713,12 @@ children:
         termType: class
         termLabel: Nucleus
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13197
+      - type: class
+        label: cDNA
+        acronym: HRAVS
+        termType: class
+        termLabel: cDNA
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C324
       - type: class
         label: Cell
         acronym: HRAVS

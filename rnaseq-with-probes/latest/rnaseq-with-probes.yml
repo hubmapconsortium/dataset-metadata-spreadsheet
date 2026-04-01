@@ -1,6 +1,18 @@
 type: template
 name: RNAseq (with probes)
+description: "Uses probes to capture and enrich specific regions of the RNA for targeted sequencing, allowing for in-depth analysis of those regions."
 children:
+  - key: assay_description
+    type: static-rich-text
+    name: assay_description
+    description: A styled paragraph describing the assay
+    prefLabel: Assay Description
+    content: |
+      <hr />
+      <p><span style="color: rgb(31, 35, 40); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">Uses probes to capture and enrich specific regions of the RNA for targeted sequencing, allowing for in-depth analysis of those regions. Link to&nbsp;</span><a href="https://hubmapconsortium.github.io/ingest-validation-tools/rnaseq-with-probes/current/" rel="nofollow" style="background-color: rgb(255, 255, 255); color: rgb(9, 105, 218); text-decoration-line: underline; text-underline-offset: 0.2rem; margin-bottom: 0px; font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px;">RNAseq with Probes directory schema</a><span style="color: rgb(31, 35, 40); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">.</span></p>
+
+      <hr />
+      <p>&nbsp;</p>
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
@@ -205,6 +217,12 @@ children:
         termType: class
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+      - type: class
+        label: Illumina Spatial v0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial v0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
       - type: class
         label: Olink
         acronym: HRAVS
@@ -753,6 +771,12 @@ children:
         termType: class
         termLabel: NovaSeq X
         iri: https://identifiers.org/RRID:SCR_024569
+      - type: class
+        label: LSM 710 Confocal Microscope
+        acronym: HRAVS
+        termType: class
+        termLabel: LSM 710 Confocal Microscope
+        iri: https://identifiers.org/RRID:SCR_018063
       - type: class
         label: NanoZoomer 2.0-HT
         acronym: HRAVS
@@ -1650,6 +1674,12 @@ children:
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Automated Single Cell 5' Kit v2, 4 rxns; PN 1000298"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000366
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell Fixed RNA Sample Preparation Kit, 16 rxns; PN 1000414"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell Fixed RNA Sample Preparation Kit, 16 rxns; PN 1000414"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000484
       - type: class
         label: "10X Genomics; Visium Spatial Gene Expression Slide and Reagent Kit, 4 slides, 16 reactions; PN 1000184"
         acronym: HRAVS
@@ -2559,6 +2589,12 @@ children:
         termType: class
         termLabel: 10x Genomics; Visium Mouse Transcriptome Probe Kit v2.0 - Small; PN 1000667
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000431
+      - type: class
+        label: "NanoString Technologies; GeoMx Human IO Proteome Atlas, 4 slides; PN 121300160"
+        acronym: HRAVS
+        termType: class
+        termLabel: "NanoString Technologies; GeoMx Human IO Proteome Atlas, 4 slides; PN 121300160"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000488
       - type: class
         label: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 4 rxns x 4 BC; PN 1000475"
         acronym: HRAVS

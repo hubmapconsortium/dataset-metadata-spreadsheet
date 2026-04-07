@@ -1,6 +1,18 @@
 type: template
 name: LC-MS
+description: Coupling of liquid chromatography (LC) to mass spectrometry (MS).
 children:
+  - key: assay_description
+    type: static-rich-text
+    name: assay_description
+    description: A styled paragraph describing the assay
+    prefLabel: Assay Description
+    content: |
+      <hr />
+      <p><span style="color: rgb(31, 35, 40); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(246, 248, 250);">Coupling of liquid chromatography (LC) to mass spectrometry (MS). Link to&nbsp;</span><a href="https://hubmapconsortium.github.io/ingest-validation-tools/lcms/current/" rel="nofollow" style="background-color: rgb(246, 248, 250); color: rgb(9, 105, 218); text-decoration-line: underline; text-underline-offset: 0.2rem; margin-bottom: 0px; font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px;">LC-MS directory schema</a><span style="color: rgb(31, 35, 40); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(246, 248, 250);">.</span></p>
+
+      <hr />
+      <p>&nbsp;</p>
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
@@ -122,6 +134,12 @@ children:
         termLabel: Light Sheet
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
       - type: class
+        label: iCLAP
+        acronym: HRAVS
+        termType: class
+        termLabel: iCLAP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
+      - type: class
         label: seqFISH
         acronym: HRAVS
         termType: class
@@ -188,11 +206,23 @@ children:
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
       - type: class
+        label: MACSima
+        acronym: HRAVS
+        termType: class
+        termLabel: MACSima
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000480
+      - type: class
         label: CyTOF
         acronym: HRAVS
         termType: class
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+      - type: class
+        label: Illumina Spatial v0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial v0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
       - type: class
         label: Olink
         acronym: HRAVS
@@ -376,6 +406,12 @@ children:
         termType: class
         termLabel: Chromatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13201
+      - type: class
+        label: Lipid + metabolite + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: Lipid + metabolite + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000478
       - type: class
         label: RNA + protein
         acronym: HRAVS
@@ -571,6 +607,12 @@ children:
         termLabel: Ionpath
         iri: https://identifiers.org/RRID:SCR_023605
       - type: class
+        label: Waters
+        acronym: HRAVS
+        termType: class
+        termLabel: Waters
+        iri: https://identifiers.org/RRID:SCR_024589
+      - type: class
         label: In-House
         acronym: HRAVS
         termType: class
@@ -624,6 +666,12 @@ children:
         termType: class
         termLabel: Keyence
         iri: https://identifiers.org/RRID:SCR_023604
+      - type: class
+        label: Miltenyi Biotec
+        acronym: HRAVS
+        termType: class
+        termLabel: Miltenyi Biotec
+        iri: https://identifiers.org/RRID:SCR_008984
       - type: class
         label: Leica Biosystems
         acronym: HRAVS
@@ -724,6 +772,12 @@ children:
         termLabel: NovaSeq X
         iri: https://identifiers.org/RRID:SCR_024569
       - type: class
+        label: LSM 710 Confocal Microscope
+        acronym: HRAVS
+        termType: class
+        termLabel: LSM 710 Confocal Microscope
+        iri: https://identifiers.org/RRID:SCR_018063
+      - type: class
         label: NanoZoomer 2.0-HT
         acronym: HRAVS
         termType: class
@@ -771,6 +825,12 @@ children:
         termType: class
         termLabel: AVITI
         iri: https://identifiers.org/RRID:SCR_026452
+      - type: class
+        label: DMi8
+        acronym: HRAVS
+        termType: class
+        termLabel: DMi8
+        iri: https://identifiers.org/RRID:SCR_026672
       - type: class
         label: Opera Phenix Plus HCS
         acronym: HRAVS
@@ -952,6 +1012,12 @@ children:
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
       - type: class
+        label: Opera Phenix HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix HCS
+        iri: https://identifiers.org/RRID:SCR_027817
+      - type: class
         label: Zeiss LightSheet Z.1
         acronym: HRAVS
         termType: class
@@ -1030,6 +1096,12 @@ children:
         termLabel: Axio Observer 5
         iri: https://identifiers.org/RRID:SCR_023692
       - type: class
+        label: NanoZoomer 2.0-RS
+        acronym: HRAVS
+        termType: class
+        termLabel: NanoZoomer 2.0-RS
+        iri: https://identifiers.org/RRID:SCR_028001
+      - type: class
         label: Axio Observer 3
         acronym: HRAVS
         termType: class
@@ -1084,6 +1156,12 @@ children:
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
       - type: class
+        label: Q Exactive HF-X
+        acronym: HRAVS
+        termType: class
+        termLabel: Q Exactive HF-X
+        iri: https://identifiers.org/RRID:SCR_020564
+      - type: class
         label: solariX
         acronym: HRAVS
         termType: class
@@ -1113,6 +1191,12 @@ children:
         termType: class
         termLabel: SYNAPT G2-Si
         iri: https://identifiers.org/RRID:SCR_027782
+      - type: class
+        label: MACSima System
+        acronym: HRAVS
+        termType: class
+        termLabel: MACSima System
+        iri: https://identifiers.org/RRID:SCR_027923
       - type: class
         label: Biomark HD
         acronym: HRAVS

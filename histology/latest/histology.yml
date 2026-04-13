@@ -1,7 +1,18 @@
 type: template
 name: Histology
-description: "The histology metadata specification provides standardized guidelines for organizing and describing histological data, facilitating efficient analysis and interpretation."
+description: "The microscopic study of tissue composition and structure, often referred to as microscopic anatomy. It involves examining tissue samples, typically after they've been sectioned, stained, and placed under a microscope."
 children:
+  - key: assay_description
+    type: static-rich-text
+    name: assay_description
+    description: A styled paragraph describing the assay
+    prefLabel: Assay Description
+    content: |
+      <hr />
+      <p><span style="color: rgb(31, 35, 40); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">The microscopic study of tissue composition and structure, often referred to as microscopic anatomy. It involves examining tissue samples, typically after they&#39;ve been sectioned, stained, and placed under a microscope. Link to&nbsp;</span><a href="https://hubmapconsortium.github.io/ingest-validation-tools/histology/current/" rel="nofollow" style="background-color: rgb(255, 255, 255); color: rgb(9, 105, 218); text-decoration-line: underline; text-underline-offset: 0.2rem; margin-bottom: 0px; font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px;">Histology directory schema</a><span style="color: rgb(31, 35, 40); font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255);">.</span></p>
+
+      <hr />
+      <p>&nbsp;</p>
   - key: parent_sample_id
     type: text-field
     name: parent_sample_id
@@ -206,6 +217,12 @@ children:
         termType: class
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
+      - type: class
+        label: Illumina Spatial v0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial v0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
       - type: class
         label: Olink
         acronym: HRAVS
@@ -755,6 +772,12 @@ children:
         termLabel: NovaSeq X
         iri: https://identifiers.org/RRID:SCR_024569
       - type: class
+        label: LSM 710 Confocal Microscope
+        acronym: HRAVS
+        termType: class
+        termLabel: LSM 710 Confocal Microscope
+        iri: https://identifiers.org/RRID:SCR_018063
+      - type: class
         label: NanoZoomer 2.0-HT
         acronym: HRAVS
         termType: class
@@ -1133,6 +1156,12 @@ children:
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
       - type: class
+        label: Q Exactive HF-X
+        acronym: HRAVS
+        termType: class
+        termLabel: Q Exactive HF-X
+        iri: https://identifiers.org/RRID:SCR_020564
+      - type: class
         label: solariX
         acronym: HRAVS
         termType: class
@@ -1361,6 +1390,12 @@ children:
         termType: class
         termLabel: H&E
         iri: http://purl.bioontology.org/ontology/LNC/LP6310-9
+      - type: class
+        label: Fluorophores
+        acronym: HRAVS
+        termType: class
+        termLabel: Fluorophores
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000489
       - type: class
         label: LFB
         acronym: HRAVS

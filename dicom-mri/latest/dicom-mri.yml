@@ -1,0 +1,476 @@
+type: template
+name: DICOM-MRI
+children:
+  - key: donor_id
+    type: text-field
+    name: donor_id
+    description: "The HuBMAP ID assigned to the organ donor. Example: HBM978.PZJF.734"
+    prefLabel: Donor ID
+    configuration:
+      required: true
+  - key: organ_id
+    type: text-field
+    name: organ_id
+    description: "The unique identifier from HuBMAP or SenNet assigned to an organ. Example: HBM811.ORKO.128"
+    prefLabel: Organ ID
+    configuration:
+      required: true
+  - key: lab_id
+    type: text-field
+    name: lab_id
+    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
+    prefLabel: Lab ID
+  - key: preparation_protocol_doi
+    type: link-field
+    name: preparation_protocol_doi
+    description: "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1"
+    prefLabel: Preparation protocol DOI
+    configuration:
+      required: true
+  - key: study_date
+    type: temporal-field
+    name: study_date
+    description: "The date the image was taken. Example: 2026-04-10"
+    prefLabel: Study date
+    datatype: xsd:date
+    granularity: day
+    configuration:
+      required: true
+  - key: modality
+    type: controlled-term-field
+    name: modality
+    description: "The imaging modality used to capture the image. Example: Magnetic Resonance"
+    prefLabel: Modality
+    datatype: iri
+    values:
+      - type: class
+        label: Magnetic Resonance
+        acronym: HRAVS
+        termType: class
+        termLabel: Magnetic Resonance
+        iri: http://dicom.nema.org/resources/ontology/DCM/MR
+    configuration:
+      required: true
+  - key: image_type
+    type: text-field
+    name: image_type
+    description: "The descriptor of an image. Example: T2 weighted"
+    prefLabel: Image type
+    configuration:
+      required: true
+  - key: series_description
+    type: text-field
+    name: series_description
+    description: "The technical description of the image series. Example: T1-weighted axial pre-contrast brain MRI"
+    prefLabel: Series description
+    configuration:
+      required: true
+  - key: series_notes
+    type: text-field
+    name: series_notes
+    description: "Site notes regarding the image series. Example: Minor RF interference noted; image quality slightly degraded."
+    prefLabel: Series notes
+    configuration:
+      required: true
+  - key: manufacturer
+    type: controlled-term-field
+    name: imaging_instrument_vendor
+    description: "The manufacturer name of the instrument that produced the images. Example: GE Healthcare"
+    prefLabel: Imaging instrument vendor
+    datatype: iri
+    values:
+      - type: class
+        label: GE Healthcare
+        acronym: HRAVS
+        termType: class
+        termLabel: GE Healthcare
+        iri: https://identifiers.org/RRID:SCR_025461
+    configuration:
+      required: true
+  - key: manufacturer_model_name
+    type: controlled-term-field
+    name: imaging_instrument_model
+    description: "Manufacturers may offer various versions (models) of the imaging instrument with different features or sensitivities. Differences in features or sensitivities may be relevant to processing or interpretation of the data. Example: Discovery MR750"
+    prefLabel: Imaging instrument model
+    datatype: iri
+    values:
+      - type: class
+        label: Discovery MR750
+        acronym: HRAVS
+        termType: class
+        termLabel: Discovery MR750
+        iri: https://identifiers.org/RRID:SCR_025460
+    configuration:
+      required: true
+  - key: contributors_path
+    type: text-field
+    name: contributors_path
+    description: "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv"
+    prefLabel: Contributors path
+    regex: ^(?:\.\/.*|\w.*)\.tsv$
+    configuration:
+      required: true
+  - key: data_path
+    type: text-field
+    name: data_path
+    description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
+    prefLabel: Data path
+    regex: ^(?:\.|\.\/.+|\w.*)$
+    configuration:
+      required: true
+  - key: image_width_value
+    type: numeric-field
+    name: image_width_value
+    description: "The width of the acquired region of interest (ROI) in the image, expressed in physical units (e.g., millimeters), representing the horizontal extent of the captured area. Example: 100"
+    prefLabel: Image width value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: image_width_unit
+    type: controlled-term-field
+    name: image_width_unit
+    description: "The unit of measurement for the image width value. Example: mm"
+    prefLabel: Image width unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: um
+        acronym: HRAVS
+        termType: class
+        termLabel: um
+        iri: http://purl.obolibrary.org/obo/UO_0000017
+    configuration:
+      required: true
+  - key: image_height_value
+    type: numeric-field
+    name: image_height_value
+    description: "The height of the acquired region of interest (ROI) in the image, expressed in physical units (e.g., millimeters), representing the vertical extent of the captured area. Example: 100"
+    prefLabel: Image height value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: image_height_unit
+    type: controlled-term-field
+    name: image_height_unit
+    description: "The unit of measurement for the image height value. Example: mm"
+    prefLabel: Image height unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: um
+        acronym: HRAVS
+        termType: class
+        termLabel: um
+        iri: http://purl.obolibrary.org/obo/UO_0000017
+    configuration:
+      required: true
+  - key: roi_description
+    type: text-field
+    name: roi_description
+    description: A description of the anatomical structure being captured in the region of interest (ROI).
+    prefLabel: ROI description
+    configuration:
+      required: true
+  - key: roi_id
+    type: numeric-field
+    name: roi_id
+    description: "Multiple images are acquired from regions of interest (ROI1, ROI2, ROI3, etc) on a slide. The ROI ID is a number from 1 to N representing the ROI captured on a slide. Example: ROI1"
+    prefLabel: ROI ID
+    datatype: xsd:int
+  - key: pixel_physical_size_width_value
+    type: numeric-field
+    name: pixel_physical_size_width_value
+    description: "The physical width of a single pixel in the image. Example: 1000"
+    prefLabel: Pixel physical size width value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: pixel_physical_size_width_unit
+    type: controlled-term-field
+    name: pixel_physical_size_width_unit
+    description: "The unit of measurement for the pixel physical size width value. Example: um"
+    prefLabel: Pixel physical size width unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: um
+        acronym: HRAVS
+        termType: class
+        termLabel: um
+        iri: http://purl.obolibrary.org/obo/UO_0000017
+      - type: class
+        label: nm
+        acronym: HRAVS
+        termType: class
+        termLabel: nm
+        iri: http://purl.obolibrary.org/obo/UO_0000018
+    configuration:
+      required: true
+  - key: pixel_physical_size_height_value
+    type: numeric-field
+    name: pixel_physical_size_height_value
+    description: "The physical height of a single pixel in the image. Example: 1000"
+    prefLabel: Pixel physical size height value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: pixel_physical_size_height_unit
+    type: controlled-term-field
+    name: pixel_physical_size_height_unit
+    description: "The unit of measurement for the pixel physical size height value. Example: um"
+    prefLabel: Pixel physical size height unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: um
+        acronym: HRAVS
+        termType: class
+        termLabel: um
+        iri: http://purl.obolibrary.org/obo/UO_0000017
+      - type: class
+        label: nm
+        acronym: HRAVS
+        termType: class
+        termLabel: nm
+        iri: http://purl.obolibrary.org/obo/UO_0000018
+    configuration:
+      required: true
+  - key: images_in_acquisition
+    type: numeric-field
+    name: images_in_acquisition
+    description: "The total number of images in the dataset. Example: 12"
+    prefLabel: Images in acquisition
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: imaging_frequency_value
+    type: numeric-field
+    name: imaging_frequency_value
+    description: "The operating radio frequency of the imaging device during image acquisition. Example: 63.86"
+    prefLabel: Imaging frequency value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: imaging_frequency_unit
+    type: controlled-term-field
+    name: imaging_frequency_unit
+    description: "The unit of measurement for imaging frequency value. Example: MHz"
+    prefLabel: Imaging frequency unit
+    datatype: iri
+    values:
+      - type: class
+        label: Hz
+        acronym: HRAVS
+        termType: class
+        termLabel: Hz
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42545
+      - type: class
+        label: kHz
+        acronym: HRAVS
+        termType: class
+        termLabel: kHz
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67279
+      - type: class
+        label: MHz
+        acronym: HRAVS
+        termType: class
+        termLabel: MHz
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67314
+    configuration:
+      required: true
+  - key: receive_coil_name
+    type: text-field
+    name: receive_coil_name
+    description: "The name or type of the receive coil used to detect and collect the MRI signal during image acquisition. Example: 16Body Full"
+    prefLabel: Receive coil name
+    configuration:
+      required: true
+  - key: magnetic_field_strength_value
+    type: numeric-field
+    name: magnetic_field_strength_value
+    description: "The strength of the static magnetic field generated by the MRI scanner during image acquisition, expressed in Tesla (T). Example 1.5"
+    prefLabel: Magnetic field strength value
+    datatype: xsd:decimal
+    unit: Tesla
+    configuration:
+      required: true
+  - key: scanning_sequence
+    type: text-field
+    name: scanning_sequence
+    description: "The type of pulse sequence used by the imaging system to acquire the data, defining how signals are generated and measured. Example: SE"
+    prefLabel: Scanning sequence
+    configuration:
+      required: true
+  - key: sequence_variant
+    type: text-field
+    name: sequence_variant
+    description: "Standardized indicators that describe specific modifications or characteristics of the base scanning sequence (e.g., segmented k-space, steady state, magnetization prepared), providing additional detail on how the data were acquired. Example: SK"
+    prefLabel: Sequence variant
+    configuration:
+      required: true
+  - key: echo_time_value
+    type: numeric-field
+    name: echo_time_value
+    description: "The time interval, in milliseconds (ms), between the center of the excitation pulse and the peak of the resulting echo signal. For segmented k-space acquisitions, this refers to the effective echo time (TE), defined as the time to the echo that samples the center of k-space. Example: 80"
+    prefLabel: Echo time value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: repetition_time_value
+    type: numeric-field
+    name: repetition_time_value
+    description: "The period of time in msec between the beginning of a pulse sequence and the beginning of the succeeding (essentially identical) pulse sequence. Example: 800"
+    prefLabel: Repetition time value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: flip_angle
+    type: numeric-field
+    name: flip_angle
+    description: "Steady state angle in degrees to which the magnetic vector is flipped from the magnetic vector of the primary field. Example: 90"
+    prefLabel: Flip angle
+    datatype: xsd:int
+    configuration:
+      required: true
+  - key: echo_train_length
+    type: numeric-field
+    name: echo_train_length
+    description: "Number of lines in k-space acquired per excitation per image. Example: 16"
+    prefLabel: Echo train length
+    datatype: xsd:int
+    configuration:
+      required: true
+  - key: acquisition_matrix_size
+    type: text-field
+    name: acquisition_matrix_size
+    description: "The dimensions of the acquired data matrix, representing the number of samples collected in the frequency (readout) and phase encoding directions prior to image reconstruction. Specified as a four-element: [frequency rows, frequency columns, phase rows, phase columns]. Example: [256, 0, 0, 192]"
+    prefLabel: Acquisition matrix size
+    configuration:
+      required: true
+  - key: pixel_physical_size_depth_value
+    type: numeric-field
+    name: pixel_physical_size_depth_value
+    description: "The physical depth of a single pixel in the image. Example: 10"
+    prefLabel: Pixel physical size depth value
+    datatype: xsd:int
+    minValue: 1
+    configuration:
+      required: true
+  - key: pixel_physical_size_depth_unit
+    type: controlled-term-field
+    name: pixel_physical_size_depth_unit
+    description: "The unit of measurement for the pixel physical size depth value. If the pixel depth value is not specified, this field may be left blank. Example: um"
+    prefLabel: Pixel physical size depth unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: um
+        acronym: HRAVS
+        termType: class
+        termLabel: um
+        iri: http://purl.obolibrary.org/obo/UO_0000017
+      - type: class
+        label: nm
+        acronym: HRAVS
+        termType: class
+        termLabel: nm
+        iri: http://purl.obolibrary.org/obo/UO_0000018
+    configuration:
+      required: true
+  - key: spacing_between_slices_value
+    type: numeric-field
+    name: spacing_between_slices_value
+    description: "The distance between the centers of adjacent image slices, representing the spacing along the slice (z) direction during acquisition. Example: 3"
+    prefLabel: Spacing between slices value
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: spacing_between_slices_unit
+    type: controlled-term-field
+    name: spacing_between_slices_unit
+    description: "The unit of measurement for spacing between slices value. Example: mm"
+    prefLabel: Spacing between slices unit
+    datatype: iri
+    values:
+      - type: class
+        label: mm
+        acronym: HRAVS
+        termType: class
+        termLabel: mm
+        iri: http://purl.obolibrary.org/obo/UO_0000016
+      - type: class
+        label: um
+        acronym: HRAVS
+        termType: class
+        termLabel: um
+        iri: http://purl.obolibrary.org/obo/UO_0000017
+      - type: class
+        label: nm
+        acronym: HRAVS
+        termType: class
+        termLabel: nm
+        iri: http://purl.obolibrary.org/obo/UO_0000018
+    configuration:
+      required: true
+  - key: image_row_count
+    type: numeric-field
+    name: image_row_count
+    description: "Number of rows of the reconstructed data, per image. Example: 100"
+    prefLabel: Image row count
+    datatype: xsd:int
+    configuration:
+      required: true
+  - key: image_column_count
+    type: numeric-field
+    name: image_column_count
+    description: "Number of columns of the reconstructed data, per image. Example: 100"
+    prefLabel: Image column count
+    datatype: xsd:decimal
+    configuration:
+      required: true
+  - key: number_of_averages
+    type: numeric-field
+    name: number_of_averages
+    description: "The number of times a pulse sequence is repeated under identical conditions before any acquisition parameters are changed, with the results averaged to form the final image or volume. Example: 1"
+    prefLabel: Number of averages
+    datatype: xsd:int
+    configuration:
+      required: true
+  - key: metadata_schema_id
+    type: text-field
+    name: metadata_schema_id
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 95b3a9bd-3fb3-48f5-99f8-1f78ffb6bb1d"
+    prefLabel: Metadata schema ID
+    default: 95b3a9bd-3fb3-48f5-99f8-1f78ffb6bb1d
+    configuration:
+      required: true

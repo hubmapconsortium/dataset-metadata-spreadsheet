@@ -1,5 +1,5 @@
 type: template
-name: Illumina Spatial v0
+name: Illumina Spatial ver0
 children:
   - key: parent_sample_id
     type: text-field
@@ -29,7 +29,7 @@ children:
     datatype: iri
     default:
       value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
-      label: Illumina Spatial v0
+      label: Illumina Spatial ver0
     values:
       - type: class
         label: HiFi-Slide
@@ -241,6 +241,12 @@ children:
         termType: class
         termLabel: Xenium
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
+      - type: class
+        label: DNA Methylation
+        acronym: HRAVS
+        termType: class
+        termLabel: DNA Methylation
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000490
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -1143,6 +1149,12 @@ children:
         termType: class
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
+      - type: class
+        label: Q Exactive HF-X
+        acronym: HRAVS
+        termType: class
+        termLabel: Q Exactive HF-X
+        iri: https://identifiers.org/RRID:SCR_020564
       - type: class
         label: solariX
         acronym: HRAVS

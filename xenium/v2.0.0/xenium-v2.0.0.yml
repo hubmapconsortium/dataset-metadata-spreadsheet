@@ -206,12 +206,6 @@ children:
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
       - type: class
-        label: Illumina Spatial v0
-        acronym: HRAVS
-        termType: class
-        termLabel: Illumina Spatial v0
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
-      - type: class
         label: Olink
         acronym: HRAVS
         termType: class
@@ -307,6 +301,12 @@ children:
         termType: class
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
+      - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
       - type: class
         label: DART-FISH
         acronym: HRAVS
@@ -1503,12 +1503,6 @@ children:
         termType: class
         termLabel: "NanoString Technologies; GeoMx Human IO Proteome Atlas, 4 slides; PN 121300160"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000488
-      - type: class
-        label: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 4 rxns x 4 BC; PN 1000475"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 4 rxns x 4 BC; PN 1000475"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000307
       - type: class
         label: 10x Genomics; Visium Human Transcriptome Probe Kit v2 - Small; PN 1000466
         acronym: HRAVS

@@ -218,12 +218,6 @@ children:
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
       - type: class
-        label: Illumina Spatial v0
-        acronym: HRAVS
-        termType: class
-        termLabel: Illumina Spatial v0
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
-      - type: class
         label: Olink
         acronym: HRAVS
         termType: class
@@ -253,6 +247,12 @@ children:
         termType: class
         termLabel: Xenium
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
+      - type: class
+        label: DNA Methylation
+        acronym: HRAVS
+        termType: class
+        termLabel: DNA Methylation
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000490
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -313,6 +313,12 @@ children:
         termType: class
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
+      - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
       - type: class
         label: DART-FISH
         acronym: HRAVS
@@ -1155,6 +1161,12 @@ children:
         termType: class
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
+      - type: class
+        label: Q Exactive HF-X
+        acronym: HRAVS
+        termType: class
+        termLabel: Q Exactive HF-X
+        iri: https://identifiers.org/RRID:SCR_020564
       - type: class
         label: solariX
         acronym: HRAVS
@@ -2596,12 +2608,6 @@ children:
         termLabel: "NanoString Technologies; GeoMx Human IO Proteome Atlas, 4 slides; PN 121300160"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000488
       - type: class
-        label: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 4 rxns x 4 BC; PN 1000475"
-        acronym: HRAVS
-        termType: class
-        termLabel: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome 4 rxns x 4 BC; PN 1000475"
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000307
-      - type: class
         label: 10x Genomics; Visium Human Transcriptome Probe Kit v2 - Small; PN 1000466
         acronym: HRAVS
         termType: class
@@ -2715,6 +2721,12 @@ children:
         termType: class
         termLabel: "10x Genomics; Chromium Fixed RNA Kit, Human Transcriptome, 4 rxns x 1 BC; PN 1000474"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000306
+      - type: class
+        label: 10x Genomics; Xenium Human Skin Gene Expression Panel; PN 1000643
+        acronym: HRAVS
+        termType: class
+        termLabel: 10x Genomics; Xenium Human Skin Gene Expression Panel; PN 1000643
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000491
       - type: class
         label: "NanoString Technologies; CosMx Human Universal Cell Characterization Panel (RNA, 1000 Plex); PN CMX-H-USCP-1KP-R"
         acronym: HRAVS

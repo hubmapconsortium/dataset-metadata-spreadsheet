@@ -248,6 +248,12 @@ children:
         termLabel: Xenium
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
       - type: class
+        label: DNA Methylation
+        acronym: HRAVS
+        termType: class
+        termLabel: DNA Methylation
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000490
+      - type: class
         label: SIMS
         acronym: HRAVS
         termType: class
@@ -308,6 +314,12 @@ children:
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
       - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
+      - type: class
         label: DART-FISH
         acronym: HRAVS
         termType: class
@@ -355,6 +367,12 @@ children:
         termType: class
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
+      - type: class
+        label: Paired-Tag
+        acronym: HRAVS
+        termType: class
+        termLabel: Paired-Tag
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000492
       - type: class
         label: MS Lipidomics
         acronym: HRAVS
@@ -1149,6 +1167,12 @@ children:
         termType: class
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
+      - type: class
+        label: Q Exactive HF-X
+        acronym: HRAVS
+        termType: class
+        termLabel: Q Exactive HF-X
+        iri: https://identifiers.org/RRID:SCR_020564
       - type: class
         label: solariX
         acronym: HRAVS
@@ -2455,6 +2479,12 @@ children:
         termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 4 rxn; PN 1000285"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000251
       - type: class
+        label: "10x Genomics; Visium HD, Mouse Transcriptome, 6.5 mm, 4 runs; PN 1000676"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Visium HD, Mouse Transcriptome, 6.5 mm, 4 runs; PN 1000676"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000494
+      - type: class
         label: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 48 rxns; PN 1000286"
         acronym: HRAVS
         termType: class
@@ -2479,6 +2509,12 @@ children:
         termLabel: Custom
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
+        label: "10x Genomics; Visium HD, Human Transcriptome, 6.5 mm, 4 runs; PN 1000675"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Visium HD, Human Transcriptome, 6.5 mm, 4 runs; PN 1000675"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000493
+      - type: class
         label: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 16 rxns; PN 1000287"
         acronym: HRAVS
         termType: class
@@ -2497,6 +2533,12 @@ children:
         termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000250
       - type: class
+        label: "10x Genomics; Visium HD, Human Transcriptome, 11 mm, 4 runs; PN 1001037"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Visium HD, Human Transcriptome, 11 mm, 4 runs; PN 1001037"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000495
+      - type: class
         label: "10x Genomics; Chromium GEM-X Single Cell 3' Kit v4, 16 rxns; PN 1000691"
         acronym: HRAVS
         termType: class
@@ -2514,6 +2556,12 @@ children:
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000325
+      - type: class
+        label: "10x Genomics; Visium HD, Mouse Transcriptome, 11 mm, 4 runs; PN 1001038"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Visium HD, Mouse Transcriptome, 11 mm, 4 runs; PN 1001038"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000496
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id

@@ -86,6 +86,12 @@ children:
         termLabel: Molecular Cartography
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000217
       - type: class
+        label: Virtual Histology
+        acronym: HRAVS
+        termType: class
+        termLabel: Virtual Histology
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000473
+      - type: class
         label: DBiT-seq
         acronym: HRAVS
         termType: class
@@ -115,6 +121,12 @@ children:
         termType: class
         termLabel: Light Sheet
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
+      - type: class
+        label: iCLAP
+        acronym: HRAVS
+        termType: class
+        termLabel: iCLAP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
       - type: class
         label: seqFISH
         acronym: HRAVS
@@ -182,6 +194,12 @@ children:
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
       - type: class
+        label: MACSima
+        acronym: HRAVS
+        termType: class
+        termLabel: MACSima
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000480
+      - type: class
         label: CyTOF
         acronym: HRAVS
         termType: class
@@ -217,6 +235,12 @@ children:
         termType: class
         termLabel: Xenium
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
+      - type: class
+        label: DNA Methylation
+        acronym: HRAVS
+        termType: class
+        termLabel: DNA Methylation
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000490
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -278,6 +302,12 @@ children:
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
       - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
+      - type: class
         label: DART-FISH
         acronym: HRAVS
         termType: class
@@ -314,17 +344,35 @@ children:
         termLabel: GeoMx (nCounter)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000301
       - type: class
+        label: Raman Imaging
+        acronym: HRAVS
+        termType: class
+        termLabel: Raman Imaging
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000475
+      - type: class
         label: RNAseq (with probes)
         acronym: HRAVS
         termType: class
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
       - type: class
+        label: Paired-Tag
+        acronym: HRAVS
+        termType: class
+        termLabel: Paired-Tag
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000492
+      - type: class
         label: MS Lipidomics
         acronym: HRAVS
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: STARmap
+        acronym: HRAVS
+        termType: class
+        termLabel: STARmap
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000476
       - type: class
         label: MPLEx
         acronym: HRAVS
@@ -379,7 +427,7 @@ children:
   - key: spot_size_value
     type: numeric-field
     name: spot_size_value
-    description: "For assays where spots are used to define discrete capture areas, this is the area of a spot."
+    description: "The area of a spot used in assays where spots define discrete capture areas.  Example: 2375.9"
     prefLabel: Spot size value
     datatype: xsd:decimal
     configuration:
@@ -387,7 +435,7 @@ children:
   - key: spot_size_unit
     type: controlled-term-field
     name: spot_size_unit
-    description: The unit for spot size value.
+    description: "The unit of measurement for the spot size value. If no spot size value is specified, this field may be left blank. Example: um^2"
     prefLabel: Spot size unit
     datatype: iri
     values:
@@ -416,7 +464,7 @@ children:
   - key: spot_spacing_value
     type: numeric-field
     name: spot_spacing_value
-    description: "Approximate center-to-center distance between capture spots.  Synonyms: Inter-Spot distance, Spot resolution, Pit size"
+    description: "The approximate center-to-center distance between capture spots, also known as inter-spot distance, spot resolution, or pit size. Example: 100"
     prefLabel: Spot spacing value
     datatype: xsd:decimal
     configuration:
@@ -439,7 +487,7 @@ children:
   - key: capture_area_id
     type: radio-field
     name: capture_area_id
-    description: "Which capture area on the slide was used. For Visium this would be [A1, B1, C1, D1]. For HiFi this would be the lane on the flowcell."
+    description: "The capture area on the slide that was used during the process. For example, in the case for Visium, this would correspond to areas such as [A1, B1, C1, D1], while for HiFi, it would refer to the lane on the flowcell. Example: A1"
     prefLabel: Capture area ID
     values:
       - label: A1
@@ -531,6 +579,18 @@ children:
         termLabel: Hamamatsu
         iri: https://identifiers.org/RRID:SCR_017105
       - type: class
+        label: Ionpath
+        acronym: HRAVS
+        termType: class
+        termLabel: Ionpath
+        iri: https://identifiers.org/RRID:SCR_023605
+      - type: class
+        label: Akoya Biosciences
+        acronym: HRAVS
+        termType: class
+        termLabel: Akoya Biosciences
+        iri: https://identifiers.org/RRID:SCR_023774
+      - type: class
         label: SunChrom
         acronym: HRAVS
         termType: class
@@ -575,6 +635,12 @@ children:
         termType: class
         termLabel: Chromium Controller
         iri: https://identifiers.org/RRID:SCR_019326
+      - type: class
+        label: Custom
+        acronym: HRAVS
+        termType: class
+        termLabel: Custom
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
       - type: class
         label: NanoZoomer S360
         acronym: HRAVS

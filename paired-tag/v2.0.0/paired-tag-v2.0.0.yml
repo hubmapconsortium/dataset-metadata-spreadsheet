@@ -721,6 +721,12 @@ children:
     datatype: xsd:int
     configuration:
       required: true
+  - key: non_global_files
+    type: text-field
+    name: non_global_files
+    description: "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree."
+    prefLabel: Non global files
+    regex: "^(?:\\.\\/[^;]+|\\w[^;]+)(?:;\\s*(?:\\.\\/[^;]+|\\w[^;]+))*$"
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id

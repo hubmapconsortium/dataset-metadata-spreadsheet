@@ -218,12 +218,6 @@ children:
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
       - type: class
-        label: Illumina Spatial v0
-        acronym: HRAVS
-        termType: class
-        termLabel: Illumina Spatial v0
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
-      - type: class
         label: Olink
         acronym: HRAVS
         termType: class
@@ -253,6 +247,12 @@ children:
         termType: class
         termLabel: Xenium
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
+      - type: class
+        label: DNA Methylation
+        acronym: HRAVS
+        termType: class
+        termLabel: DNA Methylation
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000490
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -314,6 +314,12 @@ children:
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
       - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
+      - type: class
         label: DART-FISH
         acronym: HRAVS
         termType: class
@@ -361,6 +367,12 @@ children:
         termType: class
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
+      - type: class
+        label: Paired-Tag
+        acronym: HRAVS
+        termType: class
+        termLabel: Paired-Tag
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000492
       - type: class
         label: MS Lipidomics
         acronym: HRAVS
@@ -765,6 +777,12 @@ children:
         termType: class
         termLabel: EVOS M7000
         iri: https://identifiers.org/RRID:SCR_025070
+      - type: class
+        label: Orbitrap Astral
+        acronym: HRAVS
+        termType: class
+        termLabel: Orbitrap Astral
+        iri: https://identifiers.org/RRID:SCR_028684
       - type: class
         label: NovaSeq X
         acronym: HRAVS

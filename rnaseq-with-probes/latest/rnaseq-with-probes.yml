@@ -1374,7 +1374,7 @@ children:
       - label: "0,38,76"
       - label: "10,48,78"
       - label: "10,48,86"
-      - label: "0,20-23,41-44"
+      - label: "0,20-23,51-54"
       - label: Not applicable
     configuration:
       required: true
@@ -1416,6 +1416,7 @@ children:
       - label: 40
       - label: "8,8,8"
       - label: "8,6"
+      - label: "14-17,14,14"
       - label: Not applicable
     configuration:
       required: true
@@ -1896,6 +1897,12 @@ children:
         termType: class
         termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000250
+      - type: class
+        label: Epigenome Technologies; Multiplex Droplet Paired-Tag 16 Reaction Kit; PN MDP16101
+        acronym: HRAVS
+        termType: class
+        termLabel: Epigenome Technologies; Multiplex Droplet Paired-Tag 16 Reaction Kit; PN MDP16101
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000499
       - type: class
         label: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 4 rxns; PN 1000269"
         acronym: HRAVS

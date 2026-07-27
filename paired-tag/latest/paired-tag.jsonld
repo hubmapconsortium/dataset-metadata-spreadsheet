@@ -36,12 +36,15 @@
       "dataset_type",
       "contributors_path",
       "data_path",
+      "library_preparation_kit",
       "capture_batch_id",
       "preparation_instrument_vendor",
       "preparation_instrument_model",
       "preparation_instrument_kit",
       "number_of_pre_amplification_pcr_cycles",
       "non_global_files",
+      "tag_enzyme_sequence",
+      "antibody_reagent_kit",
       "metadata_schema_id"
     ],
     "propertyLabels": {
@@ -57,7 +60,10 @@
       "preparation_instrument_kit": "preparation_instrument_kit",
       "preparation_protocol_doi": "preparation_protocol_doi",
       "parent_sample_id": "parent_sample_id",
-      "non_global_files": "non_global_files"
+      "non_global_files": "non_global_files",
+      "library_preparation_kit": "library_preparation_kit",
+      "tag_enzyme_sequence": "tag_enzyme_sequence",
+      "antibody_reagent_kit": "antibody_reagent_kit"
     },
     "propertyDescriptions": {
       "lab_id": "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1",
@@ -72,7 +78,10 @@
       "preparation_instrument_kit": "The reagent kit used in conjunction with the preparation instrument for sample processing (e.g., staining or labeling). If the reagent kit was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 48 rxns; PN 1000120",
       "preparation_protocol_doi": "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
       "parent_sample_id": "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442",
-      "non_global_files": "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree."
+      "non_global_files": "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree.",
+      "library_preparation_kit": "The reagent kit used to construct the sequencing library, including both the kit name and, if available, version and product number. If the library was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 16 rxns; PN 1000263",
+      "tag_enzyme_sequence": "The unique two-nucleotide barcode sequence contained within the adapter introduced by the TAG Enzyme during tagmentation. In multiplexed Paired-Tag experiments, different tag enzyme sequences are assigned to different samples or assay conditions to distinguish them and are used to demultiplex the pooled sequencing data.",
+      "antibody_reagent_kit": "The antibody reagent used to recognize a specific protein target or histone modification during the Paired-Tag assay. These antibodies bind to their target epitopes and direct the tagmentation reaction to the corresponding chromatin regions, enabling profiling of chromatin features in individual cells. If a custom antibody reagent is used, then enter \"Custom\". Example: Abcam; Anti-Histone H3 (tri methyl K9) antibody [EPR16601] - ChIP Grade; PN: ab176916"
     }
   },
   "properties": {
@@ -295,6 +304,21 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/63835dd7-2b5f-4b11-8f31-ee8ed9b1116e"
           ]
+        },
+        "library_preparation_kit": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/9fdca2f1-c678-4ace-9560-deae19a4fea0"
+          ]
+        },
+        "tag_enzyme_sequence": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/002af424-9185-4153-935b-e31cf1dbc7d0"
+          ]
+        },
+        "antibody_reagent_kit": {
+          "enum": [
+            "https://schema.metadatacenter.org/properties/90dfec75-2e9b-4569-accc-2db491c7834b"
+          ]
         }
       },
       "required": [
@@ -321,7 +345,10 @@
         "preparation_instrument_kit",
         "preparation_protocol_doi",
         "parent_sample_id",
-        "non_global_files"
+        "non_global_files",
+        "library_preparation_kit",
+        "tag_enzyme_sequence",
+        "antibody_reagent_kit"
       ],
       "additionalProperties": false
     },
@@ -472,9 +499,9 @@
       ],
       "schema:name": "lab_id",
       "schema:description": "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -575,9 +602,9 @@
       },
       "schema:name": "dataset_type",
       "schema:description": "The specific type of dataset being produced. Example: RNAseq",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -667,9 +694,9 @@
       ],
       "schema:name": "contributors_path",
       "schema:description": "The name of the file containing the ORCID IDs for all contributors to this dataset. Example: ./contributors.csv",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -759,9 +786,9 @@
       ],
       "schema:name": "data_path",
       "schema:description": "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -850,9 +877,9 @@
       ],
       "schema:name": "capture_batch_id",
       "schema:description": "A lab-assigned identifier used to indicate which cells or nuclei were captured together in the same run. For example, in a 10X Genomics Chromium Controller workflow, this could be the chip ID used to trace datasets derived from a single capture event. This ID helps users identify samples processed together on the same device. To avoid conflicts across institutions, it is recommended to prefix the ID with the name of the sequencing center. Example: Broad_Batch1234",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -949,9 +976,9 @@
       },
       "schema:name": "preparation_instrument_vendor",
       "schema:description": "The company that manufactures the instrument used to prepare the sample (e.g., for staining or other processing steps) prior to the assay. If the instrument was custom-built or developed internally, enter \"In-House\". If no sample preparation occurred, enter \"Not applicable\". Example: 10X Genomics",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1048,9 +1075,9 @@
       },
       "schema:name": "preparation_instrument_model",
       "schema:description": "The specific model of the instrument used for sample preparation, such as staining. Manufacturers may offer multiple models with varying features or sensitivities, which can influence how the sample is processed and how the resulting data is interpreted. If no sample preparation occurred, enter \"Not applicable\". Example: Chromium X",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1128,9 +1155,9 @@
       ],
       "schema:name": "number_of_pre_amplification_pcr_cycles",
       "schema:description": "The number of PCR cycles performed following the Chromium Controller step and before the suspension is separated and library construction begins. Example: 7",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1220,9 +1247,9 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1319,9 +1346,9 @@
       },
       "schema:name": "preparation_instrument_kit",
       "schema:description": "The reagent kit used in conjunction with the preparation instrument for sample processing (e.g., staining or labeling). If the reagent kit was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 48 rxns; PN 1000120",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1405,9 +1432,9 @@
       },
       "schema:name": "preparation_protocol_doi",
       "schema:description": "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1497,9 +1524,9 @@
       ],
       "schema:name": "parent_sample_id",
       "schema:description": "The unique identifier from HuBMAP or SenNet for the sample (such as a block, section, or suspension) used to perform the assay. For instance, in an RNAseq assay, the parent sample would be the suspension, while in imaging assays, it would be the tissue section. If the assay is derived from multiple parent samples, this field should contain a comma-separated list of identifiers. Example: HBM386.ZGKG.235, HBM672.MKPK.442",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1589,15 +1616,319 @@
       ],
       "schema:name": "non_global_files",
       "schema:description": "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree.",
-      "pav:createdOn": "2026-07-14T09:52:19-07:00",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
       "schema:schemaVersion": "1.6.0",
       "additionalProperties": false,
       "skos:prefLabel": "Non global files",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "library_preparation_kit": {
+      "@id": "https://repo.metadatacenter.org/template-fields/c92833af-f60a-4877-b159-2a1241339a94",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "library_preparation_kit field schema",
+      "description": "library_preparation_kit field schema generated by the CEDAR Template Editor 2.6.19",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1000961",
+            "name": "Library preparation kit",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "library_preparation_kit",
+      "schema:description": "The reagent kit used to construct the sequencing library, including both the kit name and, if available, version and product number. If the library was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 16 rxns; PN 1000263",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Library preparation kit",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "tag_enzyme_sequence": {
+      "@id": "https://repo.metadatacenter.org/template-fields/8b96fb6b-55e4-4469-bd4b-7f3dff3b7e04",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "tag_enzyme_sequence field schema",
+      "description": "tag_enzyme_sequence field schema generated by the CEDAR Template Editor 2.8.3",
+      "_ui": {
+        "inputType": "radio"
+      },
+      "_valueConstraints": {
+        "requiredValue": false,
+        "multipleChoice": false,
+        "literals": [
+          {
+            "label": "GG"
+          },
+          {
+            "label": "TT"
+          },
+          {
+            "label": "AC"
+          },
+          {
+            "label": "AT"
+          }
+        ]
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "@value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "@value"
+      ],
+      "schema:name": "tag_enzyme_sequence",
+      "schema:description": "The unique two-nucleotide barcode sequence contained within the adapter introduced by the TAG Enzyme during tagmentation. In multiplexed Paired-Tag experiments, different tag enzyme sequences are assigned to different samples or assay conditions to distinguish them and are used to demultiplex the pooled sequencing data.",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Tag enzyme sequence",
+      "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "antibody_reagent_kit": {
+      "@id": "https://repo.metadatacenter.org/template-fields/307cc8a8-49a6-4a89-8603-df3b2b72c50e",
+      "@type": "https://schema.metadatacenter.org/core/TemplateField",
+      "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "pav": "http://purl.org/pav/",
+        "bibo": "http://purl.org/ontology/bibo/",
+        "oslc": "http://open-services.net/ns/core#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema:name": {
+          "@type": "xsd:string"
+        },
+        "schema:description": {
+          "@type": "xsd:string"
+        },
+        "skos:prefLabel": {
+          "@type": "xsd:string"
+        },
+        "skos:altLabel": {
+          "@type": "xsd:string"
+        },
+        "pav:createdOn": {
+          "@type": "xsd:dateTime"
+        },
+        "pav:createdBy": {
+          "@type": "@id"
+        },
+        "pav:lastUpdatedOn": {
+          "@type": "xsd:dateTime"
+        },
+        "oslc:modifiedBy": {
+          "@type": "@id"
+        }
+      },
+      "type": "object",
+      "title": "antibody_reagent_kit field schema",
+      "description": "antibody_reagent_kit field schema generated by the CEDAR Template Editor 2.7.1",
+      "_ui": {
+        "inputType": "textfield"
+      },
+      "_valueConstraints": {
+        "requiredValue": true,
+        "ontologies": [],
+        "valueSets": [],
+        "classes": [],
+        "branches": [
+          {
+            "source": "undefined (HRAVS)",
+            "acronym": "HRAVS",
+            "uri": "https://purl.humanatlas.io/vocab/hravs#HRAVS_1002351",
+            "name": "Antibody reagent kit",
+            "maxDepth": 0
+          }
+        ],
+        "multipleChoice": false
+      },
+      "properties": {
+        "@type": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "uniqueItems": true
+            }
+          ]
+        },
+        "rdfs:label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "schema:name": "antibody_reagent_kit",
+      "schema:description": "The antibody reagent used to recognize a specific protein target or histone modification during the Paired-Tag assay. These antibodies bind to their target epitopes and direct the tagmentation reaction to the corresponding chromatin regions, enabling profiling of chromatin features in individual cells. If a custom antibody reagent is used, then enter \"Custom\". Example: Abcam; Anti-Histone H3 (tri methyl K9) antibody [EPR16601] - ChIP Grade; PN: ab176916",
+      "pav:createdOn": "2026-07-27T11:17:32-07:00",
+      "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
+      "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
+      "pav:version": "0.0.1",
+      "bibo:status": "bibo:draft",
+      "schema:schemaVersion": "1.6.0",
+      "additionalProperties": false,
+      "skos:prefLabel": "Antibody reagent kit",
       "$schema": "http://json-schema.org/draft-04/schema#"
     }
   },
@@ -1623,13 +1954,16 @@
     "preparation_instrument_kit",
     "preparation_protocol_doi",
     "parent_sample_id",
-    "non_global_files"
+    "non_global_files",
+    "library_preparation_kit",
+    "tag_enzyme_sequence",
+    "antibody_reagent_kit"
   ],
   "schema:name": "Paired-Tag",
   "schema:description": "",
   "pav:createdOn": "2026-06-29T15:37:40-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2026-07-14T09:52:19-07:00",
+  "pav:lastUpdatedOn": "2026-07-27T11:17:32-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

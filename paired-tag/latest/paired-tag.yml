@@ -397,6 +397,253 @@ children:
     regex: ^(?:\.|\.\/.+|\w.*)$
     configuration:
       required: true
+  - key: library_preparation_kit
+    type: controlled-term-field
+    name: library_preparation_kit
+    description: "The reagent kit used to construct the sequencing library, including both the kit name and, if available, version and product number. If the library was prepared using a custom protocol, enter “Custom”. Example: 10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 16 rxns; PN 1000263"
+    prefLabel: Library preparation kit
+    datatype: iri
+    values:
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 3' HT Kit v3.1, 8 rxns; PN 1000370"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' HT Kit v3.1, 8 rxns; PN 1000370"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000336
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Automated Single Cell 5' Kit v2, 4 rxns; PN 1000298"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Automated Single Cell 5' Kit v2, 4 rxns; PN 1000298"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000366
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell Fixed RNA Sample Preparation Kit, 16 rxns; PN 1000414"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell Fixed RNA Sample Preparation Kit, 16 rxns; PN 1000414"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000484
+      - type: class
+        label: "10X Genomics; Visium Spatial Gene Expression Slide and Reagent Kit, 4 slides, 16 reactions; PN 1000184"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium Spatial Gene Expression Slide and Reagent Kit, 4 slides, 16 reactions; PN 1000184"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000261
+      - type: class
+        label: "Parse Biosciences; Evercode WT v2 Kit, 48 rxns; PN ECW02030"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Parse Biosciences; Evercode WT v2 Kit, 48 rxns; PN ECW02030"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000341
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 16 rxns; PN 1000263"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 16 rxns; PN 1000263"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000339
+      - type: class
+        label: "10X Genomics; Visium Spatial for FFPE Gene Expression Kit, Human Transcriptome, 1 slides, 4 reactions; PN 1000338"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium Spatial for FFPE Gene Expression Kit, Human Transcriptome, 1 slides, 4 reactions; PN 1000338"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000320
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 16 rxns; PN 1000268"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 16 rxns; PN 1000268"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000337
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000175"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000175"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000471
+      - type: class
+        label: "10x Genomics; Library Construction Kit C, 16 rxns; PN 1000694"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Library Construction Kit C, 16 rxns; PN 1000694"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000399
+      - type: class
+        label: "10x Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Mouse Transcriptome, 6.5mm, 4 rxns; PN 1000521"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Mouse Transcriptome, 6.5mm, 4 rxns; PN 1000521"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000432
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 3' HT Kit v3.1, 48 rxns; PN 1000348"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' HT Kit v3.1, 48 rxns; PN 1000348"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000335
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 3' GEM, Library & Gel Bead Kit v3.1, 16 rxns; PN 1000121"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' GEM, Library & Gel Bead Kit v3.1, 16 rxns; PN 1000121"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000334
+      - type: class
+        label: "10x Genomics; Library Construction Kit C, 4 rxns; PN 1000689"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Library Construction Kit C, 4 rxns; PN 1000689"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000398
+      - type: class
+        label: "10X Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Human Transcriptome, 11 mm, 2 reactions; PN 1000522"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Human Transcriptome, 11 mm, 2 reactions; PN 1000522"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000322
+      - type: class
+        label: Illumina; TruSeq Stranded mRNA Library Prep (48 samples); PN 20020594
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina; TruSeq Stranded mRNA Library Prep (48 samples); PN 20020594
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000343
+      - type: class
+        label: "10X Genomics; Automated Library Construction Kit, 24 rxns; PN 1000428"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Automated Library Construction Kit, 24 rxns; PN 1000428"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000374
+      - type: class
+        label: New England BioLabs; NEBNext Ultra II RNA Library Prep Kit for Illumina; PN E7770
+        acronym: HRAVS
+        termType: class
+        termLabel: New England BioLabs; NEBNext Ultra II RNA Library Prep Kit for Illumina; PN E7770
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000377
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Automated Single Cell 5' Kit v2, 24 rxns; PN 1000290"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Automated Single Cell 5' Kit v2, 24 rxns; PN 1000290"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000365
+      - type: class
+        label: "10X Genomics; Visium Spatial Gene Expression Slide and Reagent Kit, 1 slides, 4 reactions; PN 1000187"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium Spatial Gene Expression Slide and Reagent Kit, 1 slides, 4 reactions; PN 1000187"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000265
+      - type: class
+        label: "10x Genomics; Chromium GEM-X Single Cell 5' Kit v3, 16 rxns; PN 1000699"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium GEM-X Single Cell 5' Kit v3, 16 rxns; PN 1000699"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000394
+      - type: class
+        label: "10x Genomics; Chromium Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000110"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Single Cell ATAC Library & Gel Bead Kit, 16 rxns; PN 1000110"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000469
+      - type: class
+        label: "10x Genomics; Library Construction Kit, 16 rxns; PN 1000190"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Library Construction Kit, 16 rxns; PN 1000190"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000439
+      - type: class
+        label: "Parse Biosciences; Evercode WT Mini v2 Kit, 12 rxns; PN ECW02010"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Parse Biosciences; Evercode WT Mini v2 Kit, 12 rxns; PN ECW02010"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000342
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 48 rxns; PN 1000356"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 48 rxns; PN 1000356"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000467
+      - type: class
+        label: Illumina; TruSeq Stranded mRNA Library Prep (96 samples); PN 20020595
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina; TruSeq Stranded mRNA Library Prep (96 samples); PN 20020595
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000344
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 4 rxns; PN 1000265"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 5' Kit v2, 4 rxns; PN 1000265"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000340
+      - type: class
+        label: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 4 rxn; PN 1000285"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 4 rxn; PN 1000285"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000251
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Hybridization & Library Kit, 4 rxns; PN 1000415"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell Fixed RNA Hybridization & Library Kit, 4 rxns; PN 1000415"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000375
+      - type: class
+        label: Custom
+        acronym: HRAVS
+        termType: class
+        termLabel: Custom
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
+      - type: class
+        label: "10X Genomics; Chromium Single Cell 3' GEM, Library & Gel Bead Kit v3, 4 rxns; PN 1000092"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Single Cell 3' GEM, Library & Gel Bead Kit v3, 4 rxns; PN 1000092"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000260
+      - type: class
+        label: "10x Genomics; Chromium Single Cell 3ʹ GEM, Library & Gel Bead Kit v3, 16 rxns; PN 1000075"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Single Cell 3ʹ GEM, Library & Gel Bead Kit v3, 16 rxns; PN 1000075"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000460
+      - type: class
+        label: "10X Genomics; Chromium Single Cell 3' Library & Gel Bead Kit, 4 rxns; PN 120267"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Single Cell 3' Library & Gel Bead Kit, 4 rxns; PN 120267"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000299
+      - type: class
+        label: "10X Genomics; Visium Spatial for FFPE Gene Expression Kit, Mouse Transcriptome, 4 rxns; PN 1000339"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium Spatial for FFPE Gene Expression Kit, Mouse Transcriptome, 4 rxns; PN 1000339"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000355
+      - type: class
+        label: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium NextGem Single Cell Multiome ATAC + Gene Expression Reagent Bundle, 16 rxn; PN 1000283"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000250
+      - type: class
+        label: Epigenome Technologies; Multiplex Droplet Paired-Tag 16 Reaction Kit; PN MDP16101
+        acronym: HRAVS
+        termType: class
+        termLabel: Epigenome Technologies; Multiplex Droplet Paired-Tag 16 Reaction Kit; PN MDP16101
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000499
+      - type: class
+        label: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 4 rxns; PN 1000269"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Chromium Next GEM Single Cell 3' Kit v3.1, 4 rxns; PN 1000269"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000338
+      - type: class
+        label: "10x Genomics; GEM-X Flex GEM & Library Kit, 4 rxns; PN 1000782"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; GEM-X Flex GEM & Library Kit, 4 rxns; PN 1000782"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000497
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 8 rxns; PN 1000374"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Single Cell 5' HT Kit v2, 8 rxns; PN 1000374"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000466
+      - type: class
+        label: "10X Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Human Transcriptome, 6.5mm, 4 reactions; PN 1000520"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10X Genomics; Visium CytAssist Spatial Gene Expression for FFPE, Human Transcriptome, 6.5mm, 4 reactions; PN 1000520"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000321
   - key: capture_batch_id
     type: text-field
     name: capture_batch_id
@@ -706,6 +953,12 @@ children:
         termLabel: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000325
       - type: class
+        label: "10x Genomics; GEM-X Flex Gene Expression Chip Kit, 4 chips; PN 1000791"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; GEM-X Flex Gene Expression Chip Kit, 4 chips; PN 1000791"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000498
+      - type: class
         label: "10x Genomics; Visium HD, Mouse Transcriptome, 11 mm, 4 runs; PN 1001038"
         acronym: HRAVS
         termType: class
@@ -727,6 +980,73 @@ children:
     description: "A semicolon separated list of non-shared files to be included in the dataset. The path assumes the files are located in the \"TOP/non-global/\" directory. For example, for the file is TOP/non-global/lab_processed/images/1-tissue-boundary.geojson the value of this field would be \"./lab_processed/images/1-tissue-boundary.geojson\". After ingest, these files will be copied to the appropriate locations within the respective dataset directory tree."
     prefLabel: Non global files
     regex: "^(?:\\.\\/[^;]+|\\w[^;]+)(?:;\\s*(?:\\.\\/[^;]+|\\w[^;]+))*$"
+  - key: tag_enzyme_sequence
+    type: radio-field
+    name: tag_enzyme_sequence
+    description: "The unique two-nucleotide barcode sequence contained within the adapter introduced by the TAG Enzyme during tagmentation. In multiplexed Paired-Tag experiments, different tag enzyme sequences are assigned to different samples or assay conditions to distinguish them and are used to demultiplex the pooled sequencing data."
+    prefLabel: Tag enzyme sequence
+    values:
+      - label: GG
+      - label: TT
+      - label: AC
+      - label: AT
+  - key: antibody_reagent_kit
+    type: controlled-term-field
+    name: antibody_reagent_kit
+    description: "The antibody reagent used to recognize a specific protein target or histone modification during the Paired-Tag assay. These antibodies bind to their target epitopes and direct the tagmentation reaction to the corresponding chromatin regions, enabling profiling of chromatin features in individual cells. If a custom antibody reagent is used, then enter \"Custom\". Example: Abcam; Anti-Histone H3 (tri methyl K9) antibody [EPR16601] - ChIP Grade; PN: ab176916"
+    prefLabel: Antibody reagent kit
+    datatype: iri
+    values:
+      - type: class
+        label: Standard BioTools; Maxpar Cytoplasmic/Secreted Antigen Staining Kit; PN 201602
+        acronym: HRAVS
+        termType: class
+        termLabel: Standard BioTools; Maxpar Cytoplasmic/Secreted Antigen Staining Kit; PN 201602
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000410
+      - type: class
+        label: Standard BioTools; Maxpar Cell Surface Staining Kit; PN 201601
+        acronym: HRAVS
+        termType: class
+        termLabel: Standard BioTools; Maxpar Cell Surface Staining Kit; PN 201601
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000411
+      - type: class
+        label: "Abcam; Anti-Histone H3 (tri methyl K9) antibody [EPR16601] - ChIP Grade; PN ab176916"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Abcam; Anti-Histone H3 (tri methyl K9) antibody [EPR16601] - ChIP Grade; PN ab176916"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000502
+      - type: class
+        label: "Abcam; Anti-Histone H3 (acetyl K27) antibody [EP16602] - ChIP Grade; PN ab177178"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Abcam; Anti-Histone H3 (acetyl K27) antibody [EP16602] - ChIP Grade; PN ab177178"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000501
+      - type: class
+        label: "Abcam; Anti-Histone H3 (tri methyl K27) antibody [mAbcam6002]- ChIP Grade; PN ab6002"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Abcam; Anti-Histone H3 (tri methyl K27) antibody [mAbcam6002]- ChIP Grade; PN ab6002"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000500
+      - type: class
+        label: Custom
+        acronym: HRAVS
+        termType: class
+        termLabel: Custom
+        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
+      - type: class
+        label: Standard BioTools; Maxpar Nuclear Antigen Staining Kit; PN 201603
+        acronym: HRAVS
+        termType: class
+        termLabel: Standard BioTools; Maxpar Nuclear Antigen Staining Kit; PN 201603
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000409
+      - type: class
+        label: Standard BioTools; Maxpar Phosphoprotein Staining Kit; PN 201604
+        acronym: HRAVS
+        termType: class
+        termLabel: Standard BioTools; Maxpar Phosphoprotein Staining Kit; PN 201604
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000408
+    configuration:
+      required: true
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id

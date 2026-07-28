@@ -206,12 +206,6 @@ children:
         termLabel: CyTOF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000407
       - type: class
-        label: Illumina Spatial v0
-        acronym: HRAVS
-        termType: class
-        termLabel: Illumina Spatial v0
-        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
-      - type: class
         label: Olink
         acronym: HRAVS
         termType: class
@@ -308,6 +302,12 @@ children:
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
       - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
+      - type: class
         label: DART-FISH
         acronym: HRAVS
         termType: class
@@ -355,6 +355,12 @@ children:
         termType: class
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
+      - type: class
+        label: Paired-Tag
+        acronym: HRAVS
+        termType: class
+        termLabel: Paired-Tag
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000492
       - type: class
         label: MS Lipidomics
         acronym: HRAVS
@@ -760,6 +766,12 @@ children:
         termLabel: EVOS M7000
         iri: https://identifiers.org/RRID:SCR_025070
       - type: class
+        label: Orbitrap Astral
+        acronym: HRAVS
+        termType: class
+        termLabel: Orbitrap Astral
+        iri: https://identifiers.org/RRID:SCR_028684
+      - type: class
         label: NovaSeq X
         acronym: HRAVS
         termType: class
@@ -1005,6 +1017,12 @@ children:
         termType: class
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
+      - type: class
+        label: iScan System
+        acronym: HRAVS
+        termType: class
+        termLabel: iScan System
+        iri: https://identifiers.org/RRID:SCR_016388
       - type: class
         label: Opera Phenix HCS
         acronym: HRAVS

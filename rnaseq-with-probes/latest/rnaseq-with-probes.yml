@@ -24,7 +24,7 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
+    description: An identifier assigned by the data provider to reference an external metadata record for the dataset. The external record may be maintained independently and can support dataset traceability and provenance tracking. Leave this field empty if no such identifier exists.
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
@@ -1030,6 +1030,12 @@ children:
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
       - type: class
+        label: iScan System
+        acronym: HRAVS
+        termType: class
+        termLabel: iScan System
+        iri: https://identifiers.org/RRID:SCR_016388
+      - type: class
         label: Opera Phenix HCS
         acronym: HRAVS
         termType: class
@@ -1368,8 +1374,10 @@ children:
     prefLabel: Barcode offset
     values:
       - label: 0
+      - label: 1
       - label: 8
       - label: 20
+      - label: "0,14"
       - label: "1,27"
       - label: "0,38,76"
       - label: "10,48,78"
@@ -1414,8 +1422,9 @@ children:
       - label: 14
       - label: 16
       - label: 40
-      - label: "8,8,8"
       - label: "8,6"
+      - label: "10,10"
+      - label: "8,8,8"
       - label: "14-17,14,14"
       - label: Not applicable
     configuration:
@@ -2083,6 +2092,12 @@ children:
         termLabel: Illumina; NovaSeq X Series 25B Reagent Kit (100 Cycle); PN 20125967
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000463
       - type: class
+        label: Illumina; NextSeq 1000/2000 P2 XLEAP-SBS Reagent Kit (100 Cycles); PN 20100987
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina; NextSeq 1000/2000 P2 XLEAP-SBS Reagent Kit (100 Cycles); PN 20100987
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000503
+      - type: class
         label: Illumina; NovaSeq X Series 1.5B Reagent Kit (300 Cycle); PN 20104705
         acronym: HRAVS
         termType: class
@@ -2531,6 +2546,12 @@ children:
         termLabel: "10X Genomics; Chromium Next GEM Chip K Single Cell Kit, 16 rxns; PN 1000287"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000368
       - type: class
+        label: "10x Genomics; Chromium Next GEM Chip J Single Cell Kit, 16 rxns; PN 1000230"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Chip J Single Cell Kit, 16 rxns; PN 1000230"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000263
+      - type: class
         label: "10X Genomics; Chromium Next GEM Chip G Single Cell Kit, 16 rxns; PN 1000127"
         acronym: HRAVS
         termType: class
@@ -2566,6 +2587,12 @@ children:
         termType: class
         termLabel: "10X Genomics; Chromium Next GEM Chip Q Single Cell Kit, 16 rxns; PN 1000422"
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000325
+      - type: class
+        label: "10x Genomics; Chromium Next GEM Chip J Single Cell Kit, 48 rxns; PN 1000234"
+        acronym: HRAVS
+        termType: class
+        termLabel: "10x Genomics; Chromium Next GEM Chip J Single Cell Kit, 48 rxns; PN 1000234"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000262
       - type: class
         label: "10x Genomics; GEM-X Flex Gene Expression Chip Kit, 4 chips; PN 1000791"
         acronym: HRAVS

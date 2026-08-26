@@ -140,6 +140,12 @@ children:
         termLabel: iCLAP
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
       - type: class
+        label: snm3C-seq
+        acronym: HRAVS
+        termType: class
+        termLabel: snm3C-seq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000504
+      - type: class
         label: seqFISH
         acronym: HRAVS
         termType: class
@@ -2014,6 +2020,12 @@ children:
         termType: class
         termLabel: Custom
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65167
+      - type: class
+        label: "Illumina; IDT for Illumina - TruSeq RNA UD Indexes (96 Indexes, 96 Samples); PN 20022371"
+        acronym: HRAVS
+        termType: class
+        termLabel: "Illumina; IDT for Illumina - TruSeq RNA UD Indexes (96 Indexes, 96 Samples); PN 20022371"
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000505
       - type: class
         label: "10x Genomics; Chromium i7 Multiplex Kit N, Set A, 96 rxn; PN 1000084"
         acronym: HRAVS

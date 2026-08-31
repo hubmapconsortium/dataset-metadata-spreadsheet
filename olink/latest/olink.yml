@@ -12,7 +12,7 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
+    description: An identifier assigned by the data provider to reference an external metadata record for the dataset. The external record may be maintained independently and can support dataset traceability and provenance tracking. Leave this field empty if no such identifier exists.
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
@@ -122,6 +122,18 @@ children:
         termLabel: Light Sheet
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000168
       - type: class
+        label: iCLAP
+        acronym: HRAVS
+        termType: class
+        termLabel: iCLAP
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
+      - type: class
+        label: snm3C-seq
+        acronym: HRAVS
+        termType: class
+        termLabel: snm3C-seq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000504
+      - type: class
         label: seqFISH
         acronym: HRAVS
         termType: class
@@ -188,6 +200,12 @@ children:
         termLabel: Thick section Multiphoton MxIF
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000207
       - type: class
+        label: MACSima
+        acronym: HRAVS
+        termType: class
+        termLabel: MACSima
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000480
+      - type: class
         label: CyTOF
         acronym: HRAVS
         termType: class
@@ -223,6 +241,12 @@ children:
         termType: class
         termLabel: Xenium
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000219
+      - type: class
+        label: DNA Methylation
+        acronym: HRAVS
+        termType: class
+        termLabel: DNA Methylation
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000490
       - type: class
         label: SIMS
         acronym: HRAVS
@@ -284,6 +308,12 @@ children:
         termLabel: Enhanced Stimulated Raman Spectroscopy (SRS)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000209
       - type: class
+        label: Illumina Spatial ver0
+        acronym: HRAVS
+        termType: class
+        termLabel: Illumina Spatial ver0
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000487
+      - type: class
         label: DART-FISH
         acronym: HRAVS
         termType: class
@@ -320,17 +350,35 @@ children:
         termLabel: GeoMx (nCounter)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000301
       - type: class
+        label: Raman Imaging
+        acronym: HRAVS
+        termType: class
+        termLabel: Raman Imaging
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000475
+      - type: class
         label: RNAseq (with probes)
         acronym: HRAVS
         termType: class
         termLabel: RNAseq (with probes)
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000311
       - type: class
+        label: Paired-Tag
+        acronym: HRAVS
+        termType: class
+        termLabel: Paired-Tag
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000492
+      - type: class
         label: MS Lipidomics
         acronym: HRAVS
         termType: class
         termLabel: MS Lipidomics
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000405
+      - type: class
+        label: STARmap
+        acronym: HRAVS
+        termType: class
+        termLabel: STARmap
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000476
       - type: class
         label: MPLEx
         acronym: HRAVS
@@ -364,6 +412,12 @@ children:
         termType: class
         termLabel: Chromatin
         iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13201
+      - type: class
+        label: Lipid + metabolite + protein
+        acronym: HRAVS
+        termType: class
+        termLabel: Lipid + metabolite + protein
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000478
       - type: class
         label: RNA + protein
         acronym: HRAVS
@@ -481,6 +535,12 @@ children:
         termLabel: Cytiva
         iri: https://identifiers.org/RRID:SCR_023581
       - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://identifiers.org/RRID:SCR_003899
+      - type: class
         label: Thermo Fisher Scientific
         acronym: HRAVS
         termType: class
@@ -559,6 +619,12 @@ children:
         termLabel: Ionpath
         iri: https://identifiers.org/RRID:SCR_023605
       - type: class
+        label: Waters
+        acronym: HRAVS
+        termType: class
+        termLabel: Waters
+        iri: https://identifiers.org/RRID:SCR_024589
+      - type: class
         label: In-House
         acronym: HRAVS
         termType: class
@@ -613,11 +679,23 @@ children:
         termLabel: Keyence
         iri: https://identifiers.org/RRID:SCR_023604
       - type: class
+        label: Miltenyi Biotec
+        acronym: HRAVS
+        termType: class
+        termLabel: Miltenyi Biotec
+        iri: https://identifiers.org/RRID:SCR_008984
+      - type: class
         label: Leica Biosystems
         acronym: HRAVS
         termType: class
         termLabel: Leica Biosystems
         iri: https://identifiers.org/RRID:SCR_023603
+      - type: class
+        label: Revvity
+        acronym: HRAVS
+        termType: class
+        termLabel: Revvity
+        iri: https://identifiers.org/RRID:SCR_027779
       - type: class
         label: Cytek Biosciences
         acronym: HRAVS
@@ -700,11 +778,23 @@ children:
         termLabel: EVOS M7000
         iri: https://identifiers.org/RRID:SCR_025070
       - type: class
+        label: Orbitrap Astral
+        acronym: HRAVS
+        termType: class
+        termLabel: Orbitrap Astral
+        iri: https://identifiers.org/RRID:SCR_028684
+      - type: class
         label: NovaSeq X
         acronym: HRAVS
         termType: class
         termLabel: NovaSeq X
         iri: https://identifiers.org/RRID:SCR_024569
+      - type: class
+        label: LSM 710 Confocal Microscope
+        acronym: HRAVS
+        termType: class
+        termLabel: LSM 710 Confocal Microscope
+        iri: https://identifiers.org/RRID:SCR_018063
       - type: class
         label: NanoZoomer 2.0-HT
         acronym: HRAVS
@@ -754,6 +844,18 @@ children:
         termLabel: AVITI
         iri: https://identifiers.org/RRID:SCR_026452
       - type: class
+        label: DMi8
+        acronym: HRAVS
+        termType: class
+        termLabel: DMi8
+        iri: https://identifiers.org/RRID:SCR_026672
+      - type: class
+        label: Opera Phenix Plus HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix Plus HCS
+        iri: https://identifiers.org/RRID:SCR_027780
+      - type: class
         label: timsTOF Pro 2
         acronym: HRAVS
         termType: class
@@ -795,6 +897,12 @@ children:
         termType: class
         termLabel: uScopeHXII-20
         iri: https://identifiers.org/RRID:SCR_027101
+      - type: class
+        label: Orbitrap Fusion Tribrid
+        acronym: HRAVS
+        termType: class
+        termLabel: Orbitrap Fusion Tribrid
+        iri: https://identifiers.org/RRID:SCR_020559
       - type: class
         label: "Custom: Multiphoton"
         acronym: HRAVS
@@ -922,6 +1030,30 @@ children:
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
       - type: class
+        label: iScan System
+        acronym: HRAVS
+        termType: class
+        termLabel: iScan System
+        iri: https://identifiers.org/RRID:SCR_016388
+      - type: class
+        label: Opera Phenix HCS
+        acronym: HRAVS
+        termType: class
+        termLabel: Opera Phenix HCS
+        iri: https://identifiers.org/RRID:SCR_027817
+      - type: class
+        label: Zeiss LightSheet Z.1
+        acronym: HRAVS
+        termType: class
+        termLabel: Zeiss LightSheet Z.1
+        iri: https://identifiers.org/RRID:SCR_020919
+      - type: class
+        label: Olink Signature Q100
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink Signature Q100
+        iri: https://identifiers.org/RRID:SCR_028906
+      - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS
         termType: class
@@ -994,6 +1126,12 @@ children:
         termLabel: Axio Observer 5
         iri: https://identifiers.org/RRID:SCR_023692
       - type: class
+        label: NanoZoomer 2.0-RS
+        acronym: HRAVS
+        termType: class
+        termLabel: NanoZoomer 2.0-RS
+        iri: https://identifiers.org/RRID:SCR_028001
+      - type: class
         label: Axio Observer 3
         acronym: HRAVS
         termType: class
@@ -1048,6 +1186,12 @@ children:
         termLabel: HiSeq 4000
         iri: https://identifiers.org/RRID:SCR_016386
       - type: class
+        label: Q Exactive HF-X
+        acronym: HRAVS
+        termType: class
+        termLabel: Q Exactive HF-X
+        iri: https://identifiers.org/RRID:SCR_020564
+      - type: class
         label: solariX
         acronym: HRAVS
         termType: class
@@ -1071,6 +1215,18 @@ children:
         termType: class
         termLabel: MIBIscope
         iri: https://identifiers.org/RRID:SCR_023613
+      - type: class
+        label: SYNAPT G2-Si
+        acronym: HRAVS
+        termType: class
+        termLabel: SYNAPT G2-Si
+        iri: https://identifiers.org/RRID:SCR_027782
+      - type: class
+        label: MACSima System
+        acronym: HRAVS
+        termType: class
+        termLabel: MACSima System
+        iri: https://identifiers.org/RRID:SCR_027923
       - type: class
         label: Biomark HD
         acronym: HRAVS

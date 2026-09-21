@@ -535,6 +535,12 @@ children:
         termLabel: Cytiva
         iri: https://identifiers.org/RRID:SCR_023581
       - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://identifiers.org/RRID:SCR_003899
+      - type: class
         label: Thermo Fisher Scientific
         acronym: HRAVS
         termType: class
@@ -576,6 +582,12 @@ children:
         termType: class
         termLabel: Akoya Biosciences
         iri: https://identifiers.org/RRID:SCR_023774
+      - type: class
+        label: MGI Tech
+        acronym: HRAVS
+        termType: class
+        termLabel: MGI Tech
+        iri: https://identifiers.org/RRID:SCR_029020
       - type: class
         label: NanoString
         acronym: HRAVS
@@ -783,6 +795,12 @@ children:
         termType: class
         termLabel: NovaSeq X
         iri: https://identifiers.org/RRID:SCR_024569
+      - type: class
+        label: SYNAPT XS
+        acronym: HRAVS
+        termType: class
+        termLabel: SYNAPT XS
+        iri: https://identifiers.org/RRID:SCR_026524
       - type: class
         label: LSM 710 Confocal Microscope
         acronym: HRAVS
@@ -1041,6 +1059,12 @@ children:
         termType: class
         termLabel: Zeiss LightSheet Z.1
         iri: https://identifiers.org/RRID:SCR_020919
+      - type: class
+        label: Olink Signature Q100
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink Signature Q100
+        iri: https://identifiers.org/RRID:SCR_028906
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS

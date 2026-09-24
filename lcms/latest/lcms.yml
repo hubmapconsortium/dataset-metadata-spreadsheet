@@ -24,7 +24,7 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
+    description: An identifier assigned by the data provider to reference an external metadata record for the dataset. The external record may be maintained independently and can support dataset traceability and provenance tracking. Leave this field empty if no such identifier exists.
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
@@ -139,6 +139,12 @@ children:
         termType: class
         termLabel: iCLAP
         iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000479
+      - type: class
+        label: snm3C-seq
+        acronym: HRAVS
+        termType: class
+        termLabel: snm3C-seq
+        iri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000504
       - type: class
         label: seqFISH
         acronym: HRAVS
@@ -541,6 +547,12 @@ children:
         termLabel: Cytiva
         iri: https://identifiers.org/RRID:SCR_023581
       - type: class
+        label: Olink
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink
+        iri: https://identifiers.org/RRID:SCR_003899
+      - type: class
         label: Thermo Fisher Scientific
         acronym: HRAVS
         termType: class
@@ -582,6 +594,12 @@ children:
         termType: class
         termLabel: Akoya Biosciences
         iri: https://identifiers.org/RRID:SCR_023774
+      - type: class
+        label: MGI Tech
+        acronym: HRAVS
+        termType: class
+        termLabel: MGI Tech
+        iri: https://identifiers.org/RRID:SCR_029020
       - type: class
         label: NanoString
         acronym: HRAVS
@@ -789,6 +807,12 @@ children:
         termType: class
         termLabel: NovaSeq X
         iri: https://identifiers.org/RRID:SCR_024569
+      - type: class
+        label: SYNAPT XS
+        acronym: HRAVS
+        termType: class
+        termLabel: SYNAPT XS
+        iri: https://identifiers.org/RRID:SCR_026524
       - type: class
         label: LSM 710 Confocal Microscope
         acronym: HRAVS
@@ -1030,6 +1054,12 @@ children:
         termLabel: Cytek Northern Lights
         iri: https://identifiers.org/RRID:SCR_027072
       - type: class
+        label: iScan System
+        acronym: HRAVS
+        termType: class
+        termLabel: iScan System
+        iri: https://identifiers.org/RRID:SCR_016388
+      - type: class
         label: Opera Phenix HCS
         acronym: HRAVS
         termType: class
@@ -1041,6 +1071,12 @@ children:
         termType: class
         termLabel: Zeiss LightSheet Z.1
         iri: https://identifiers.org/RRID:SCR_020919
+      - type: class
+        label: Olink Signature Q100
+        acronym: HRAVS
+        termType: class
+        termLabel: Olink Signature Q100
+        iri: https://identifiers.org/RRID:SCR_028906
       - type: class
         label: IN Cell Analyzer 2200
         acronym: HRAVS

@@ -26,7 +26,7 @@
     }
   },
   "type": "object",
-  "title": "GENERATEDVALUE.templateTitle",
+  "title": "Sample Block template schema",
   "description": "GENERATEDVALUE.templateDescription",
   "_ui": {
     "order": [
@@ -95,7 +95,7 @@
       "processing_time_unit": "The unit of measurement for the processing time value. If processing time is not specified, this field may be left blank. Example: minute",
       "storage_medium": "The medium used to preserve the sample. If no specific medium was utilized, enter \"None\". If medium was not recorded, enter \"Unknown\". Example: FFPE (Paraffin embedded)",
       "storage_method": "The method used to store the sample after preparation and prior to performing the assay. If no specific storage method was utilized, enter \"None\". If storage method was not recorded, enter \"Unknown\". Example: Frozen in dry ice",
-      "lab_id": "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1",
+      "lab_id": "An identifier assigned by the data provider to reference an external metadata record for the dataset. The external record may be maintained independently and can support dataset traceability and provenance tracking. Leave this field empty if no such identifier exists.",
       "tissue_weight_value": "The weight of a tissue block or the piece of tissue used in a suspension. This information is crucial for calculating the percentage of the parent block that was utilized in the suspension preparation. If the weight is not applicable or unknown, this field may be left blank. Example: 100",
       "tissue_weight_unit": "The unit of measurement for the tissue weight value. If no tissue weight is specified, this field may be left blank. Example: g",
       "preparation_protocol_doi": "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
@@ -368,6 +368,12 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/ba77c589-6ae8-4b97-b8ef-8c18fcb174ec"
           ]
+        },
+        "_annotations": {
+          "type": "string",
+          "enum": [
+            "@nest"
+          ]
         }
       },
       "required": [
@@ -544,9 +550,9 @@
       ],
       "schema:name": "source_storage_duration_value",
       "schema:description": "The length of time the sample was stored prior to processing it. For assays performed on tissue sections, this refers to how long the tissue section (e.g., slide) was stored before the assay began (e.g., imaging). For assays performed on suspensions, such as sequencing, it refers to how long the suspension was stored before library construction started. Example: 12",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -625,9 +631,9 @@
       ],
       "schema:name": "volume_value",
       "schema:description": "The volume of the object in question. Example: 102",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -706,9 +712,9 @@
       ],
       "schema:name": "pathology_distance_value",
       "schema:description": "The distance from which the surgical sample was obtained relative to the pathology site. If this information is not applicable, this field may be left blank. Example: 100",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -787,9 +793,9 @@
       ],
       "schema:name": "processing_time_value",
       "schema:description": "The duration for which the tissue was handled prior to its initial preservation. Example: 120",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -878,9 +884,9 @@
       ],
       "schema:name": "quality_criteria",
       "schema:description": "The quality criteria used to assess the sample, which may include metrics such as RIN (e.g., RIN: 8.7) or visual inspection parameters for suspensions prior to cell lysis. These criteria can be captured at a high level with general terms like \"OK\" or \"not OK\" or with more specific descriptors such as \"debris\" \"clump\" or \"low clump\". Example: RIN: 8.7, low clump, no visible debris",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -969,9 +975,9 @@
       ],
       "schema:name": "histological_report",
       "schema:description": "The key variables in the histopathological report that are crucial for assessing the tissue, including the absence of necrosis, comments on tissue composition, descriptions of significant pathology, and high-level assessments of inflammation or fibrosis. Example: No necrosis observed; tissue composed predominantly of hepatocytes with mild portal inflammation and minimal fibrosis",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1060,9 +1066,9 @@
       ],
       "schema:name": "notes",
       "schema:description": "Miscellaneous details about the sample that are not captured in the existing metadata fields. Example: Sample was stored at 4°C for 48 hours prior to processing due to equipment maintenance delay",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1152,9 +1158,9 @@
       ],
       "schema:name": "metadata_schema_id",
       "schema:description": "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 22bc762a-5020-419d-b170-24253ed9e8d9",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1251,9 +1257,9 @@
       },
       "schema:name": "source_storage_duration_unit",
       "schema:description": "The unit of measurement used to specify the source storage duration value. Example: hour",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1350,9 +1356,9 @@
       },
       "schema:name": "volume_unit",
       "schema:description": "The unit of measurement for the volume value. If no volume measurement is specified, this field may be left blank. Example: mm^3",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1449,9 +1455,9 @@
       },
       "schema:name": "pathology_distance_unit",
       "schema:description": "The unit of measurement for the pathology distance value. If no distance measurement is applicable, this field may be left blank. Example: mm",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1548,9 +1554,9 @@
       },
       "schema:name": "preparation_medium",
       "schema:description": "The medium used during the sample preparation process. If no specific medium was utilized, enter \"None\". If medium was not recorded, enter \"Unknown\". Example: Fresh frozen CMC",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1648,9 +1654,9 @@
       },
       "schema:name": "preparation_condition",
       "schema:description": "The condition under which the sample preparation took place, such as whether the sample was placed on dry ice during the process. If preparation condition was not recorded, enter \"Unknown\". Example: Frozen on dry ice",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1757,9 +1763,9 @@
       },
       "schema:name": "processing_time_unit",
       "schema:description": "The unit of measurement for the processing time value. If processing time is not specified, this field may be left blank. Example: minute",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1857,9 +1863,9 @@
       },
       "schema:name": "storage_medium",
       "schema:description": "The medium used to preserve the sample. If no specific medium was utilized, enter \"None\". If medium was not recorded, enter \"Unknown\". Example: FFPE (Paraffin embedded)",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -1957,9 +1963,9 @@
       },
       "schema:name": "storage_method",
       "schema:description": "The method used to store the sample after preparation and prior to performing the assay. If no specific storage method was utilized, enter \"None\". If storage method was not recorded, enter \"Unknown\". Example: Frozen in dry ice",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2004,7 +2010,7 @@
         }
       },
       "type": "object",
-      "title": "Untitled field schema",
+      "title": "lab_id field schema",
       "description": "Untitled field schema generated by the CEDAR Template Editor 2.6.19",
       "_ui": {
         "inputType": "textfield"
@@ -2047,10 +2053,10 @@
         "@value"
       ],
       "schema:name": "lab_id",
-      "schema:description": "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "schema:description": "An identifier assigned by the data provider to reference an external metadata record for the dataset. The external record may be maintained independently and can support dataset traceability and provenance tracking. Leave this field empty if no such identifier exists.",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2129,9 +2135,9 @@
       ],
       "schema:name": "tissue_weight_value",
       "schema:description": "The weight of a tissue block or the piece of tissue used in a suspension. This information is crucial for calculating the percentage of the parent block that was utilized in the suspension preparation. If the weight is not applicable or unknown, this field may be left blank. Example: 100",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2228,9 +2234,9 @@
       },
       "schema:name": "tissue_weight_unit",
       "schema:description": "The unit of measurement for the tissue weight value. If no tissue weight is specified, this field may be left blank. Example: g",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2275,7 +2281,7 @@
         }
       },
       "type": "object",
-      "title": "Untitled field schema",
+      "title": "preparation_protocol_doi field schema",
       "description": "Untitled field schema generated by the CEDAR Template Editor 2.6.19",
       "_ui": {
         "inputType": "link"
@@ -2314,9 +2320,9 @@
       },
       "schema:name": "preparation_protocol_doi",
       "schema:description": "The DOI for the protocols.io page that details the assay or the procedures used for sample procurement and preparation. For example, in the case of an imaging assay, the protocol may start with tissue section staining and end with the generation of an OME-TIFF file. The documented protocol should also include any image processing steps involved in producing the final OME-TIFF. Example: https://dx.doi.org/10.17504/protocols.io.eq2lyno9qvx9/v1",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2406,9 +2412,9 @@
       ],
       "schema:name": "source_id",
       "schema:description": "The unique identifier from HuBMAP or SenNet for the source (parent data) from which the sample was derived. Example: HBM122.EFGH.789",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2498,9 +2504,9 @@
       ],
       "schema:name": "sample_id",
       "schema:description": "The unique HuBMAP or SenNet identifier assigned to the sample by the ingest portal. Example: HBM743.CKJW.876",
-      "pav:createdOn": "2025-10-15T15:30:13-07:00",
+      "pav:createdOn": "2026-08-07T20:15:44-07:00",
       "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-      "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+      "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
       "pav:version": "0.0.1",
       "bibo:status": "bibo:draft",
       "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
@@ -2508,6 +2514,40 @@
       "additionalProperties": false,
       "skos:prefLabel": "Sample ID",
       "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "_annotations": {
+      "type": "object",
+      "patternProperties": {
+        "^.+$": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [
@@ -2547,7 +2587,7 @@
   "schema:description": "The sample block metadata specification outlines the standardized format for recording essential information about biological samples, such as origin, preparation, and storage conditions, ensuring accurate documentation and facilitating data sharing and analysis.",
   "pav:createdOn": "2023-09-20T15:19:06-07:00",
   "pav:createdBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
-  "pav:lastUpdatedOn": "2025-10-15T15:30:13-07:00",
+  "pav:lastUpdatedOn": "2026-08-07T20:15:44-07:00",
   "oslc:modifiedBy": "https://metadatacenter.org/users/70417c1c-ffa6-49b2-9ddf-e4a2d73fe1e9",
   "schema:schemaVersion": "1.6.0",
   "additionalProperties": false,

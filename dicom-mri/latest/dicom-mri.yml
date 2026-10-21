@@ -1,5 +1,6 @@
 type: template
 name: DICOM-MRI
+id: https://repo.metadatacenter.org/templates/f8c76a33-6262-4733-8f00-23175af7fd73
 children:
   - key: donor_id
     type: text-field
@@ -18,7 +19,7 @@ children:
   - key: lab_id
     type: text-field
     name: lab_id
-    description: "A locally assigned identifier provided by the data provider for the dataset. It is used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Example: Visium_9OLC_A4_S1"
+    description: "A local identifier assigned by the data provider to the dataset, used to reference an external metadata record that may be maintained independently, enabling traceability and supporting provenance tracking. Leave empty when the record has no such identifier for the dataset. Example: Visium_9OLC_A4_S1"
     prefLabel: Lab ID
   - key: preparation_protocol_doi
     type: link-field
@@ -44,11 +45,10 @@ children:
     datatype: iri
     values:
       - type: class
-        label: Magnetic Resonance
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://dicom.nema.org/resources/ontology/DCM/MR
         termType: class
         termLabel: Magnetic Resonance
-        iri: http://dicom.nema.org/resources/ontology/DCM/MR
     configuration:
       required: true
   - key: image_type
@@ -80,11 +80,10 @@ children:
     datatype: iri
     values:
       - type: class
-        label: GE Healthcare
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: https://identifiers.org/RRID:SCR_025461
         termType: class
         termLabel: GE Healthcare
-        iri: https://identifiers.org/RRID:SCR_025461
     configuration:
       required: true
   - key: manufacturer_model_name
@@ -95,11 +94,10 @@ children:
     datatype: iri
     values:
       - type: class
-        label: Discovery MR750
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: https://identifiers.org/RRID:SCR_025460
         termType: class
         termLabel: Discovery MR750
-        iri: https://identifiers.org/RRID:SCR_025460
     configuration:
       required: true
   - key: contributors_path
@@ -134,17 +132,15 @@ children:
     datatype: iri
     values:
       - type: class
-        label: mm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000016
         termType: class
         termLabel: mm
-        iri: http://purl.obolibrary.org/obo/UO_0000016
       - type: class
-        label: um
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000017
         termType: class
         termLabel: um
-        iri: http://purl.obolibrary.org/obo/UO_0000017
     configuration:
       required: true
   - key: image_height_value
@@ -163,17 +159,15 @@ children:
     datatype: iri
     values:
       - type: class
-        label: mm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000016
         termType: class
         termLabel: mm
-        iri: http://purl.obolibrary.org/obo/UO_0000016
       - type: class
-        label: um
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000017
         termType: class
         termLabel: um
-        iri: http://purl.obolibrary.org/obo/UO_0000017
     configuration:
       required: true
   - key: roi_description
@@ -186,7 +180,7 @@ children:
   - key: roi_id
     type: numeric-field
     name: roi_id
-    description: "Multiple images are acquired from regions of interest (ROI1, ROI2, ROI3, etc) on a slide. The ROI ID is a number from 1 to N representing the ROI captured on a slide. Example: ROI1"
+    description: "Multiple images are acquired from regions of interest (ROI1, ROI2, ROI3, etc) on a slide. The ROI ID is a number from 1 to N representing the ROI captured on a slide. Example: 1"
     prefLabel: ROI ID
     datatype: xsd:int
   - key: pixel_physical_size_width_value
@@ -205,23 +199,20 @@ children:
     datatype: iri
     values:
       - type: class
-        label: mm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000016
         termType: class
         termLabel: mm
-        iri: http://purl.obolibrary.org/obo/UO_0000016
       - type: class
-        label: um
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000017
         termType: class
         termLabel: um
-        iri: http://purl.obolibrary.org/obo/UO_0000017
       - type: class
-        label: nm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000018
         termType: class
         termLabel: nm
-        iri: http://purl.obolibrary.org/obo/UO_0000018
     configuration:
       required: true
   - key: pixel_physical_size_height_value
@@ -240,23 +231,20 @@ children:
     datatype: iri
     values:
       - type: class
-        label: mm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000016
         termType: class
         termLabel: mm
-        iri: http://purl.obolibrary.org/obo/UO_0000016
       - type: class
-        label: um
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000017
         termType: class
         termLabel: um
-        iri: http://purl.obolibrary.org/obo/UO_0000017
       - type: class
-        label: nm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000018
         termType: class
         termLabel: nm
-        iri: http://purl.obolibrary.org/obo/UO_0000018
     configuration:
       required: true
   - key: images_in_acquisition
@@ -283,23 +271,20 @@ children:
     datatype: iri
     values:
       - type: class
-        label: Hz
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42545
         termType: class
         termLabel: Hz
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42545
       - type: class
-        label: kHz
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67279
         termType: class
         termLabel: kHz
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67279
       - type: class
-        label: MHz
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67314
         termType: class
         termLabel: MHz
-        iri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C67314
     configuration:
       required: true
   - key: receive_coil_name
@@ -388,23 +373,20 @@ children:
     datatype: iri
     values:
       - type: class
-        label: mm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000016
         termType: class
         termLabel: mm
-        iri: http://purl.obolibrary.org/obo/UO_0000016
       - type: class
-        label: um
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000017
         termType: class
         termLabel: um
-        iri: http://purl.obolibrary.org/obo/UO_0000017
       - type: class
-        label: nm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000018
         termType: class
         termLabel: nm
-        iri: http://purl.obolibrary.org/obo/UO_0000018
     configuration:
       required: true
   - key: spacing_between_slices_value
@@ -423,23 +405,20 @@ children:
     datatype: iri
     values:
       - type: class
-        label: mm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000016
         termType: class
         termLabel: mm
-        iri: http://purl.obolibrary.org/obo/UO_0000016
       - type: class
-        label: um
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000017
         termType: class
         termLabel: um
-        iri: http://purl.obolibrary.org/obo/UO_0000017
       - type: class
-        label: nm
-        acronym: HRAVS
+        sourceAcronym: HRAVS
+        termIri: http://purl.obolibrary.org/obo/UO_0000018
         termType: class
         termLabel: nm
-        iri: http://purl.obolibrary.org/obo/UO_0000018
     configuration:
       required: true
   - key: image_row_count
@@ -469,7 +448,7 @@ children:
   - key: metadata_schema_id
     type: text-field
     name: metadata_schema_id
-    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: 95b3a9bd-3fb3-48f5-99f8-1f78ffb6bb1d"
+    description: "The unique string identifier for the metadata specification version, which is easily interpretable by computers for purposes of data validation and processing. Example: f8c76a33-6262-4733-8f00-23175af7fd73"
     prefLabel: Metadata schema ID
     default: f8c76a33-6262-4733-8f00-23175af7fd73
     configuration:

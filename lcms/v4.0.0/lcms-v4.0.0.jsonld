@@ -562,6 +562,12 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/a0c0c388-8adc-4891-b28d-179c13c4fad3"
           ]
+        },
+        "_annotations": {
+          "type": "string",
+          "enum": [
+            "@nest"
+          ]
         }
       },
       "required": [
@@ -4956,6 +4962,40 @@
       "skos:prefLabel": "Assay Description",
       "@id": "https://repo.metadatacenter.org/template-fields/2aefa70a-1dc1-4f96-88ac-3e33acbc89ae",
       "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "_annotations": {
+      "type": "object",
+      "patternProperties": {
+        "^.+$": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [

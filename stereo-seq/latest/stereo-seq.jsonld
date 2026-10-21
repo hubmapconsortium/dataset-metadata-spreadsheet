@@ -407,6 +407,12 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/e6e8f277-c1fa-4668-8ddb-3d550cb45879"
           ]
+        },
+        "_annotations": {
+          "type": "string",
+          "enum": [
+            "@nest"
+          ]
         }
       },
       "required": [
@@ -3009,6 +3015,40 @@
       "additionalProperties": false,
       "skos:prefLabel": "Time since acquisition instrument calibration unit",
       "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "_annotations": {
+      "type": "object",
+      "patternProperties": {
+        "^.+$": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [

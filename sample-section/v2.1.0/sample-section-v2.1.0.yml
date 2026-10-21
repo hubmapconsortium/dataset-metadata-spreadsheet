@@ -200,7 +200,7 @@ children:
         sourceAcronym: HRAVS
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000151
         termType: class
-        termLabel: UW Solution
+        termLabel: UWS Solution
       - type: class
         sourceAcronym: HRAVS
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000152

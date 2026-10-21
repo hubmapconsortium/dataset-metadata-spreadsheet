@@ -1,5 +1,6 @@
 type: template
 name: Contributor
+id: https://repo.metadatacenter.org/templates/94dae6f8-0756-4ab0-a47b-138e446a9501
 children:
   - key: first_name
     type: text-field

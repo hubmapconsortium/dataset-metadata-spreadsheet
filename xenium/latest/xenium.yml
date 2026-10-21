@@ -327,6 +327,11 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000504
         termType: class
         termLabel: snm3C-seq
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000514
+        termType: class
+        termLabel: Whole Exome Sequencing
     configuration:
       required: true
   - key: analyte_class
@@ -939,7 +944,7 @@ children:
         sourceAcronym: HRAVS
         termIri: https://identifiers.org/RRID:SCR_026452
         termType: class
-        termLabel: AVITI
+        termLabel: AVITI24
       - type: class
         sourceAcronym: HRAVS
         termIri: https://identifiers.org/RRID:SCR_026524

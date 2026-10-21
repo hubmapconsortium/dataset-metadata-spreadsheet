@@ -503,6 +503,12 @@
           "enum": [
             "https://schema.metadatacenter.org/properties/f9afce52-1880-4d4f-bdd8-9e88b516a8a7"
           ]
+        },
+        "_annotations": {
+          "type": "string",
+          "enum": [
+            "@nest"
+          ]
         }
       },
       "required": [
@@ -4304,6 +4310,40 @@
       "additionalProperties": false,
       "skos:prefLabel": "Number of PCR cycles for indexing",
       "$schema": "http://json-schema.org/draft-04/schema#"
+    },
+    "_annotations": {
+      "type": "object",
+      "patternProperties": {
+        "^.+$": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [

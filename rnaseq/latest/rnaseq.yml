@@ -339,6 +339,11 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000504
         termType: class
         termLabel: snm3C-seq
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000514
+        termType: class
+        termLabel: Whole Exome Sequencing
     configuration:
       required: true
   - key: analyte_class
@@ -951,7 +956,7 @@ children:
         sourceAcronym: HRAVS
         termIri: https://identifiers.org/RRID:SCR_026452
         termType: class
-        termLabel: AVITI
+        termLabel: AVITI24
       - type: class
         sourceAcronym: HRAVS
         termIri: https://identifiers.org/RRID:SCR_026524
@@ -1702,6 +1707,11 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000499
         termType: class
         termLabel: Epigenome Technologies; Multiplex Droplet Paired-Tag 16 Reaction Kit; PN MDP16101
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000507
+        termType: class
+        termLabel: "Takara Bio; SMART-Seq Total RNA Library Prep with ZapR Depletion (with UMIs), 96 rxns; PN 634355"
     configuration:
       required: true
   - key: sample_indexing_kit
@@ -1811,6 +1821,31 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000505
         termType: class
         termLabel: "Illumina; IDT for Illumina - TruSeq RNA UD Indexes (96 Indexes, 96 Samples); PN 20022371"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000508
+        termType: class
+        termLabel: "Takara Bio; Unique Dual Index Kit (1–96), 96 rxns; PN 634752"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000509
+        termType: class
+        termLabel: "Takara Bio; Unique Dual Index Kit (97–192), 96 rxns; PN 634753"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000510
+        termType: class
+        termLabel: "Takara Bio; Unique Dual Index Kit (193–288), 96 rxns; PN 634754"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000511
+        termType: class
+        termLabel: "Takara Bio; Unique Dual Index Kit (289–384), 96 rxns; PN 634755"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000512
+        termType: class
+        termLabel: "Takara Bio; Unique Dual Index Kit (1–24), 24 rxns; PN 634756"
     configuration:
       required: true
   - key: sample_indexing_set
@@ -1993,6 +2028,11 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000503
         termType: class
         termLabel: Illumina; NextSeq 1000/2000 P2 XLEAP-SBS Reagent Kit (100 Cycles); PN 20100987
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000513
+        termType: class
+        termLabel: Element Biosciences; AVITI 2x150 Sequencing Kit Cloudbreak FS High Output (334 Cycles); PN 860-00013
     configuration:
       required: true
   - key: sequencing_read_format

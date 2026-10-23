@@ -30,7 +30,7 @@ children:
     datatype: iri
     default:
       value: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000514
-      label: Whole Exome Sequencing
+      label: Whole Exome Sequencing (WES)
     values:
       - type: class
         sourceAcronym: HRAVS
@@ -331,7 +331,7 @@ children:
         sourceAcronym: HRAVS
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000514
         termType: class
-        termLabel: Whole Exome Sequencing
+        termLabel: Whole Exome Sequencing (WES)
     configuration:
       required: true
   - key: analyte_class

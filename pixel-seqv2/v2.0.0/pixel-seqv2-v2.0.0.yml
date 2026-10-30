@@ -331,7 +331,7 @@ children:
         sourceAcronym: HRAVS
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000514
         termType: class
-        termLabel: Whole Exome Sequencing
+        termLabel: Whole Exome Sequencing (WES)
     configuration:
       required: true
   - key: analyte_class
@@ -1178,105 +1178,6 @@ children:
     description: "The top-level directory containing the raw and/or processed data. For a single dataset upload, this might be represented as \".\", whereas for a data upload containing multiple datasets, this would be the directory name for the respective dataset. For example, if the data is within a directory named \"TEST001-RK\", use the syntax \"./TEST001-RK\" for this field. If there are multiple directory levels, use the format \"./TEST001-RK/Run1/Pass2\", where \"Pass2\" is the subdirectory where the single dataset's data is stored. This is an internal metadata field used solely for data ingestion. Example: ./TEST001-RK"
     prefLabel: Data path
     regex: ^(?:\.|\.\/.+|\w.*)$
-    configuration:
-      required: true
-  - key: mapped_area_value
-    type: numeric-field
-    name: mapped_area_value
-    description: "The mapped area value, which refers to the specific area covered or captured in various assays. For Visium, it is the area of spots covered by tissue within the captured area, excluding the total possible captured area. For GeoMx, it refers to the area of the AOI being captured. In HiFi, it is the summed area of the ROIs in a single flowcell lane. For CosMx and Resolve, it indicates the area of the FOV (also known as ROI) region being captured. For Xenium, it is the total area of the FOV regions (also known as ROI) being captured. For Stereo-Seq, this value represents the number of beads. Example: 42.25"
-    prefLabel: Mapped area value
-    datatype: xsd:decimal
-    configuration:
-      required: true
-  - key: mapped_area_unit
-    type: controlled-term-field
-    name: mapped_area_unit
-    description: "The unit of measurement for the mapped area value. If mapping area is not specified, this field may be left blank. Example: um^2"
-    prefLabel: Mapped area unit
-    datatype: iri
-    values:
-      - type: class
-        sourceAcronym: HRAVS
-        termIri: http://purl.obolibrary.org/obo/UO_0000082
-        termType: class
-        termLabel: mm^2
-      - type: class
-        sourceAcronym: HRAVS
-        termIri: http://purl.obolibrary.org/obo/UO_0010001
-        termType: class
-        termLabel: um^2
-    configuration:
-      required: true
-  - key: spot_size_value
-    type: numeric-field
-    name: spot_size_value
-    description: "The area of a spot used in assays where spots define discrete capture areas.  Example: 2375.9"
-    prefLabel: Spot size value
-    datatype: xsd:decimal
-    configuration:
-      required: true
-  - key: spot_size_unit
-    type: controlled-term-field
-    name: spot_size_unit
-    description: "The unit of measurement for the spot size value. If no spot size value is specified, this field may be left blank. Example: um^2"
-    prefLabel: Spot size unit
-    datatype: iri
-    values:
-      - type: class
-        sourceAcronym: HRAVS
-        termIri: http://purl.obolibrary.org/obo/UO_0000082
-        termType: class
-        termLabel: mm^2
-      - type: class
-        sourceAcronym: HRAVS
-        termIri: http://purl.obolibrary.org/obo/UO_0010001
-        termType: class
-        termLabel: um^2
-    configuration:
-      required: true
-  - key: number_of_spots
-    type: numeric-field
-    name: number_of_spots
-    description: "Number of capture spots within the mapped area. For Visium this would be the number of spots covered by tissue, while it's the number of spots within ROIs for HiFi."
-    prefLabel: Number of spots
-    datatype: xsd:int
-    configuration:
-      required: true
-  - key: permeabilization_time_value
-    type: numeric-field
-    name: permeabilization_time_value
-    description: Permeabilization time used for this tissue section.
-    prefLabel: Permeabilization time value
-    datatype: xsd:int
-    configuration:
-      required: true
-  - key: permeabilization_time_unit
-    type: controlled-term-field
-    name: permeabilization_time_unit
-    description: The unit for the permeabilization time.
-    prefLabel: Permeabilization time unit
-    datatype: iri
-    values:
-      - type: class
-        sourceAcronym: HRAVS
-        termIri: http://purl.obolibrary.org/obo/UO_0000031
-        termType: class
-        termLabel: minute
-    configuration:
-      required: true
-  - key: slide_id
-    type: text-field
-    name: slide_id
-    description: "The unique identifier assigned to each slide, enabling users to determine which tissue sections were processed together on the same slide. It is recommended that data providers prefix the ID with the center name to prevent overlapping values across different centers. Example: VAN0071-PA-1-1_AF"
-    prefLabel: Slide ID
-    configuration:
-      required: true
-  - key: number_of_additional_stains
-    type: numeric-field
-    name: number_of_additional_stains
-    description: "The number of additional stains used in the process. For example, this would be minimally 2 (i.e., DAPI and polyT) and can include 6 more. Example: 2"
-    prefLabel: Number of additional stains
-    datatype: xsd:int
     configuration:
       required: true
   - key: metadata_schema_id

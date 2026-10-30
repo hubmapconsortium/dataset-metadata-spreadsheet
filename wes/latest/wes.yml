@@ -2361,6 +2361,11 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000506
         termType: class
         termLabel: "10x Genomics; Xenium Prime 5K Mouse Pan Tissues & Pathways Panel, 2 rxns; PN 1000725"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000515
+        termType: class
+        termLabel: "Roche Diagnostics; KAPA HyperExome V2 Probes, 1536 rxns; PN 09718737001"
     configuration:
       required: true
   - key: is_custom_probes_used

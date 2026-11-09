@@ -1263,6 +1263,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "source_storage_duration_unit",
@@ -1362,6 +1368,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_medium",
@@ -1462,6 +1474,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_condition",
@@ -1571,6 +1589,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "processing_time_unit",
@@ -1671,6 +1695,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "storage_medium",
@@ -1771,6 +1801,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "storage_method",
@@ -1870,6 +1906,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "suspension_entity_type",
@@ -2141,6 +2183,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "tissue_weight_unit",
@@ -2227,6 +2275,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_protocol_doi",

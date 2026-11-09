@@ -629,6 +629,11 @@ children:
         termLabel: cDNA
       - type: class
         sourceAcronym: HRAVS
+        termIri: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C449
+        termType: class
+        termLabel: DNA
+      - type: class
+        sourceAcronym: HRAVS
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000424
         termType: class
         termLabel: Nucleus + cell

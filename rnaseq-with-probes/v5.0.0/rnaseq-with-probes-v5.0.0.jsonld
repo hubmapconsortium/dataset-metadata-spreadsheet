@@ -927,6 +927,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "analyte_class",
@@ -1026,6 +1032,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "acquisition_instrument_vendor",
@@ -1125,6 +1137,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "acquisition_instrument_model",
@@ -1305,6 +1323,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "source_storage_duration_unit",
@@ -1485,6 +1509,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "time_since_acquisition_instrument_calibration_unit",
@@ -1768,6 +1798,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "barcode_read",
@@ -1985,6 +2021,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "umi_read",
@@ -2196,6 +2238,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "assay_input_entity",
@@ -2626,6 +2674,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "library_input_amount_unit",
@@ -2805,6 +2859,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "library_output_amount_unit",
@@ -2984,6 +3044,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "library_concentration_unit",
@@ -3083,6 +3149,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "library_layout",
@@ -3262,6 +3334,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "library_preparation_kit",
@@ -3361,6 +3439,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "sample_indexing_kit",
@@ -3731,6 +3815,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "sequencing_reagent_kit",
@@ -4103,6 +4193,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_instrument_vendor",
@@ -4202,6 +4298,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_instrument_model",
@@ -4553,6 +4655,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_instrument_kit",
@@ -4639,6 +4747,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "preparation_protocol_doi",
@@ -5244,6 +5358,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "probe_hybridization_time_unit",
@@ -5343,6 +5463,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "oligo_probe_panel",
@@ -5546,6 +5672,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "dataset_type",
@@ -5645,6 +5777,12 @@
         "@id": {
           "type": "string",
           "format": "uri"
+        },
+        "skos:notation": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "schema:name": "amount_of_input_analyte_unit",

@@ -1072,6 +1072,11 @@ children:
         termLabel: Olink Signature Q100
       - type: class
         sourceAcronym: HRAVS
+        termIri: https://identifiers.org/RRID:SCR_029159
+        termType: class
+        termLabel: AVITI
+      - type: class
+        sourceAcronym: HRAVS
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000316
         termType: class
         termLabel: Phenocycler-Fusion 1.0
@@ -1705,6 +1710,11 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000512
         termType: class
         termLabel: "Takara Bio; Unique Dual Index Kit (1–24), 24 rxns; PN 634756"
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000516
+        termType: class
+        termLabel: "NanoString Technologies; GeoMx Pro Code Pack: Z, Y; PN 121400207"
   - key: sample_indexing_set
     type: text-field
     name: sample_indexing_set
@@ -1882,6 +1892,16 @@ children:
         termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000513
         termType: class
         termLabel: Element Biosciences; AVITI 2x150 Sequencing Kit Cloudbreak FS High Output (334 Cycles); PN 860-00013
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000517
+        termType: class
+        termLabel: Illumina; NovaSeq X Series 10B Reagent v1 Cartridge (300 Cycles); PN 20066614
+      - type: class
+        sourceAcronym: HRAVS
+        termIri: https://purl.humanatlas.io/vocab/hravs#HRAVS_0000518
+        termType: class
+        termLabel: Illumina; NovaSeq X Series 25B Reagent v1.5 Cartridge (300 Cycles); PN 20066626
     configuration:
       required: true
   - key: sequencing_read_format
